@@ -1,0 +1,66 @@
+{
+  "name": "cosmic-explorer",
+  "version": "1.0.0",
+  "description": "Interactive 3D web application for exploring the universe",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --fix --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.19.1",
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.110.0",
+    "@tailwindcss/postcss": "^4.3.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "howler": "^2.2.4",
+    "lucide-react": "^1.22.0",
+    "next": "^14.2.35",
+    "next-intl": "^4.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.6.0",
+    "three": "^0.185.0",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@eslint/eslintrc": "^3.3.5",
+    "@types/howler": "^2.2.13",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.185.0",
+    "autoprefixer": "^10.5.2",
+    "eslint": "^10.6.0",
+    "eslint-config-next": "^16.2.9",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "postcss": "^8.5.16",
+    "prettier": "^3.9.4",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^6.0.3"
+  }
+}

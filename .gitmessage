@@ -1,0 +1,53 @@
+# <type>(<scope>): <subject>
+# 
+# <body>
+# 
+# <footer>
+#
+# ─────────────────────────────────────────────────────────────
+# TYPE: feat, fix, docs, style, refactor, perf, test, chore, ci
+# ─────────────────────────────────────────────────────────────
+# feat:     New feature
+# fix:      Bug fix
+# docs:     Documentation changes
+# style:    Code style (formatting, semicolons, etc)
+# refactor: Code refactoring (no functional changes)
+# perf:     Performance improvement
+# test:     Adding/updating tests
+# chore:    Maintenance (dependencies, build, etc)
+# ci:       CI/CD changes
+#
+# ─────────────────────────────────────────────────────────────
+# SCOPE: core, 3d, ui, auth, quiz, api, deps, config, layout
+# ─────────────────────────────────────────────────────────────
+# core:    Core functionality
+# 3d:      3D rendering, R3F, shaders
+# ui:      UI components, styling
+# auth:    Authentication, Supabase
+# quiz:    Quiz system
+# api:     API routes
+# deps:    Dependencies
+# config:  Configuration files
+# layout:  Layout components
+#
+# ─────────────────────────────────────────────────────────────
+# SUBJECT: imperative mood, lowercase, no period at end
+# ─────────────────────────────────────────────────────────────
+# ✅ add planet component with PBR materials
+# ❌ Added planet component with PBR materials
+# ❌ adding planet component
+# ❌ add planet component.
+#
+# ─────────────────────────────────────────────────────────────
+# BODY: what and why, not how (optional)
+# ─────────────────────────────────────────────────────────────
+# - Bullet points for multiple changes
+# - Explain the motivation for the change
+# - Reference related issues
+#
+# ─────────────────────────────────────────────────────────────
+# FOOTER: references, breaking changes (optional)
+# ─────────────────────────────────────────────────────────────
+# Closes #123
+# Refs: #456, #789
+# BREAKING CHANGE: [description]
