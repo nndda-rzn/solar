@@ -1,4 +1,1 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-echo "Skipping pre-commit hooks temporarily (ESLint version issue)"
+npx lint-staged
