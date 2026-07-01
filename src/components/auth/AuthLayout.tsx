@@ -10,7 +10,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
   return (
     <div
       style={{
-        minHeight: "100vh",
+        height: "100vh",
         position: "relative",
         overflow: "hidden",
         background: "#0a0a0f",
@@ -22,7 +22,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
         style={{
           position: "relative",
           zIndex: 10,
-          minHeight: "100vh",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
         }}
@@ -164,14 +164,18 @@ export function AuthLayout({ children }: AuthLayoutProps) {
 
       <footer
         style={{
-          position: "relative",
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
           zIndex: 10,
-          padding: "24px 32px",
+          padding: "16px 32px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
           gap: "16px",
+          pointerEvents: "auto",
         }}
       >
         <p style={{ color: "#6b7280", fontSize: "12px" }}>
