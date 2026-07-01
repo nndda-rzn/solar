@@ -5,6 +5,7 @@ export interface PlanetTextures {
   emissive?: string;
   clouds?: string;
   ring?: string;
+  atmosphere?: string;
 }
 
 export interface PlanetData {
@@ -13,6 +14,7 @@ export interface PlanetData {
   slug: string;
   radius: number;
   distance: number;
+  distanceScaled: number;
   orbitalPeriod: number;
   rotationSpeed: number;
   tilt: number;
@@ -25,6 +27,7 @@ export interface PlanetData {
   hasRing?: boolean;
   hasAtmosphere?: boolean;
   atmosphereColor?: string;
+  color?: string;
 }
 
 export interface PlanetPosition {

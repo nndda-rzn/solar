@@ -1,0 +1,227 @@
+{
+  "planets": [
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "slug": "mercury",
+      "radius": 0.38,
+      "distance": 0.39,
+      "distanceScaled": 12,
+      "orbitalPeriod": 87.97,
+      "rotationSpeed": 0.002,
+      "tilt": 0.034,
+      "mass": "3.30 × 10²³ kg",
+      "temperature": "167°C",
+      "moons": 0,
+      "description": "Planet terkecil dan terdekat dari Matahari. Tidak memiliki atmosfer.",
+      "funFacts": [
+        "Satu hari di Merkurius berlangsung 59 hari Bumi",
+        "Merkurius memiliki orbit paling eksentrik"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/mercury/diffuse.webp"
+      },
+      "hasAtmosphere": false,
+      "hasRing": false,
+      "color": "#94A3B8"
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "slug": "venus",
+      "radius": 0.95,
+      "distance": 0.72,
+      "distanceScaled": 18,
+      "orbitalPeriod": 224.7,
+      "rotationSpeed": -0.0005,
+      "tilt": 177.4,
+      "mass": "4.87 × 10²⁴ kg",
+      "temperature": "464°C",
+      "moons": 0,
+      "description": "Planet terpanas di tata surya dengan atmosfer tebal CO₂.",
+      "funFacts": [
+        "Venus berotasi mundur dibanding planet lain",
+        "Satu hari di Venus lebih lama dari setahun"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/venus/diffuse.webp",
+        "atmosphere": "/textures/solar-system/venus/atmosphere.webp"
+      },
+      "hasAtmosphere": true,
+      "hasRing": false,
+      "atmosphereColor": "#FB923C",
+      "color": "#FB923C"
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "slug": "earth",
+      "radius": 1.0,
+      "distance": 1.0,
+      "distanceScaled": 25,
+      "orbitalPeriod": 365.25,
+      "rotationSpeed": 0.005,
+      "tilt": 23.44,
+      "mass": "5.97 × 10²⁴ kg",
+      "temperature": "15°C",
+      "moons": 1,
+      "description": "Planet kita. 71% permukaan ditutup air dan satu-satunya planet yang diketahui mendukung kehidupan.",
+      "funFacts": [
+        "Inti bumi sepanas permukaan matahari",
+        "Bumi berotasi pada kecepatan 1.670 km/jam di khatulistiwa"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/earth/diffuse.webp",
+        "normal": "/textures/solar-system/earth/normal.webp",
+        "specular": "/textures/solar-system/earth/specular.webp",
+        "emissive": "/textures/solar-system/earth/emissive.webp",
+        "clouds": "/textures/solar-system/earth/clouds.webp"
+      },
+      "hasAtmosphere": true,
+      "hasRing": false,
+      "atmosphereColor": "#4A9EFF",
+      "color": "#3B82F6"
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "slug": "mars",
+      "radius": 0.53,
+      "distance": 1.52,
+      "distanceScaled": 35,
+      "orbitalPeriod": 686.97,
+      "rotationSpeed": 0.005,
+      "tilt": 25.19,
+      "mass": "6.42 × 10²³ kg",
+      "temperature": "-65°C",
+      "moons": 2,
+      "description": "Planet Merah. Memiliki gunung tertinggi dan lembah terdalam di tata surya.",
+      "funFacts": [
+        "Mars memiliki musim seperti Bumi",
+        "Olympus Mons 3x lebih tinggi dari Everest"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/mars/diffuse.webp"
+      },
+      "hasAtmosphere": true,
+      "hasRing": false,
+      "atmosphereColor": "#EF4444",
+      "color": "#EF4444"
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "slug": "jupiter",
+      "radius": 5.5,
+      "distance": 5.2,
+      "distanceScaled": 55,
+      "orbitalPeriod": 4332.59,
+      "rotationSpeed": 0.012,
+      "tilt": 3.13,
+      "mass": "1.90 × 10²⁷ kg",
+      "temperature": "-110°C",
+      "moons": 95,
+      "description": "Planet terbesar di tata surya. Gas raksasa dengan massa 2x lipat total planet lain.",
+      "funFacts": [
+        "Great Red Spot adalah badai yang sudah berlangsung 350+ tahun",
+        "Jupiter memiliki medan magnet 20.000x lebih kuat dari Bumi"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/jupiter/diffuse.webp"
+      },
+      "hasAtmosphere": true,
+      "hasRing": false,
+      "atmosphereColor": "#F59E0B",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "slug": "saturn",
+      "radius": 4.7,
+      "distance": 9.58,
+      "distanceScaled": 80,
+      "orbitalPeriod": 10759.22,
+      "rotationSpeed": 0.011,
+      "tilt": 26.73,
+      "mass": "5.68 × 10²⁶ kg",
+      "temperature": "-140°C",
+      "moons": 146,
+      "description": "Planet dengan cincin indah. Gas raksasa yang kurang padat dari air.",
+      "funFacts": [
+        "Cincin Saturnus terbuat dari es dan batu",
+        "Saturn bisa mengambang di bak mandi yang cukup besar"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/saturn/diffuse.webp",
+        "ring": "/textures/solar-system/saturn/rings.webp"
+      },
+      "hasAtmosphere": true,
+      "hasRing": true,
+      "atmosphereColor": "#D97706",
+      "color": "#D97706"
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "slug": "uranus",
+      "radius": 2.0,
+      "distance": 19.22,
+      "distanceScaled": 110,
+      "orbitalPeriod": 30688.5,
+      "rotationSpeed": -0.007,
+      "tilt": 97.77,
+      "mass": "8.68 × 10²⁵ kg",
+      "temperature": "-195°C",
+      "moons": 27,
+      "description": "Es raksasa yang berotasi miring pada sisinya (98 derajat).",
+      "funFacts": [
+        "Uranus berotasi miring pada sisi 98 derajat",
+        "Uranus adalah planet pertama yang ditemukan dengan teleskop"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/uranus/diffuse.webp"
+      },
+      "hasAtmosphere": true,
+      "hasRing": false,
+      "atmosphereColor": "#22D3EE",
+      "color": "#22D3EE"
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune",
+      "slug": "neptune",
+      "radius": 1.95,
+      "distance": 30.05,
+      "distanceScaled": 145,
+      "orbitalPeriod": 60195.0,
+      "rotationSpeed": 0.008,
+      "tilt": 28.32,
+      "mass": "1.02 × 10²⁶ kg",
+      "temperature": "-200°C",
+      "moons": 16,
+      "description": "Planet paling berangin di tata surya. Angin supersonik hingga 2.100 km/jam.",
+      "funFacts": [
+        "Neptune memiliki angin tercepat di tata surya",
+        "Neptune butuh 165 tahun untuk mengorbit Matahari"
+      ],
+      "textures": {
+        "diffuse": "/textures/solar-system/neptune/diffuse.webp"
+      },
+      "hasAtmosphere": true,
+      "hasRing": false,
+      "atmosphereColor": "#6366F1",
+      "color": "#6366F1"
+    }
+  ],
+  "sun": {
+    "id": "sun",
+    "name": "Sun",
+    "radius": 5.0,
+    "mass": "1.99 × 10³⁰ kg",
+    "temperature": "5,500°C",
+    "description": "Bintang di pusat tata surya kita. Mengandung 99,86% massa total tata surya.",
+    "texture": "/textures/solar-system/sun/diffuse.webp",
+    "color": "#FBBF24"
+  }
+}
