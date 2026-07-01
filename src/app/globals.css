@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-cosmic-black: #0a0a0f;
+  --color-cosmic-deep: #0f0f1a;
+  --color-cosmic-nebula: #1a1a2e;
+  --color-cosmic-accent: #4a9eff;
+  --color-cosmic-glow: #7cb9ff;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+}
 
 :root {
   --foreground-rgb: 255, 255, 255;
