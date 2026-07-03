@@ -1,6 +1,6 @@
 {
   "name": "cosmic-explorer",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha",
   "description": "Interactive 3D web application for exploring the universe",
   "private": true,
   "scripts": {

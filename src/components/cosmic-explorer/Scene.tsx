@@ -3,13 +3,19 @@
 import { Stars, OrbitControls } from "@react-three/drei";
 import { Camera } from "./Camera";
 import { Lighting } from "./Lighting";
+import { ScaleManager } from "./ScaleManager";
 import { SolarSystemScene } from "@/components/solar-system/SolarSystemScene";
+import { useExplorerStore } from "@/lib/store/explorer-store";
 
 export function Scene() {
+  const selectedPlanet = useExplorerStore((s) => s.selectedPlanet);
+  const isFlying = !!selectedPlanet;
+
   return (
     <>
       <Camera />
       <Lighting />
+      <ScaleManager />
       <Stars
         radius={5000}
         depth={100}
@@ -21,11 +27,12 @@ export function Scene() {
       />
       <SolarSystemScene />
       <OrbitControls
+        enabled={!isFlying}
         enablePan={true}
         enableZoom={true}
         enableRotate={true}
         minDistance={5}
-        maxDistance={500}
+        maxDistance={600}
       />
     </>
   );

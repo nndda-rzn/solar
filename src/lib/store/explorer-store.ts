@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { ScaleMode } from "@/config/scales";
+import * as THREE from "three";
 
 interface ExplorerState {
   // Scale navigation
@@ -17,6 +18,10 @@ interface ExplorerState {
   // Transition state
   isTransitioning: boolean;
   setIsTransitioning: (isTransitioning: boolean) => void;
+
+  // Camera fly-to target
+  cameraTarget: THREE.Vector3 | null;
+  setCameraTarget: (target: THREE.Vector3 | null) => void;
 
   // Info panel
   isInfoPanelOpen: boolean;
@@ -45,6 +50,10 @@ export const useExplorerStore = create<ExplorerState>((set) => ({
   // Transition state
   isTransitioning: false,
   setIsTransitioning: (isTransitioning) => set({ isTransitioning }),
+
+  // Camera fly-to target
+  cameraTarget: null,
+  setCameraTarget: (target) => set({ cameraTarget: target }),
 
   // Info panel
   isInfoPanelOpen: false,
