@@ -1,0 +1,139 @@
+{
+  "dwarfPlanets": [
+    {
+      "id": "pluto",
+      "name": "Pluto",
+      "slug": "pluto",
+      "radius": 1.0,
+      "distance": 39.48,
+      "distanceScaled": 40,
+      "orbitalPeriod": 90560,
+      "rotationSpeed": -0.001,
+      "tilt": 122.53,
+      "mass": "1.30 × 10²² kg",
+      "temperature": "-225°C",
+      "moonCount": 5,
+      "description": "Planet katai paling terkenal di sabuk Kuiper. Dulunya planet kesembilan, sekarang diklasifikasikan sebagai dwarf planet.",
+      "funFacts": [
+        "Pluto lebih kecil dari bulan Bumi",
+        "Satu tahun di Pluto sama dengan 248 tahun Bumi",
+        "Pluto memiliki jantung es yang terlihat dari foto New Horizons"
+      ],
+      "proceduralTexture": {
+        "baseColor": "#C4A882",
+        "noiseScale": 0.6,
+        "noiseType": "fbm",
+        "detailLevel": 4
+      },
+      "color": "#C4A882"
+    },
+    {
+      "id": "ceres",
+      "name": "Ceres",
+      "slug": "ceres",
+      "radius": 0.8,
+      "distance": 2.77,
+      "distanceScaled": 14,
+      "orbitalPeriod": 1682,
+      "rotationSpeed": 0.003,
+      "tilt": 4.0,
+      "mass": "9.39 × 10²⁰ kg",
+      "temperature": "-105°C",
+      "moonCount": 0,
+      "description": "Objek terbesar di sabuk asteroid. Satu-satunya dwarf planet di inner solar system.",
+      "funFacts": [
+        "Ceres menyimpan 25% massa sabuk asteroid",
+        "Mungkin memiliki samudra air di bawah permukaan",
+        "Ditemukan tahun 1801, dulunya dikategorikan planet"
+      ],
+      "proceduralTexture": {
+        "baseColor": "#7A7A6D",
+        "noiseScale": 0.8,
+        "noiseType": "simplex",
+        "detailLevel": 2
+      },
+      "color": "#7A7A6D"
+    },
+    {
+      "id": "eris",
+      "name": "Eris",
+      "slug": "eris",
+      "radius": 1.1,
+      "distance": 67.78,
+      "distanceScaled": 45,
+      "orbitalPeriod": 204199,
+      "rotationSpeed": 0.002,
+      "tilt": 78.0,
+      "mass": "1.66 × 10²² kg",
+      "temperature": "-243°C",
+      "moonCount": 1,
+      "description": "Dwarf planet paling masif di solar system. Namanya diambil dari dewi perselisihan Greek.",
+      "funFacts": [
+        "Eris lebih masif dari Pluto",
+        "Penemuan Eris yang mendorong reklassifikasi Pluto",
+        "Satu orbit Eris memakan waktu 559 tahun"
+      ],
+      "proceduralTexture": {
+        "baseColor": "#E0DDD5",
+        "noiseScale": 0.5,
+        "noiseType": "fbm",
+        "detailLevel": 3
+      },
+      "color": "#E0DDD5"
+    },
+    {
+      "id": "haumea",
+      "name": "Haumea",
+      "slug": "haumea",
+      "radius": 0.9,
+      "distance": 43.13,
+      "distanceScaled": 42,
+      "orbitalPeriod": 103774,
+      "rotationSpeed": 0.01,
+      "tilt": 126.0,
+      "mass": "4.00 × 10²¹ kg",
+      "temperature": "-241°C",
+      "moonCount": 2,
+      "description": "Dwarf planet berbentuk elips karena rotasi super cepat. Namanya dari dewi fertilitas Hawaii.",
+      "funFacts": [
+        "Haumea berotasi setiap 4 jam — tercepat di solar system",
+        "Bentuknya seperti rugby ball karena rotasi cepat",
+        "Memiliki 2 bulan kecil: Hi'iaka dan Namaka"
+      ],
+      "proceduralTexture": {
+        "baseColor": "#B8B0A0",
+        "noiseScale": 0.7,
+        "noiseType": "ridged",
+        "detailLevel": 3
+      },
+      "color": "#B8B0A0"
+    },
+    {
+      "id": "makemake",
+      "name": "Makemake",
+      "slug": "makemake",
+      "radius": 0.9,
+      "distance": 45.79,
+      "distanceScaled": 43,
+      "orbitalPeriod": 111845,
+      "rotationSpeed": 0.003,
+      "tilt": 87.0,
+      "mass": "3.10 × 10²¹ kg",
+      "temperature": "-239°C",
+      "moonCount": 1,
+      "description": "Dwarf planet di sabuk Kuiper. Namanya dari dewa pencipta Rapa Nui.",
+      "funFacts": [
+        "Makemake adalah satu dari 3 dwarf planet di Kuiper Belt",
+        "Warna permukaannya merah-coklat",
+        "Ditemukan tahun 2005, saat Easter Week"
+      ],
+      "proceduralTexture": {
+        "baseColor": "#A0522D",
+        "noiseScale": 0.6,
+        "noiseType": "fbm",
+        "detailLevel": 4
+      },
+      "color": "#A0522D"
+    }
+  ]
+}

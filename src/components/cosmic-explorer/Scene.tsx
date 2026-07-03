@@ -1,6 +1,12 @@
 "use client";
 
 import { Stars, OrbitControls } from "@react-three/drei";
+import {
+  EffectComposer,
+  Bloom,
+  ToneMapping,
+} from "@react-three/postprocessing";
+import { ToneMappingMode } from "postprocessing";
 import { Camera } from "./Camera";
 import { Lighting } from "./Lighting";
 import { ScaleManager } from "./ScaleManager";
@@ -34,6 +40,15 @@ export function Scene() {
         minDistance={5}
         maxDistance={600}
       />
+      <EffectComposer>
+        <Bloom
+          intensity={1.5}
+          luminanceThreshold={0.6}
+          luminanceSmoothing={0.9}
+          mipmapBlur
+        />
+        <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
+      </EffectComposer>
     </>
   );
 }

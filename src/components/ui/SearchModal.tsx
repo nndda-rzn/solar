@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
+import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { Search } from "lucide-react";
 import * as THREE from "three";
 
@@ -10,6 +11,7 @@ export function SearchModal() {
   const { isSearchOpen, setSearchOpen, selectPlanet, setCameraTarget } =
     useExplorerStore();
   const { planets } = usePlanetData();
+  const { dwarfPlanets } = useDwarfPlanetData();
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -22,6 +24,13 @@ export function SearchModal() {
       color: p.color || "#ffffff",
       type: "planet" as const,
       distanceScaled: p.distanceScaled,
+    })),
+    ...dwarfPlanets.map((dp) => ({
+      id: dp.id,
+      name: dp.name,
+      color: dp.color,
+      type: "dwarf planet" as const,
+      distanceScaled: dp.distanceScaled,
     })),
   ];
 
@@ -93,7 +102,7 @@ export function SearchModal() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Search planets, stars..."
+            placeholder="Search planets, dwarf planets, stars..."
             className="flex-1 bg-transparent text-sm text-white outline-none placeholder:text-white/30"
           />
           <kbd className="rounded border border-white/10 bg-white/5 px-1.5 py-0.5 text-[10px] text-white/40">

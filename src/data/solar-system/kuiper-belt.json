@@ -1,0 +1,10 @@
+{
+  "count": 1000,
+  "innerRadius": 350,
+  "outerRadius": 400,
+  "thickness": 8,
+  "sizeRange": [0.2, 0.8],
+  "distribution": "uniform",
+  "orbitSpeed": 0.0001,
+  "color": "#696969"
+}

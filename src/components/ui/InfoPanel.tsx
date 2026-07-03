@@ -2,13 +2,22 @@
 
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
+import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { X, Settings, Globe, BookOpen, Lightbulb } from "lucide-react";
 
 export function InfoPanel() {
   const { selectedPlanet, selectPlanet, setCameraTarget } = useExplorerStore();
   const { getPlanetBySlug } = usePlanetData();
+  const { getDwarfPlanetBySlug } = useDwarfPlanetData();
 
-  const planet = selectedPlanet ? getPlanetBySlug(selectedPlanet) : undefined;
+  const planetData = selectedPlanet
+    ? getPlanetBySlug(selectedPlanet)
+    : undefined;
+  const dwarfPlanet =
+    !planetData && selectedPlanet
+      ? getDwarfPlanetBySlug(selectedPlanet)
+      : undefined;
+  const planet = planetData ?? dwarfPlanet;
   const isOpen = !!planet;
 
   function handleClose() {
@@ -72,7 +81,7 @@ export function InfoPanel() {
                 />
                 <Stat label="Mass" value={planet.mass} />
                 <Stat label="Temperature" value={planet.temperature} />
-                <Stat label="Moons" value={String(planet.moons)} />
+                <Stat label="Moons" value={String(planet.moonCount)} />
               </div>
             </section>
 

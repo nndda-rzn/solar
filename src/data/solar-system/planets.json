@@ -12,7 +12,8 @@
       "tilt": 0.034,
       "mass": "3.30 × 10²³ kg",
       "temperature": "167°C",
-      "moons": 0,
+      "moonCount": 0,
+      "moons": [],
       "description": "Planet terkecil dan terdekat dari Matahari. Tidak memiliki atmosfer.",
       "funFacts": [
         "Satu hari di Merkurius berlangsung 59 hari Bumi",
@@ -37,7 +38,8 @@
       "tilt": 177.4,
       "mass": "4.87 × 10²⁴ kg",
       "temperature": "464°C",
-      "moons": 0,
+      "moonCount": 0,
+      "moons": [],
       "description": "Planet terpanas di tata surya dengan atmosfer tebal CO₂.",
       "funFacts": [
         "Venus berotasi mundur dibanding planet lain",
@@ -64,7 +66,18 @@
       "tilt": 23.44,
       "mass": "5.97 × 10²⁴ kg",
       "temperature": "15°C",
-      "moons": 1,
+      "moonCount": 1,
+      "moons": [
+        {
+          "id": "moon",
+          "name": "Moon",
+          "radius": 0.8,
+          "orbitRadius": 8,
+          "orbitalPeriod": 27.3,
+          "texture": "/textures/extras/moon.webp",
+          "color": "#C0C0C0"
+        }
+      ],
       "description": "Planet kita. 71% permukaan ditutup air dan satu-satunya planet yang diketahui mendukung kehidupan.",
       "funFacts": [
         "Inti bumi sepanas permukaan matahari",
@@ -94,7 +107,8 @@
       "tilt": 25.19,
       "mass": "6.42 × 10²³ kg",
       "temperature": "-65°C",
-      "moons": 2,
+      "moonCount": 2,
+      "moons": [],
       "description": "Planet Merah. Memiliki gunung tertinggi dan lembah terdalam di tata surya.",
       "funFacts": [
         "Mars memiliki musim seperti Bumi",
@@ -120,7 +134,8 @@
       "tilt": 3.13,
       "mass": "1.90 × 10²⁷ kg",
       "temperature": "-110°C",
-      "moons": 95,
+      "moonCount": 95,
+      "moons": [],
       "description": "Planet terbesar di tata surya. Gas raksasa dengan massa 2x lipat total planet lain.",
       "funFacts": [
         "Great Red Spot adalah badai yang sudah berlangsung 350+ tahun",
@@ -146,7 +161,8 @@
       "tilt": 26.73,
       "mass": "5.68 × 10²⁶ kg",
       "temperature": "-140°C",
-      "moons": 146,
+      "moonCount": 146,
+      "moons": [],
       "description": "Planet dengan cincin indah. Gas raksasa yang kurang padat dari air.",
       "funFacts": [
         "Cincin Saturnus terbuat dari es dan batu",
@@ -173,7 +189,8 @@
       "tilt": 97.77,
       "mass": "8.68 × 10²⁵ kg",
       "temperature": "-195°C",
-      "moons": 27,
+      "moonCount": 27,
+      "moons": [],
       "description": "Es raksasa yang berotasi miring pada sisinya (98 derajat).",
       "funFacts": [
         "Uranus berotasi miring pada sisi 98 derajat",
@@ -199,7 +216,8 @@
       "tilt": 28.32,
       "mass": "1.02 × 10²⁶ kg",
       "temperature": "-200°C",
-      "moons": 16,
+      "moonCount": 16,
+      "moons": [],
       "description": "Planet paling berangin di tata surya. Angin supersonik hingga 2.100 km/jam.",
       "funFacts": [
         "Neptune memiliki angin tercepat di tata surya",
