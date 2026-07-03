@@ -11,11 +11,13 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale,
     messages: {
-      ...(await import(`@/messages/${locale}/common.json`)),
-      ...(await import(`@/messages/${locale}/simulation.json`)),
-      ...(await import(`@/messages/${locale}/infoPanel.json`)),
-      ...(await import(`@/messages/${locale}/planets.json`)),
-      ...(await import(`@/messages/${locale}/dwarfPlanets.json`)),
+      common: (await import(`@/messages/${locale}/common.json`)).default,
+      simulation: (await import(`@/messages/${locale}/simulation.json`))
+        .default,
+      infoPanel: (await import(`@/messages/${locale}/infoPanel.json`)).default,
+      planets: (await import(`@/messages/${locale}/planets.json`)).default,
+      dwarfPlanets: (await import(`@/messages/${locale}/dwarfPlanets.json`))
+        .default,
     },
   };
 });
