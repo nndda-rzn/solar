@@ -1,0 +1,16 @@
+{
+  "physicalProperties": "Physical Properties",
+  "orbitalProperties": "Orbital Properties",
+  "about": "About",
+  "funFacts": "Fun Facts",
+  "stats": {
+    "radius": "Radius",
+    "mass": "Mass",
+    "temperature": "Temperature",
+    "moonCount": "Moons",
+    "distance": "Distance",
+    "period": "Period",
+    "tilt": "Axial Tilt"
+  },
+  "close": "Close panel"
+}

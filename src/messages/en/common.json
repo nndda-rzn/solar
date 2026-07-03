@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Cosmic Explorer",
+    "subtitle": "Explore planetary orbits in real time",
+    "search": "Search",
+    "searchPlaceholder": "Search planets, dwarf planets, stars...",
+    "noResults": "No results found",
+    "date": "Date",
+    "speed": "Speed",
+    "close": "ESC"
+  },
+  "hud": {
+    "backToOverview": "Back to Overview"
+  },
+  "scale": {
+    "solar": "Solar System",
+    "stellar": "Stars",
+    "galactic": "Galaxy",
+    "cosmic": "Universe"
+  },
+  "search": {
+    "placeholder": "Search planets, dwarf planets, stars...",
+    "noResults": "No results found"
+  },
+  "types": {
+    "star": "star",
+    "planet": "planet",
+    "dwarfPlanet": "dwarf planet"
+  },
+  "language": {
+    "en": "EN",
+    "id": "ID"
+  }
+}

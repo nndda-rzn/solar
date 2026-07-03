@@ -1,0 +1,42 @@
+{
+  "pluto": {
+    "description": "Planet katai paling terkenal di sabuk Kuiper. Dulunya planet kesembilan, sekarang diklasifikasikan sebagai dwarf planet.",
+    "funFacts": [
+      "Pluto lebih kecil dari bulan kita",
+      "Satu tahun di Pluto sama dengan 248 tahun Bumi",
+      "Pluto memiliki jantung es yang terlihat dari foto New Horizons"
+    ]
+  },
+  "ceres": {
+    "description": "Objek terbesar di sabuk asteroid. Satu-satunya dwarf planet di inner solar system.",
+    "funFacts": [
+      "Ceres menyimpan 25% massa sabuk asteroid",
+      "Mungkin memiliki samudera air di bawah permukaan",
+      "Ditemukan tahun 1801, dulunya dikategorikan planet"
+    ]
+  },
+  "eris": {
+    "description": "Dwarf planet paling masif di solar system. Namanya diambil dari dewi perselisihan Greek.",
+    "funFacts": [
+      "Eris lebih masif dari Pluto",
+      "Penemuan Eris yang mendorong reklassifikasi Pluto",
+      "Satu orbit Eris memakan waktu 559 tahun"
+    ]
+  },
+  "haumea": {
+    "description": "Dwarf planet berbentuk elips karena rotasi super cepat. Namanya dari dewi fertilitas Hawaii.",
+    "funFacts": [
+      "Haumea berotasi setiap 4 jam — tercepat di solar system",
+      "Bentuknya seperti rugby ball karena rotasi cepat",
+      "Memiliki 2 bulan kecil: Hi'iaka dan Namaka"
+    ]
+  },
+  "makemake": {
+    "description": "Dwarf planet di sabuk Kuiper. Namanya dari dewa pencipta Rapa Nui.",
+    "funFacts": [
+      "Makemake adalah satu dari 3 dwarf planet di Kuiper Belt",
+      "Warna permukaannya merah-coklat",
+      "Ditemukan tahun 2005, saat Easter Week"
+    ]
+  }
+}

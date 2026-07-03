@@ -2,8 +2,10 @@
 
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { Play, Pause, RotateCcw } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function SimulationControls() {
+  const t = useTranslations("simulation");
   const { isPlaying, togglePlay, speed, setSpeed, reset } =
     useSimulationStore();
 
@@ -13,7 +15,7 @@ export function SimulationControls() {
         {/* Play / Pause */}
         <button
           onClick={togglePlay}
-          aria-label={isPlaying ? "Pause simulation" : "Play simulation"}
+          aria-label={isPlaying ? t("pause") : t("play")}
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-200 hover:border-cosmic-accent/40 hover:bg-cosmic-accent/20 hover:text-cosmic-accent hover:shadow-[0_0_12px_rgba(74,158,255,0.25)] active:scale-95"
         >
           {isPlaying ? (
@@ -26,7 +28,7 @@ export function SimulationControls() {
         {/* Speed label + slider + value */}
         <div className="flex items-center gap-3">
           <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">
-            Speed
+            {t("speed")}
           </span>
           <input
             type="range"
@@ -46,7 +48,7 @@ export function SimulationControls() {
         {/* Reset */}
         <button
           onClick={reset}
-          aria-label="Reset simulation"
+          aria-label={t("reset")}
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-200 hover:border-cosmic-accent/40 hover:bg-cosmic-accent/20 hover:text-cosmic-accent hover:shadow-[0_0_12px_rgba(74,158,255,0.25)] active:scale-95"
         >
           <RotateCcw className="h-4 w-4" />

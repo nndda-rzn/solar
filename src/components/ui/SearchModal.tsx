@@ -5,9 +5,11 @@ import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { Search } from "lucide-react";
+import { useTranslations } from "next-intl";
 import * as THREE from "three";
 
 export function SearchModal() {
+  const t = useTranslations("common");
   const { isSearchOpen, setSearchOpen, selectPlanet, setCameraTarget } =
     useExplorerStore();
   const { planets } = usePlanetData();
@@ -33,6 +35,15 @@ export function SearchModal() {
       distanceScaled: dp.distanceScaled,
     })),
   ];
+
+  const getTypeLabel = (type: string) => {
+    const typeMap: Record<string, string> = {
+      star: t("types.star"),
+      planet: t("types.planet"),
+      "dwarf planet": t("types.dwarfPlanet"),
+    };
+    return typeMap[type] ?? type;
+  };
 
   const filtered = allObjects.filter((obj) =>
     obj.name.toLowerCase().includes(query.toLowerCase()),
@@ -102,7 +113,7 @@ export function SearchModal() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Search planets, dwarf planets, stars..."
+            placeholder={t("search.placeholder")}
             className="flex-1 bg-transparent text-sm text-white outline-none placeholder:text-white/30"
           />
           <kbd className="rounded border border-white/10 bg-white/5 px-1.5 py-0.5 text-[10px] text-white/40">
@@ -112,7 +123,7 @@ export function SearchModal() {
         <div className="max-h-80 overflow-y-auto p-2">
           {filtered.length === 0 ? (
             <div className="py-8 text-center text-sm text-white/40">
-              No results found
+              {t("search.noResults")}
             </div>
           ) : (
             filtered.map((obj, index) => (
@@ -136,7 +147,7 @@ export function SearchModal() {
                 />
                 <span className="text-sm font-medium">{obj.name}</span>
                 <span className="ml-auto text-xs text-white/30 capitalize">
-                  {obj.type}
+                  {getTypeLabel(obj.type)}
                 </span>
               </button>
             ))

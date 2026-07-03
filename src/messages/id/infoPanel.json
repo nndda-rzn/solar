@@ -1,0 +1,16 @@
+{
+  "physicalProperties": "Properti Fisik",
+  "orbitalProperties": "Properti Orbit",
+  "about": "Tentang",
+  "funFacts": "Fakta Menarik",
+  "stats": {
+    "radius": "Radius",
+    "mass": "Massa",
+    "temperature": "Suhu",
+    "moonCount": "Bulan",
+    "distance": "Jarak",
+    "period": "Periode Orbit",
+    "tilt": "Kemiringan Sumbu"
+  },
+  "close": "Tutup panel"
+}

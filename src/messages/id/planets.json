@@ -1,0 +1,72 @@
+{
+  "mercury": {
+    "description": "Planet terkecil dan terdekat dari Matahari. Tidak memiliki atmosfer.",
+    "funFacts": [
+      "Satu hari di Merkurius berlangsung 59 hari Bumi",
+      "Merkurius memiliki orbit paling eksentrik"
+    ]
+  },
+  "venus": {
+    "description": "Planet terpanas di tata surya dengan atmosfer tebal CO₂.",
+    "funFacts": [
+      "Venus berotasi mundur dibanding planet lain",
+      "Satu hari di Venus lebih lama dari setahun"
+    ]
+  },
+  "earth": {
+    "description": "Planet kita. 71% permukaan ditutup air dan satu-satunya planet yang diketahui mendukung kehidupan.",
+    "funFacts": [
+      "Inti bumi sepanas permukaan matahari",
+      "Bumi berotasi pada kecepatan 1.670 km/jam di khatulistiwa"
+    ]
+  },
+  "mars": {
+    "description": "Planet Merah. Memiliki gunung tertinggi dan lembah terdalam di tata surya.",
+    "funFacts": [
+      "Mars memiliki musim seperti Bumi",
+      "Olympus Mons 3x lebih tinggi dari Everest"
+    ]
+  },
+  "jupiter": {
+    "description": "Planet terbesar di tata surya. Gas raksasa dengan massa 2x lipat total planet lain.",
+    "funFacts": [
+      "Great Red Spot adalah badai yang sudah berlangsung 350+ tahun",
+      "Jupiter memiliki medan magnet 20.000x lebih kuat dari Bumi"
+    ]
+  },
+  "saturn": {
+    "description": "Planet dengan cincin indah. Gas raksasa yang kurang padat dari air.",
+    "funFacts": [
+      "Cincin Saturnus terbuat dari es dan batu",
+      "Saturn bisa mengambang di bak mandi yang cukup besar"
+    ]
+  },
+  "uranus": {
+    "description": "Es raksasa yang berotasi miring pada sisinya (98 derajat).",
+    "funFacts": [
+      "Uranus berotasi miring pada sisi 98 derajat",
+      "Uranus adalah planet pertama yang ditemukan dengan teleskop"
+    ]
+  },
+  "neptune": {
+    "description": "Planet paling berangin di tata surya. Angin supersonik hingga 2.100 km/jam.",
+    "funFacts": [
+      "Neptune memiliki angin tercepat di tata surya",
+      "Neptune butuh 165 tahun untuk mengorbit Matahari"
+    ]
+  },
+  "sun": {
+    "description": "Bintang di pusat tata surya kita. Mengandung 99,86% massa total tata surya.",
+    "funFacts": [
+      "Matahari berusia 4,6 miliar tahun",
+      "Cahaya Matahari membutuhkan 8 menit untuk mencapai Bumi"
+    ]
+  },
+  "moon": {
+    "description": "Satu-satunya satelit alami Bumi. Mempengaruhi pasang surut dan stabilisasi kemiringan sumbu Bumi.",
+    "funFacts": [
+      "Bulan perlahan menjauh dari Bumi 3,8 cm per tahun",
+      "Sisi Bulan yang sama selalu menghadap Bumi"
+    ]
+  }
+}

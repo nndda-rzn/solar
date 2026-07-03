@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Penjelajah Kosmik",
+    "subtitle": "Jelajahi orbit planet secara real time",
+    "search": "Cari",
+    "searchPlaceholder": "Cari planet, planet katai, bintang...",
+    "noResults": "Tidak ada hasil ditemukan",
+    "date": "Tanggal",
+    "speed": "Kecepatan",
+    "close": "ESC"
+  },
+  "hud": {
+    "backToOverview": "Kembali ke Overview"
+  },
+  "scale": {
+    "solar": "Tata Surya",
+    "stellar": "Bintang",
+    "galactic": "Galaksi",
+    "cosmic": "Alam Semesta"
+  },
+  "search": {
+    "placeholder": "Cari planet, planet katai, bintang...",
+    "noResults": "Tidak ada hasil ditemukan"
+  },
+  "types": {
+    "star": "bintang",
+    "planet": "planet",
+    "dwarfPlanet": "planet katai"
+  },
+  "language": {
+    "en": "EN",
+    "id": "ID"
+  }
+}

@@ -4,8 +4,12 @@ import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { X, Settings, Globe, BookOpen, Lightbulb } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function InfoPanel() {
+  const t = useTranslations("infoPanel");
+  const tPlanets = useTranslations("planets");
+  const tDwarfPlanets = useTranslations("dwarfPlanets");
   const { selectedPlanet, selectPlanet, setCameraTarget } = useExplorerStore();
   const { getPlanetBySlug } = usePlanetData();
   const { getDwarfPlanetBySlug } = useDwarfPlanetData();
@@ -19,6 +23,20 @@ export function InfoPanel() {
       : undefined;
   const planet = planetData ?? dwarfPlanet;
   const isOpen = !!planet;
+  const isDwarfPlanet = !!dwarfPlanet;
+
+  const getDescription = () => {
+    if (!selectedPlanet) return "";
+    if (isDwarfPlanet) return tDwarfPlanets(`${selectedPlanet}.description`);
+    return tPlanets(`${selectedPlanet}.description`);
+  };
+
+  const getFunFacts = (): string[] => {
+    if (!selectedPlanet) return [];
+    if (isDwarfPlanet)
+      return tDwarfPlanets.raw(`${selectedPlanet}.funFacts`) as string[];
+    return tPlanets.raw(`${selectedPlanet}.funFacts`) as string[];
+  };
 
   function handleClose() {
     selectPlanet(null);
@@ -47,7 +65,7 @@ export function InfoPanel() {
         {/* Close button */}
         <button
           onClick={handleClose}
-          aria-label="Close panel"
+          aria-label={t("close")}
           className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/60 transition-all duration-200 hover:border-white/20 hover:bg-white/10 hover:text-white"
         >
           <X className="h-4 w-4" />
@@ -63,7 +81,7 @@ export function InfoPanel() {
               >
                 {planet.name}
               </h2>
-              <p className="mt-1 text-sm text-white/50">{planet.description}</p>
+              <p className="mt-1 text-sm text-white/50">{getDescription()}</p>
             </div>
 
             <hr className="border-white/10" />
@@ -72,16 +90,22 @@ export function InfoPanel() {
             <section>
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white/70">
                 <Settings className="h-4 w-4 text-cosmic-accent" />
-                Physical Properties
+                {t("physicalProperties")}
               </div>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
                 <Stat
-                  label="Radius"
+                  label={t("stats.radius")}
                   value={`${planet.radius.toLocaleString()} km`}
                 />
-                <Stat label="Mass" value={planet.mass} />
-                <Stat label="Temperature" value={planet.temperature} />
-                <Stat label="Moons" value={String(planet.moonCount)} />
+                <Stat label={t("stats.mass")} value={planet.mass} />
+                <Stat
+                  label={t("stats.temperature")}
+                  value={planet.temperature}
+                />
+                <Stat
+                  label={t("stats.moonCount")}
+                  value={String(planet.moonCount)}
+                />
               </div>
             </section>
 
@@ -91,15 +115,18 @@ export function InfoPanel() {
             <section>
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white/70">
                 <Globe className="h-4 w-4 text-cosmic-accent" />
-                Orbital Properties
+                {t("orbitalProperties")}
               </div>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-                <Stat label="Distance" value={`${planet.distance} AU`} />
                 <Stat
-                  label="Period"
+                  label={t("stats.distance")}
+                  value={`${planet.distance} AU`}
+                />
+                <Stat
+                  label={t("stats.period")}
                   value={`${planet.orbitalPeriod.toLocaleString()} days`}
                 />
-                <Stat label="Tilt" value={`${planet.tilt}°`} />
+                <Stat label={t("stats.tilt")} value={`${planet.tilt}°`} />
               </div>
             </section>
 
@@ -109,10 +136,10 @@ export function InfoPanel() {
             <section>
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white/70">
                 <BookOpen className="h-4 w-4 text-cosmic-accent" />
-                About
+                {t("about")}
               </div>
               <p className="text-sm leading-relaxed text-white/50">
-                {planet.description}
+                {getDescription()}
               </p>
             </section>
 
@@ -122,10 +149,10 @@ export function InfoPanel() {
             <section>
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white/70">
                 <Lightbulb className="h-4 w-4 text-cosmic-accent" />
-                Fun Facts
+                {t("funFacts")}
               </div>
               <ul className="flex flex-col gap-2">
-                {planet.funFacts.map((fact) => (
+                {getFunFacts().map((fact) => (
                   <li
                     key={fact}
                     className="flex items-start gap-2 text-sm text-white/50"

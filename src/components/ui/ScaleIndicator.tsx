@@ -1,17 +1,18 @@
 "use client";
 
 import { useExplorerStore } from "@/lib/store/explorer-store";
-import { SCALES, ScaleMode } from "@/config/scales";
+import { ScaleMode } from "@/config/scales";
+import { useTranslations } from "next-intl";
 
 const SCALE_ORDER: ScaleMode[] = ["solar", "stellar", "galactic", "cosmic"];
 
 export function ScaleIndicator() {
+  const t = useTranslations("common");
   const { scale, setScale } = useExplorerStore();
 
   return (
     <div className="pointer-events-auto absolute bottom-20 left-4 flex flex-col gap-1">
       {SCALE_ORDER.map((key) => {
-        const config = SCALES[key];
         const isActive = scale === key;
 
         return (
@@ -29,7 +30,7 @@ export function ScaleIndicator() {
                 isActive ? "bg-cosmic-accent" : "bg-white/20"
               }`}
             />
-            <span>{config.label}</span>
+            <span>{t(`scale.${key}`)}</span>
           </button>
         );
       })}
