@@ -19,9 +19,17 @@ interface ExplorerState {
   selectedConstellation: string | null;
   selectConstellation: (constellation: string | null) => void;
 
-  // Hovered object
+  // Hovered object (planets)
   hoveredPlanet: string | null;
   hoverPlanet: (planet: string | null) => void;
+
+  // Hovered object (stars)
+  hoveredStar: string | null;
+  hoverStar: (star: string | null) => void;
+
+  // Hovered object (constellations)
+  hoveredConstellation: string | null;
+  hoverConstellation: (constellation: string | null) => void;
 
   // Transition state
   isTransitioning: boolean;
@@ -60,9 +68,18 @@ export const useExplorerStore = create<ExplorerState>((set) => ({
   selectConstellation: (constellation) =>
     set({ selectedConstellation: constellation }),
 
-  // Hovered object
+  // Hovered object (planets)
   hoveredPlanet: null,
   hoverPlanet: (planet) => set({ hoveredPlanet: planet }),
+
+  // Hovered object (stars)
+  hoveredStar: null,
+  hoverStar: (star) => set({ hoveredStar: star }),
+
+  // Hovered object (constellations)
+  hoveredConstellation: null,
+  hoverConstellation: (constellation) =>
+    set({ hoveredConstellation: constellation }),
 
   // Transition state
   isTransitioning: false,
