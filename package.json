@@ -10,6 +10,8 @@
     "lint": "eslint src --fix --ext .ts,.tsx",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,md}\"",
     "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:ci": "jest --ci",
     "prepare": "husky",
     "pre-commit": "lint-staged"
   },
@@ -49,6 +51,7 @@
     "@commitlint/config-conventional": "^21.2.0",
     "@eslint/eslintrc": "^3.3.5",
     "@types/howler": "^2.2.13",
+    "@types/jest": "^30.0.0",
     "@types/node": "^26.0.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
@@ -57,10 +60,12 @@
     "eslint": "^9.39.4",
     "eslint-config-next": "^14.2.35",
     "husky": "^9.1.7",
+    "jest": "^30.4.2",
     "lint-staged": "^17.0.8",
     "postcss": "^8.5.16",
     "prettier": "^3.9.4",
     "tailwindcss": "^4.3.2",
+    "ts-jest": "^29.4.11",
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.62.1"
   }
