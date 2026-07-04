@@ -18,13 +18,10 @@ export function PlanetMoon({ moonData }: PlanetMoonProps) {
 
   const moonRadius = Math.max(moonData.radius, 0.3);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!groupRef.current) return;
 
-    const { isPlaying, speed } = useSimulationStore.getState();
-    if (!isPlaying) return;
-
-    const dayOffset = state.clock.getElapsedTime() * speed;
+    const { dayOffset } = useSimulationStore.getState();
     const angle =
       ((dayOffset / moonData.orbitalPeriod) * 2 * Math.PI) % (2 * Math.PI);
 

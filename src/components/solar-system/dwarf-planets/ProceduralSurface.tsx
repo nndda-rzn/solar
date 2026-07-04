@@ -5,6 +5,7 @@ import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { useProceduralTexture } from "@/hooks/useProceduralTexture";
 import { ProceduralTextureConfig } from "@/types/celestial/dwarf-planet";
+import { useSimulationStore } from "@/lib/store/simulation-store";
 
 interface ProceduralSurfaceProps {
   radius: number;
@@ -24,7 +25,8 @@ export function ProceduralSurface({
 
   useFrame(() => {
     if (meshRef.current) {
-      meshRef.current.rotation.y += rotationSpeed * 0.01;
+      const { dayOffset } = useSimulationStore.getState();
+      meshRef.current.rotation.y = dayOffset * rotationSpeed * 0.01;
     }
   });
 

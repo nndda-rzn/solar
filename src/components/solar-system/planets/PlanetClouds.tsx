@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
+import { useSimulationStore } from "@/lib/store/simulation-store";
 
 interface PlanetCloudsProps {
   texturePath: string;
@@ -23,7 +24,9 @@ export function PlanetClouds({
 
   useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.y += rotationSpeed * 0.012;
+      const { dayOffset } = useSimulationStore.getState();
+      // Cloud rotation slightly faster than surface, tied to same time source
+      ref.current.rotation.y = dayOffset * rotationSpeed * 0.012;
     }
   });
 

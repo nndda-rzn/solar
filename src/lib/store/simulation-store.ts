@@ -13,6 +13,7 @@ interface SimulationState {
   // Day offset (simulation time)
   dayOffset: number;
   setDayOffset: (dayOffset: number) => void;
+  advanceDayOffset: (delta: number) => void;
 
   // Reset
   reset: () => void;
@@ -31,7 +32,13 @@ export const useSimulationStore = create<SimulationState>((set) => ({
   // Day offset
   dayOffset: 0,
   setDayOffset: (dayOffset) => set({ dayOffset }),
+  advanceDayOffset: (delta) =>
+    set((state) => ({
+      dayOffset: state.isPlaying
+        ? state.dayOffset + delta * state.speed
+        : state.dayOffset,
+    })),
 
-  // Reset all
-  reset: () => set({ isPlaying: true, speed: 1, dayOffset: 0 }),
+  // Reset (preserves dayOffset to not affect current date/time)
+  reset: () => set({ isPlaying: true, speed: 1 }),
 }));

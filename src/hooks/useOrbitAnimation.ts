@@ -16,17 +16,14 @@ export function useOrbitAnimation(
 ) {
   const positionRef = useRef(new THREE.Vector3());
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!config || !groupRef.current) return;
 
-    const { isPlaying, speed } = useSimulationStore.getState();
-    if (!isPlaying) return;
-
-    const dayOffset = state.clock.getElapsedTime() * speed;
+    const { dayOffset } = useSimulationStore.getState();
     const pos = calculateOrbitalPosition(
       config.distance,
       config.period,
-      dayOffset,
+      dayOffset + (config.initialOffset || 0),
       0,
     );
 

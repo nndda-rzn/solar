@@ -10,6 +10,7 @@ import { ToneMappingMode } from "postprocessing";
 import { Camera } from "./Camera";
 import { Lighting } from "./Lighting";
 import { ScaleManager } from "./ScaleManager";
+import { SimulationClock } from "./SimulationClock";
 import { SolarSystemScene } from "@/components/solar-system/SolarSystemScene";
 import { StellarScene } from "@/components/stellar";
 import { useExplorerStore } from "@/lib/store/explorer-store";
@@ -24,6 +25,7 @@ export function Scene() {
       <Camera />
       <Lighting />
       <ScaleManager />
+      <SimulationClock />
       <Stars
         radius={5000}
         depth={100}
