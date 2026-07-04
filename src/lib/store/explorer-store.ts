@@ -7,9 +7,17 @@ interface ExplorerState {
   scale: ScaleMode;
   setScale: (scale: ScaleMode) => void;
 
-  // Selected object
+  // Selected object (planets)
   selectedPlanet: string | null;
   selectPlanet: (planet: string | null) => void;
+
+  // Selected object (stars)
+  selectedStar: string | null;
+  selectStar: (star: string | null) => void;
+
+  // Selected object (constellations)
+  selectedConstellation: string | null;
+  selectConstellation: (constellation: string | null) => void;
 
   // Hovered object
   hoveredPlanet: string | null;
@@ -39,9 +47,18 @@ export const useExplorerStore = create<ExplorerState>((set) => ({
   scale: "solar",
   setScale: (scale) => set({ scale }),
 
-  // Selected object
+  // Selected object (planets)
   selectedPlanet: null,
   selectPlanet: (planet) => set({ selectedPlanet: planet }),
+
+  // Selected object (stars)
+  selectedStar: null,
+  selectStar: (star) => set({ selectedStar: star }),
+
+  // Selected object (constellations)
+  selectedConstellation: null,
+  selectConstellation: (constellation) =>
+    set({ selectedConstellation: constellation }),
 
   // Hovered object
   hoveredPlanet: null,

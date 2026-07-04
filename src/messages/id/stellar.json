@@ -1,0 +1,18 @@
+{
+  "stellar": {
+    "stats": {
+      "magnitude": "Magnitudo Tampak",
+      "spectralType": "Tipe Spektral",
+      "distance": "Jarak",
+      "hip": "ID Hipparcos"
+    },
+    "constellation": {
+      "memberStars": "Bintang Anggota",
+      "mythology": "Mitologi"
+    },
+    "types": {
+      "star": "bintang",
+      "constellation": "rasi bintang"
+    }
+  }
+}

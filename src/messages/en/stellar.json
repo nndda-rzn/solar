@@ -1,0 +1,18 @@
+{
+  "stellar": {
+    "stats": {
+      "magnitude": "Apparent Magnitude",
+      "spectralType": "Spectral Type",
+      "distance": "Distance",
+      "hip": "Hipparcos ID"
+    },
+    "constellation": {
+      "memberStars": "Member Stars",
+      "mythology": "Mythology"
+    },
+    "types": {
+      "star": "star",
+      "constellation": "constellation"
+    }
+  }
+}

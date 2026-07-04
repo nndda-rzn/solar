@@ -1,0 +1,82 @@
+{
+  "constellations": [
+    {
+      "id": "orion",
+      "name": "Orion",
+      "indonesianName": "Belantik",
+      "abbreviation": "Ori",
+      "stars": [
+        "betelgeuse",
+        "rigel",
+        "bellatrix",
+        "alnitak",
+        "alnilam",
+        "mintaka"
+      ],
+      "lines": [
+        { "from": "betelgeuse", "to": "bellatrix" },
+        { "from": "bellatrix", "to": "mintaka" },
+        { "from": "mintaka", "to": "alnilam" },
+        { "from": "alnilam", "to": "alnitak" },
+        { "from": "betelgeuse", "to": "alnitak" },
+        { "from": "rigel", "to": "alnitak" }
+      ],
+      "content": {
+        "en": {
+          "description": "The Hunter constellation, one of the most recognizable patterns in the night sky with the famous Orion Belt.",
+          "mythology": "In Greek mythology, Orion was a great hunter placed among the stars by Zeus. He eternally pursues the Pleiades sisters."
+        },
+        "id": {
+          "description": "Rasi Sang Pemburu, salah satu pola paling mudah dikenali di langit malam dengan Sabuk Orion yang terkenal.",
+          "mythology": "Dalam mitologi Yunani, Orion adalah pemburu hebat yang ditempatkan di antara bintang oleh Zeus. Ia mengejar saudari Pleiades selamanya."
+        }
+      }
+    },
+    {
+      "id": "scorpius",
+      "name": "Scorpius",
+      "indonesianName": "Kalajengking",
+      "abbreviation": "Sco",
+      "stars": ["antares", "shaula", "sargas", "dschubba", "graffias"],
+      "lines": [
+        { "from": "graffias", "to": "dschubba" },
+        { "from": "dschubba", "to": "antares" },
+        { "from": "antares", "to": "sargas" },
+        { "from": "sargas", "to": "shaula" }
+      ],
+      "content": {
+        "en": {
+          "description": "The Scorpion constellation, one of the zodiac constellations with the bright red star Antares marking the scorpion heart.",
+          "mythology": "In Greek mythology, the scorpion was sent by Gaia to kill Orion. They were placed on opposite sides of the sky so they never meet."
+        },
+        "id": {
+          "description": "Rasi Kalajengking, salah satu rasi zodiak dengan bintang merah terang Antares yang menandai jantung kalajengking.",
+          "mythology": "Dalam mitologi Yunani, kalajengking dikirim oleh Gaia untuk membunuh Orion. Mereka ditempatkan di sisi berlawanan langit agar tidak pernah bertemu."
+        }
+      }
+    },
+    {
+      "id": "lyra",
+      "name": "Lyra",
+      "indonesianName": "Kecapi",
+      "abbreviation": "Lyr",
+      "stars": ["vega", "sheliak", "sulafat", "delta-lyrae"],
+      "lines": [
+        { "from": "vega", "to": "sheliak" },
+        { "from": "sheliak", "to": "sulafat" },
+        { "from": "sulafat", "to": "delta-lyrae" },
+        { "from": "delta-lyrae", "to": "vega" }
+      ],
+      "content": {
+        "en": {
+          "description": "The Lyre constellation, representing the musical instrument of Orpheus. Contains the bright star Vega, fifth brightest in the night sky.",
+          "mythology": "In Greek mythology, this is the lyre of Orpheus, the legendary musician whose music could charm all living things and even stones."
+        },
+        "id": {
+          "description": "Rasi Kecapi, melambangkan alat musik Orpheus. Mengandung bintang terang Vega, bintang paling terang kelima di langit malam.",
+          "mythology": "Dalam mitologi Yunani, ini adalah kecapi Orpheus, musisi legendaris yang musiknya bisa memikat semua makhluk hidup bahkan batu."
+        }
+      }
+    }
+  ]
+}

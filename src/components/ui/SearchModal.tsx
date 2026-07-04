@@ -4,22 +4,36 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
+import { useStarData } from "@/hooks/data/useStarData";
 import { Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 import * as THREE from "three";
 
 export function SearchModal() {
   const t = useTranslations("common");
-  const { isSearchOpen, setSearchOpen, selectPlanet, setCameraTarget } =
-    useExplorerStore();
+  const tStellar = useTranslations("stellar");
+  const {
+    isSearchOpen,
+    setSearchOpen,
+    selectPlanet,
+    selectStar,
+    setCameraTarget,
+  } = useExplorerStore();
   const { planets } = usePlanetData();
   const { dwarfPlanets } = useDwarfPlanetData();
+  const { stars } = useStarData();
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const allObjects = [
-    { id: "sun", name: "Sun", color: "#FBBF24", type: "star" as const },
+    {
+      id: "sun",
+      name: "Sun",
+      color: "#FBBF24",
+      type: "star" as const,
+      distanceScaled: undefined as number | undefined,
+    },
     ...planets.map((p) => ({
       id: p.id,
       name: p.name,
@@ -34,6 +48,16 @@ export function SearchModal() {
       type: "dwarf planet" as const,
       distanceScaled: dp.distanceScaled,
     })),
+    ...stars.map((s) => ({
+      id: s.id,
+      name: s.name,
+      color: s.color,
+      type: "stellar" as const,
+      x: s.x,
+      y: s.y,
+      z: s.z,
+      distanceScaled: undefined as number | undefined,
+    })),
   ];
 
   const getTypeLabel = (type: string) => {
@@ -41,6 +65,7 @@ export function SearchModal() {
       star: t("types.star"),
       planet: t("types.planet"),
       "dwarf planet": t("types.dwarfPlanet"),
+      stellar: tStellar("types.star"),
     };
     return typeMap[type] ?? type;
   };
@@ -62,19 +87,26 @@ export function SearchModal() {
   }, [query]);
 
   const handleSelect = useCallback(
-    (id: string, distanceScaled?: number) => {
-      if (id === "sun") {
+    (obj: (typeof allObjects)[0]) => {
+      if (obj.id === "sun") {
         selectPlanet(null);
+        selectStar(null);
         setCameraTarget(new THREE.Vector3(0, 0, 0));
+      } else if (obj.type === "stellar") {
+        selectPlanet(null);
+        selectStar(obj.id);
+        const pos = new THREE.Vector3(obj.x, obj.y, obj.z);
+        setCameraTarget(pos);
       } else {
-        selectPlanet(id);
-        const dist = (distanceScaled || 10) * 10;
+        selectStar(null);
+        selectPlanet(obj.id);
+        const dist = (obj.distanceScaled ?? 10) * 10;
         const pos = new THREE.Vector3(dist, 0, 0);
         setCameraTarget(pos);
       }
       setSearchOpen(false);
     },
-    [selectPlanet, setCameraTarget, setSearchOpen],
+    [selectPlanet, selectStar, setCameraTarget, setSearchOpen],
   );
 
   const handleKeyDown = useCallback(
@@ -87,10 +119,7 @@ export function SearchModal() {
         setSelectedIndex((i) => Math.max(i - 1, 0));
       } else if (e.key === "Enter" && filtered[selectedIndex]) {
         const obj = filtered[selectedIndex];
-        handleSelect(
-          obj.id,
-          "distanceScaled" in obj ? obj.distanceScaled : undefined,
-        );
+        handleSelect(obj);
       }
     },
     [filtered, selectedIndex, handleSelect],
@@ -129,12 +158,7 @@ export function SearchModal() {
             filtered.map((obj, index) => (
               <button
                 key={obj.id}
-                onClick={() =>
-                  handleSelect(
-                    obj.id,
-                    "distanceScaled" in obj ? obj.distanceScaled : undefined,
-                  )
-                }
+                onClick={() => handleSelect(obj)}
                 className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-colors ${
                   index === selectedIndex
                     ? "bg-cosmic-accent/20 text-cosmic-accent"

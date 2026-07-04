@@ -18,6 +18,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       planets: (await import(`@/messages/${locale}/planets.json`)).default,
       dwarfPlanets: (await import(`@/messages/${locale}/dwarfPlanets.json`))
         .default,
+      stellar: (await import(`@/messages/${locale}/stellar.json`)).default,
     },
   };
 });

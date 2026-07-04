@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { SimulationControls } from "./SimulationControls";
 import { ScaleIndicator } from "./ScaleIndicator";
 import { InfoPanel } from "./InfoPanel";
+import { StellarInfoPanel } from "./StellarInfoPanel";
 import { HeaderBar } from "./HeaderBar";
 import { SearchModal } from "./SearchModal";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
@@ -42,6 +43,7 @@ export function HUD() {
       <SimulationControls />
       <ScaleIndicator />
       <InfoPanel />
+      <StellarInfoPanel />
       <SearchModal />
     </div>
   );

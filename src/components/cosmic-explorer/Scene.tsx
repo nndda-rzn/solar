@@ -11,10 +11,12 @@ import { Camera } from "./Camera";
 import { Lighting } from "./Lighting";
 import { ScaleManager } from "./ScaleManager";
 import { SolarSystemScene } from "@/components/solar-system/SolarSystemScene";
+import { StellarScene } from "@/components/stellar";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 
 export function Scene() {
   const selectedPlanet = useExplorerStore((s) => s.selectedPlanet);
+  const scale = useExplorerStore((s) => s.scale);
   const isFlying = !!selectedPlanet;
 
   return (
@@ -31,7 +33,8 @@ export function Scene() {
         fade
         speed={0.5}
       />
-      <SolarSystemScene />
+      {scale === "solar" && <SolarSystemScene />}
+      {scale === "stellar" && <StellarScene />}
       <OrbitControls
         enabled={!isFlying}
         enablePan={true}

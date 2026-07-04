@@ -1,0 +1,655 @@
+{
+  "stars": [
+    {
+      "id": "sirius",
+      "name": "Sirius",
+      "hip": 32349,
+      "ra": 101.287,
+      "dec": -16.716,
+      "magnitude": -1.46,
+      "spectralType": "A1V",
+      "color": "#9db4ff",
+      "distance": 8.6,
+      "content": {
+        "en": {
+          "description": "Sirius is the brightest star in Earth night sky, located in Canis Major constellation.",
+          "facts": [
+            "Brightest star in night sky",
+            "Binary star system with white dwarf companion",
+            "Distance: 8.6 light-years from Earth",
+            "Also called the Dog Star"
+          ]
+        },
+        "id": {
+          "description": "Sirius adalah bintang paling terang di langit malam Bumi, terletak di konstelasi Canis Major.",
+          "facts": [
+            "Bintang paling terang di langit malam",
+            "Sistem bintang biner dengan pendamping katai putih",
+            "Jarak: 8,6 tahun cahaya dari Bumi",
+            "Juga disebut Bintang Anjing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "canopus",
+      "name": "Canopus",
+      "hip": 30438,
+      "ra": 95.988,
+      "dec": -52.696,
+      "magnitude": -0.74,
+      "spectralType": "A9II",
+      "color": "#ffd2a1",
+      "distance": 310,
+      "content": {
+        "en": {
+          "description": "Canopus is the second-brightest star, a bright giant in constellation Carina.",
+          "facts": [
+            "Second-brightest star in night sky",
+            "13,300 times more luminous than the Sun",
+            "Used for spacecraft navigation",
+            "Distance: 310 light-years"
+          ]
+        },
+        "id": {
+          "description": "Canopus adalah bintang paling terang kedua, raksasa terang di konstelasi Carina.",
+          "facts": [
+            "Bintang paling terang kedua di langit malam",
+            "13.300 kali lebih terang dari Matahari",
+            "Digunakan untuk navigasi pesawat ruang angkasa",
+            "Jarak: 310 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "arcturus",
+      "name": "Arcturus",
+      "hip": 69673,
+      "ra": 213.915,
+      "dec": 19.182,
+      "magnitude": -0.05,
+      "spectralType": "K1III",
+      "color": "#ffcc6f",
+      "distance": 36.7,
+      "content": {
+        "en": {
+          "description": "Arcturus is the brightest star in the northern celestial hemisphere, located in Boötes.",
+          "facts": [
+            "Fourth-brightest star in night sky",
+            "Orange giant star",
+            "Distance: 36.7 light-years",
+            "170 times more luminous than the Sun"
+          ]
+        },
+        "id": {
+          "description": "Arcturus adalah bintang paling terang di belahan langit utara, terletak di Boötes.",
+          "facts": [
+            "Bintang paling terang keempat di langit malam",
+            "Bintang raksasa oranye",
+            "Jarak: 36,7 tahun cahaya",
+            "170 kali lebih terang dari Matahari"
+          ]
+        }
+      }
+    },
+    {
+      "id": "vega",
+      "name": "Vega",
+      "hip": 91262,
+      "ra": 279.234,
+      "dec": 38.784,
+      "magnitude": 0.03,
+      "spectralType": "A0V",
+      "color": "#9db4ff",
+      "distance": 25,
+      "content": {
+        "en": {
+          "description": "Vega is the brightest star in Lyra, was the north pole star 12,000 years ago.",
+          "facts": [
+            "Fifth-brightest star in night sky",
+            "Surrounded by debris disk",
+            "Distance: 25 light-years",
+            "Part of the Summer Triangle"
+          ]
+        },
+        "id": {
+          "description": "Vega adalah bintang paling terang di Lyra, merupakan bintang kutub utara 12.000 tahun lalu.",
+          "facts": [
+            "Bintang paling terang kelima di langit malam",
+            "Dikelilingi oleh disk puing",
+            "Jarak: 25 tahun cahaya",
+            "Bagian dari Segitiga Musim Panas"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rigel",
+      "name": "Rigel",
+      "hip": 24436,
+      "ra": 78.634,
+      "dec": -8.202,
+      "magnitude": 0.13,
+      "spectralType": "B8Ia",
+      "color": "#9db4ff",
+      "distance": 860,
+      "content": {
+        "en": {
+          "description": "Rigel is a blue supergiant in Orion, marking the hunter left foot.",
+          "facts": [
+            "Seventh-brightest star in night sky",
+            "Blue supergiant star",
+            "120,000 times more luminous than the Sun",
+            "Distance: 860 light-years"
+          ]
+        },
+        "id": {
+          "description": "Rigel adalah supergiant biru di Orion, menandai kaki kiri pemburu.",
+          "facts": [
+            "Bintang paling terang ketujuh di langit malam",
+            "Bintang supergiant biru",
+            "120.000 kali lebih terang dari Matahari",
+            "Jarak: 860 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "betelgeuse",
+      "name": "Betelgeuse",
+      "hip": 27989,
+      "ra": 88.793,
+      "dec": 7.407,
+      "magnitude": 0.5,
+      "spectralType": "M1Ia",
+      "color": "#ff8247",
+      "distance": 548,
+      "content": {
+        "en": {
+          "description": "Betelgeuse is a red supergiant in Orion, one of the largest stars visible to naked eye.",
+          "facts": [
+            "Red supergiant near end of life",
+            "Diameter 700 times larger than the Sun",
+            "Will explode as supernova someday",
+            "Distance: 548 light-years"
+          ]
+        },
+        "id": {
+          "description": "Betelgeuse adalah supergiant merah di Orion, salah satu bintang terbesar yang terlihat mata telanjang.",
+          "facts": [
+            "Supergiant merah mendekati akhir hidup",
+            "Diameter 700 kali lebih besar dari Matahari",
+            "Akan meledak sebagai supernova suatu hari",
+            "Jarak: 548 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "procyon",
+      "name": "Procyon",
+      "hip": 37279,
+      "ra": 114.825,
+      "dec": 5.225,
+      "magnitude": 0.34,
+      "spectralType": "F5IV",
+      "color": "#f8f7ff",
+      "distance": 11.5,
+      "content": {
+        "en": {
+          "description": "Procyon is the brightest star in Canis Minor, part of the Winter Triangle.",
+          "facts": [
+            "Eighth-brightest star in night sky",
+            "Binary star system",
+            "Distance: 11.5 light-years",
+            "Forms Winter Triangle with Sirius and Betelgeuse"
+          ]
+        },
+        "id": {
+          "description": "Procyon adalah bintang paling terang di Canis Minor, bagian dari Segitiga Musim Dingin.",
+          "facts": [
+            "Bintang paling terang kedelapan di langit malam",
+            "Sistem bintang biner",
+            "Jarak: 11,5 tahun cahaya",
+            "Membentuk Segitiga Musim Dingin dengan Sirius dan Betelgeuse"
+          ]
+        }
+      }
+    },
+    {
+      "id": "altair",
+      "name": "Altair",
+      "hip": 97649,
+      "ra": 297.696,
+      "dec": 8.868,
+      "magnitude": 0.77,
+      "spectralType": "A7V",
+      "color": "#fff4ea",
+      "distance": 16.7,
+      "content": {
+        "en": {
+          "description": "Altair is the brightest star in Aquila, rotates extremely rapidly.",
+          "facts": [
+            "Twelfth-brightest star in night sky",
+            "Rotates once every 9 hours",
+            "Distance: 16.7 light-years",
+            "Part of the Summer Triangle"
+          ]
+        },
+        "id": {
+          "description": "Altair adalah bintang paling terang di Aquila, berputar sangat cepat.",
+          "facts": [
+            "Bintang paling terang kedua belas di langit malam",
+            "Berputar sekali setiap 9 jam",
+            "Jarak: 16,7 tahun cahaya",
+            "Bagian dari Segitiga Musim Panas"
+          ]
+        }
+      }
+    },
+    {
+      "id": "aldebaran",
+      "name": "Aldebaran",
+      "hip": 21421,
+      "ra": 68.98,
+      "dec": 16.509,
+      "magnitude": 0.85,
+      "spectralType": "K5III",
+      "color": "#ffc38a",
+      "distance": 65.3,
+      "content": {
+        "en": {
+          "description": "Aldebaran is an orange giant in Taurus, marking the eye of the bull.",
+          "facts": [
+            "Fourteenth-brightest star in night sky",
+            "Orange giant star",
+            "44 times larger than the Sun",
+            "Distance: 65.3 light-years"
+          ]
+        },
+        "id": {
+          "description": "Aldebaran adalah raksasa oranye di Taurus, menandai mata banteng.",
+          "facts": [
+            "Bintang paling terang keempat belas di langit malam",
+            "Bintang raksasa oranye",
+            "44 kali lebih besar dari Matahari",
+            "Jarak: 65,3 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "antares",
+      "name": "Antares",
+      "hip": 80763,
+      "ra": 247.352,
+      "dec": -26.432,
+      "magnitude": 0.96,
+      "spectralType": "M1Ib",
+      "color": "#ff4500",
+      "distance": 550,
+      "content": {
+        "en": {
+          "description": "Antares is a red supergiant in Scorpius, its name means rival of Mars.",
+          "facts": [
+            "Fifteenth-brightest star in night sky",
+            "Red supergiant star",
+            "Diameter 700 times larger than the Sun",
+            "Distance: 550 light-years"
+          ]
+        },
+        "id": {
+          "description": "Antares adalah supergiant merah di Scorpius, namanya berarti saingan Mars.",
+          "facts": [
+            "Bintang paling terang kelima belas di langit malam",
+            "Bintang supergiant merah",
+            "Diameter 700 kali lebih besar dari Matahari",
+            "Jarak: 550 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bellatrix",
+      "name": "Bellatrix",
+      "hip": 25336,
+      "ra": 81.283,
+      "dec": 6.35,
+      "magnitude": 1.64,
+      "spectralType": "B2III",
+      "color": "#b4c4ff",
+      "distance": 250,
+      "content": {
+        "en": {
+          "description": "Bellatrix is a blue giant star in Orion, marking the left shoulder of the hunter.",
+          "facts": [
+            "Located in constellation Orion",
+            "Blue giant star",
+            "Marks Orion's left shoulder",
+            "Distance: 250 light-years"
+          ]
+        },
+        "id": {
+          "description": "Bellatrix adalah bintang raksasa biru di Orion, menandai bahu kiri pemburu.",
+          "facts": [
+            "Terletak di konstelasi Orion",
+            "Bintang raksasa biru",
+            "Menandai bahu kiri Orion",
+            "Jarak: 250 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alnitak",
+      "name": "Alnitak",
+      "hip": 26727,
+      "ra": 85.19,
+      "dec": -1.943,
+      "magnitude": 1.77,
+      "spectralType": "O9Ib",
+      "color": "#b4c4ff",
+      "distance": 1260,
+      "content": {
+        "en": {
+          "description": "Alnitak is the easternmost star of Orion's Belt, a triple star system near the Horsehead Nebula.",
+          "facts": [
+            "Easternmost star of Orion's Belt",
+            "Triple star system",
+            "Near the Horsehead Nebula",
+            "Distance: 1,260 light-years"
+          ]
+        },
+        "id": {
+          "description": "Alnitak adalah bintang paling timur dari Sabuk Orion, sistem bintang tiga dekat Nebula Horsehead.",
+          "facts": [
+            "Bintang paling timur dari Sabuk Orion",
+            "Sistem bintang tiga",
+            "Dekat Nebula Horsehead",
+            "Jarak: 1.260 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alnilam",
+      "name": "Alnilam",
+      "hip": 26311,
+      "ra": 84.053,
+      "dec": -1.202,
+      "magnitude": 1.69,
+      "spectralType": "B0Ia",
+      "color": "#b4c4ff",
+      "distance": 2000,
+      "content": {
+        "en": {
+          "description": "Alnilam is the central star of Orion's Belt, a blue supergiant and one of the most luminous stars known.",
+          "facts": [
+            "Central star of Orion's Belt",
+            "Blue supergiant star",
+            "375,000 times more luminous than the Sun",
+            "Distance: 2,000 light-years"
+          ]
+        },
+        "id": {
+          "description": "Alnilam adalah bintang tengah Sabuk Orion, supergiant biru dan salah satu bintang paling terang yang diketahui.",
+          "facts": [
+            "Bintang tengah Sabuk Orion",
+            "Bintang supergiant biru",
+            "375.000 kali lebih terang dari Matahari",
+            "Jarak: 2.000 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mintaka",
+      "name": "Mintaka",
+      "hip": 25930,
+      "ra": 83.002,
+      "dec": -0.299,
+      "magnitude": 2.23,
+      "spectralType": "O9II",
+      "color": "#b4c4ff",
+      "distance": 1200,
+      "content": {
+        "en": {
+          "description": "Mintaka is the westernmost star of Orion's Belt, lying very close to the celestial equator.",
+          "facts": [
+            "Westernmost star of Orion's Belt",
+            "Multiple star system",
+            "Lies close to celestial equator",
+            "Distance: 1,200 light-years"
+          ]
+        },
+        "id": {
+          "description": "Mintaka adalah bintang paling barat dari Sabuk Orion, terletak sangat dekat dengan ekuator langit.",
+          "facts": [
+            "Bintang paling barat dari Sabuk Orion",
+            "Sistem bintang ganda",
+            "Terletak dekat ekuator langit",
+            "Jarak: 1.200 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "shaula",
+      "name": "Shaula",
+      "hip": 85927,
+      "ra": 263.402,
+      "dec": -37.104,
+      "magnitude": 1.62,
+      "spectralType": "B2IV",
+      "color": "#b4c4ff",
+      "distance": 570,
+      "content": {
+        "en": {
+          "description": "Shaula marks the stinger of Scorpius the Scorpion, located at the end of the scorpion's curved tail.",
+          "facts": [
+            "Marks the stinger of Scorpius",
+            "Blue subgiant star",
+            "Part of the scorpion's tail",
+            "Distance: 570 light-years"
+          ]
+        },
+        "id": {
+          "description": "Shaula menandai sengat Kalajengking Scorpius, terletak di ujung ekor melengkung kalajengking.",
+          "facts": [
+            "Menandai sengat Scorpius",
+            "Bintang subgiant biru",
+            "Bagian dari ekor kalajengking",
+            "Jarak: 570 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sargas",
+      "name": "Sargas",
+      "hip": 86228,
+      "ra": 264.33,
+      "dec": -42.998,
+      "magnitude": 1.86,
+      "spectralType": "F1II",
+      "color": "#f8f7ff",
+      "distance": 272,
+      "content": {
+        "en": {
+          "description": "Sargas is a bright star in the tail of Scorpius, forming part of the scorpion's distinctive curved shape.",
+          "facts": [
+            "Located in Scorpius tail",
+            "Yellow-white supergiant",
+            "Forms the scorpion's curve",
+            "Distance: 272 light-years"
+          ]
+        },
+        "id": {
+          "description": "Sargas adalah bintang terang di ekor Scorpius, membentuk bagian dari bentuk melengkung khas kalajengking.",
+          "facts": [
+            "Terletak di ekor Scorpius",
+            "Supergiant kuning-putih",
+            "Membentuk lengkungan kalajengking",
+            "Jarak: 272 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dschubba",
+      "name": "Dschubba",
+      "hip": 78401,
+      "ra": 240.083,
+      "dec": -22.622,
+      "magnitude": 2.29,
+      "spectralType": "B0.3IV",
+      "color": "#b4c4ff",
+      "distance": 400,
+      "content": {
+        "en": {
+          "description": "Dschubba marks the head of Scorpius, positioned between the claws and the heart star Antares.",
+          "facts": [
+            "Marks the scorpion's head",
+            "Blue subgiant star",
+            "Between claws and heart",
+            "Distance: 400 light-years"
+          ]
+        },
+        "id": {
+          "description": "Dschubba menandai kepala Scorpius, terletak antara cakar dan bintang jantung Antares.",
+          "facts": [
+            "Menandai kepala kalajengking",
+            "Bintang subgiant biru",
+            "Antara cakar dan jantung",
+            "Jarak: 400 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "graffias",
+      "name": "Graffias",
+      "hip": 78820,
+      "ra": 241.359,
+      "dec": -19.805,
+      "magnitude": 2.56,
+      "spectralType": "B1V",
+      "color": "#b4c4ff",
+      "distance": 530,
+      "content": {
+        "en": {
+          "description": "Graffias represents one of the claws of Scorpius, located at the northern part of the constellation.",
+          "facts": [
+            "Represents scorpion's claw",
+            "Blue main-sequence star",
+            "Northern part of Scorpius",
+            "Distance: 530 light-years"
+          ]
+        },
+        "id": {
+          "description": "Graffias melambangkan salah satu cakar Scorpius, terletak di bagian utara konstelasi.",
+          "facts": [
+            "Melambangkan cakar kalajengking",
+            "Bintang deret utama biru",
+            "Bagian utara Scorpius",
+            "Jarak: 530 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sheliak",
+      "name": "Sheliak",
+      "hip": 91971,
+      "ra": 281.083,
+      "dec": 33.363,
+      "magnitude": 3.45,
+      "spectralType": "B7II",
+      "color": "#b4c4ff",
+      "distance": 960,
+      "content": {
+        "en": {
+          "description": "Sheliak is the second-brightest star in Lyra, forming part of the lyre's frame with Vega.",
+          "facts": [
+            "Second-brightest in Lyra",
+            "Blue giant star",
+            "Forms the lyre frame",
+            "Distance: 960 light-years"
+          ]
+        },
+        "id": {
+          "description": "Sheliak adalah bintang paling terang kedua di Lyra, membentuk bagian rangka kecapi bersama Vega.",
+          "facts": [
+            "Paling terang kedua di Lyra",
+            "Bintang raksasa biru",
+            "Membentuk rangka kecapi",
+            "Jarak: 960 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sulafat",
+      "name": "Sulafat",
+      "hip": 91926,
+      "ra": 281.018,
+      "dec": 32.689,
+      "magnitude": 3.24,
+      "spectralType": "B9III",
+      "color": "#b4c4ff",
+      "distance": 620,
+      "content": {
+        "en": {
+          "description": "Sulafat is a bright star in Lyra, completing the distinctive parallelogram shape of the constellation.",
+          "facts": [
+            "Third-brightest in Lyra",
+            "Blue giant star",
+            "Forms the parallelogram",
+            "Distance: 620 light-years"
+          ]
+        },
+        "id": {
+          "description": "Sulafat adalah bintang terang di Lyra, melengkapi bentuk jajaran genjang khas konstelasi ini.",
+          "facts": [
+            "Paling terang ketiga di Lyra",
+            "Bintang raksasa biru",
+            "Membentuk jajaran genjang",
+            "Jarak: 620 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "delta-lyrae",
+      "name": "Delta Lyrae",
+      "hip": 92791,
+      "ra": 283.814,
+      "dec": 36.898,
+      "magnitude": 4.3,
+      "spectralType": "M4II",
+      "color": "#ff6b6b",
+      "distance": 740,
+      "content": {
+        "en": {
+          "description": "Delta Lyrae is a red giant star in Lyra, completing the lyre's distinctive shape alongside Vega.",
+          "facts": [
+            "Red giant star in Lyra",
+            "Completes the lyre shape",
+            "Cooler than other Lyra stars",
+            "Distance: 740 light-years"
+          ]
+        },
+        "id": {
+          "description": "Delta Lyrae adalah bintang raksasa merah di Lyra, melengkapi bentuk khas kecapi bersama Vega.",
+          "facts": [
+            "Bintang raksasa merah di Lyra",
+            "Melengkapi bentuk kecapi",
+            "Lebih dingin dari bintang Lyra lain",
+            "Jarak: 740 tahun cahaya"
+          ]
+        }
+      }
+    }
+  ]
+}
