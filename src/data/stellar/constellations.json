@@ -205,6 +205,199 @@
           "mythology": "Dalam mitologi Yunani, Carina melambangkan lunas kapal Argo yang membawa Jason dan Argonaut dalam pencarian Bulu Emas."
         }
       }
+    },
+    {
+      "id": "aries",
+      "name": "Aries",
+      "indonesianName": "Domba",
+      "abbreviation": "Ari",
+      "stars": ["hamal", "sheratan", "mesarthim"],
+      "lines": [
+        { "from": "hamal", "to": "sheratan" },
+        { "from": "sheratan", "to": "mesarthim" }
+      ],
+      "content": {
+        "en": {
+          "description": "Aries is the first constellation of the zodiac, representing the ram whose golden fleece was sought by Jason and the Argonauts.",
+          "mythology": "In Greek mythology, Aries is the ram with the golden fleece that rescued Phrixus and Helle, later becoming the object of the Argonauts' quest."
+        },
+        "id": {
+          "description": "Aries adalah konstelasi zodiak pertama, melambangkan domba jantan berbulu emas yang dicari oleh Jason dan Argonaut.",
+          "mythology": "Dalam mitologi Yunani, Aries adalah domba jantan berbulu emas yang menyelamatkan Phrixus dan Helle, kemudian menjadi tujuan pencarian para Argonaut."
+        }
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "indonesianName": "Kembar",
+      "abbreviation": "Gem",
+      "stars": ["pollux", "castor", "alhena"],
+      "lines": [
+        { "from": "pollux", "to": "castor" },
+        { "from": "castor", "to": "alhena" }
+      ],
+      "content": {
+        "en": {
+          "description": "Gemini is the zodiac constellation of the twins, marked by the bright stars Castor and Pollux representing the twin brothers.",
+          "mythology": "In Greek mythology, Gemini represents the twins Castor and Pollux, who were placed among the stars by Zeus so they would never be separated."
+        },
+        "id": {
+          "description": "Gemini adalah konstelasi zodiak si kembar, ditandai oleh bintang terang Castor dan Pollux yang melambangkan saudara kembar.",
+          "mythology": "Dalam mitologi Yunani, Gemini melambangkan si kembar Castor dan Pollux, yang ditempatkan di antara bintang oleh Zeus agar tidak pernah terpisah."
+        }
+      }
+    },
+    {
+      "id": "cancer",
+      "name": "Cancer",
+      "indonesianName": "Kepiting",
+      "abbreviation": "Cnc",
+      "stars": ["tarf", "asellus-australis"],
+      "lines": [{ "from": "tarf", "to": "asellus-australis" }],
+      "content": {
+        "en": {
+          "description": "Cancer is a faint zodiac constellation representing the crab, home to the famous Beehive Cluster.",
+          "mythology": "In Greek mythology, the crab was sent by Hera to distract Hercules during his battle with the Hydra, but was crushed and placed among the stars."
+        },
+        "id": {
+          "description": "Cancer adalah konstelasi zodiak yang redup melambangkan kepiting, rumah bagi Gugus Beehive yang terkenal.",
+          "mythology": "Dalam mitologi Yunani, kepiting dikirim oleh Hera untuk mengalihkan perhatian Hercules saat bertarung dengan Hydra, namun terinjak dan ditempatkan di antara bintang."
+        }
+      }
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "indonesianName": "Singa",
+      "abbreviation": "Leo",
+      "stars": ["regulus", "algieba", "zosma", "denebola"],
+      "lines": [
+        { "from": "regulus", "to": "algieba" },
+        { "from": "algieba", "to": "zosma" },
+        { "from": "zosma", "to": "denebola" }
+      ],
+      "content": {
+        "en": {
+          "description": "Leo is a prominent zodiac constellation shaped like a crouching lion, marked by the bright star Regulus at its heart.",
+          "mythology": "In Greek mythology, Leo represents the Nemean Lion slain by Hercules as the first of his twelve labors, its hide made invulnerable to weapons."
+        },
+        "id": {
+          "description": "Leo adalah konstelasi zodiak menonjol berbentuk singa merangkak, ditandai oleh bintang terang Regulus di jantungnya.",
+          "mythology": "Dalam mitologi Yunani, Leo melambangkan Singa Nemea yang dibunuh Hercules sebagai tugas pertama dari dua belas tugasnya, kulitnya kebal terhadap senjata."
+        }
+      }
+    },
+    {
+      "id": "virgo",
+      "name": "Virgo",
+      "indonesianName": "Perawan",
+      "abbreviation": "Vir",
+      "stars": ["spica", "zavijava"],
+      "lines": [{ "from": "zavijava", "to": "spica" }],
+      "content": {
+        "en": {
+          "description": "Virgo is the second-largest constellation and a zodiac sign, dominated by the bright star Spica.",
+          "mythology": "In Greek mythology, Virgo is associated with Demeter or Persephone, goddesses of the harvest, often depicted holding a sheaf of wheat."
+        },
+        "id": {
+          "description": "Virgo adalah konstelasi terbesar kedua dan tanda zodiak, didominasi oleh bintang terang Spica.",
+          "mythology": "Dalam mitologi Yunani, Virgo dikaitkan dengan Demeter atau Persephone, dewi panen, sering digambarkan memegang bulir gandum."
+        }
+      }
+    },
+    {
+      "id": "libra",
+      "name": "Libra",
+      "indonesianName": "Timbangan",
+      "abbreviation": "Lib",
+      "stars": ["zubenelgenubi", "zubeneschamali"],
+      "lines": [{ "from": "zubenelgenubi", "to": "zubeneschamali" }],
+      "content": {
+        "en": {
+          "description": "Libra is the zodiac constellation of the scales, the only zodiac sign represented by an object rather than an animal or person.",
+          "mythology": "In Greek mythology, Libra represents the scales held by Themis or Astraea, goddesses of justice, used to weigh the fates of mortals."
+        },
+        "id": {
+          "description": "Libra adalah konstelasi zodiak timbangan, satu-satunya tanda zodiak yang digambarkan sebagai benda bukan hewan atau orang.",
+          "mythology": "Dalam mitologi Yunani, Libra melambangkan timbangan yang dipegang oleh Themis atau Astraea, dewi keadilan, digunakan untuk menimbang nasib manusia."
+        }
+      }
+    },
+    {
+      "id": "sagittarius",
+      "name": "Sagittarius",
+      "indonesianName": "Pemanah",
+      "abbreviation": "Sgr",
+      "stars": ["kaus-australis", "nunki", "ascella"],
+      "lines": [
+        { "from": "kaus-australis", "to": "nunki" },
+        { "from": "nunki", "to": "ascella" }
+      ],
+      "content": {
+        "en": {
+          "description": "Sagittarius is the zodiac constellation of the archer, its bright stars forming the shape of a teapot near the galactic center.",
+          "mythology": "In Greek mythology, Sagittarius represents the centaur Chiron, a wise archer and teacher, aiming his bow toward the heart of Scorpius."
+        },
+        "id": {
+          "description": "Sagittarius adalah konstelasi zodiak pemanah, bintang-bintang terangnya membentuk bentuk teko dekat pusat galaksi.",
+          "mythology": "Dalam mitologi Yunani, Sagittarius melambangkan centaur Chiron, pemanah bijak dan guru, mengarahkan panahnya ke jantung Scorpius."
+        }
+      }
+    },
+    {
+      "id": "capricornus",
+      "name": "Capricornus",
+      "indonesianName": "Kambing Laut",
+      "abbreviation": "Cap",
+      "stars": ["dabih", "deneb-algedi"],
+      "lines": [{ "from": "dabih", "to": "deneb-algedi" }],
+      "content": {
+        "en": {
+          "description": "Capricornus is a faint zodiac constellation representing a sea-goat, one of the oldest recognized constellations.",
+          "mythology": "In Greek mythology, Capricornus represents the god Pan, who transformed into a fish-tailed goat to escape the monster Typhon."
+        },
+        "id": {
+          "description": "Capricornus adalah konstelasi zodiak redup yang melambangkan kambing laut, salah satu konstelasi yang dikenal paling tua.",
+          "mythology": "Dalam mitologi Yunani, Capricornus melambangkan dewa Pan, yang berubah menjadi kambing berekor ikan untuk melarikan diri dari monster Typhon."
+        }
+      }
+    },
+    {
+      "id": "aquarius",
+      "name": "Aquarius",
+      "indonesianName": "Pembawa Air",
+      "abbreviation": "Aqr",
+      "stars": ["sadalsuud", "sadalmelik"],
+      "lines": [{ "from": "sadalsuud", "to": "sadalmelik" }],
+      "content": {
+        "en": {
+          "description": "Aquarius is a large zodiac constellation depicting a figure pouring water from a jar into the sky.",
+          "mythology": "In Greek mythology, Aquarius is often identified with Ganymede, the beautiful youth abducted by Zeus to serve as cupbearer to the gods."
+        },
+        "id": {
+          "description": "Aquarius adalah konstelasi zodiak besar yang menggambarkan sosok menuangkan air dari kendi ke langit.",
+          "mythology": "Dalam mitologi Yunani, Aquarius sering diidentikkan dengan Ganymede, pemuda tampan yang diculik Zeus untuk menjadi pembawa cawan para dewa."
+        }
+      }
+    },
+    {
+      "id": "pisces",
+      "name": "Pisces",
+      "indonesianName": "Ikan",
+      "abbreviation": "Psc",
+      "stars": ["fumalsamakah", "alrescha"],
+      "lines": [{ "from": "fumalsamakah", "to": "alrescha" }],
+      "content": {
+        "en": {
+          "description": "Pisces is the twelfth and final zodiac constellation, representing two fish tied together by their tails.",
+          "mythology": "In Greek mythology, Pisces represents Aphrodite and her son Eros, who transformed into fish and tied themselves together to escape the monster Typhon."
+        },
+        "id": {
+          "description": "Pisces adalah konstelasi zodiak kedua belas dan terakhir, melambangkan dua ikan yang diikat bersama pada ekornya.",
+          "mythology": "Dalam mitologi Yunani, Pisces melambangkan Aphrodite dan putranya Eros, yang berubah menjadi ikan dan mengikat diri bersama untuk melarikan diri dari monster Typhon."
+        }
+      }
     }
   ]
 }

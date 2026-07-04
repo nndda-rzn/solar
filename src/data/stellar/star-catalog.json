@@ -1115,6 +1115,781 @@
           ]
         }
       }
+    },
+    {
+      "id": "hamal",
+      "name": "Hamal",
+      "hip": 9884,
+      "ra": 31.793,
+      "dec": 23.462,
+      "magnitude": 2.0,
+      "spectralType": "K2III",
+      "color": "#ffc38a",
+      "distance": 66,
+      "content": {
+        "en": {
+          "description": "Hamal is the brightest star in Aries, an orange giant marking the head of the ram.",
+          "facts": [
+            "Brightest star in Aries constellation",
+            "Orange giant star",
+            "Distance: 66 light-years",
+            "Name means 'the ram' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Hamal adalah bintang paling terang di Aries, raksasa oranye yang menandai kepala domba.",
+          "facts": [
+            "Bintang paling terang di konstelasi Aries",
+            "Bintang raksasa oranye",
+            "Jarak: 66 tahun cahaya",
+            "Nama berarti 'domba jantan' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sheratan",
+      "name": "Sheratan",
+      "hip": 8903,
+      "ra": 28.66,
+      "dec": 20.808,
+      "magnitude": 2.64,
+      "spectralType": "A5V",
+      "color": "#f8f7ff",
+      "distance": 60,
+      "content": {
+        "en": {
+          "description": "Sheratan is the second-brightest star in Aries, marking the ram's second horn.",
+          "facts": [
+            "Second-brightest star in Aries",
+            "Spectroscopic binary star system",
+            "Distance: 60 light-years",
+            "Name means 'the two signs' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Sheratan adalah bintang paling terang kedua di Aries, menandai tanduk kedua domba.",
+          "facts": [
+            "Bintang paling terang kedua di Aries",
+            "Sistem bintang biner spektroskopik",
+            "Jarak: 60 tahun cahaya",
+            "Nama berarti 'dua tanda' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mesarthim",
+      "name": "Mesarthim",
+      "hip": 8832,
+      "ra": 28.42,
+      "dec": 19.294,
+      "magnitude": 3.88,
+      "spectralType": "B9V",
+      "color": "#b4c4ff",
+      "distance": 164,
+      "content": {
+        "en": {
+          "description": "Mesarthim is a double star in Aries, one of the first binary stars discovered through a telescope.",
+          "facts": [
+            "Double star discovered by Robert Hooke in 1664",
+            "Blue-white main-sequence star",
+            "Distance: 164 light-years",
+            "Once shared the name Sheratan with Beta Arietis"
+          ]
+        },
+        "id": {
+          "description": "Mesarthim adalah bintang ganda di Aries, salah satu bintang biner pertama yang ditemukan melalui teleskop.",
+          "facts": [
+            "Bintang ganda ditemukan Robert Hooke pada 1664",
+            "Bintang deret utama biru-putih",
+            "Jarak: 164 tahun cahaya",
+            "Pernah berbagi nama Sheratan dengan Beta Arietis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pollux",
+      "name": "Pollux",
+      "hip": 37826,
+      "ra": 116.329,
+      "dec": 28.026,
+      "magnitude": 1.14,
+      "spectralType": "K0III",
+      "color": "#ffc38a",
+      "distance": 34,
+      "content": {
+        "en": {
+          "description": "Pollux is the brightest star in Gemini, an orange giant known to host a confirmed exoplanet.",
+          "facts": [
+            "Brightest star in Gemini",
+            "Hosts confirmed exoplanet Pollux b",
+            "Distance: 34 light-years",
+            "Named after the mythological twin Pollux"
+          ]
+        },
+        "id": {
+          "description": "Pollux adalah bintang paling terang di Gemini, raksasa oranye yang diketahui memiliki exoplanet terkonfirmasi.",
+          "facts": [
+            "Bintang paling terang di Gemini",
+            "Memiliki exoplanet terkonfirmasi Pollux b",
+            "Jarak: 34 tahun cahaya",
+            "Dinamai dari saudara kembar mitologi Pollux"
+          ]
+        }
+      }
+    },
+    {
+      "id": "castor",
+      "name": "Castor",
+      "hip": 36850,
+      "ra": 113.65,
+      "dec": 31.888,
+      "magnitude": 1.58,
+      "spectralType": "A1V",
+      "color": "#9db4ff",
+      "distance": 51,
+      "content": {
+        "en": {
+          "description": "Castor is a sextuple star system in Gemini, appearing as a single bright star to the naked eye.",
+          "facts": [
+            "Actually a system of six stars",
+            "Marks the head of one Gemini twin",
+            "Distance: 51 light-years",
+            "Named after the mythological twin Castor"
+          ]
+        },
+        "id": {
+          "description": "Castor adalah sistem enam bintang di Gemini, tampak sebagai satu bintang terang bagi mata telanjang.",
+          "facts": [
+            "Sebenarnya sistem dari enam bintang",
+            "Menandai kepala salah satu kembar Gemini",
+            "Jarak: 51 tahun cahaya",
+            "Dinamai dari saudara kembar mitologi Castor"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alhena",
+      "name": "Alhena",
+      "hip": 31681,
+      "ra": 99.428,
+      "dec": 16.399,
+      "magnitude": 1.93,
+      "spectralType": "A1IV",
+      "color": "#9db4ff",
+      "distance": 109,
+      "content": {
+        "en": {
+          "description": "Alhena is the third-brightest star in Gemini, marking the foot of one of the twins.",
+          "facts": [
+            "Third-brightest star in Gemini",
+            "White subgiant star",
+            "Distance: 109 light-years",
+            "Name means 'the brand' or 'mark' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Alhena adalah bintang paling terang ketiga di Gemini, menandai kaki salah satu si kembar.",
+          "facts": [
+            "Bintang paling terang ketiga di Gemini",
+            "Bintang subgiant putih",
+            "Jarak: 109 tahun cahaya",
+            "Nama berarti 'tanda' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tarf",
+      "name": "Tarf",
+      "hip": 42799,
+      "ra": 124.129,
+      "dec": 9.186,
+      "magnitude": 3.53,
+      "spectralType": "K4III",
+      "color": "#ffc38a",
+      "distance": 290,
+      "content": {
+        "en": {
+          "description": "Tarf is the brightest star in Cancer, an orange giant marking one of the crab's hind legs.",
+          "facts": [
+            "Brightest star in Cancer",
+            "Orange giant star",
+            "Distance: 290 light-years",
+            "Name means 'the glance' or 'eye' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Tarf adalah bintang paling terang di Cancer, raksasa oranye yang menandai salah satu kaki belakang kepiting.",
+          "facts": [
+            "Bintang paling terang di Cancer",
+            "Bintang raksasa oranye",
+            "Jarak: 290 tahun cahaya",
+            "Nama berarti 'pandangan' atau 'mata' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "asellus-australis",
+      "name": "Asellus Australis",
+      "hip": 42911,
+      "ra": 124.128,
+      "dec": 18.154,
+      "magnitude": 3.94,
+      "spectralType": "K0III",
+      "color": "#ffc38a",
+      "distance": 136,
+      "content": {
+        "en": {
+          "description": "Asellus Australis is an orange giant in Cancer, marking the southern donkey near the Beehive Cluster.",
+          "facts": [
+            "Marks the southern donkey in Cancer",
+            "Orange giant star",
+            "Located near the Beehive Cluster (M44)",
+            "Distance: 136 light-years"
+          ]
+        },
+        "id": {
+          "description": "Asellus Australis adalah raksasa oranye di Cancer, menandai keledai selatan dekat Gugus Beehive.",
+          "facts": [
+            "Menandai keledai selatan di Cancer",
+            "Bintang raksasa oranye",
+            "Terletak dekat Gugus Beehive (M44)",
+            "Jarak: 136 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "regulus",
+      "name": "Regulus",
+      "hip": 49669,
+      "ra": 152.093,
+      "dec": 11.967,
+      "magnitude": 1.35,
+      "spectralType": "B7V",
+      "color": "#9db4ff",
+      "distance": 79,
+      "content": {
+        "en": {
+          "description": "Regulus is the brightest star in Leo, marking the lion's heart and one of the four Royal Stars of Persia.",
+          "facts": [
+            "Brightest star in Leo",
+            "One of the four Royal Stars of ancient Persia",
+            "Distance: 79 light-years",
+            "Name means 'little king' in Latin"
+          ]
+        },
+        "id": {
+          "description": "Regulus adalah bintang paling terang di Leo, menandai jantung singa dan salah satu dari empat Bintang Kerajaan Persia kuno.",
+          "facts": [
+            "Bintang paling terang di Leo",
+            "Salah satu dari empat Bintang Kerajaan Persia kuno",
+            "Jarak: 79 tahun cahaya",
+            "Nama berarti 'raja kecil' dalam bahasa Latin"
+          ]
+        }
+      }
+    },
+    {
+      "id": "denebola",
+      "name": "Denebola",
+      "hip": 57632,
+      "ra": 177.265,
+      "dec": 14.572,
+      "magnitude": 2.14,
+      "spectralType": "A3V",
+      "color": "#f8f7ff",
+      "distance": 36,
+      "content": {
+        "en": {
+          "description": "Denebola marks the tail of Leo the Lion, the second-brightest star in the constellation.",
+          "facts": [
+            "Second-brightest star in Leo",
+            "Marks the lion's tail",
+            "Distance: 36 light-years",
+            "Name means 'the lion's tail' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Denebola menandai ekor Leo Sang Singa, bintang paling terang kedua di konstelasi ini.",
+          "facts": [
+            "Bintang paling terang kedua di Leo",
+            "Menandai ekor singa",
+            "Jarak: 36 tahun cahaya",
+            "Nama berarti 'ekor singa' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "algieba",
+      "name": "Algieba",
+      "hip": 50583,
+      "ra": 154.993,
+      "dec": 19.842,
+      "magnitude": 2.28,
+      "spectralType": "K1III",
+      "color": "#ffc38a",
+      "distance": 130,
+      "content": {
+        "en": {
+          "description": "Algieba is a striking double star in Leo, marking the lion's mane.",
+          "facts": [
+            "Marks the lion's mane",
+            "Beautiful binary star system",
+            "Distance: 130 light-years",
+            "Name means 'the forehead' or 'mane' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Algieba adalah bintang ganda mencolok di Leo, menandai surai singa.",
+          "facts": [
+            "Menandai surai singa",
+            "Sistem bintang biner yang indah",
+            "Jarak: 130 tahun cahaya",
+            "Nama berarti 'dahi' atau 'surai' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "zosma",
+      "name": "Zosma",
+      "hip": 54872,
+      "ra": 168.527,
+      "dec": 20.524,
+      "magnitude": 2.56,
+      "spectralType": "A4V",
+      "color": "#f8f7ff",
+      "distance": 58,
+      "content": {
+        "en": {
+          "description": "Zosma marks the back of Leo the Lion, a white main-sequence star.",
+          "facts": [
+            "Marks the lion's back",
+            "White main-sequence star",
+            "Distance: 58 light-years",
+            "Name means 'girdle' in Greek"
+          ]
+        },
+        "id": {
+          "description": "Zosma menandai punggung Leo Sang Singa, bintang deret utama putih.",
+          "facts": [
+            "Menandai punggung singa",
+            "Bintang deret utama putih",
+            "Jarak: 58 tahun cahaya",
+            "Nama berarti 'ikat pinggang' dalam bahasa Yunani"
+          ]
+        }
+      }
+    },
+    {
+      "id": "spica",
+      "name": "Spica",
+      "hip": 65474,
+      "ra": 201.298,
+      "dec": -11.161,
+      "magnitude": 1.04,
+      "spectralType": "B1V",
+      "color": "#9db4ff",
+      "distance": 250,
+      "content": {
+        "en": {
+          "description": "Spica is the brightest star in Virgo, a blue giant binary marking the sheaf of wheat she holds.",
+          "facts": [
+            "Brightest star in Virgo",
+            "Close binary system of two blue giants",
+            "Distance: 250 light-years",
+            "Name means 'ear of grain' in Latin"
+          ]
+        },
+        "id": {
+          "description": "Spica adalah bintang paling terang di Virgo, biner raksasa biru yang menandai gandum yang dipegangnya.",
+          "facts": [
+            "Bintang paling terang di Virgo",
+            "Sistem biner rapat dua raksasa biru",
+            "Jarak: 250 tahun cahaya",
+            "Nama berarti 'bulir gandum' dalam bahasa Latin"
+          ]
+        }
+      }
+    },
+    {
+      "id": "zavijava",
+      "name": "Zavijava",
+      "hip": 57757,
+      "ra": 177.674,
+      "dec": 1.765,
+      "magnitude": 3.6,
+      "spectralType": "F9V",
+      "color": "#fff4ea",
+      "distance": 36,
+      "content": {
+        "en": {
+          "description": "Zavijava is a yellow-white main-sequence star in Virgo, a close solar analog.",
+          "facts": [
+            "Yellow-white main-sequence star",
+            "Close solar analog star",
+            "Distance: 36 light-years",
+            "Name means 'the angle' or 'corner' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Zavijava adalah bintang deret utama kuning-putih di Virgo, analog dekat Matahari.",
+          "facts": [
+            "Bintang deret utama kuning-putih",
+            "Analog dekat Matahari",
+            "Jarak: 36 tahun cahaya",
+            "Nama berarti 'sudut' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "zubeneschamali",
+      "name": "Zubeneschamali",
+      "hip": 74785,
+      "ra": 229.252,
+      "dec": -9.383,
+      "magnitude": 2.61,
+      "spectralType": "B8V",
+      "color": "#b4c4ff",
+      "distance": 185,
+      "content": {
+        "en": {
+          "description": "Zubeneschamali is the brightest star in Libra, marking the northern scale pan and famous for its reported greenish tint.",
+          "facts": [
+            "Brightest star in Libra",
+            "Occasionally reported to appear greenish",
+            "Distance: 185 light-years",
+            "Name means 'the northern claw' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Zubeneschamali adalah bintang paling terang di Libra, menandai piringan timbangan utara dan terkenal karena rona kehijauan yang dilaporkan.",
+          "facts": [
+            "Bintang paling terang di Libra",
+            "Kadang dilaporkan tampak kehijauan",
+            "Jarak: 185 tahun cahaya",
+            "Nama berarti 'cakar utara' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "zubenelgenubi",
+      "name": "Zubenelgenubi",
+      "hip": 72622,
+      "ra": 222.72,
+      "dec": -16.042,
+      "magnitude": 2.75,
+      "spectralType": "A3V",
+      "color": "#f8f7ff",
+      "distance": 77,
+      "content": {
+        "en": {
+          "description": "Zubenelgenubi marks the southern scale pan of Libra, a naked-eye double star.",
+          "facts": [
+            "Naked-eye double star",
+            "Marks the southern scale pan",
+            "Distance: 77 light-years",
+            "Name means 'the southern claw' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Zubenelgenubi menandai piringan timbangan selatan Libra, bintang ganda yang terlihat mata telanjang.",
+          "facts": [
+            "Bintang ganda yang terlihat mata telanjang",
+            "Menandai piringan timbangan selatan",
+            "Jarak: 77 tahun cahaya",
+            "Nama berarti 'cakar selatan' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "kaus-australis",
+      "name": "Kaus Australis",
+      "hip": 90185,
+      "ra": 276.043,
+      "dec": -34.385,
+      "magnitude": 1.85,
+      "spectralType": "B9.5III",
+      "color": "#b4c4ff",
+      "distance": 143,
+      "content": {
+        "en": {
+          "description": "Kaus Australis is the brightest star in Sagittarius, marking the southern part of the archer's bow.",
+          "facts": [
+            "Brightest star in Sagittarius",
+            "Blue-white giant star",
+            "Distance: 143 light-years",
+            "Name means 'the southern part of the bow' in Latin/Arabic"
+          ]
+        },
+        "id": {
+          "description": "Kaus Australis adalah bintang paling terang di Sagittarius, menandai bagian selatan busur pemanah.",
+          "facts": [
+            "Bintang paling terang di Sagittarius",
+            "Bintang raksasa biru-putih",
+            "Jarak: 143 tahun cahaya",
+            "Nama berarti 'bagian selatan busur' dalam bahasa Latin/Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nunki",
+      "name": "Nunki",
+      "hip": 92855,
+      "ra": 283.816,
+      "dec": -26.297,
+      "magnitude": 2.02,
+      "spectralType": "B2.5V",
+      "color": "#b4c4ff",
+      "distance": 228,
+      "content": {
+        "en": {
+          "description": "Nunki is the second-brightest star in Sagittarius, one of the oldest recorded star names dating to Babylonian astronomy.",
+          "facts": [
+            "Second-brightest star in Sagittarius",
+            "One of the oldest recorded star names",
+            "Distance: 228 light-years",
+            "Named after a Babylonian sacred city"
+          ]
+        },
+        "id": {
+          "description": "Nunki adalah bintang paling terang kedua di Sagittarius, salah satu nama bintang tertua yang tercatat dari astronomi Babilonia.",
+          "facts": [
+            "Bintang paling terang kedua di Sagittarius",
+            "Salah satu nama bintang tertua yang tercatat",
+            "Jarak: 228 tahun cahaya",
+            "Dinamai dari kota suci Babilonia"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ascella",
+      "name": "Ascella",
+      "hip": 95347,
+      "ra": 290.972,
+      "dec": -29.88,
+      "magnitude": 2.6,
+      "spectralType": "A2IV",
+      "color": "#f8f7ff",
+      "distance": 89,
+      "content": {
+        "en": {
+          "description": "Ascella marks the archer's armpit in Sagittarius, a close binary star system.",
+          "facts": [
+            "Close binary star system",
+            "Marks the archer's armpit",
+            "Distance: 89 light-years",
+            "Name derives from Latin 'axilla' meaning armpit"
+          ]
+        },
+        "id": {
+          "description": "Ascella menandai ketiak pemanah di Sagittarius, sistem bintang biner rapat.",
+          "facts": [
+            "Sistem bintang biner rapat",
+            "Menandai ketiak pemanah",
+            "Jarak: 89 tahun cahaya",
+            "Nama berasal dari kata Latin 'axilla' yang berarti ketiak"
+          ]
+        }
+      }
+    },
+    {
+      "id": "deneb-algedi",
+      "name": "Deneb Algedi",
+      "hip": 107556,
+      "ra": 326.76,
+      "dec": -16.127,
+      "magnitude": 2.85,
+      "spectralType": "A7III",
+      "color": "#f8f7ff",
+      "distance": 39,
+      "content": {
+        "en": {
+          "description": "Deneb Algedi is the brightest star in Capricornus, marking the sea-goat's tail and an eclipsing binary.",
+          "facts": [
+            "Brightest star in Capricornus",
+            "Eclipsing binary star system",
+            "Distance: 39 light-years",
+            "Name means 'tail of the goat' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Deneb Algedi adalah bintang paling terang di Capricornus, menandai ekor kambing laut dan merupakan biner gerhana.",
+          "facts": [
+            "Bintang paling terang di Capricornus",
+            "Sistem bintang biner gerhana",
+            "Jarak: 39 tahun cahaya",
+            "Nama berarti 'ekor kambing' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dabih",
+      "name": "Dabih",
+      "hip": 100345,
+      "ra": 305.253,
+      "dec": -14.781,
+      "magnitude": 3.05,
+      "spectralType": "F8III",
+      "color": "#fff4ea",
+      "distance": 344,
+      "content": {
+        "en": {
+          "description": "Dabih is a naked-eye double star in Capricornus, marking part of the sea-goat.",
+          "facts": [
+            "Naked-eye double star",
+            "Yellow-white giant star",
+            "Distance: 344 light-years",
+            "Name means 'the butcher' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Dabih adalah bintang ganda yang terlihat mata telanjang di Capricornus, menandai bagian kambing laut.",
+          "facts": [
+            "Bintang ganda yang terlihat mata telanjang",
+            "Bintang raksasa kuning-putih",
+            "Jarak: 344 tahun cahaya",
+            "Nama berarti 'tukang jagal' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sadalsuud",
+      "name": "Sadalsuud",
+      "hip": 106278,
+      "ra": 322.889,
+      "dec": -5.571,
+      "magnitude": 2.87,
+      "spectralType": "G0Ib",
+      "color": "#fff4ea",
+      "distance": 540,
+      "content": {
+        "en": {
+          "description": "Sadalsuud is the brightest star in Aquarius, a yellow supergiant whose name means 'luck of luck'.",
+          "facts": [
+            "Brightest star in Aquarius",
+            "Yellow supergiant star",
+            "Distance: 540 light-years",
+            "Name means 'luckiest of the lucky' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Sadalsuud adalah bintang paling terang di Aquarius, supergiant kuning yang namanya berarti 'keberuntungan dari keberuntungan'.",
+          "facts": [
+            "Bintang paling terang di Aquarius",
+            "Bintang supergiant kuning",
+            "Jarak: 540 tahun cahaya",
+            "Nama berarti 'paling beruntung dari yang beruntung' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sadalmelik",
+      "name": "Sadalmelik",
+      "hip": 109074,
+      "ra": 331.443,
+      "dec": -0.32,
+      "magnitude": 2.95,
+      "spectralType": "G2Ib",
+      "color": "#fff4ea",
+      "distance": 520,
+      "content": {
+        "en": {
+          "description": "Sadalmelik marks the water bearer's shoulder in Aquarius, a yellow supergiant star.",
+          "facts": [
+            "Marks the water bearer's shoulder",
+            "Yellow supergiant star",
+            "Distance: 520 light-years",
+            "Name means 'luck of the king' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Sadalmelik menandai bahu pembawa air di Aquarius, bintang supergiant kuning.",
+          "facts": [
+            "Menandai bahu pembawa air",
+            "Bintang supergiant kuning",
+            "Jarak: 520 tahun cahaya",
+            "Nama berarti 'keberuntungan raja' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alrescha",
+      "name": "Alrescha",
+      "hip": 8497,
+      "ra": 27.261,
+      "dec": 2.764,
+      "magnitude": 3.82,
+      "spectralType": "A2V",
+      "color": "#f8f7ff",
+      "distance": 139,
+      "content": {
+        "en": {
+          "description": "Alrescha marks the knot tying the cords of the two fish together in Pisces.",
+          "facts": [
+            "Marks the knot joining the two fish",
+            "Binary star system",
+            "Distance: 139 light-years",
+            "Name means 'the cord' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Alrescha menandai simpul yang mengikat tali kedua ikan bersama di Pisces.",
+          "facts": [
+            "Menandai simpul yang menyatukan kedua ikan",
+            "Sistem bintang biner",
+            "Jarak: 139 tahun cahaya",
+            "Nama berarti 'tali' dalam bahasa Arab"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fumalsamakah",
+      "name": "Fumalsamakah",
+      "hip": 118268,
+      "ra": 359.914,
+      "dec": 3.282,
+      "magnitude": 3.62,
+      "spectralType": "K5III",
+      "color": "#ffc38a",
+      "distance": 294,
+      "content": {
+        "en": {
+          "description": "Fumalsamakah is the brightest star in Pisces, an orange giant marking the mouth of the northern fish.",
+          "facts": [
+            "Brightest star in Pisces",
+            "Orange giant star",
+            "Distance: 294 light-years",
+            "Name means 'the fish's mouth' in Arabic"
+          ]
+        },
+        "id": {
+          "description": "Fumalsamakah adalah bintang paling terang di Pisces, raksasa oranye yang menandai mulut ikan utara.",
+          "facts": [
+            "Bintang paling terang di Pisces",
+            "Bintang raksasa oranye",
+            "Jarak: 294 tahun cahaya",
+            "Nama berarti 'mulut ikan' dalam bahasa Arab"
+          ]
+        }
+      }
     }
   ]
 }
