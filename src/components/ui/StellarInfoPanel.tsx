@@ -5,6 +5,7 @@ import { useStarData } from "@/hooks/data/useStarData";
 import { useConstellationData } from "@/hooks/data/useConstellationData";
 import { X, Star as StarIcon, Sparkles } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
+import * as THREE from "three";
 
 export function StellarInfoPanel() {
   const t = useTranslations("stellar");
@@ -156,18 +157,30 @@ export function StellarInfoPanel() {
                 {t("constellation.memberStars")}
               </div>
               <div className="flex flex-wrap gap-2">
-                {constellation.stars.map((starId) => (
-                  <button
-                    key={starId}
-                    onClick={() => {
-                      selectConstellation(null);
-                      selectStar(starId);
-                    }}
-                    className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/70 transition-colors hover:border-cosmic-accent hover:text-cosmic-accent"
-                  >
-                    {starId}
-                  </button>
-                ))}
+                {constellation.stars.map((starId) => {
+                  const memberStar = getStarById(starId);
+                  return (
+                    <button
+                      key={starId}
+                      onClick={() => {
+                        selectConstellation(null);
+                        selectStar(starId);
+                        if (memberStar) {
+                          setCameraTarget(
+                            new THREE.Vector3(
+                              memberStar.x,
+                              memberStar.y,
+                              memberStar.z,
+                            ),
+                          );
+                        }
+                      }}
+                      className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/70 transition-colors hover:border-cosmic-accent hover:text-cosmic-accent"
+                    >
+                      {memberStar?.name ?? starId}
+                    </button>
+                  );
+                })}
               </div>
             </section>
           </div>
