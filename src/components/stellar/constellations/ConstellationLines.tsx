@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo, useEffect } from "react";
 import * as THREE from "three";
 import { ConstellationLine } from "@/types/celestial/constellation";
 import { StarPosition } from "@/types/celestial/star";
@@ -17,9 +18,10 @@ export function ConstellationLines({
   color = "#4a9eff",
   opacity = 0.4,
 }: ConstellationLinesProps) {
-  return (
-    <group>
-      {lines.map((line, i) => {
+  // Memoize geometry creation to prevent recreating on every render
+  const geometries = useMemo(() => {
+    return lines
+      .map((line, i) => {
         const starA = starPositions.get(line.from);
         const starB = starPositions.get(line.to);
 
@@ -30,19 +32,38 @@ export function ConstellationLines({
           new THREE.Vector3(starB.x, starB.y, starB.z),
         ]);
 
-        return (
-          <mesh key={`${line.from}-${line.to}-${i}`}>
-            <tubeGeometry args={[path, 8, 0.15, 8, false]} />
-            <meshBasicMaterial
-              color={color}
-              transparent
-              opacity={opacity}
-              blending={THREE.AdditiveBlending}
-              depthWrite={false}
-            />
-          </mesh>
-        );
-      })}
+        const geometry = new THREE.TubeGeometry(path, 8, 0.15, 8, false);
+
+        return {
+          geometry,
+          key: `${line.from}-${line.to}-${i}`,
+        };
+      })
+      .filter((item): item is NonNullable<typeof item> => item !== null);
+  }, [lines, starPositions]);
+
+  // Cleanup: dispose geometries on unmount
+  useEffect(() => {
+    return () => {
+      geometries.forEach((item) => {
+        item.geometry.dispose();
+      });
+    };
+  }, [geometries]);
+
+  return (
+    <group>
+      {geometries.map((item) => (
+        <mesh key={item.key} geometry={item.geometry}>
+          <meshBasicMaterial
+            color={color}
+            transparent
+            opacity={opacity}
+            blending={THREE.AdditiveBlending}
+            depthWrite={false}
+          />
+        </mesh>
+      ))}
     </group>
   );
 }
