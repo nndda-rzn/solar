@@ -4,6 +4,7 @@ import { CelestialBase } from "@/components/cosmic-explorer/CelestialBase";
 import { StarPosition } from "@/types/celestial/star";
 import { magnitudeToSize } from "@/lib/utils/coordinates";
 import { StarGlow } from "./StarGlow";
+import { useStarSelection } from "@/hooks/useStarSelection";
 
 interface StarProps {
   star: StarPosition;
@@ -12,6 +13,9 @@ interface StarProps {
 export function Star({ star }: StarProps) {
   const starSize = magnitudeToSize(star.magnitude);
   const showLabel = star.magnitude < 2.0;
+
+  // Star-specific selection hook (fixes hover state bug)
+  const { isHovered } = useStarSelection(star.id);
 
   return (
     <CelestialBase
@@ -27,7 +31,11 @@ export function Star({ star }: StarProps) {
         <sphereGeometry args={[starSize, 16, 16]} />
         <meshBasicMaterial color={star.color} />
       </mesh>
-      <StarGlow color={star.color} size={starSize} intensity={0.6} />
+      <StarGlow
+        color={star.color}
+        size={starSize}
+        intensity={isHovered ? 0.8 : 0.6}
+      />
     </CelestialBase>
   );
 }
