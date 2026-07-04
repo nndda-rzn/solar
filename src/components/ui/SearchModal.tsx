@@ -5,23 +5,27 @@ import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { useStarData } from "@/hooks/data/useStarData";
+import { useConstellationData } from "@/hooks/data/useConstellationData";
 import { Search } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import * as THREE from "three";
 
 export function SearchModal() {
   const t = useTranslations("common");
   const tStellar = useTranslations("stellar");
+  const locale = useLocale();
   const {
     isSearchOpen,
     setSearchOpen,
     selectPlanet,
     selectStar,
+    selectConstellation,
     setCameraTarget,
   } = useExplorerStore();
   const { planets } = usePlanetData();
   const { dwarfPlanets } = useDwarfPlanetData();
   const { stars } = useStarData();
+  const { constellations } = useConstellationData();
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -58,6 +62,14 @@ export function SearchModal() {
       z: s.z,
       distanceScaled: undefined as number | undefined,
     })),
+    ...constellations.map((c) => ({
+      id: c.id,
+      name: locale === "id" ? c.indonesianName : c.name,
+      color: "#4a9eff",
+      type: "constellation" as const,
+      stars: c.stars,
+      distanceScaled: undefined as number | undefined,
+    })),
   ];
 
   const getTypeLabel = (type: string) => {
@@ -66,6 +78,7 @@ export function SearchModal() {
       planet: t("types.planet"),
       "dwarf planet": t("types.dwarfPlanet"),
       stellar: tStellar("types.star"),
+      constellation: tStellar("types.constellation"),
     };
     return typeMap[type] ?? type;
   };
@@ -94,11 +107,27 @@ export function SearchModal() {
         setCameraTarget(new THREE.Vector3(0, 0, 0));
       } else if (obj.type === "stellar") {
         selectPlanet(null);
+        selectConstellation(null);
         selectStar(obj.id);
         const pos = new THREE.Vector3(obj.x, obj.y, obj.z);
         setCameraTarget(pos);
+      } else if (obj.type === "constellation") {
+        selectPlanet(null);
+        selectStar(null);
+        selectConstellation(obj.id);
+        // Calculate centroid from member stars for camera target
+        const memberStars = stars.filter((s) => obj.stars.includes(s.id));
+        if (memberStars.length > 0) {
+          const centroid = new THREE.Vector3();
+          memberStars.forEach((s) =>
+            centroid.add(new THREE.Vector3(s.x, s.y, s.z)),
+          );
+          centroid.divideScalar(memberStars.length);
+          setCameraTarget(centroid);
+        }
       } else {
         selectStar(null);
+        selectConstellation(null);
         selectPlanet(obj.id);
         const dist = (obj.distanceScaled ?? 10) * 10;
         const pos = new THREE.Vector3(dist, 0, 0);
@@ -106,7 +135,14 @@ export function SearchModal() {
       }
       setSearchOpen(false);
     },
-    [selectPlanet, selectStar, setCameraTarget, setSearchOpen],
+    [
+      selectPlanet,
+      selectStar,
+      selectConstellation,
+      setCameraTarget,
+      setSearchOpen,
+      stars,
+    ],
   );
 
   const handleKeyDown = useCallback(
