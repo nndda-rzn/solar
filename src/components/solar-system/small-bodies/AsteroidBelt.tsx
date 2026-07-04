@@ -57,11 +57,7 @@ export function AsteroidBelt() {
 
   return (
     <group ref={groupRef}>
-      <instancedMesh
-        ref={meshRef}
-        args={[geometry, material, count]}
-        frustumCulled={false}
-      />
+      <instancedMesh ref={meshRef} args={[geometry, material, count]} />
     </group>
   );
 }

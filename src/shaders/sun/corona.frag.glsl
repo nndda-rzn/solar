@@ -17,7 +17,7 @@ void main() {
   fresnel = pow(fresnel, 2.0);
 
   vec3 noisePos = vWorldPosition * 0.5 + u_time * 0.3;
-  float plasma = fbm(noisePos, 4);
+  float plasma = fbm(noisePos, 3);
   plasma = remap(plasma, -1.0, 1.0, 0.0, 1.0);
 
   float distFromCenter = length(vWorldPosition) / u_sunRadius;
