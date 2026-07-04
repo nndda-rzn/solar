@@ -650,6 +650,471 @@
           ]
         }
       }
+    },
+    {
+      "id": "mirzam",
+      "name": "Mirzam",
+      "hip": 30380,
+      "ra": 95.675,
+      "dec": -17.956,
+      "magnitude": 1.98,
+      "spectralType": "B1II",
+      "color": "#b4c4ff",
+      "distance": 500,
+      "content": {
+        "en": {
+          "description": "Mirzam is a blue giant star in Canis Major, serving as a beta star despite being less bright than Sirius.",
+          "facts": [
+            "Beta star of Canis Major constellation",
+            "Blue giant star with variable brightness",
+            "Name means 'the herald' in Arabic",
+            "Distance: 500 light-years"
+          ]
+        },
+        "id": {
+          "description": "Mirzam adalah bintang raksasa biru di Canis Major, berfungsi sebagai bintang beta meskipun kurang terang dari Sirius.",
+          "facts": [
+            "Bintang beta konstelasi Canis Major",
+            "Bintang raksasa biru dengan kecerahan variabel",
+            "Nama berarti 'panglima' dalam bahasa Arab",
+            "Jarak: 500 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "wezen",
+      "name": "Wezen",
+      "hip": 36850,
+      "ra": 107.098,
+      "dec": -26.393,
+      "magnitude": 1.83,
+      "spectralType": "F8II",
+      "color": "#f8f7ff",
+      "distance": 1605,
+      "content": {
+        "en": {
+          "description": "Wezen is a yellow-white supergiant in Canis Major, one of the most distant bright stars visible to the naked eye.",
+          "facts": [
+            "Yellow-white supergiant star",
+            "One of the most distant bright stars",
+            "Name means 'weight' in Arabic",
+            "Distance: 1,605 light-years"
+          ]
+        },
+        "id": {
+          "description": "Wezen adalah supergiant kuning-putih di Canis Major, salah satu bintang terang paling jauh yang terlihat mata telanjang.",
+          "facts": [
+            "Bintang supergiant kuning-putih",
+            "Salah satu bintang terang paling jauh",
+            "Nama berarti 'berat' dalam bahasa Arab",
+            "Jarak: 1.605 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "adhara",
+      "name": "Adhara",
+      "hip": 33579,
+      "ra": 104.656,
+      "dec": -28.972,
+      "magnitude": 1.5,
+      "spectralType": "B2II",
+      "color": "#b4c4ff",
+      "distance": 430,
+      "content": {
+        "en": {
+          "description": "Adhara is a blue giant star in Canis Major, historically one of the brightest stars in the sky.",
+          "facts": [
+            "Second-brightest star in Canis Major",
+            "Blue giant star",
+            "Name means 'the virgins' in Arabic",
+            "Distance: 430 light-years"
+          ]
+        },
+        "id": {
+          "description": "Adhara adalah bintang raksasa biru di Canis Major, secara historis salah satu bintang paling terang di langit.",
+          "facts": [
+            "Bintang paling terang kedua di Canis Major",
+            "Bintang raksasa biru",
+            "Nama berarti 'para gadis' dalam bahasa Arab",
+            "Jarak: 430 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "furud",
+      "name": "Furud",
+      "hip": 35904,
+      "ra": 111.024,
+      "dec": -30.063,
+      "magnitude": 3.02,
+      "spectralType": "B2.5V",
+      "color": "#b4c4ff",
+      "distance": 362,
+      "content": {
+        "en": {
+          "description": "Furud is a blue main-sequence star in Canis Major, located in the southern part of the constellation.",
+          "facts": [
+            "Southernmost bright star in Canis Major",
+            "Blue main-sequence star",
+            "Name means 'the solitary one' in Arabic",
+            "Distance: 362 light-years"
+          ]
+        },
+        "id": {
+          "description": "Furud adalah bintang deret utama biru di Canis Major, terletak di bagian selatan konstelasi.",
+          "facts": [
+            "Bintang terang paling selatan di Canis Major",
+            "Bintang deret utama biru",
+            "Nama berarti 'yang sendirian' dalam bahasa Arab",
+            "Jarak: 362 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gomeisa",
+      "name": "Gomeisa",
+      "hip": 36284,
+      "ra": 111.788,
+      "dec": 8.289,
+      "magnitude": 2.89,
+      "spectralType": "B8Ve",
+      "color": "#b4c4ff",
+      "distance": 162,
+      "content": {
+        "en": {
+          "description": "Gomeisa is a blue main-sequence star in Canis Minor, the second-brightest star in the small constellation.",
+          "facts": [
+            "Second-brightest star in Canis Minor",
+            "Blue main-sequence star with emission lines",
+            "Name means 'the little bleary-eyed one' in Arabic",
+            "Distance: 162 light-years"
+          ]
+        },
+        "id": {
+          "description": "Gomeisa adalah bintang deret utama biru di Canis Minor, bintang paling terang kedua di konstelasi kecil ini.",
+          "facts": [
+            "Bintang paling terang kedua di Canis Minor",
+            "Bintang deret utama biru dengan garis emisi",
+            "Nama berarti 'yang bermata kabur kecil' dalam bahasa Arab",
+            "Jarak: 162 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tarazed",
+      "name": "Tarazed",
+      "hip": 97278,
+      "ra": 294.998,
+      "dec": 10.613,
+      "magnitude": 2.72,
+      "spectralType": "K3II",
+      "color": "#ffc38a",
+      "distance": 461,
+      "content": {
+        "en": {
+          "description": "Tarazed is an orange giant star in Aquila, located north of Altair forming part of the eagle's shape.",
+          "facts": [
+            "Orange giant star in Aquila",
+            "Located north of Altair",
+            "Name means 'the scales' in Arabic",
+            "Distance: 461 light-years"
+          ]
+        },
+        "id": {
+          "description": "Tarazed adalah bintang raksasa oranye di Aquila, terletak di utara Altair membentuk bagian bentuk elang.",
+          "facts": [
+            "Bintang raksasa oranye di Aquila",
+            "Terletak di utara Altair",
+            "Nama berarti 'timbangan' dalam bahasa Arab",
+            "Jarak: 461 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "alshain",
+      "name": "Alshain",
+      "hip": 98036,
+      "ra": 298.118,
+      "dec": 6.407,
+      "magnitude": 3.71,
+      "spectralType": "G8IV",
+      "color": "#fff4ea",
+      "distance": 44.7,
+      "content": {
+        "en": {
+          "description": "Alshain is a yellow subgiant star in Aquila, located south of Altair completing the eagle's distinctive line.",
+          "facts": [
+            "Beta star of Aquila constellation",
+            "Yellow subgiant star",
+            "Relatively close at 44.7 light-years",
+            "Name derived from Persian for 'the star'"
+          ]
+        },
+        "id": {
+          "description": "Alshain adalah bintang subgiant kuning di Aquila, terletak di selatan Altair melengkapi garis khas elang.",
+          "facts": [
+            "Bintang beta konstelasi Aquila",
+            "Bintang subgiant kuning",
+            "Relatif dekat di 44,7 tahun cahaya",
+            "Nama berasal dari Persia untuk 'bintang'"
+          ]
+        }
+      }
+    },
+    {
+      "id": "izar",
+      "name": "Izar",
+      "hip": 72105,
+      "ra": 221.246,
+      "dec": 27.074,
+      "magnitude": 2.37,
+      "spectralType": "A0III",
+      "color": "#b4c4ff",
+      "distance": 203,
+      "content": {
+        "en": {
+          "description": "Izar is a striking double star in Boötes, featuring a blue giant paired with an orange companion.",
+          "facts": [
+            "Famous double star in Boötes",
+            "Blue giant with orange companion",
+            "Name means 'the girdle' in Arabic",
+            "Distance: 203 light-years"
+          ]
+        },
+        "id": {
+          "description": "Izar adalah bintang ganda mencolok di Boötes, menampilkan raksasa biru berpasangan dengan pendamping oranye.",
+          "facts": [
+            "Bintang ganda terkenal di Boötes",
+            "Raksasa biru dengan pendamping oranye",
+            "Nama berarti 'ikat pinggang' dalam bahasa Arab",
+            "Jarak: 203 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "muphrid",
+      "name": "Muphrid",
+      "hip": 73555,
+      "ra": 225.849,
+      "dec": 18.398,
+      "magnitude": 2.68,
+      "spectralType": "G0IV",
+      "color": "#fff4ea",
+      "distance": 37,
+      "content": {
+        "en": {
+          "description": "Muphrid is a yellow subgiant star in Boötes, located close to Arcturus in the herdsman's constellation.",
+          "facts": [
+            "Yellow subgiant near Arcturus",
+            "Only 37 light-years from Earth",
+            "Name means 'the solitary one of the spear bearer' in Arabic",
+            "Shares similar motion with Arcturus"
+          ]
+        },
+        "id": {
+          "description": "Muphrid adalah bintang subgiant kuning di Boötes, terletak dekat Arcturus di rasi gembala.",
+          "facts": [
+            "Subgiant kuning dekat Arcturus",
+            "Hanya 37 tahun cahaya dari Bumi",
+            "Nama berarti 'yang sendirian dari pembawa tombak' dalam bahasa Arab",
+            "Bergerak serupa dengan Arcturus"
+          ]
+        }
+      }
+    },
+    {
+      "id": "seginus",
+      "name": "Seginus",
+      "hip": 71075,
+      "ra": 218.02,
+      "dec": 38.308,
+      "magnitude": 3.04,
+      "spectralType": "A7III",
+      "color": "#f8f7ff",
+      "distance": 86.8,
+      "content": {
+        "en": {
+          "description": "Seginus is a white giant star in Boötes, marking the left shoulder of the herdsman figure.",
+          "facts": [
+            "Gamma star of Boötes constellation",
+            "White giant star",
+            "Name derived from Arabic for 'the shoulder'",
+            "Distance: 86.8 light-years"
+          ]
+        },
+        "id": {
+          "description": "Seginus adalah bintang raksasa putih di Boötes, menandai bahu kiri figur gembala.",
+          "facts": [
+            "Bintang gamma konstelasi Boötes",
+            "Bintang raksasa putih",
+            "Nama berasal dari bahasa Arab untuk 'bahu'",
+            "Jarak: 86,8 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "elnath",
+      "name": "Elnath",
+      "hip": 26464,
+      "ra": 81.573,
+      "dec": 28.608,
+      "magnitude": 1.65,
+      "spectralType": "B7III",
+      "color": "#b4c4ff",
+      "distance": 134,
+      "content": {
+        "en": {
+          "description": "Elnath is a blue giant star in Taurus, marking the northern horn tip of the bull.",
+          "facts": [
+            "Beta star of Taurus constellation",
+            "Blue giant star",
+            "Marks the bull's northern horn tip",
+            "Distance: 134 light-years"
+          ]
+        },
+        "id": {
+          "description": "Elnath adalah bintang raksasa biru di Taurus, menandai ujung tanduk utara banteng.",
+          "facts": [
+            "Bintang beta konstelasi Taurus",
+            "Bintang raksasa biru",
+            "Menandai ujung tanduk utara banteng",
+            "Jarak: 134 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ain",
+      "name": "Ain",
+      "hip": 20889,
+      "ra": 67.154,
+      "dec": 19.105,
+      "magnitude": 3.53,
+      "spectralType": "K0III",
+      "color": "#ffc38a",
+      "distance": 155,
+      "content": {
+        "en": {
+          "description": "Ain is an orange giant star in Taurus, marking the eye of the bull alongside Aldebaran in the Hyades cluster.",
+          "facts": [
+            "Orange giant star in the Hyades cluster",
+            "Marks the bull's eye",
+            "Name means 'eye' in Arabic",
+            "Distance: 155 light-years"
+          ]
+        },
+        "id": {
+          "description": "Ain adalah bintang raksasa oranye di Taurus, menandai mata banteng bersama Aldebaran di gugus Hyades.",
+          "facts": [
+            "Bintang raksasa oranye di gugus Hyades",
+            "Menandai mata banteng",
+            "Nama berarti 'mata' dalam bahasa Arab",
+            "Jarak: 155 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hyadum",
+      "name": "Hyadum",
+      "hip": 20894,
+      "ra": 67.177,
+      "dec": 15.628,
+      "magnitude": 3.65,
+      "spectralType": "G8III",
+      "color": "#ffd2a1",
+      "distance": 154,
+      "content": {
+        "en": {
+          "description": "Hyadum is a yellow giant star in Taurus, the leading star of the V-shaped Hyades star cluster.",
+          "facts": [
+            "Leading star of the Hyades cluster",
+            "Yellow giant star",
+            "Name means 'the first of the Hyades' in Arabic",
+            "Distance: 154 light-years"
+          ]
+        },
+        "id": {
+          "description": "Hyadum adalah bintang raksasa kuning di Taurus, bintang utama gugus bintang Hyades berbentuk V.",
+          "facts": [
+            "Bintang utama gugus Hyades",
+            "Bintang raksasa kuning",
+            "Nama berarti 'pertama dari Hyades' dalam bahasa Arab",
+            "Jarak: 154 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "avior",
+      "name": "Avior",
+      "hip": 41037,
+      "ra": 125.627,
+      "dec": -63.409,
+      "magnitude": 1.86,
+      "spectralType": "K3III",
+      "color": "#ffc38a",
+      "distance": 630,
+      "content": {
+        "en": {
+          "description": "Avior is an orange giant star in Carina, one of the brightest stars in the southern sky.",
+          "facts": [
+            "One of the brightest stars in southern sky",
+            "Orange giant star",
+            "Binary system with blue companion",
+            "Distance: 630 light-years"
+          ]
+        },
+        "id": {
+          "description": "Avior adalah bintang raksasa oranye di Carina, salah satu bintang paling terang di langit selatan.",
+          "facts": [
+            "Salah satu bintang paling terang di langit selatan",
+            "Bintang raksasa oranye",
+            "Sistem biner dengan pendamping biru",
+            "Jarak: 630 tahun cahaya"
+          ]
+        }
+      }
+    },
+    {
+      "id": "miaplacidus",
+      "name": "Miaplacidus",
+      "hip": 45238,
+      "ra": 138.3,
+      "dec": -69.717,
+      "magnitude": 1.69,
+      "spectralType": "A2IV",
+      "color": "#f8f7ff",
+      "distance": 113,
+      "content": {
+        "en": {
+          "description": "Miaplacidus is a white subgiant star in Carina, the second-brightest star in the constellation.",
+          "facts": [
+            "Second-brightest star in Carina",
+            "White subgiant star",
+            "Name combines Latin and Arabic origins",
+            "Distance: 113 light-years"
+          ]
+        },
+        "id": {
+          "description": "Miaplacidus adalah bintang subgiant putih di Carina, bintang paling terang kedua di konstelasi ini.",
+          "facts": [
+            "Bintang paling terang kedua di Carina",
+            "Bintang subgiant putih",
+            "Nama menggabungkan asal Latin dan Arab",
+            "Jarak: 113 tahun cahaya"
+          ]
+        }
+      }
     }
   ]
 }

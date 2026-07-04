@@ -77,6 +77,134 @@
           "mythology": "Dalam mitologi Yunani, ini adalah kecapi Orpheus, musisi legendaris yang musiknya bisa memikat semua makhluk hidup bahkan batu."
         }
       }
+    },
+    {
+      "id": "canis-major",
+      "name": "Canis Major",
+      "indonesianName": "Anjing Besar",
+      "abbreviation": "CMa",
+      "stars": ["sirius", "mirzam", "wezen", "adhara", "furud"],
+      "lines": [
+        { "from": "sirius", "to": "mirzam" },
+        { "from": "mirzam", "to": "wezen" },
+        { "from": "wezen", "to": "adhara" },
+        { "from": "adhara", "to": "furud" }
+      ],
+      "content": {
+        "en": {
+          "description": "Canis Major is the Great Dog constellation, home to Sirius the brightest star in the night sky.",
+          "mythology": "In Greek mythology, Canis Major represents the dog of Orion the hunter, chasing the hare across the sky."
+        },
+        "id": {
+          "description": "Canis Major adalah rasi Anjing Besar, rumah bagi Sirius bintang paling terang di langit malam.",
+          "mythology": "Dalam mitologi Yunani, Canis Major melambangkan anjing pemburu Orion, mengejar kelinci melintasi langit."
+        }
+      }
+    },
+    {
+      "id": "canis-minor",
+      "name": "Canis Minor",
+      "indonesianName": "Anjing Kecil",
+      "abbreviation": "CMi",
+      "stars": ["procyon", "gomeisa"],
+      "lines": [{ "from": "procyon", "to": "gomeisa" }],
+      "content": {
+        "en": {
+          "description": "Canis Minor is the Little Dog constellation, a small constellation containing the bright star Procyon.",
+          "mythology": "In Greek mythology, Canis Minor represents one of Orion's hunting dogs, placed in the sky alongside the hunter."
+        },
+        "id": {
+          "description": "Canis Minor adalah rasi Anjing Kecil, konstelasi kecil yang mengandung bintang terang Procyon.",
+          "mythology": "Dalam mitologi Yunani, Canis Minor melambangkan salah satu anjing pemburu Orion, ditempatkan di langit bersama pemburu."
+        }
+      }
+    },
+    {
+      "id": "aquila",
+      "name": "Aquila",
+      "indonesianName": "Elang",
+      "abbreviation": "Aql",
+      "stars": ["altair", "tarazed", "alshain"],
+      "lines": [
+        { "from": "tarazed", "to": "altair" },
+        { "from": "altair", "to": "alshain" }
+      ],
+      "content": {
+        "en": {
+          "description": "Aquila is the Eagle constellation, featuring the bright star Altair as part of the Summer Triangle.",
+          "mythology": "In Greek mythology, Aquila represents the eagle that carried Zeus's thunderbolts and was sent to fetch Ganymede."
+        },
+        "id": {
+          "description": "Aquila adalah rasi Elang, menampilkan bintang terang Altair sebagai bagian dari Segitiga Musim Panas.",
+          "mythology": "Dalam mitologi Yunani, Aquila melambangkan elang yang membawa petir Zeus dan dikirim untuk mengambil Ganymede."
+        }
+      }
+    },
+    {
+      "id": "bootes",
+      "name": "Boötes",
+      "indonesianName": "Gembala",
+      "abbreviation": "Boo",
+      "stars": ["arcturus", "izar", "muphrid", "seginus"],
+      "lines": [
+        { "from": "seginus", "to": "izar" },
+        { "from": "izar", "to": "arcturus" },
+        { "from": "arcturus", "to": "muphrid" }
+      ],
+      "content": {
+        "en": {
+          "description": "Boötes is the Herdsman constellation, dominated by the bright orange star Arcturus guarding the northern sky.",
+          "mythology": "In Greek mythology, Boötes represents the herdsman Icarius, who was taught winemaking by Dionysus and placed among the stars."
+        },
+        "id": {
+          "description": "Boötes adalah rasi Gembala, didominasi oleh bintang oranye terang Arcturus menjaga langit utara.",
+          "mythology": "Dalam mitologi Yunani, Boötes melambangkan gembala Icarius, yang diajari pembuatan anggur oleh Dionysus dan ditempatkan di antara bintang."
+        }
+      }
+    },
+    {
+      "id": "taurus",
+      "name": "Taurus",
+      "indonesianName": "Banteng",
+      "abbreviation": "Tau",
+      "stars": ["aldebaran", "elnath", "ain", "hyadum"],
+      "lines": [
+        { "from": "elnath", "to": "ain" },
+        { "from": "ain", "to": "hyadum" },
+        { "from": "hyadum", "to": "aldebaran" },
+        { "from": "aldebaran", "to": "elnath" }
+      ],
+      "content": {
+        "en": {
+          "description": "Taurus is the Bull constellation, a zodiac constellation featuring the bright Aldebaran and the V-shaped Hyades cluster.",
+          "mythology": "In Greek mythology, Taurus represents the white bull Zeus transformed into to abduct Europa, carrying her across the sea to Crete."
+        },
+        "id": {
+          "description": "Taurus adalah rasi Banteng, konstelasi zodiak menampilkan Aldebaran terang dan gugus Hyades berbentuk V.",
+          "mythology": "Dalam mitologi Yunani, Taurus melambangkan banteng putih yang Zeus ubah untuk menculik Europa, membawanya melintasi laut ke Crete."
+        }
+      }
+    },
+    {
+      "id": "carina",
+      "name": "Carina",
+      "indonesianName": "Lunas Kapal",
+      "abbreviation": "Car",
+      "stars": ["canopus", "avior", "miaplacidus"],
+      "lines": [
+        { "from": "miaplacidus", "to": "canopus" },
+        { "from": "canopus", "to": "avior" }
+      ],
+      "content": {
+        "en": {
+          "description": "Carina is the Keel constellation, part of the ancient Argo Navis ship, home to the second-brightest star Canopus.",
+          "mythology": "In Greek mythology, Carina represents the keel of the ship Argo that carried Jason and the Argonauts on their quest for the Golden Fleece."
+        },
+        "id": {
+          "description": "Carina adalah rasi Lunas Kapal, bagian dari kapal Argo Navis kuno, rumah bagi bintang paling terang kedua Canopus.",
+          "mythology": "Dalam mitologi Yunani, Carina melambangkan lunas kapal Argo yang membawa Jason dan Argonaut dalam pencarian Bulu Emas."
+        }
+      }
     }
   ]
 }
