@@ -12,8 +12,15 @@ const NOISE_TYPE_MAP = { simplex: 0, fbm: 1, ridged: 2 } as const;
 export function useProceduralTexture(
   config: ProceduralTextureConfig,
 ): THREE.ShaderMaterial {
-  const baseColor = new THREE.Color(config.baseColor);
-  const secondaryColor = baseColor.clone().offsetHSL(0.05, -0.1, 0.1);
+  // Memoize colors to prevent shader recompilation on every render
+  const baseColor = useMemo(
+    () => new THREE.Color(config.baseColor),
+    [config.baseColor],
+  );
+  const secondaryColor = useMemo(
+    () => baseColor.clone().offsetHSL(0.05, -0.1, 0.1),
+    [baseColor],
+  );
 
   const material = useMemo(() => {
     const fragmentShader = proceduralFragRaw
