@@ -5,7 +5,10 @@ import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
 import { useOrbitAnimation } from "@/hooks/useOrbitAnimation";
-import { useSelection } from "@/hooks/useSelection";
+import {
+  useCelestialSelection,
+  CelestialType,
+} from "@/hooks/useCelestialSelection";
 
 interface OrbitConfig {
   distance: number;
@@ -23,6 +26,8 @@ interface CelestialBaseProps {
   selectionRing?: boolean;
   label?: string;
   children?: React.ReactNode;
+  /** Type of celestial object for selection state. Defaults to "planet" */
+  type?: CelestialType;
 }
 
 export function CelestialBase({
@@ -35,9 +40,12 @@ export function CelestialBase({
   selectionRing = true,
   label,
   children,
+  type = "planet",
 }: CelestialBaseProps) {
   const groupRef = useRef<THREE.Group>(null);
   const meshRef = useRef<THREE.Mesh>(null);
+  // Cache target vector to avoid allocation every frame
+  const targetScaleVec = useRef(new THREE.Vector3(1, 1, 1));
 
   const {
     isSelected,
@@ -45,17 +53,15 @@ export function CelestialBase({
     handleClick,
     handlePointerOver,
     handlePointerOut,
-  } = useSelection(id);
+  } = useCelestialSelection(type, id);
 
   useOrbitAnimation(orbitConfig || null, groupRef);
 
   useFrame(() => {
     if (!meshRef.current) return;
     const targetScale = isHovered || isSelected ? 1.15 : 1;
-    meshRef.current.scale.lerp(
-      new THREE.Vector3(targetScale, targetScale, targetScale),
-      0.1,
-    );
+    targetScaleVec.current.setScalar(targetScale);
+    meshRef.current.scale.lerp(targetScaleVec.current, 0.1);
   });
 
   const onClick = (e: { stopPropagation: () => void }) => {

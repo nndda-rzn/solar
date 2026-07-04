@@ -5,7 +5,7 @@ import * as THREE from "three";
 import { ConstellationData } from "@/types/celestial/constellation";
 import { StarPosition } from "@/types/celestial/star";
 import { ConstellationLines } from "./ConstellationLines";
-import { useConstellationSelection } from "@/hooks/useConstellationSelection";
+import { useCelestialSelection } from "@/hooks/useCelestialSelection";
 
 interface ConstellationProps {
   data: ConstellationData;
@@ -16,10 +16,10 @@ export function Constellation({ data, starPositions }: ConstellationProps) {
   const {
     isSelected,
     isHovered,
-    handleClick,
+    handleClickWithPosition,
     handlePointerOver,
     handlePointerOut,
-  } = useConstellationSelection(data.id);
+  } = useCelestialSelection("constellation", data.id);
 
   // Calculate centroid for click target and bounding sphere for clickable area
   const { centroid, boundingRadius } = useMemo(() => {
@@ -51,7 +51,7 @@ export function Constellation({ data, starPositions }: ConstellationProps) {
         position={[centroid.x, centroid.y, centroid.z]}
         onClick={(e) => {
           e.stopPropagation();
-          handleClick(e, centroid);
+          handleClickWithPosition(e, centroid);
         }}
         onPointerOver={handlePointerOver}
         onPointerOut={handlePointerOut}
