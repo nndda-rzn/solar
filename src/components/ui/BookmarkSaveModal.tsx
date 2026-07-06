@@ -92,14 +92,17 @@ export function BookmarkSaveModal() {
 
     setIsSaving(false);
 
-    if (created) {
-      cosmicEventBus.emit({
-        type: "bookmark_saved",
-        payload: { id: created.id },
-      });
-      push({ title: t("toast.bookmarkSaved"), variant: "info" });
+    if (!created) {
+      push({ title: t("bookmarks.saveError"), variant: "error" });
+      setIsSaving(false);
+      return;
     }
 
+    cosmicEventBus.emit({
+      type: "bookmark_saved",
+      payload: { id: created.id },
+    });
+    push({ title: t("toast.bookmarkSaved"), variant: "info" });
     close();
   }
 

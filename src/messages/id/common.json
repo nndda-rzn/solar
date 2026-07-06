@@ -84,7 +84,11 @@
     "delete": "Hapus",
     "confirmDelete": "Hapus bookmark ini?",
     "empty": "Belum ada bookmark. Tekan Ctrl+B untuk menyimpan tampilan saat ini.",
-    "scale": "Skala"
+    "scale": "Skala",
+    "saveError": "Gagal menyimpan bookmark",
+    "nameError": "Nama harus 1-50 karakter",
+    "cameraError": "Posisi kamera tidak tersedia",
+    "cancel": "Batal"
   },
   "toast": {
     "achievementUnlocked": "Pencapaian Terbuka!",

@@ -84,7 +84,11 @@
     "delete": "Delete",
     "confirmDelete": "Delete this bookmark?",
     "empty": "No bookmarks yet. Press Ctrl+B to save your current view.",
-    "scale": "Scale"
+    "scale": "Scale",
+    "saveError": "Failed to save bookmark",
+    "nameError": "Name must be 1-50 characters",
+    "cameraError": "Camera position unavailable",
+    "cancel": "Cancel"
   },
   "toast": {
     "achievementUnlocked": "Achievement Unlocked!",
