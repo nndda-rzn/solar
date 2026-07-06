@@ -4,5 +4,21 @@
   "play": "Play simulation",
   "reset": "Reset simulation",
   "timeline": "Timeline",
-  "dateJump": "Jump to date"
+  "dateJump": "Jump to date",
+  "presets": {
+    "realtime": "Realtime",
+    "minPerSec": "1 min/s",
+    "hourPerSec": "1 hr/s",
+    "dayPerSec": "1 day/s",
+    "weekPerSec": "1 wk/s",
+    "monthPerSec": "1 mo/s",
+    "yearPerSec": "1 yr/s"
+  },
+  "jump": {
+    "back1Year": "-1 yr",
+    "back1Month": "-1 mo",
+    "today": "Today",
+    "forward1Month": "+1 mo",
+    "forward1Year": "+1 yr"
+  }
 }
