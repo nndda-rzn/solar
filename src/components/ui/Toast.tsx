@@ -49,15 +49,22 @@ export function ToastContainer() {
   const { toasts, dismiss } = useToast();
 
   return (
-    <div className="fixed right-4 top-4 z-[100] flex flex-col gap-2">
+    <div
+      role="status"
+      aria-live="polite"
+      className="fixed right-4 top-4 z-[100] flex flex-col gap-2"
+    >
       <AnimatePresence>
         {toasts.map((toast) => {
           const variant = VARIANTS[toast.variant ?? "info"];
           const Icon = (toast.icon && ICON_MAP[toast.icon]) || variant.icon;
+          const isUrgent = toast.variant === "achievement";
           return (
             <motion.div
               key={toast.id}
               onClick={() => dismiss(toast.id)}
+              role={isUrgent ? "alert" : "status"}
+              aria-live={isUrgent ? "assertive" : "polite"}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 50 }}
