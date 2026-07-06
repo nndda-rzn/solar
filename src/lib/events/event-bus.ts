@@ -8,7 +8,10 @@ export type CosmicEvent =
   | { type: "bookmark_saved"; payload: { id: string } }
   | {
       type: "panel_opened";
-      payload: { id: string; panelType: "planet" | "star" | "dwarf" };
+      payload: {
+        id: string;
+        panelType: "planet" | "star" | "dwarf" | "constellation";
+      };
     }
   | { type: "speed_reached"; payload: { speed: number } }
   | {

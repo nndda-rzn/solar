@@ -49,7 +49,7 @@ export function StellarInfoPanel() {
     });
     cosmicEventBus.emit({
       type: "panel_opened",
-      payload: { id: selectedConstellation, panelType: "star" },
+      payload: { id: selectedConstellation, panelType: "constellation" },
     });
   }, [selectedConstellation]);
 
