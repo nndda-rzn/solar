@@ -13,6 +13,8 @@ const resetStore = () => {
     hoveredConstellation: null,
     isTransitioning: false,
     cameraTarget: null,
+    cameraPosition: null,
+    isBookmarkModalOpen: false,
     isInfoPanelOpen: false,
     isSearchOpen: false,
   });
@@ -126,6 +128,42 @@ describe("useExplorerStore", () => {
     it("setIsTransitioning updates the flag", () => {
       useExplorerStore.getState().setIsTransitioning(true);
       expect(useExplorerStore.getState().isTransitioning).toBe(true);
+    });
+  });
+
+  describe("camera position", () => {
+    it("defaults to null", () => {
+      expect(useExplorerStore.getState().cameraPosition).toBeNull();
+    });
+
+    it("setCameraPosition stores the given vector", () => {
+      const pos = new THREE.Vector3(5, 5, 5);
+      useExplorerStore.getState().setCameraPosition(pos);
+      expect(useExplorerStore.getState().cameraPosition).toBe(pos);
+    });
+
+    it("setCameraPosition(null) clears the position", () => {
+      useExplorerStore.getState().setCameraPosition(new THREE.Vector3());
+      useExplorerStore.getState().setCameraPosition(null);
+      expect(useExplorerStore.getState().cameraPosition).toBeNull();
+    });
+  });
+
+  describe("bookmark modal", () => {
+    it("defaults to closed", () => {
+      expect(useExplorerStore.getState().isBookmarkModalOpen).toBe(false);
+    });
+
+    it("toggleBookmarkModal flips the state", () => {
+      useExplorerStore.getState().toggleBookmarkModal();
+      expect(useExplorerStore.getState().isBookmarkModalOpen).toBe(true);
+      useExplorerStore.getState().toggleBookmarkModal();
+      expect(useExplorerStore.getState().isBookmarkModalOpen).toBe(false);
+    });
+
+    it("setBookmarkModalOpen sets the state directly", () => {
+      useExplorerStore.getState().setBookmarkModalOpen(true);
+      expect(useExplorerStore.getState().isBookmarkModalOpen).toBe(true);
     });
   });
 });
