@@ -3,6 +3,7 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { ZOOM_THRESHOLDS, ScaleMode } from "@/config/scales";
+import { cosmicEventBus } from "@/lib/events/event-bus";
 
 export function ScaleManager() {
   const { scale, setScale } = useExplorerStore();
@@ -25,6 +26,10 @@ export function ScaleManager() {
 
     if (newScale !== scale) {
       setScale(newScale);
+      cosmicEventBus.emit({
+        type: "scale_reached",
+        payload: { scale: newScale },
+      });
     }
   });
 

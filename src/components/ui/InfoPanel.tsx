@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
+import { cosmicEventBus } from "@/lib/events/event-bus";
 import { X, Settings, Globe, BookOpen, Lightbulb } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -24,6 +26,19 @@ export function InfoPanel() {
   const planet = planetData ?? dwarfPlanet;
   const isOpen = !!planet;
   const isDwarfPlanet = !!dwarfPlanet;
+
+  useEffect(() => {
+    if (!selectedPlanet) return;
+    const panelType = isDwarfPlanet ? "dwarf" : "planet";
+    cosmicEventBus.emit({
+      type: "panel_opened",
+      payload: { id: selectedPlanet, panelType },
+    });
+    cosmicEventBus.emit({
+      type: "planet_visited",
+      payload: { id: selectedPlanet },
+    });
+  }, [selectedPlanet, isDwarfPlanet]);
 
   const getDescription = () => {
     if (!selectedPlanet) return "";

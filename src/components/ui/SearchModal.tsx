@@ -6,6 +6,7 @@ import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { useStarData } from "@/hooks/data/useStarData";
 import { useConstellationData } from "@/hooks/data/useConstellationData";
+import { cosmicEventBus } from "@/lib/events/event-bus";
 import { Search } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import * as THREE from "three";
@@ -101,6 +102,7 @@ export function SearchModal() {
 
   const handleSelect = useCallback(
     (obj: (typeof allObjects)[0]) => {
+      cosmicEventBus.emit({ type: "search_used", payload: { query } });
       if (obj.id === "sun") {
         selectPlanet(null);
         selectStar(null);

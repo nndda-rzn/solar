@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { useStarData } from "@/hooks/data/useStarData";
 import { useConstellationData } from "@/hooks/data/useConstellationData";
+import { cosmicEventBus } from "@/lib/events/event-bus";
 import { X, Star as StarIcon, Sparkles } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import * as THREE from "three";
@@ -26,6 +28,30 @@ export function StellarInfoPanel() {
     : undefined;
 
   const isOpen = !!star || !!constellation;
+
+  useEffect(() => {
+    if (!selectedStar) return;
+    cosmicEventBus.emit({
+      type: "star_visited",
+      payload: { id: selectedStar },
+    });
+    cosmicEventBus.emit({
+      type: "panel_opened",
+      payload: { id: selectedStar, panelType: "star" },
+    });
+  }, [selectedStar]);
+
+  useEffect(() => {
+    if (!selectedConstellation) return;
+    cosmicEventBus.emit({
+      type: "constellation_visited",
+      payload: { id: selectedConstellation },
+    });
+    cosmicEventBus.emit({
+      type: "panel_opened",
+      payload: { id: selectedConstellation, panelType: "star" },
+    });
+  }, [selectedConstellation]);
 
   function handleClose() {
     selectStar(null);

@@ -2,6 +2,7 @@
 
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { ScaleMode } from "@/config/scales";
+import { cosmicEventBus } from "@/lib/events/event-bus";
 import { useTranslations } from "next-intl";
 
 const SCALE_ORDER: ScaleMode[] = ["solar", "stellar", "galactic", "cosmic"];
@@ -18,7 +19,13 @@ export function ScaleIndicator() {
         return (
           <button
             key={key}
-            onClick={() => setScale(key)}
+            onClick={() => {
+              setScale(key);
+              cosmicEventBus.emit({
+                type: "scale_reached",
+                payload: { scale: key },
+              });
+            }}
             className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-left text-xs transition-all duration-200 ${
               isActive
                 ? "border border-cosmic-accent/40 bg-cosmic-accent/20 text-cosmic-accent"

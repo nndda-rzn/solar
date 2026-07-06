@@ -1,7 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useSimulationStore } from "@/lib/store/simulation-store";
+import { cosmicEventBus } from "@/lib/events/event-bus";
+
+const TIME_TRAVEL_THRESHOLD = 365;
 
 /**
  * SimulationClock - Central time accumulator for the entire simulation
@@ -18,11 +22,21 @@ import { useSimulationStore } from "@/lib/store/simulation-store";
  */
 export function SimulationClock() {
   const advanceDayOffset = useSimulationStore((s) => s.advanceDayOffset);
+  const hasEmittedThreshold = useRef(false);
 
   useFrame((state, delta) => {
     // Advance simulation time by real elapsed time scaled by speed
     // advanceDayOffset handles isPlaying check internally
     advanceDayOffset(delta);
+
+    const dayOffset = useSimulationStore.getState().dayOffset;
+    if (!hasEmittedThreshold.current && dayOffset >= TIME_TRAVEL_THRESHOLD) {
+      hasEmittedThreshold.current = true;
+      cosmicEventBus.emit({
+        type: "time_traveled",
+        payload: { dayOffset },
+      });
+    }
   });
 
   // This component renders nothing - it's just a time accumulator
