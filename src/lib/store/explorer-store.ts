@@ -39,6 +39,15 @@ interface ExplorerState {
   cameraTarget: THREE.Vector3 | null;
   setCameraTarget: (target: THREE.Vector3 | null) => void;
 
+  // Camera position (for bookmark capture)
+  cameraPosition: THREE.Vector3 | null;
+  setCameraPosition: (pos: THREE.Vector3 | null) => void;
+
+  // Bookmark modal
+  isBookmarkModalOpen: boolean;
+  toggleBookmarkModal: () => void;
+  setBookmarkModalOpen: (isOpen: boolean) => void;
+
   // Info panel
   isInfoPanelOpen: boolean;
   toggleInfoPanel: () => void;
@@ -88,6 +97,16 @@ export const useExplorerStore = create<ExplorerState>((set) => ({
   // Camera fly-to target
   cameraTarget: null,
   setCameraTarget: (target) => set({ cameraTarget: target }),
+
+  // Camera position (for bookmark capture)
+  cameraPosition: null,
+  setCameraPosition: (pos) => set({ cameraPosition: pos }),
+
+  // Bookmark modal
+  isBookmarkModalOpen: false,
+  toggleBookmarkModal: () =>
+    set((state) => ({ isBookmarkModalOpen: !state.isBookmarkModalOpen })),
+  setBookmarkModalOpen: (isOpen) => set({ isBookmarkModalOpen: isOpen }),
 
   // Info panel
   isInfoPanelOpen: false,
