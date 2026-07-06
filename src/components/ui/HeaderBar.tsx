@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import {
   Globe,
   Search,
@@ -15,79 +15,21 @@ import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { useAuth } from "@/hooks/useAuth";
 import { useAchievements } from "@/hooks/useAchievements";
-import { createClient } from "@/utils/supabase/client";
-import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname, Link } from "@/i18n/navigation";
-
-function formatSimDate(dayOffset: number): string {
-  const base = new Date();
-  const simTime = new Date(base.getTime() + dayOffset * 86400000);
-  const day = simTime.getDate().toString().padStart(2, "0");
-  const month = simTime.toLocaleString("en-US", { month: "short" });
-  const year = simTime.getFullYear();
-  return `${day} ${month} ${year}`;
-}
-
-function LanguageToggle() {
-  const t = useTranslations("common");
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  return (
-    <div className="flex items-center gap-1 text-xs">
-      <button
-        onClick={() => router.push(pathname, { locale: "en" })}
-        aria-label="Switch to English"
-        aria-pressed={locale === "en"}
-        className={
-          locale === "en"
-            ? "font-semibold text-cosmic-accent"
-            : "text-white/50 hover:text-white/70"
-        }
-      >
-        {t("language.en")}
-      </button>
-      <span className="text-white/20">|</span>
-      <button
-        onClick={() => router.push(pathname, { locale: "id" })}
-        aria-label="Ganti ke Bahasa Indonesia"
-        aria-pressed={locale === "id"}
-        className={
-          locale === "id"
-            ? "font-semibold text-cosmic-accent"
-            : "text-white/50 hover:text-white/70"
-        }
-      >
-        {t("language.id")}
-      </button>
-    </div>
-  );
-}
+import { useClickOutside } from "@/hooks/useClickOutside";
+import { useSupabaseLogout } from "@/hooks/useSupabaseLogout";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { formatSimDate } from "@/lib/utils/format";
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
 
 function UserMenu() {
   const t = useTranslations("common");
   const { user } = useAuth();
-  const router = useRouter();
+  const logout = useSupabaseLogout();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleLogout = async () => {
-    const supabase = createClient();
-    await supabase.auth.signOut();
-    router.push("/login");
-    router.refresh();
-  };
+  useClickOutside(ref, () => setOpen(false));
 
   if (!user) return null;
 
@@ -141,7 +83,7 @@ function UserMenu() {
           <div className="my-1 border-t border-white/5" />
 
           <button
-            onClick={handleLogout}
+            onClick={logout}
             className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-xs text-white/60 transition-colors hover:bg-red-500/10 hover:text-red-400"
           >
             <LogOut className="h-3.5 w-3.5" />

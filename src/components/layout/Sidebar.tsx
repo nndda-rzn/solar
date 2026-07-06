@@ -10,51 +10,14 @@ import {
   Settings,
   Trophy,
 } from "lucide-react";
-import { useTranslations, useLocale } from "next-intl";
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useAuth } from "@/hooks/useAuth";
-import { createClient } from "@/utils/supabase/client";
-
-function LanguageToggle() {
-  const t = useTranslations("common");
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  return (
-    <div className="flex items-center gap-1 text-xs">
-      <button
-        onClick={() => router.push(pathname, { locale: "en" })}
-        aria-label="Switch to English"
-        aria-pressed={locale === "en"}
-        className={
-          locale === "en"
-            ? "font-semibold text-cosmic-accent"
-            : "text-white/50 hover:text-white/70"
-        }
-      >
-        {t("language.en")}
-      </button>
-      <span className="text-white/20">|</span>
-      <button
-        onClick={() => router.push(pathname, { locale: "id" })}
-        aria-label="Ganti ke Bahasa Indonesia"
-        aria-pressed={locale === "id"}
-        className={
-          locale === "id"
-            ? "font-semibold text-cosmic-accent"
-            : "text-white/50 hover:text-white/70"
-        }
-      >
-        {t("language.id")}
-      </button>
-    </div>
-  );
-}
+import { useSupabaseLogout } from "@/hooks/useSupabaseLogout";
+import { LanguageToggle } from "@/components/layout/LanguageToggle";
 
 export function Sidebar() {
   const t = useTranslations("common");
-  const router = useRouter();
   const pathname = usePathname();
   const { user } = useAuth();
 
@@ -74,12 +37,7 @@ export function Sidebar() {
     { href: "/settings" as const, label: t("nav.settings"), icon: Settings },
   ];
 
-  const handleLogout = async () => {
-    const supabase = createClient();
-    await supabase.auth.signOut();
-    router.push("/login");
-    router.refresh();
-  };
+  const logout = useSupabaseLogout();
 
   const isActive = (href: string) =>
     href === "/"
@@ -143,7 +101,7 @@ export function Sidebar() {
 
         {user && (
           <button
-            onClick={handleLogout}
+            onClick={logout}
             aria-label={t("nav.logout")}
             className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-white/50 transition-colors hover:bg-red-500/10 hover:text-red-400"
           >

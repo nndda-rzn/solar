@@ -10,7 +10,11 @@ import { cosmicEventBus } from "@/lib/events/event-bus";
 import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { Search } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
-import * as THREE from "three";
+import {
+  buildSearchIndex,
+  TYPE_LABEL_KEYS,
+} from "@/lib/search/buildSearchIndex";
+import { resolveObjectSelect } from "@/lib/search/handleObjectSelect";
 
 export function SearchModal() {
   const t = useTranslations("common");
@@ -32,57 +36,20 @@ export function SearchModal() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const allObjects = [
-    {
-      id: "sun",
-      name: "Sun",
-      color: "#FBBF24",
-      type: "star" as const,
-      distanceScaled: undefined as number | undefined,
-    },
-    ...planets.map((p) => ({
-      id: p.id,
-      name: p.name,
-      color: p.color || "#ffffff",
-      type: "planet" as const,
-      distanceScaled: p.distanceScaled,
-    })),
-    ...dwarfPlanets.map((dp) => ({
-      id: dp.id,
-      name: dp.name,
-      color: dp.color,
-      type: "dwarf planet" as const,
-      distanceScaled: dp.distanceScaled,
-    })),
-    ...stars.map((s) => ({
-      id: s.id,
-      name: s.name,
-      color: s.color,
-      type: "stellar" as const,
-      x: s.x,
-      y: s.y,
-      z: s.z,
-      distanceScaled: undefined as number | undefined,
-    })),
-    ...constellations.map((c) => ({
-      id: c.id,
-      name: locale === "id" ? c.indonesianName : c.name,
-      color: "#4a9eff",
-      type: "constellation" as const,
-      stars: c.stars,
-      distanceScaled: undefined as number | undefined,
-    })),
-  ];
+  const allObjects = buildSearchIndex({
+    planets,
+    dwarfPlanets,
+    stars,
+    constellations,
+    locale,
+  });
 
   const getTypeLabel = (type: string) => {
-    const typeMap: Record<string, string> = {
-      star: t("types.star"),
-      planet: t("types.planet"),
-      "dwarf planet": t("types.dwarfPlanet"),
-      stellar: tStellar("types.star"),
-      constellation: tStellar("types.constellation"),
-    };
-    return typeMap[type] ?? type;
+    const mapping = TYPE_LABEL_KEYS[type as keyof typeof TYPE_LABEL_KEYS];
+    if (!mapping) return type;
+    return mapping.namespace === "stellar"
+      ? tStellar(mapping.key)
+      : t(mapping.key);
   };
 
   const filtered = allObjects.filter((obj) =>
@@ -104,37 +71,32 @@ export function SearchModal() {
   const handleSelect = useCallback(
     (obj: (typeof allObjects)[0]) => {
       cosmicEventBus.emit({ type: "search_used", payload: { query } });
-      if (obj.id === "sun") {
-        selectPlanet(null);
-        selectStar(null);
-        setCameraTarget(new THREE.Vector3(0, 0, 0));
-      } else if (obj.type === "stellar") {
-        selectPlanet(null);
-        selectConstellation(null);
-        selectStar(obj.id);
-        const pos = new THREE.Vector3(obj.x, obj.y, obj.z);
-        setCameraTarget(pos);
-      } else if (obj.type === "constellation") {
-        selectPlanet(null);
-        selectStar(null);
-        selectConstellation(obj.id);
-        // Calculate centroid from member stars for camera target
-        const memberStars = stars.filter((s) => obj.stars.includes(s.id));
-        if (memberStars.length > 0) {
-          const centroid = new THREE.Vector3();
-          memberStars.forEach((s) =>
-            centroid.add(new THREE.Vector3(s.x, s.y, s.z)),
-          );
-          centroid.divideScalar(memberStars.length);
-          setCameraTarget(centroid);
-        }
-      } else {
-        selectStar(null);
-        selectConstellation(null);
-        selectPlanet(obj.id);
-        const dist = (obj.distanceScaled ?? 10) * 10;
-        const pos = new THREE.Vector3(dist, 0, 0);
-        setCameraTarget(pos);
+      const { action, cameraTarget } = resolveObjectSelect(obj, stars);
+
+      switch (action.kind) {
+        case "sun":
+          selectPlanet(null);
+          selectStar(null);
+          break;
+        case "star":
+          selectPlanet(null);
+          selectConstellation(null);
+          selectStar(action.id);
+          break;
+        case "constellation":
+          selectPlanet(null);
+          selectStar(null);
+          selectConstellation(action.id);
+          break;
+        case "planet":
+          selectStar(null);
+          selectConstellation(null);
+          selectPlanet(action.id);
+          break;
+      }
+
+      if (cameraTarget) {
+        setCameraTarget(cameraTarget);
       }
       setSearchOpen(false);
     },
@@ -145,6 +107,7 @@ export function SearchModal() {
       setCameraTarget,
       setSearchOpen,
       stars,
+      query,
     ],
   );
 
