@@ -1,8 +1,11 @@
 "use client";
 
 import { useSimulationStore } from "@/lib/store/simulation-store";
+import { cosmicEventBus } from "@/lib/events/event-bus";
 import { Play, Pause, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
+
+const SPEED_ACHIEVEMENT_THRESHOLD = 10;
 
 export function SimulationControls() {
   const t = useTranslations("simulation");
@@ -36,7 +39,16 @@ export function SimulationControls() {
             max={1000}
             step={1}
             value={speed}
-            onChange={(e) => setSpeed(Number(e.target.value))}
+            onChange={(e) => {
+              const newSpeed = Number(e.target.value);
+              setSpeed(newSpeed);
+              if (newSpeed >= SPEED_ACHIEVEMENT_THRESHOLD) {
+                cosmicEventBus.emit({
+                  type: "speed_reached",
+                  payload: { speed: newSpeed },
+                });
+              }
+            }}
             aria-label="Simulation speed"
             className="slider w-40 cursor-pointer appearance-none rounded-full bg-white/10 accent-cosmic-accent md:w-56"
           />
