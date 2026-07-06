@@ -26,6 +26,8 @@ export function ScaleIndicator() {
                 payload: { scale: key },
               });
             }}
+            aria-label={t(`scale.${key}`)}
+            aria-pressed={isActive}
             className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-left text-xs transition-all duration-200 ${
               isActive
                 ? "border border-cosmic-accent/40 bg-cosmic-accent/20 text-cosmic-accent"

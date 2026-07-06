@@ -5,6 +5,8 @@
     "distance": "Jarak",
     "hip": "ID Hipparcos"
   },
+  "starProperties": "Properti Bintang",
+  "facts": "Fakta",
   "constellation": {
     "memberStars": "Bintang Anggota",
     "mythology": "Mitologi"

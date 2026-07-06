@@ -8,6 +8,7 @@ import { useExplorerStore } from "@/lib/store/explorer-store";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useToast } from "@/hooks/useToast";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { cosmicEventBus } from "@/lib/events/event-bus";
 import { SCALES } from "@/config/scales";
 import type { CameraState } from "@/types/bookmark";
@@ -66,6 +67,8 @@ export function BookmarkSaveModal() {
     reset();
   }
 
+  const modalRef = useFocusTrap(isBookmarkModalOpen);
+
   async function handleSave() {
     if (!canSave || !cameraPosition) return;
     setIsSaving(true);
@@ -117,6 +120,10 @@ export function BookmarkSaveModal() {
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm"
         >
           <motion.div
+            ref={modalRef as React.RefObject<HTMLDivElement>}
+            role="dialog"
+            aria-modal="true"
+            aria-label={t("bookmarks.save")}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
@@ -152,7 +159,7 @@ export function BookmarkSaveModal() {
                 />
                 {!isValid && name.length > 0 && (
                   <p className="mt-1 text-xs text-red-400">
-                    1–50 characters required
+                    {t("bookmarks.nameError")}
                   </p>
                 )}
               </div>
@@ -182,7 +189,7 @@ export function BookmarkSaveModal() {
 
               {!hasCamera && (
                 <p className="text-xs text-red-400">
-                  Camera position unavailable
+                  {t("bookmarks.cameraError")}
                 </p>
               )}
 

@@ -29,6 +29,7 @@ function BackButton() {
         selectPlanet(null);
         setCameraTarget(null);
       }}
+      aria-label={t("hud.backToOverview")}
       className="pointer-events-auto absolute left-4 top-16 flex items-center gap-2 rounded-lg border border-white/10 bg-black/60 px-4 py-2 text-sm text-white/70 backdrop-blur-md transition-all duration-200 hover:border-cosmic-accent/40 hover:text-cosmic-accent"
     >
       <ArrowLeft className="h-4 w-4" />

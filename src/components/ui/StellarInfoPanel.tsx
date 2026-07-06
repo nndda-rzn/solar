@@ -5,6 +5,7 @@ import { useExplorerStore } from "@/lib/store/explorer-store";
 import { useStarData } from "@/hooks/data/useStarData";
 import { useConstellationData } from "@/hooks/data/useConstellationData";
 import { cosmicEventBus } from "@/lib/events/event-bus";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { X, Star as StarIcon, Sparkles } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import * as THREE from "three";
@@ -59,6 +60,8 @@ export function StellarInfoPanel() {
     setCameraTarget(null);
   }
 
+  const panelRef = useFocusTrap(isOpen);
+
   return (
     <>
       {/* Backdrop */}
@@ -74,6 +77,10 @@ export function StellarInfoPanel() {
 
       {/* Panel */}
       <aside
+        ref={panelRef as React.RefObject<HTMLElement>}
+        role="dialog"
+        aria-modal={isOpen}
+        aria-label={star?.name ?? constellation?.name}
         className={`fixed right-0 top-0 z-50 flex h-full w-96 flex-col overflow-y-auto border-l border-white/10 bg-black/80 backdrop-blur-xl transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } pointer-events-auto`}
@@ -105,7 +112,7 @@ export function StellarInfoPanel() {
             <section>
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white/70">
                 <StarIcon className="h-4 w-4 text-cosmic-accent" />
-                Star Properties
+                {t("starProperties")}
               </div>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
                 <Stat
@@ -130,7 +137,7 @@ export function StellarInfoPanel() {
             <section>
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white/70">
                 <Sparkles className="h-4 w-4 text-cosmic-accent" />
-                Facts
+                {t("facts")}
               </div>
               <ul className="flex flex-col gap-2">
                 {star.content[locale as "en" | "id"].facts.map((fact, i) => (

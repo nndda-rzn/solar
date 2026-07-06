@@ -5,6 +5,8 @@
     "distance": "Distance",
     "hip": "Hipparcos ID"
   },
+  "starProperties": "Star Properties",
+  "facts": "Facts",
   "constellation": {
     "memberStars": "Member Stars",
     "mythology": "Mythology"

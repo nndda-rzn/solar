@@ -35,6 +35,8 @@ function LanguageToggle() {
     <div className="flex items-center gap-1 text-xs">
       <button
         onClick={() => router.push(pathname, { locale: "en" })}
+        aria-label="Switch to English"
+        aria-pressed={locale === "en"}
         className={
           locale === "en"
             ? "font-semibold text-cosmic-accent"
@@ -46,6 +48,8 @@ function LanguageToggle() {
       <span className="text-white/20">|</span>
       <button
         onClick={() => router.push(pathname, { locale: "id" })}
+        aria-label="Ganti ke Bahasa Indonesia"
+        aria-pressed={locale === "id"}
         className={
           locale === "id"
             ? "font-semibold text-cosmic-accent"
@@ -118,6 +122,7 @@ export function HeaderBar() {
       <div className="flex items-center gap-4">
         <button
           onClick={toggleSearch}
+          aria-label={t("header.search")}
           className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50 transition-colors hover:border-white/20 hover:text-white/70"
         >
           <Search className="h-3 w-3" />
@@ -142,6 +147,7 @@ export function HeaderBar() {
         </div>
         <button
           onClick={toggleBookmarkModal}
+          aria-label={t("header.bookmark")}
           className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50 transition-colors hover:border-white/20 hover:text-white/70"
         >
           <Bookmark className="h-3 w-3" />

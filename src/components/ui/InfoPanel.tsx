@@ -5,6 +5,7 @@ import { useExplorerStore } from "@/lib/store/explorer-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { cosmicEventBus } from "@/lib/events/event-bus";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { X, Settings, Globe, BookOpen, Lightbulb } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -58,6 +59,8 @@ export function InfoPanel() {
     setCameraTarget(null);
   }
 
+  const panelRef = useFocusTrap(isOpen);
+
   return (
     <>
       {/* Backdrop */}
@@ -73,6 +76,10 @@ export function InfoPanel() {
 
       {/* Panel */}
       <aside
+        ref={panelRef as React.RefObject<HTMLElement>}
+        role="dialog"
+        aria-modal={isOpen}
+        aria-label={planet?.name}
         className={`fixed right-0 top-0 z-50 flex h-full w-96 flex-col overflow-y-auto border-l border-white/10 bg-black/80 backdrop-blur-xl transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } pointer-events-auto`}

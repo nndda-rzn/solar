@@ -7,6 +7,7 @@ import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { useStarData } from "@/hooks/data/useStarData";
 import { useConstellationData } from "@/hooks/data/useConstellationData";
 import { cosmicEventBus } from "@/lib/events/event-bus";
+import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { Search } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import * as THREE from "three";
@@ -163,6 +164,8 @@ export function SearchModal() {
     [filtered, selectedIndex, handleSelect],
   );
 
+  const modalRef = useFocusTrap(isSearchOpen);
+
   if (!isSearchOpen) return null;
 
   return (
@@ -171,7 +174,13 @@ export function SearchModal() {
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={() => setSearchOpen(false)}
       />
-      <div className="pointer-events-auto relative w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-cosmic-deep/95 shadow-2xl backdrop-blur-xl">
+      <div
+        ref={modalRef as React.RefObject<HTMLDivElement>}
+        role="dialog"
+        aria-modal="true"
+        aria-label={t("header.search")}
+        className="pointer-events-auto relative w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-cosmic-deep/95 shadow-2xl backdrop-blur-xl"
+      >
         <div className="flex items-center gap-3 border-b border-white/10 px-4 py-3">
           <Search className="h-5 w-5 text-white/40" />
           <input
@@ -181,6 +190,15 @@ export function SearchModal() {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={t("search.placeholder")}
+            aria-label={t("search.placeholder")}
+            role="combobox"
+            aria-expanded="true"
+            aria-controls="search-results-list"
+            aria-activedescendant={
+              filtered[selectedIndex]
+                ? `search-result-${filtered[selectedIndex].id}`
+                : undefined
+            }
             className="flex-1 bg-transparent text-sm text-white outline-none placeholder:text-white/30"
           />
           <kbd className="rounded border border-white/10 bg-white/5 px-1.5 py-0.5 text-[10px] text-white/40">
