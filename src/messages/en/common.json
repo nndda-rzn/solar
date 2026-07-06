@@ -80,5 +80,41 @@
     "levelUp": "Level Up!",
     "bookmarkSaved": "Bookmark Saved",
     "reachedLevel": "Reached Level {level}"
+  },
+  "auth": {
+    "login": {
+      "badge": "Explorer Access",
+      "title": "Login to Cosmic Explorer",
+      "subtitle": "Continue your journey through the solar system",
+      "email": "Email",
+      "emailPlaceholder": "Enter email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Login Now",
+      "processing": "Processing...",
+      "noAccount": "Don't have an account?",
+      "signupHere": "Sign up here",
+      "errorInvalid": "Invalid email or password"
+    },
+    "signup": {
+      "badge": "Explorer Access",
+      "title": "Sign up to Cosmic Explorer",
+      "subtitle": "Start your journey exploring the solar system",
+      "username": "Username",
+      "usernamePlaceholder": "Enter username",
+      "email": "Email",
+      "emailPlaceholder": "Enter email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "confirmPassword": "Confirm Password",
+      "confirmPlaceholder": "Repeat password",
+      "submit": "Sign Up Now",
+      "processing": "Processing...",
+      "hasAccount": "Already have an account?",
+      "loginHere": "Login here",
+      "errorExists": "Email already registered"
+    }
   }
 }

@@ -80,5 +80,41 @@
     "levelUp": "Level Naik!",
     "bookmarkSaved": "Bookmark Disimpan",
     "reachedLevel": "Mencapai Level {level}"
+  },
+  "auth": {
+    "login": {
+      "badge": "Akses Explorer",
+      "title": "Masuk ke Cosmic Explorer",
+      "subtitle": "Lanjutkan petualanganmu di tata surya",
+      "email": "Email",
+      "emailPlaceholder": "Masukkan email",
+      "password": "Password",
+      "passwordPlaceholder": "Masukkan password",
+      "rememberMe": "Ingat saya",
+      "forgotPassword": "Lupa password?",
+      "submit": "Masuk Sekarang",
+      "processing": "Memproses...",
+      "noAccount": "Belum punya akun?",
+      "signupHere": "Daftar di sini",
+      "errorInvalid": "Email atau password salah"
+    },
+    "signup": {
+      "badge": "Akses Explorer",
+      "title": "Daftar ke Cosmic Explorer",
+      "subtitle": "Mulai petualanganmu menjelajahi tata surya",
+      "username": "Username",
+      "usernamePlaceholder": "Masukkan username",
+      "email": "Email",
+      "emailPlaceholder": "Masukkan email",
+      "password": "Password",
+      "passwordPlaceholder": "Masukkan password",
+      "confirmPassword": "Konfirmasi Password",
+      "confirmPlaceholder": "Ulangi password",
+      "submit": "Daftar Sekarang",
+      "processing": "Memproses...",
+      "hasAccount": "Sudah punya akun?",
+      "loginHere": "Masuk di sini",
+      "errorExists": "Email sudah terdaftar"
+    }
   }
 }

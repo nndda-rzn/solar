@@ -3,12 +3,15 @@
 import { useSignupForm } from "@/hooks/useSignupForm";
 import { SignupFormValues } from "@/types/auth/signup";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 interface SignupFormProps {
   onSubmit: (values: SignupFormValues) => Promise<void>;
 }
 
 export function SignupForm({ onSubmit }: SignupFormProps) {
+  const t = useTranslations("common");
   const {
     values,
     errors,
@@ -36,16 +39,14 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
           style={{ boxShadow: "0 0 8px rgba(0, 255, 255, 0.6)" }}
         />
         <span className="text-cyan-400 text-xs font-medium tracking-wider uppercase">
-          Explorer Access
+          {t("auth.signup.badge")}
         </span>
       </div>
 
       <h2 className="text-2xl font-bold text-white mb-1">
-        Daftar ke Cosmic Explorer
+        {t("auth.signup.title")}
       </h2>
-      <p className="text-gray-400 text-sm mb-6">
-        Mulai petualanganmu menjelajahi tata surya.
-      </p>
+      <p className="text-gray-400 text-sm mb-6">{t("auth.signup.subtitle")}</p>
 
       <form
         onSubmit={(e) => {
@@ -62,14 +63,14 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
 
         <div>
           <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
-            Username
+            {t("auth.signup.username")}
           </label>
           <input
             type="text"
             name="username"
             value={values.username}
             onChange={handleChange}
-            placeholder="Masukkan username"
+            placeholder={t("auth.signup.usernamePlaceholder")}
             disabled={isLoading}
             className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
             style={{
@@ -86,14 +87,14 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
 
         <div>
           <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
-            Email
+            {t("auth.signup.email")}
           </label>
           <input
             type="email"
             name="email"
             value={values.email}
             onChange={handleChange}
-            placeholder="Masukkan email"
+            placeholder={t("auth.signup.emailPlaceholder")}
             disabled={isLoading}
             className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
             style={{
@@ -110,7 +111,7 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
 
         <div>
           <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
-            Password
+            {t("auth.signup.password")}
           </label>
           <div className="relative">
             <input
@@ -118,7 +119,7 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
               name="password"
               value={values.password}
               onChange={handleChange}
-              placeholder="Masukkan password"
+              placeholder={t("auth.signup.passwordPlaceholder")}
               disabled={isLoading}
               className="w-full px-4 py-3 pr-12 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
               style={{
@@ -143,14 +144,14 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
 
         <div>
           <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
-            Konfirmasi Password
+            {t("auth.signup.confirmPassword")}
           </label>
           <input
             type={showPassword ? "text" : "password"}
             name="confirmPassword"
             value={values.confirmPassword}
             onChange={handleChange}
-            placeholder="Ulangi password"
+            placeholder={t("auth.signup.confirmPlaceholder")}
             disabled={isLoading}
             className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
             style={{
@@ -178,22 +179,22 @@ export function SignupForm({ onSubmit }: SignupFormProps) {
           {isLoading ? (
             <>
               <Loader2 size={18} className="animate-spin" />
-              <span>Memproses...</span>
+              <span>{t("auth.signup.processing")}</span>
             </>
           ) : (
-            <span>Daftar Sekarang</span>
+            <span>{t("auth.signup.submit")}</span>
           )}
         </button>
       </form>
 
       <p className="text-center text-gray-400 text-sm mt-6">
-        Sudah punya akun?{" "}
-        <a
+        {t("auth.signup.hasAccount")}{" "}
+        <Link
           href="/login"
           className="text-white font-medium hover:text-cyan-400 transition-colors underline"
         >
-          Masuk di sini
-        </a>
+          {t("auth.signup.loginHere")}
+        </Link>
       </p>
     </div>
   );
