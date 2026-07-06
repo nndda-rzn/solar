@@ -33,6 +33,14 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
+  if (user && isPublicPath(pathWithoutLocale)) {
+    const locale =
+      routing.locales.find((l) => pathname.startsWith(`/${l}`)) ??
+      routing.defaultLocale;
+    const homeUrl = new URL(`/${locale}`, request.url);
+    return NextResponse.redirect(homeUrl);
+  }
+
   // Let next-intl handle locale detection/rewriting, then merge in the
   // Supabase session cookies so the refreshed session isn't lost.
   const intlResponse = intlMiddleware(request);
