@@ -4,9 +4,11 @@ import { AuthLayout } from "@/components/auth/AuthLayout";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function LoginPage() {
   const router = useRouter();
+  const t = useTranslations("common");
 
   const handleLogin = async (values: {
     email: string;
@@ -22,7 +24,7 @@ export default function LoginPage() {
     if (error) {
       throw new Error(
         error.message === "Invalid login credentials"
-          ? "Email atau password salah"
+          ? t("auth.login.errorInvalid")
           : error.message,
       );
     }
