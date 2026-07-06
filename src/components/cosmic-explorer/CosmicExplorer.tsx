@@ -3,6 +3,7 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { Scene } from "./Scene";
+import { SceneLoader } from "./SceneLoader";
 import { HUD } from "@/components/ui/HUD";
 import { CosmicLoader } from "@/components/ui/CosmicLoader";
 import { useSettings } from "@/hooks/useSettings";
@@ -52,6 +53,7 @@ export function CosmicExplorer() {
             <Scene />
           </Canvas>
         </CanvasErrorBoundary>
+        <SceneLoader />
         <HUD />
       </div>
     </div>
