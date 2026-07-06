@@ -1,4 +1,9 @@
 {
+  "error": {
+    "title": "Terjadi kesalahan",
+    "description": "Terjadi kesalahan saat merender cosmic explorer. Progres Anda telah disimpan.",
+    "retry": "Coba lagi"
+  },
   "header": {
     "title": "Penjelajah Kosmik",
     "subtitle": "Jelajahi orbit planet secara real time",
@@ -89,6 +94,26 @@
     "nameError": "Nama harus 1-50 karakter",
     "cameraError": "Posisi kamera tidak tersedia",
     "cancel": "Batal"
+  },
+  "shortcuts": {
+    "title": "Pintasan Keyboard",
+    "search": "Buka pencarian",
+    "bookmark": "Simpan bookmark",
+    "help": "Tampilkan bantuan ini",
+    "close": "Tutup dialog",
+    "playPause": "Putar / jeda simulasi",
+    "reset": "Reset simulasi"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "perfMode": "Mode Performa",
+    "highQuality": "Kualitas Tinggi",
+    "lowQuality": "Kualitas Rendah (Performa)",
+    "highQualityDesc": "Jumlah partikel penuh, resolusi tinggi. Terbaik untuk perangkat bertenaga.",
+    "lowQualityDesc": "Jumlah partikel dikurangi, resolusi dibatasi. Terbaik untuk perangkat low-end."
+  },
+  "loader": {
+    "loading": "Memuat..."
   },
   "toast": {
     "achievementUnlocked": "Pencapaian Terbuka!",

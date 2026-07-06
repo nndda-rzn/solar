@@ -7,6 +7,7 @@ import {
   UserRound,
   Bookmark,
   Sparkles,
+  Settings as SettingsIcon,
 } from "lucide-react";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useExplorerStore } from "@/lib/store/explorer-store";
@@ -101,6 +102,7 @@ export function HeaderBar() {
   const dayOffset = useSimulationStore((s) => s.dayOffset);
   const toggleSearch = useExplorerStore((s) => s.toggleSearch);
   const toggleBookmarkModal = useExplorerStore((s) => s.toggleBookmarkModal);
+  const toggleSettings = useExplorerStore((s) => s.toggleSettings);
   const { isAuthenticated } = useAuth();
   const { totalXp } = useAchievements();
   const level = Math.floor(totalXp / 100);
@@ -145,6 +147,13 @@ export function HeaderBar() {
           </span>
           <span className="font-mono text-xs text-cosmic-accent">{speed}x</span>
         </div>
+        <button
+          onClick={toggleSettings}
+          aria-label={t("settings.title")}
+          className="flex items-center justify-center rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50 transition-colors hover:border-white/20 hover:text-white/70"
+        >
+          <SettingsIcon className="h-3 w-3" />
+        </button>
         <button
           onClick={toggleBookmarkModal}
           aria-label={t("header.bookmark")}

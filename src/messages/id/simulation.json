@@ -2,5 +2,7 @@
   "speed": "Kecepatan",
   "pause": "Jeda simulasi",
   "play": "Putar simulasi",
-  "reset": "Reset simulasi"
+  "reset": "Reset simulasi",
+  "timeline": "Lini Masa",
+  "dateJump": "Lompat ke tanggal"
 }

@@ -2,6 +2,12 @@
 
 import { useEffect } from "react";
 import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useSimulationStore } from "@/lib/store/simulation-store";
+
+function isTypingTarget(e: KeyboardEvent): boolean {
+  const target = e.target as HTMLElement;
+  return target.tagName === "INPUT" || target.tagName === "TEXTAREA";
+}
 
 export function useKeyboardShortcuts() {
   const toggleSearch = useExplorerStore((s) => s.toggleSearch);
@@ -21,6 +27,18 @@ export function useKeyboardShortcuts() {
         if (isSearchOpen) {
           setSearchOpen(false);
         }
+      }
+      if (e.key === " " && !isTypingTarget(e)) {
+        e.preventDefault();
+        useSimulationStore.getState().togglePlay();
+      }
+      if ((e.key === "r" || e.key === "R") && !isTypingTarget(e)) {
+        e.preventDefault();
+        useSimulationStore.getState().reset();
+      }
+      if (e.key === "?" && !isTypingTarget(e)) {
+        e.preventDefault();
+        useExplorerStore.getState().toggleShortcutsHelp();
       }
     }
     window.addEventListener("keydown", handleKeyDown);

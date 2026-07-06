@@ -16,11 +16,16 @@ import { StellarScene } from "@/components/stellar";
 import { GalacticScene } from "@/components/galactic/GalacticScene";
 import { CosmicScene } from "@/components/cosmic/CosmicScene";
 import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useSettings } from "@/hooks/useSettings";
 
 export function Scene() {
   const selectedPlanet = useExplorerStore((s) => s.selectedPlanet);
   const scale = useExplorerStore((s) => s.scale);
   const isFlying = !!selectedPlanet;
+  const reducedMotion = useReducedMotion();
+  const perfMode = useSettings((s) => s.perfMode);
+  const starCount = perfMode === "high" ? 5000 : 2000;
 
   return (
     <>
@@ -31,11 +36,11 @@ export function Scene() {
       <Stars
         radius={5000}
         depth={100}
-        count={5000}
+        count={starCount}
         factor={4}
         saturation={0}
         fade
-        speed={0.5}
+        speed={reducedMotion ? 0 : 0.5}
       />
       {scale === "solar" && <SolarSystemScene />}
       {scale === "stellar" && <StellarScene />}

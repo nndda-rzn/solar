@@ -57,6 +57,16 @@ interface ExplorerState {
   isSearchOpen: boolean;
   toggleSearch: () => void;
   setSearchOpen: (isOpen: boolean) => void;
+
+  // Shortcuts help modal
+  isShortcutsHelpOpen: boolean;
+  toggleShortcutsHelp: () => void;
+  setShortcutsHelpOpen: (isOpen: boolean) => void;
+
+  // Settings modal
+  isSettingsOpen: boolean;
+  toggleSettings: () => void;
+  setSettingsOpen: (isOpen: boolean) => void;
 }
 
 export const useExplorerStore = create<ExplorerState>((set) => ({
@@ -118,4 +128,16 @@ export const useExplorerStore = create<ExplorerState>((set) => ({
   isSearchOpen: false,
   toggleSearch: () => set((state) => ({ isSearchOpen: !state.isSearchOpen })),
   setSearchOpen: (isOpen) => set({ isSearchOpen: isOpen }),
+
+  // Shortcuts help modal
+  isShortcutsHelpOpen: false,
+  toggleShortcutsHelp: () =>
+    set((state) => ({ isShortcutsHelpOpen: !state.isShortcutsHelpOpen })),
+  setShortcutsHelpOpen: (isShortcutsHelpOpen) => set({ isShortcutsHelpOpen }),
+
+  // Settings modal
+  isSettingsOpen: false,
+  toggleSettings: () =>
+    set((state) => ({ isSettingsOpen: !state.isSettingsOpen })),
+  setSettingsOpen: (isSettingsOpen) => set({ isSettingsOpen }),
 }));

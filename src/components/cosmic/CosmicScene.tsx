@@ -4,8 +4,9 @@ import { useMemo, useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import * as THREE from "three";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useSettings } from "@/hooks/useSettings";
 
-const GALAXY_COUNT = 100;
 const FIELD_RADIUS = 40000;
 
 interface GalaxyPoint {
@@ -14,11 +15,11 @@ interface GalaxyPoint {
   scale: number;
 }
 
-function buildGalaxyField(): GalaxyPoint[] {
+function buildGalaxyField(count: number): GalaxyPoint[] {
   const galaxies: GalaxyPoint[] = [];
   const palette = ["#8ab4ff", "#fff4d6", "#ffb08a", "#c9a8ff"];
 
-  for (let i = 0; i < GALAXY_COUNT; i++) {
+  for (let i = 0; i < count; i++) {
     const radius = FIELD_RADIUS * (0.2 + Math.random() * 0.8);
     const theta = Math.random() * Math.PI * 2;
     const phi = Math.acos(2 * Math.random() - 1);
@@ -41,9 +42,10 @@ function buildGalaxyField(): GalaxyPoint[] {
 
 function GalaxyDot({ galaxy }: { galaxy: GalaxyPoint }) {
   const meshRef = useRef<THREE.Mesh>(null);
+  const reducedMotion = useReducedMotion();
 
   useFrame((_, delta) => {
-    if (meshRef.current) {
+    if (meshRef.current && !reducedMotion) {
       meshRef.current.rotation.y += delta * 0.01;
     }
   });
@@ -63,7 +65,10 @@ function GalaxyDot({ galaxy }: { galaxy: GalaxyPoint }) {
 }
 
 export function CosmicScene() {
-  const galaxies = useMemo(() => buildGalaxyField(), []);
+  const perfMode = useSettings((s) => s.perfMode);
+  const galaxyCount = perfMode === "high" ? 100 : 50;
+  const starCount = perfMode === "high" ? 8000 : 4000;
+  const galaxies = useMemo(() => buildGalaxyField(galaxyCount), [galaxyCount]);
   const geometriesRef = useRef<THREE.BufferGeometry[]>([]);
 
   useEffect(() => {
@@ -78,7 +83,7 @@ export function CosmicScene() {
       <Stars
         radius={FIELD_RADIUS * 1.5}
         depth={200}
-        count={8000}
+        count={starCount}
         factor={6}
         saturation={0}
         fade

@@ -11,6 +11,8 @@ import { HeaderBar } from "./HeaderBar";
 import { SearchModal } from "./SearchModal";
 import { ToastContainer } from "./Toast";
 import { BookmarkSaveModal } from "./BookmarkSaveModal";
+import { ShortcutsHelpModal } from "./ShortcutsHelpModal";
+import { SettingsModal } from "./SettingsModal";
 import { ToastProvider } from "@/hooks/useToast";
 import { AchievementTracker } from "@/hooks/useAchievementTracker";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
@@ -53,6 +55,8 @@ export function HUD() {
         <SearchModal />
         <AchievementTracker />
         <BookmarkSaveModal />
+        <ShortcutsHelpModal />
+        <SettingsModal />
       </div>
       <ToastContainer />
     </ToastProvider>

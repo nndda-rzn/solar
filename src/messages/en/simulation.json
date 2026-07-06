@@ -2,5 +2,7 @@
   "speed": "Speed",
   "pause": "Pause simulation",
   "play": "Play simulation",
-  "reset": "Reset simulation"
+  "reset": "Reset simulation",
+  "timeline": "Timeline",
+  "dateJump": "Jump to date"
 }

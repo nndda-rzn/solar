@@ -1,4 +1,9 @@
 {
+  "error": {
+    "title": "Something went wrong",
+    "description": "An error occurred while rendering the cosmic explorer. Your progress has been saved.",
+    "retry": "Try again"
+  },
   "header": {
     "title": "Cosmic Explorer",
     "subtitle": "Explore planetary orbits in real time",
@@ -89,6 +94,26 @@
     "nameError": "Name must be 1-50 characters",
     "cameraError": "Camera position unavailable",
     "cancel": "Cancel"
+  },
+  "shortcuts": {
+    "title": "Keyboard Shortcuts",
+    "search": "Open search",
+    "bookmark": "Save bookmark",
+    "help": "Show this help",
+    "close": "Close dialog",
+    "playPause": "Play / pause simulation",
+    "reset": "Reset simulation"
+  },
+  "settings": {
+    "title": "Settings",
+    "perfMode": "Performance Mode",
+    "highQuality": "High Quality",
+    "lowQuality": "Low Quality (Performance)",
+    "highQualityDesc": "Full particle count, high resolution. Best for powerful devices.",
+    "lowQualityDesc": "Reduced particle count, capped resolution. Best for low-end devices."
+  },
+  "loader": {
+    "loading": "Loading..."
   },
   "toast": {
     "achievementUnlocked": "Achievement Unlocked!",

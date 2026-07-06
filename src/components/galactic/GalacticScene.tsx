@@ -3,19 +3,20 @@
 import { useMemo, useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useSettings } from "@/hooks/useSettings";
 
-const PARTICLE_COUNT = 50000;
 const ARM_COUNT = 4;
 const GALAXY_RADIUS = 200;
 const CORE_COLOR = new THREE.Color("#fff4d6");
 const ARM_COLOR = new THREE.Color("#8ab4ff");
 
-function buildGalaxyGeometry(): THREE.BufferGeometry {
-  const positions = new Float32Array(PARTICLE_COUNT * 3);
-  const colors = new Float32Array(PARTICLE_COUNT * 3);
+function buildGalaxyGeometry(count: number): THREE.BufferGeometry {
+  const positions = new Float32Array(count * 3);
+  const colors = new Float32Array(count * 3);
   const tempColor = new THREE.Color();
 
-  for (let i = 0; i < PARTICLE_COUNT; i++) {
+  for (let i = 0; i < count; i++) {
     const arm = i % ARM_COUNT;
     const armOffset = (arm / ARM_COUNT) * Math.PI * 2;
     const radius = Math.random() * GALAXY_RADIUS;
@@ -47,8 +48,14 @@ function buildGalaxyGeometry(): THREE.BufferGeometry {
 
 export function GalacticScene() {
   const pointsRef = useRef<THREE.Points>(null);
+  const reducedMotion = useReducedMotion();
+  const perfMode = useSettings((s) => s.perfMode);
+  const particleCount = perfMode === "high" ? 50000 : 20000;
 
-  const geometry = useMemo(() => buildGalaxyGeometry(), []);
+  const geometry = useMemo(
+    () => buildGalaxyGeometry(particleCount),
+    [particleCount],
+  );
 
   useEffect(() => {
     return () => {
@@ -57,7 +64,7 @@ export function GalacticScene() {
   }, [geometry]);
 
   useFrame((_, delta) => {
-    if (pointsRef.current) {
+    if (pointsRef.current && !reducedMotion) {
       pointsRef.current.rotation.y += delta * 0.02;
     }
   });
