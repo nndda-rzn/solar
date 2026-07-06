@@ -7,7 +7,10 @@
     "noResults": "Tidak ada hasil ditemukan",
     "date": "Tanggal",
     "speed": "Kecepatan",
-    "close": "ESC"
+    "close": "ESC",
+    "bookmark": "Bookmark",
+    "level": "Level",
+    "xp": "XP"
   },
   "hud": {
     "backToOverview": "Kembali ke Overview"
@@ -77,10 +80,5 @@
     "levelUp": "Level Naik!",
     "bookmarkSaved": "Bookmark Disimpan",
     "reachedLevel": "Mencapai Level {level}"
-  },
-  "header": {
-    "bookmark": "Bookmark",
-    "level": "Level",
-    "xp": "XP"
   }
 }
