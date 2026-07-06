@@ -23,8 +23,23 @@
   "nav": {
     "dashboard": "Dashboard",
     "explorer": "Explorer",
+    "library": "Library",
+    "achievements": "Achievements",
+    "settings": "Settings",
     "profile": "Profile",
+    "help": "Help",
+    "logout": "Logout",
     "exit": "Exit to Dashboard"
+  },
+  "sidebar": {
+    "tagline": "Elite Astronomer",
+    "brand": "Cosmic Explorer"
+  },
+  "topbar": {
+    "level": "LVL",
+    "points": "PTS",
+    "notifications": "Notifications",
+    "account": "Account"
   },
   "scale": {
     "solar": "Solar System",
@@ -126,6 +141,22 @@
     "levelUp": "Level Up!",
     "bookmarkSaved": "Bookmark Saved",
     "reachedLevel": "Reached Level {level}"
+  },
+  "pages": {
+    "library": {
+      "title": "Library",
+      "comingSoon": "Coming Soon",
+      "description": "An encyclopedia of planets, stars, and constellations is on its way."
+    },
+    "help": {
+      "title": "Help",
+      "faq1": "How do I navigate the 3D scene?",
+      "faq1Answer": "Use mouse drag to rotate, scroll to zoom. Press ? for keyboard shortcuts.",
+      "faq2": "How do I save my current view?",
+      "faq2Answer": "Press Ctrl+B (or Cmd+B on Mac) to open the bookmark modal.",
+      "faq3": "How do I earn achievements?",
+      "faq3Answer": "Explore planets, stars, and constellations. Each interaction contributes to your progress."
+    }
   },
   "auth": {
     "layout": {

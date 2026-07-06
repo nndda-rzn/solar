@@ -1,12 +1,22 @@
 "use client";
 
-import { Navbar } from "./Navbar";
+import { Sidebar } from "./Sidebar";
+import { TopBar } from "./TopBar";
 
-export function AppShell({ children }: { children: React.ReactNode }) {
+export function AppShell({
+  children,
+  breadcrumb,
+}: {
+  children: React.ReactNode;
+  breadcrumb?: string;
+}) {
   return (
     <div className="min-h-screen bg-cosmic-deep">
-      <Navbar />
-      <main className="pt-12">{children}</main>
+      <Sidebar />
+      <div className="ml-60">
+        <TopBar breadcrumb={breadcrumb} />
+        <main className="p-6">{children}</main>
+      </div>
     </div>
   );
 }

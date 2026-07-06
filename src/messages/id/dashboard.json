@@ -1,21 +1,25 @@
 {
   "welcome": "Selamat datang kembali",
   "subtitle": "Lanjutkan perjalanan Anda menjelajahi kosmos",
+  "badge": "Elite Astronomer",
+  "breadcrumb": "Dashboard",
+  "breadcrumbSummary": "Ringkasan",
+  "stats": {
+    "level": "Level Penjelajah",
+    "planetsVisited": "Planet Dikunjungi",
+    "achievements": "Misteri Terungkap",
+    "bookmarks": "Markah Disimpan"
+  },
   "cards": {
     "explore": {
-      "title": "Cosmic Explorer",
+      "title": "Eksplorasi Kosmos",
       "description": "Jelajahi tata surya, bintang, dan galaksi dalam 3D",
       "cta": "Mulai Eksplorasi"
     },
     "profile": {
-      "title": "Profil Anda",
+      "title": "Profil & Progres",
       "description": "Lihat progres, bookmark, dan pencapaian Anda",
       "cta": "Lihat Profil"
-    },
-    "achievements": {
-      "title": "Pencapaian",
-      "description": "Lacak pencapaian dan hadiah yang Anda peroleh",
-      "cta": "Lihat Pencapaian"
     }
   }
 }

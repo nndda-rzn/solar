@@ -6,10 +6,9 @@ import { useSearchParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { ProfileForm } from "@/components/profile/ProfileForm";
 import { ProgressTab } from "@/components/profile/ProgressTab";
-import { AchievementsTab } from "@/components/profile/AchievementsTab";
 import { BookmarksTab } from "@/components/profile/BookmarksTab";
 
-const TABS = ["profile", "progress", "achievements", "bookmarks"] as const;
+const TABS = ["profile", "progress", "bookmarks"] as const;
 
 export function ProfileTabs() {
   const t = useTranslations("common");
@@ -57,8 +56,7 @@ export function ProfileTabs() {
       <div>
         {active === 0 && <ProfileForm />}
         {active === 1 && <ProgressTab />}
-        {active === 2 && <AchievementsTab />}
-        {active === 3 && <BookmarksTab />}
+        {active === 2 && <BookmarksTab />}
       </div>
     </div>
   );

@@ -22,9 +22,24 @@
   },
   "nav": {
     "dashboard": "Dashboard",
-    "explorer": "Explorer",
+    "explorer": "Eksplorasi",
+    "library": "Pustaka",
+    "achievements": "Pencapaian",
+    "settings": "Pengaturan",
     "profile": "Profil",
+    "help": "Bantuan",
+    "logout": "Keluar",
     "exit": "Kembali ke Dashboard"
+  },
+  "sidebar": {
+    "tagline": "Elite Astronomer",
+    "brand": "Cosmic Explorer"
+  },
+  "topbar": {
+    "level": "LVL",
+    "points": "PTS",
+    "notifications": "Notifikasi",
+    "account": "Akun"
   },
   "scale": {
     "solar": "Tata Surya",
@@ -126,6 +141,22 @@
     "levelUp": "Level Naik!",
     "bookmarkSaved": "Bookmark Disimpan",
     "reachedLevel": "Mencapai Level {level}"
+  },
+  "pages": {
+    "library": {
+      "title": "Pustaka",
+      "comingSoon": "Segera Hadir",
+      "description": "Ensiklopedia planet, bintang, dan konstelasi sedang dalam pengembangan."
+    },
+    "help": {
+      "title": "Bantuan",
+      "faq1": "Bagaimana cara menavigasi scene 3D?",
+      "faq1Answer": "Gunakan drag mouse untuk rotasi, scroll untuk zoom. Tekan ? untuk pintasan keyboard.",
+      "faq2": "Bagaimana cara menyimpan tampilan saat ini?",
+      "faq2Answer": "Tekan Ctrl+B (atau Cmd+B di Mac) untuk membuka modal bookmark.",
+      "faq3": "Bagaimana cara mendapatkan pencapaian?",
+      "faq3Answer": "Jelajahi planet, bintang, dan konstelasi. Setiap interaksi berkontribusi pada progres Anda."
+    }
   },
   "auth": {
     "layout": {
