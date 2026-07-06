@@ -1,10 +1,12 @@
 "use client";
 
-import { Globe, Search } from "lucide-react";
+import { Globe, Search, LogOut, UserRound } from "lucide-react";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useAuth } from "@/hooks/useAuth";
+import { createClient } from "@/utils/supabase/client";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useRouter, usePathname, Link } from "@/i18n/navigation";
 
 function formatSimDate(dayOffset: number): string {
   const base = new Date();
@@ -43,6 +45,39 @@ function LanguageToggle() {
         }
       >
         {t("language.id")}
+      </button>
+    </div>
+  );
+}
+
+function UserMenu() {
+  const { user } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    router.push("/login");
+    router.refresh();
+  };
+
+  if (!user) return null;
+
+  return (
+    <div className="flex items-center gap-2">
+      <Link
+        href="/profile"
+        className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5 text-xs text-white/70 transition-colors hover:border-white/20 hover:text-white"
+      >
+        <UserRound className="h-3.5 w-3.5" />
+        <span className="max-w-[120px] truncate">{user.email}</span>
+      </Link>
+      <button
+        onClick={handleLogout}
+        aria-label="Logout"
+        className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/50 transition-colors hover:border-red-400/40 hover:text-red-400"
+      >
+        <LogOut className="h-3.5 w-3.5" />
       </button>
     </div>
   );
@@ -93,6 +128,7 @@ export function HeaderBar() {
           <span className="font-mono text-xs text-cosmic-accent">{speed}x</span>
         </div>
         <LanguageToggle />
+        <UserMenu />
       </div>
     </div>
   );

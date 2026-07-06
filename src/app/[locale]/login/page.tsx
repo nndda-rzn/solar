@@ -2,14 +2,33 @@
 
 import { AuthLayout } from "@/components/auth/AuthLayout";
 import { LoginForm } from "@/components/auth/LoginForm";
+import { createClient } from "@/utils/supabase/client";
+import { useRouter } from "@/i18n/navigation";
 
 export default function LoginPage() {
+  const router = useRouter();
+
   const handleLogin = async (values: {
-    username: string;
+    email: string;
     password: string;
     rememberMe: boolean;
   }) => {
-    console.log("Login:", values);
+    const supabase = createClient();
+    const { error } = await supabase.auth.signInWithPassword({
+      email: values.email,
+      password: values.password,
+    });
+
+    if (error) {
+      throw new Error(
+        error.message === "Invalid login credentials"
+          ? "Email atau password salah"
+          : error.message,
+      );
+    }
+
+    router.push("/");
+    router.refresh();
   };
 
   return (

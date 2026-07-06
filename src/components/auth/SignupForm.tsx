@@ -1,17 +1,14 @@
 "use client";
 
-import { useLoginForm } from "@/hooks/useLoginForm";
+import { useSignupForm } from "@/hooks/useSignupForm";
+import { SignupFormValues } from "@/types/auth/signup";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 
-interface LoginFormProps {
-  onSubmit: (values: {
-    email: string;
-    password: string;
-    rememberMe: boolean;
-  }) => Promise<void>;
+interface SignupFormProps {
+  onSubmit: (values: SignupFormValues) => Promise<void>;
 }
 
-export function LoginForm({ onSubmit }: LoginFormProps) {
+export function SignupForm({ onSubmit }: SignupFormProps) {
   const {
     values,
     errors,
@@ -20,7 +17,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
     handleChange,
     handleSubmit,
     togglePasswordVisibility,
-  } = useLoginForm();
+  } = useSignupForm();
 
   return (
     <div
@@ -44,10 +41,10 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
       </div>
 
       <h2 className="text-2xl font-bold text-white mb-1">
-        Masuk ke Cosmic Explorer
+        Daftar ke Cosmic Explorer
       </h2>
       <p className="text-gray-400 text-sm mb-6">
-        Lanjutkan petualanganmu di tata surya.
+        Mulai petualanganmu menjelajahi tata surya.
       </p>
 
       <form
@@ -62,6 +59,31 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
             {errors.form}
           </p>
         )}
+
+        <div>
+          <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
+            Username
+          </label>
+          <input
+            type="text"
+            name="username"
+            value={values.username}
+            onChange={handleChange}
+            placeholder="Masukkan username"
+            disabled={isLoading}
+            className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
+            style={{
+              background: "rgba(30, 41, 59, 0.5)",
+              border: errors.username
+                ? "1px solid #f87171"
+                : "1px solid rgba(255, 255, 255, 0.1)",
+            }}
+          />
+          {errors.username && (
+            <p className="text-red-400 text-xs mt-1">{errors.username}</p>
+          )}
+        </div>
+
         <div>
           <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
             Email
@@ -119,23 +141,30 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
           )}
         </div>
 
-        <div className="flex items-center justify-between">
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="checkbox"
-              name="rememberMe"
-              checked={values.rememberMe}
-              onChange={handleChange}
-              className="w-4 h-4 rounded border-gray-600 text-cyan-400 focus:ring-cyan-400"
-            />
-            <span className="text-gray-400 text-sm">Ingat saya</span>
+        <div>
+          <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
+            Konfirmasi Password
           </label>
-          <a
-            href="#"
-            className="text-cyan-400 text-sm hover:text-cyan-300 transition-colors"
-          >
-            Lupa password?
-          </a>
+          <input
+            type={showPassword ? "text" : "password"}
+            name="confirmPassword"
+            value={values.confirmPassword}
+            onChange={handleChange}
+            placeholder="Ulangi password"
+            disabled={isLoading}
+            className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
+            style={{
+              background: "rgba(30, 41, 59, 0.5)",
+              border: errors.confirmPassword
+                ? "1px solid #f87171"
+                : "1px solid rgba(255, 255, 255, 0.1)",
+            }}
+          />
+          {errors.confirmPassword && (
+            <p className="text-red-400 text-xs mt-1">
+              {errors.confirmPassword}
+            </p>
+          )}
         </div>
 
         <button
@@ -152,18 +181,18 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
               <span>Memproses...</span>
             </>
           ) : (
-            <span>Masuk Sekarang</span>
+            <span>Daftar Sekarang</span>
           )}
         </button>
       </form>
 
       <p className="text-center text-gray-400 text-sm mt-6">
-        Belum punya akun?{" "}
+        Sudah punya akun?{" "}
         <a
-          href="/signup"
+          href="/login"
           className="text-white font-medium hover:text-cyan-400 transition-colors underline"
         >
-          Daftar di sini
+          Masuk di sini
         </a>
       </p>
     </div>

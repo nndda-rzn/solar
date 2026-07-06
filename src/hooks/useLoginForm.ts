@@ -6,7 +6,7 @@ import { validateLoginForm } from "@/lib/utils/validators";
 
 export function useLoginForm() {
   const [values, setValues] = useState<LoginFormValues>({
-    username: "",
+    email: "",
     password: "",
     rememberMe: false,
   });
@@ -36,10 +36,13 @@ export function useLoginForm() {
     }
 
     setIsLoading(true);
+    setErrors({});
     try {
       await onSubmit(values);
     } catch (error) {
-      console.error("Login error:", error);
+      const message =
+        error instanceof Error ? error.message : "Login gagal. Coba lagi.";
+      setErrors({ form: message });
     } finally {
       setIsLoading(false);
     }
