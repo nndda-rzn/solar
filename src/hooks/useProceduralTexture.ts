@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import * as THREE from "three";
 import { ProceduralTextureConfig } from "@/types/celestial/dwarf-planet";
 
@@ -41,6 +41,12 @@ export function useProceduralTexture(
       },
     });
   }, [config, baseColor, secondaryColor]);
+
+  useEffect(() => {
+    return () => {
+      material.dispose();
+    };
+  }, [material]);
 
   return material;
 }
