@@ -9,6 +9,10 @@ import { InfoPanel } from "./InfoPanel";
 import { StellarInfoPanel } from "./StellarInfoPanel";
 import { HeaderBar } from "./HeaderBar";
 import { SearchModal } from "./SearchModal";
+import { ToastContainer } from "./Toast";
+import { BookmarkSaveModal } from "./BookmarkSaveModal";
+import { ToastProvider } from "@/hooks/useToast";
+import { AchievementTracker } from "@/hooks/useAchievementTracker";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 
 function BackButton() {
@@ -37,14 +41,19 @@ export function HUD() {
   useKeyboardShortcuts();
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-10">
-      <HeaderBar />
-      <BackButton />
-      <SimulationControls />
-      <ScaleIndicator />
-      <InfoPanel />
-      <StellarInfoPanel />
-      <SearchModal />
-    </div>
+    <ToastProvider>
+      <div className="pointer-events-none fixed inset-0 z-10">
+        <HeaderBar />
+        <BackButton />
+        <SimulationControls />
+        <ScaleIndicator />
+        <InfoPanel />
+        <StellarInfoPanel />
+        <SearchModal />
+        <AchievementTracker />
+        <BookmarkSaveModal />
+      </div>
+      <ToastContainer />
+    </ToastProvider>
   );
 }

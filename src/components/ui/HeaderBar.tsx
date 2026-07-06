@@ -1,9 +1,17 @@
 "use client";
 
-import { Globe, Search, LogOut, UserRound } from "lucide-react";
+import {
+  Globe,
+  Search,
+  LogOut,
+  UserRound,
+  Bookmark,
+  Sparkles,
+} from "lucide-react";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 import { useAuth } from "@/hooks/useAuth";
+import { useAchievements } from "@/hooks/useAchievements";
 import { createClient } from "@/utils/supabase/client";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname, Link } from "@/i18n/navigation";
@@ -88,6 +96,11 @@ export function HeaderBar() {
   const speed = useSimulationStore((s) => s.speed);
   const dayOffset = useSimulationStore((s) => s.dayOffset);
   const toggleSearch = useExplorerStore((s) => s.toggleSearch);
+  const toggleBookmarkModal = useExplorerStore((s) => s.toggleBookmarkModal);
+  const { isAuthenticated } = useAuth();
+  const { totalXp } = useAchievements();
+  const level = Math.floor(totalXp / 100);
+  const xpInLevel = totalXp % 100;
 
   return (
     <div className="pointer-events-auto fixed inset-x-0 top-0 z-50 flex h-12 items-center justify-between border-b border-white/5 bg-cosmic-deep/80 px-4 backdrop-blur-md">
@@ -127,6 +140,30 @@ export function HeaderBar() {
           </span>
           <span className="font-mono text-xs text-cosmic-accent">{speed}x</span>
         </div>
+        <button
+          onClick={toggleBookmarkModal}
+          className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50 transition-colors hover:border-white/20 hover:text-white/70"
+        >
+          <Bookmark className="h-3 w-3" />
+          <span>{t("header.bookmark")}</span>
+          <kbd className="rounded border border-white/10 bg-white/5 px-1 py-0.5 text-[9px]">
+            ⌘B
+          </kbd>
+        </button>
+        {isAuthenticated && (
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 rounded-lg border border-yellow-400/20 bg-yellow-400/5 px-2.5 py-1.5">
+              <Sparkles className="h-3 w-3 text-yellow-400" />
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-yellow-400/80">
+                {t("header.level")}
+              </span>
+              <span className="font-mono text-xs font-bold text-yellow-400">
+                {level}
+              </span>
+              <span className="text-[9px] text-white/30">{xpInLevel}/100</span>
+            </div>
+          </div>
+        )}
         <LanguageToggle />
         <UserMenu />
       </div>

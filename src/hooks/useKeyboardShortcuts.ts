@@ -12,6 +12,10 @@ export function useKeyboardShortcuts() {
         e.preventDefault();
         toggleSearch();
       }
+      if ((e.metaKey || e.ctrlKey) && e.key === "b") {
+        e.preventDefault();
+        useExplorerStore.getState().toggleBookmarkModal();
+      }
       if (e.key === "Escape") {
         const { isSearchOpen, setSearchOpen } = useExplorerStore.getState();
         if (isSearchOpen) {

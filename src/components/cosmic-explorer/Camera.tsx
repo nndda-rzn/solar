@@ -8,9 +8,17 @@ import { useExplorerStore } from "@/lib/store/explorer-store";
 
 export function Camera() {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null);
+  const frameCount = useRef(0);
 
   useFrame(() => {
     if (!cameraRef.current) return;
+
+    frameCount.current += 1;
+    if (frameCount.current % 10 === 0) {
+      useExplorerStore
+        .getState()
+        .setCameraPosition(cameraRef.current.position.clone());
+    }
 
     const { cameraTarget } = useExplorerStore.getState();
     if (!cameraTarget) return;
