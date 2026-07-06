@@ -2,7 +2,7 @@
 
 import { CelestialBase } from "@/components/cosmic-explorer/CelestialBase";
 import { StarPosition } from "@/types/celestial/star";
-import { magnitudeToSize } from "@/lib/utils/coordinates";
+import { magnitudeToSize, magnitudeToGlowScale } from "@/lib/utils/coordinates";
 import { StarGlow } from "./StarGlow";
 import { useCelestialSelection } from "@/hooks/useCelestialSelection";
 
@@ -12,6 +12,7 @@ interface StarProps {
 
 export function Star({ star }: StarProps) {
   const starSize = magnitudeToSize(star.magnitude);
+  const glowScale = magnitudeToGlowScale(star.magnitude);
   const showLabel = star.magnitude < 2.0;
 
   // Star-specific selection hook (fixes hover state bug with CelestialBase)
@@ -36,6 +37,7 @@ export function Star({ star }: StarProps) {
         color={star.color}
         size={starSize}
         intensity={isHovered ? 0.8 : 0.6}
+        scale={glowScale}
       />
     </CelestialBase>
   );

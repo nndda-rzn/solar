@@ -38,3 +38,16 @@ export function magnitudeToSize(magnitude: number): number {
   );
   return minSize + normalized * (maxSize - minSize);
 }
+
+export function magnitudeToGlowScale(magnitude: number): number {
+  const minGlow = 1.5;
+  const maxGlow = 4.0;
+  const minMag = -1.5;
+  const maxMag = 6.0;
+
+  const normalized = Math.max(
+    0,
+    Math.min(1, (maxMag - magnitude) / (maxMag - minMag)),
+  );
+  return minGlow + normalized * (maxGlow - minGlow);
+}

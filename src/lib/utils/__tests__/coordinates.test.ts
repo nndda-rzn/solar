@@ -1,6 +1,7 @@
 import {
   raDecToCartesian,
   magnitudeToSize,
+  magnitudeToGlowScale,
   positionStar,
 } from "../coordinates";
 import { StarData } from "@/types/celestial/star";
@@ -68,6 +69,36 @@ describe("magnitudeToSize", () => {
 
   it("clamps magnitude below -1.5 to max size", () => {
     expect(magnitudeToSize(-5)).toBeCloseTo(3.0, 1);
+  });
+});
+
+describe("magnitudeToGlowScale", () => {
+  it("returns max glow (4.0) for brightest star (mag -1.5)", () => {
+    expect(magnitudeToGlowScale(-1.5)).toBeCloseTo(4.0, 1);
+  });
+
+  it("returns min glow (1.5) for dimmest visible star (mag 6)", () => {
+    expect(magnitudeToGlowScale(6)).toBeCloseTo(1.5, 1);
+  });
+
+  it("clamps magnitude above 6 to min glow", () => {
+    expect(magnitudeToGlowScale(10)).toBeCloseTo(1.5, 1);
+  });
+
+  it("clamps magnitude below -1.5 to max glow", () => {
+    expect(magnitudeToGlowScale(-5)).toBeCloseTo(4.0, 1);
+  });
+
+  it("returns mid glow for mag 2.25", () => {
+    const glow = magnitudeToGlowScale(2.25);
+    expect(glow).toBeGreaterThan(1.5);
+    expect(glow).toBeLessThan(4.0);
+  });
+
+  it("gives brighter stars larger glow than dimmer stars", () => {
+    const siriusGlow = magnitudeToGlowScale(-1.46);
+    const dimStarGlow = magnitudeToGlowScale(4.3);
+    expect(siriusGlow).toBeGreaterThan(dimStarGlow);
   });
 });
 
