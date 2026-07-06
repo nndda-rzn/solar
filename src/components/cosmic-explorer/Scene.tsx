@@ -13,6 +13,8 @@ import { ScaleManager } from "./ScaleManager";
 import { SimulationClock } from "./SimulationClock";
 import { SolarSystemScene } from "@/components/solar-system/SolarSystemScene";
 import { StellarScene } from "@/components/stellar";
+import { GalacticScene } from "@/components/galactic/GalacticScene";
+import { CosmicScene } from "@/components/cosmic/CosmicScene";
 import { useExplorerStore } from "@/lib/store/explorer-store";
 
 export function Scene() {
@@ -37,13 +39,17 @@ export function Scene() {
       />
       {scale === "solar" && <SolarSystemScene />}
       {scale === "stellar" && <StellarScene />}
+      {scale === "galactic" && <GalacticScene />}
+      {scale === "cosmic" && <CosmicScene />}
       <OrbitControls
         enabled={!isFlying}
         enablePan={true}
         enableZoom={true}
         enableRotate={true}
         minDistance={5}
-        maxDistance={600}
+        maxDistance={100000}
+        enableDamping
+        dampingFactor={0.05}
       />
       <EffectComposer>
         <Bloom
