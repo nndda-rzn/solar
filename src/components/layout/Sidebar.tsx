@@ -2,6 +2,7 @@
 
 import {
   BookOpen,
+  Globe,
   HelpCircle,
   LayoutDashboard,
   LogOut,
@@ -91,8 +92,8 @@ export function Sidebar() {
       <div className="flex flex-col gap-6 p-4">
         {/* Brand */}
         <Link href="/dashboard" className="flex items-center gap-2.5">
-          <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-cosmic-accent to-cosmic-glow">
-            <span className="h-2 w-2 rounded-full bg-white/90 shadow-[0_0_8px_rgba(124,185,255,0.8)]" />
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-cosmic-accent/30 to-cosmic-glow/20 ring-1 ring-cosmic-accent/40">
+            <Globe className="h-4 w-4 text-cosmic-accent" />
           </span>
           <span className="flex flex-col leading-tight">
             <span className="text-sm font-bold text-white">
