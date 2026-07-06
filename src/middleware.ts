@@ -37,7 +37,7 @@ export default async function middleware(request: NextRequest) {
     const locale =
       routing.locales.find((l) => pathname.startsWith(`/${l}`)) ??
       routing.defaultLocale;
-    const homeUrl = new URL(`/${locale}`, request.url);
+    const homeUrl = new URL(`/${locale}/dashboard`, request.url);
     return NextResponse.redirect(homeUrl);
   }
 

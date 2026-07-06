@@ -13,7 +13,7 @@ export default function SignupPage() {
 
   const handleSignup = async (values: SignupFormValues) => {
     const supabase = createClient();
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email: values.email,
       password: values.password,
       options: {
@@ -32,7 +32,12 @@ export default function SignupPage() {
       );
     }
 
-    router.push("/login");
+    if (data.session) {
+      router.push("/dashboard");
+      router.refresh();
+    } else {
+      router.push("/login?signup=success");
+    }
   };
 
   return (

@@ -8,6 +8,7 @@ import {
   Bookmark,
   Sparkles,
   Settings as SettingsIcon,
+  LayoutDashboard,
 } from "lucide-react";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useExplorerStore } from "@/lib/store/explorer-store";
@@ -118,6 +119,14 @@ export function HeaderBar() {
         </span>
         <span className="text-sm text-white/30">|</span>
         <span className="text-xs text-white/50">{t("header.subtitle")}</span>
+        <Link
+          href="/dashboard"
+          aria-label={t("nav.exit")}
+          className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/50 transition-colors hover:border-white/20 hover:text-white/70"
+        >
+          <LayoutDashboard className="h-3 w-3" />
+          <span>{t("nav.exit")}</span>
+        </Link>
       </div>
 
       {/* Right */}

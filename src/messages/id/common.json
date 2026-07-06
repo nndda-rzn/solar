@@ -20,6 +20,12 @@
   "hud": {
     "backToOverview": "Kembali ke Overview"
   },
+  "nav": {
+    "dashboard": "Dashboard",
+    "explorer": "Explorer",
+    "profile": "Profil",
+    "exit": "Kembali ke Dashboard"
+  },
   "scale": {
     "solar": "Tata Surya",
     "stellar": "Bintang",
@@ -122,6 +128,17 @@
     "reachedLevel": "Mencapai Level {level}"
   },
   "auth": {
+    "layout": {
+      "titleLine1": "Jelajahi Tata Surya",
+      "titleLine2": "Secara Interaktif",
+      "subtitle": "Masuk untuk melanjutkan eksplorasi planet, orbit, misi luar angkasa, dan kuis kosmik.",
+      "feature1": "Planet Interaktif",
+      "feature2": "Kuis Edukatif",
+      "feature3": "Timeline Eksplorasi",
+      "footer": "© 2024 Cosmic Explorer. Jelajahi Alam Semesta.",
+      "aboutUs": "Tentang Kami",
+      "help": "Bantuan"
+    },
     "login": {
       "badge": "Akses Explorer",
       "title": "Masuk ke Cosmic Explorer",
@@ -136,7 +153,8 @@
       "processing": "Memproses...",
       "noAccount": "Belum punya akun?",
       "signupHere": "Daftar di sini",
-      "errorInvalid": "Email atau password salah"
+      "errorInvalid": "Email atau password salah",
+      "signupSuccess": "Akun berhasil dibuat! Silakan masuk."
     },
     "signup": {
       "badge": "Akses Explorer",
@@ -154,7 +172,8 @@
       "processing": "Memproses...",
       "hasAccount": "Sudah punya akun?",
       "loginHere": "Masuk di sini",
-      "errorExists": "Email sudah terdaftar"
+      "errorExists": "Email sudah terdaftar",
+      "checkEmail": "Periksa email Anda untuk konfirmasi akun"
     }
   }
 }

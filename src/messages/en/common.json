@@ -20,6 +20,12 @@
   "hud": {
     "backToOverview": "Back to Overview"
   },
+  "nav": {
+    "dashboard": "Dashboard",
+    "explorer": "Explorer",
+    "profile": "Profile",
+    "exit": "Exit to Dashboard"
+  },
   "scale": {
     "solar": "Solar System",
     "stellar": "Stars",
@@ -122,6 +128,17 @@
     "reachedLevel": "Reached Level {level}"
   },
   "auth": {
+    "layout": {
+      "titleLine1": "Explore the Solar System",
+      "titleLine2": "Interactively",
+      "subtitle": "Sign in to continue exploring planets, orbits, space missions, and cosmic quizzes.",
+      "feature1": "Interactive Planets",
+      "feature2": "Educational Quizzes",
+      "feature3": "Exploration Timeline",
+      "footer": "© 2024 Cosmic Explorer. Explore the Universe.",
+      "aboutUs": "About Us",
+      "help": "Help"
+    },
     "login": {
       "badge": "Explorer Access",
       "title": "Login to Cosmic Explorer",
@@ -136,7 +153,8 @@
       "processing": "Processing...",
       "noAccount": "Don't have an account?",
       "signupHere": "Sign up here",
-      "errorInvalid": "Invalid email or password"
+      "errorInvalid": "Invalid email or password",
+      "signupSuccess": "Account created successfully! Please log in."
     },
     "signup": {
       "badge": "Explorer Access",
@@ -154,7 +172,8 @@
       "processing": "Processing...",
       "hasAccount": "Already have an account?",
       "loginHere": "Login here",
-      "errorExists": "Email already registered"
+      "errorExists": "Email already registered",
+      "checkEmail": "Check your email to confirm your account"
     }
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
 import { RotateCcw, Trash2, Bookmark } from "lucide-react";
 import * as THREE from "three";
 import { useBookmarks } from "@/hooks/useBookmarks";
@@ -20,6 +21,7 @@ function formatDate(iso: string): string {
 
 export function BookmarksTab() {
   const t = useTranslations("common");
+  const router = useRouter();
   const { bookmarks, isLoading, remove } = useBookmarks();
   const {
     setScale,
@@ -55,6 +57,7 @@ export function BookmarksTab() {
       selectConstellation(b.selectedObject);
     }
     setDayOffset(b.dayOffset);
+    router.push("/");
   }
 
   async function handleDelete(id: string) {
