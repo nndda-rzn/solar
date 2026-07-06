@@ -35,6 +35,13 @@ export function validateLoginForm(values: { email: string; password: string }) {
   };
 }
 
+export function validateBookmarkName(name: string): string | null {
+  const trimmed = name.trim();
+  if (trimmed.length === 0) return "Bookmark name is required";
+  if (trimmed.length > 50) return "Bookmark name must be 50 characters or less";
+  return null;
+}
+
 export function validateSignupForm(values: {
   username: string;
   email: string;

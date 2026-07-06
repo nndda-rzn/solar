@@ -30,5 +30,57 @@
   "language": {
     "en": "EN",
     "id": "ID"
+  },
+  "profile": {
+    "title": "Profil Saya",
+    "tabs": {
+      "profile": "Profil",
+      "progress": "Progress",
+      "achievements": "Pencapaian",
+      "bookmarks": "Bookmark"
+    }
+  },
+  "progress": {
+    "stats": {
+      "planetsVisited": "Planet Dikunjungi",
+      "starsVisited": "Bintang Dikunjungi",
+      "constellationsVisited": "Konstelasi Dikunjungi",
+      "searchesUsed": "Pencarian Digunakan",
+      "bookmarksSaved": "Bookmark Disimpan",
+      "panelsOpened": "Panel Dibuka"
+    },
+    "recentActivity": "Aktivitas Terbaru",
+    "empty": "Belum ada aktivitas. Mulai jelajah!"
+  },
+  "achievements": {
+    "title": "Pencapaian",
+    "level": "Level",
+    "totalXp": "Total XP",
+    "unlocked": "Terbuka",
+    "locked": "Terkunci",
+    "hidden": "Pencapaian Tersembunyi",
+    "xp": "XP"
+  },
+  "bookmarks": {
+    "title": "Bookmark",
+    "save": "Simpan Bookmark",
+    "namePlaceholder": "Nama bookmark",
+    "saveSuccess": "Bookmark disimpan",
+    "restore": "Pulihkan",
+    "delete": "Hapus",
+    "confirmDelete": "Hapus bookmark ini?",
+    "empty": "Belum ada bookmark. Tekan Ctrl+B untuk menyimpan tampilan saat ini.",
+    "scale": "Skala"
+  },
+  "toast": {
+    "achievementUnlocked": "Pencapaian Terbuka!",
+    "levelUp": "Level Naik!",
+    "bookmarkSaved": "Bookmark Disimpan",
+    "reachedLevel": "Mencapai Level {level}"
+  },
+  "header": {
+    "bookmark": "Bookmark",
+    "level": "Level",
+    "xp": "XP"
   }
 }

@@ -30,5 +30,57 @@
   "language": {
     "en": "EN",
     "id": "ID"
+  },
+  "profile": {
+    "title": "My Profile",
+    "tabs": {
+      "profile": "Profile",
+      "progress": "Progress",
+      "achievements": "Achievements",
+      "bookmarks": "Bookmarks"
+    }
+  },
+  "progress": {
+    "stats": {
+      "planetsVisited": "Planets Visited",
+      "starsVisited": "Stars Visited",
+      "constellationsVisited": "Constellations Visited",
+      "searchesUsed": "Searches Used",
+      "bookmarksSaved": "Bookmarks Saved",
+      "panelsOpened": "Panels Opened"
+    },
+    "recentActivity": "Recent Activity",
+    "empty": "No activity yet. Start exploring!"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "level": "Level",
+    "totalXp": "Total XP",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "hidden": "Hidden Achievement",
+    "xp": "XP"
+  },
+  "bookmarks": {
+    "title": "Bookmarks",
+    "save": "Save Bookmark",
+    "namePlaceholder": "Bookmark name",
+    "saveSuccess": "Bookmark saved",
+    "restore": "Restore",
+    "delete": "Delete",
+    "confirmDelete": "Delete this bookmark?",
+    "empty": "No bookmarks yet. Press Ctrl+B to save your current view.",
+    "scale": "Scale"
+  },
+  "toast": {
+    "achievementUnlocked": "Achievement Unlocked!",
+    "levelUp": "Level Up!",
+    "bookmarkSaved": "Bookmark Saved",
+    "reachedLevel": "Reached Level {level}"
+  },
+  "header": {
+    "bookmark": "Bookmark",
+    "level": "Level",
+    "xp": "XP"
   }
 }
