@@ -41,7 +41,18 @@
       "progress": "Progress",
       "achievements": "Pencapaian",
       "bookmarks": "Bookmark"
-    }
+    },
+    "loading": "Memuat profil...",
+    "loadError": "Gagal memuat profil: ",
+    "notFound": "Tidak ada profil ditemukan.",
+    "saved": "Profil tersimpan.",
+    "level": "Level",
+    "displayName": "Nama Tampilan",
+    "displayNamePlaceholder": "Nama tampilan",
+    "bio": "Bio",
+    "bioPlaceholder": "Ceritakan tentang dirimu",
+    "avatarUrl": "URL Avatar",
+    "save": "Simpan Profil"
   },
   "progress": {
     "stats": {

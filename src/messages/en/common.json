@@ -41,7 +41,18 @@
       "progress": "Progress",
       "achievements": "Achievements",
       "bookmarks": "Bookmarks"
-    }
+    },
+    "loading": "Loading profile...",
+    "loadError": "Failed to load profile: ",
+    "notFound": "No profile found.",
+    "saved": "Profile saved.",
+    "level": "Level",
+    "displayName": "Display Name",
+    "displayNamePlaceholder": "Display name",
+    "bio": "Bio",
+    "bioPlaceholder": "Tell us about yourself",
+    "avatarUrl": "Avatar URL",
+    "save": "Save Profile"
   },
   "progress": {
     "stats": {

@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { Loader2, Save, User as UserIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function ProfileForm() {
+  const t = useTranslations("common");
   const { profile, isLoading, error, updateProfile } = useProfile();
   const [displayName, setDisplayName] = useState("");
   const [bio, setBio] = useState("");
@@ -14,13 +16,14 @@ export function ProfileForm() {
   const [saved, setSaved] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
-  // Hydrate local form state once the profile loads
-  if (profile && !hydrated) {
-    setDisplayName(profile.displayName ?? "");
-    setBio(profile.bio ?? "");
-    setAvatarUrl(profile.avatarUrl ?? "");
-    setHydrated(true);
-  }
+  useEffect(() => {
+    if (profile && !hydrated) {
+      setDisplayName(profile.displayName ?? "");
+      setBio(profile.bio ?? "");
+      setAvatarUrl(profile.avatarUrl ?? "");
+      setHydrated(true);
+    }
+  }, [profile, hydrated]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,17 +49,22 @@ export function ProfileForm() {
     return (
       <div className="flex items-center gap-2 text-white/50">
         <Loader2 className="h-4 w-4 animate-spin" />
-        <span>Memuat profil...</span>
+        <span>{t("profile.loading")}</span>
       </div>
     );
   }
 
   if (error) {
-    return <p className="text-sm text-red-400">Gagal memuat profil: {error}</p>;
+    return (
+      <p className="text-sm text-red-400">
+        {t("profile.loadError")}
+        {error}
+      </p>
+    );
   }
 
   if (!profile) {
-    return <p className="text-sm text-white/50">Tidak ada profil ditemukan.</p>;
+    return <p className="text-sm text-white/50">{t("profile.notFound")}</p>;
   }
 
   return (
@@ -79,7 +87,7 @@ export function ProfileForm() {
           </p>
           <p className="text-xs text-white/50">{profile.email}</p>
           <p className="mt-1 text-[10px] uppercase tracking-wider text-cosmic-accent">
-            Level {profile.level} &middot; {profile.xp} XP
+            {t("profile.level")} {profile.level} &middot; {profile.xp} XP
           </p>
         </div>
       </div>
@@ -92,19 +100,19 @@ export function ProfileForm() {
         )}
         {saved && (
           <p className="rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-xs text-emerald-400">
-            Profil tersimpan.
+            {t("profile.saved")}
           </p>
         )}
 
         <div>
           <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-white/40">
-            Nama Tampilan
+            {t("profile.displayName")}
           </label>
           <input
             type="text"
             value={displayName}
             onChange={(e) => setDisplayName(e.target.value)}
-            placeholder="Nama tampilan"
+            placeholder={t("profile.displayNamePlaceholder")}
             disabled={isSaving}
             className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-cosmic-accent/50"
           />
@@ -112,12 +120,12 @@ export function ProfileForm() {
 
         <div>
           <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-white/40">
-            Bio
+            {t("profile.bio")}
           </label>
           <textarea
             value={bio}
             onChange={(e) => setBio(e.target.value)}
-            placeholder="Ceritakan tentang dirimu"
+            placeholder={t("profile.bioPlaceholder")}
             disabled={isSaving}
             rows={3}
             className="w-full resize-none rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-cosmic-accent/50"
@@ -126,7 +134,7 @@ export function ProfileForm() {
 
         <div>
           <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-white/40">
-            URL Avatar
+            {t("profile.avatarUrl")}
           </label>
           <input
             type="url"
@@ -148,7 +156,7 @@ export function ProfileForm() {
           ) : (
             <Save className="h-4 w-4" />
           )}
-          <span>Simpan Profil</span>
+          <span>{t("profile.save")}</span>
         </button>
       </form>
     </div>
