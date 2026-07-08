@@ -8,6 +8,11 @@
     "description": "Terjadi kesalahan saat merender cosmic explorer. Progres Anda telah disimpan.",
     "retry": "Coba lagi"
   },
+  "notFound": {
+    "title": "Tersesat di luar angkasa",
+    "description": "Koordinat kosmis yang Anda tuju tidak menunjuk ke mana pun di alam semesta kami.",
+    "action": "Kembali ke dashboard"
+  },
   "header": {
     "title": "Penjelajah Kosmik",
     "subtitle": "Jelajahi orbit planet secara real time",

@@ -8,6 +8,11 @@
     "description": "An error occurred while rendering the cosmic explorer. Your progress has been saved.",
     "retry": "Try again"
   },
+  "notFound": {
+    "title": "Lost in space",
+    "description": "The cosmic coordinate you followed does not lead anywhere in our universe.",
+    "action": "Return to dashboard"
+  },
   "header": {
     "title": "Cosmic Explorer",
     "subtitle": "Explore planetary orbits in real time",
