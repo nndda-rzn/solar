@@ -13,8 +13,10 @@ export default function Error({
   const t = useTranslations("common");
 
   useEffect(() => {
-    console.error(error);
+    console.error("[error]", error);
   }, [error]);
+
+  const isProd = process.env.NODE_ENV === "production";
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-cosmic-deep p-8 text-white">
@@ -23,9 +25,17 @@ export default function Error({
           {t("error.title")}
         </h1>
         <p className="text-white/50">{t("error.description")}</p>
-        <pre className="overflow-x-auto rounded border border-red-500/40 bg-red-950/40 p-4 text-left text-sm text-red-400">
-          {error.message}
-        </pre>
+        {isProd ? (
+          error.digest ? (
+            <p className="font-mono text-xs text-white/40">
+              Reference: {error.digest}
+            </p>
+          ) : null
+        ) : (
+          <pre className="overflow-x-auto rounded border border-red-500/40 bg-red-950/40 p-4 text-left text-sm text-red-400">
+            {error.message}
+          </pre>
+        )}
         <button
           onClick={reset}
           className="rounded border border-cosmic-accent/40 bg-cosmic-accent/20 px-6 py-2 font-medium text-cosmic-accent transition hover:bg-cosmic-accent/40"
