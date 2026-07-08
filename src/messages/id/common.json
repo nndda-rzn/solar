@@ -149,7 +149,39 @@
     "achievementUnlocked": "Pencapaian Terbuka!",
     "levelUp": "Level Naik!",
     "bookmarkSaved": "Bookmark Disimpan",
-    "reachedLevel": "Mencapai Level {level}"
+    "reachedLevel": "Mencapai Level {level}",
+    "bookmarksLoadFailed": {
+      "title": "Tidak dapat memuat bookmark",
+      "description": "Tampilan tersimpan Anda akan muncul setelah koneksi pulih."
+    },
+    "bookmarkCreateFailed": {
+      "title": "Tidak dapat menyimpan bookmark",
+      "description": "Coba lagi sebentar."
+    },
+    "bookmarkRenameFailed": {
+      "title": "Tidak dapat mengubah nama bookmark",
+      "description": "Coba lagi sebentar."
+    },
+    "bookmarkRemoveFailed": {
+      "title": "Tidak dapat menghapus bookmark",
+      "description": "Coba lagi sebentar."
+    },
+    "progressLoadFailed": {
+      "title": "Tidak dapat memuat progres",
+      "description": "Stat eksplorasi Anda akan dilanjutkan saat koneksi pulih."
+    },
+    "progressTrackFailed": {
+      "title": "Tidak dapat menyimpan progres",
+      "description": "Tindakan terakhir Anda mungkin tidak tersimpan."
+    },
+    "achievementsLoadFailed": {
+      "title": "Tidak dapat memuat pencapaian",
+      "description": "Lencana Anda akan muncul setelah koneksi pulih."
+    },
+    "achievementAwardFailed": {
+      "title": "Tidak dapat memberikan pencapaian",
+      "description": "Coba lagi sebentar."
+    }
   },
   "pages": {
     "library": {

@@ -149,7 +149,39 @@
     "achievementUnlocked": "Achievement Unlocked!",
     "levelUp": "Level Up!",
     "bookmarkSaved": "Bookmark Saved",
-    "reachedLevel": "Reached Level {level}"
+    "reachedLevel": "Reached Level {level}",
+    "bookmarksLoadFailed": {
+      "title": "Couldn't load bookmarks",
+      "description": "Your saved views will appear once the connection is restored."
+    },
+    "bookmarkCreateFailed": {
+      "title": "Couldn't save bookmark",
+      "description": "Try again in a moment."
+    },
+    "bookmarkRenameFailed": {
+      "title": "Couldn't rename bookmark",
+      "description": "Try again in a moment."
+    },
+    "bookmarkRemoveFailed": {
+      "title": "Couldn't delete bookmark",
+      "description": "Try again in a moment."
+    },
+    "progressLoadFailed": {
+      "title": "Couldn't load progress",
+      "description": "Your exploration stats will resume once we reconnect."
+    },
+    "progressTrackFailed": {
+      "title": "Couldn't save progress",
+      "description": "Your latest action may not be saved."
+    },
+    "achievementsLoadFailed": {
+      "title": "Couldn't load achievements",
+      "description": "Your badges will appear once the connection is restored."
+    },
+    "achievementAwardFailed": {
+      "title": "Couldn't award achievement",
+      "description": "Try again in a moment."
+    }
   },
   "pages": {
     "library": {

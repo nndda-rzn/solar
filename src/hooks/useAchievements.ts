@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/useToast";
 import { supabaseAchievementProvider } from "@/lib/providers/supabase-achievements";
 import { evaluateRule } from "@/lib/rules/ruleEvaluator";
 import { Achievement, AchievementDefinition } from "@/types/achievement";
@@ -20,6 +21,8 @@ const catalog = catalogRaw.definitions as AchievementDefinition[];
 export function useAchievements() {
   const { user, isAuthenticated } = useAuth();
   const locale = useLocale();
+  const t = useTranslations("common");
+  const toast = useToast();
   const [achievements, setAchievements] = useState<Achievement[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const userIdRef = useRef<string | null>(null);
@@ -39,9 +42,14 @@ export function useAchievements() {
       .then(setAchievements)
       .catch((e) => {
         console.error("[useAchievements] load error:", e);
+        toast.push({
+          variant: "error",
+          title: t("toast.achievementsLoadFailed.title"),
+          description: t("toast.achievementsLoadFailed.description"),
+        });
       })
       .finally(() => setIsLoading(false));
-  }, [user, isAuthenticated]);
+  }, [user, isAuthenticated, toast, t]);
 
   const earned = useMemo(
     () => new Set(achievements.map((a) => a.achievementType)),
@@ -84,12 +92,17 @@ export function useAchievements() {
           }
         } catch (e) {
           console.error("[useAchievements] award error:", e);
+          toast.push({
+            variant: "error",
+            title: t("toast.achievementAwardFailed.title"),
+            description: t("toast.achievementAwardFailed.description"),
+          });
         }
       }
 
       return newlyEarned;
     },
-    [earned, locale],
+    [earned, locale, toast, t],
   );
 
   return useMemo(

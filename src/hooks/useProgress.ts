@@ -1,7 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/useToast";
 import { supabaseProgressProvider } from "@/lib/providers/supabase-progress";
 import { Progress, ProgressCategory } from "@/types/progress";
 
@@ -13,6 +15,8 @@ import { Progress, ProgressCategory } from "@/types/progress";
  */
 export function useProgress() {
   const { user, isAuthenticated } = useAuth();
+  const t = useTranslations("common");
+  const toast = useToast();
   const [progress, setProgress] = useState<Progress[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const userIdRef = useRef<string | null>(null);
@@ -32,9 +36,14 @@ export function useProgress() {
       .then(setProgress)
       .catch((e) => {
         console.error("[useProgress] load error:", e);
+        toast.push({
+          variant: "error",
+          title: t("toast.progressLoadFailed.title"),
+          description: t("toast.progressLoadFailed.description"),
+        });
       })
       .finally(() => setIsLoading(false));
-  }, [user, isAuthenticated]);
+  }, [user, isAuthenticated, toast, t]);
 
   const hasProgress = useCallback(
     (category: ProgressCategory, targetId: string): boolean => {
@@ -62,10 +71,15 @@ export function useProgress() {
         })
         .catch((e) => {
           console.error("[useProgress] track error:", e);
+          toast.push({
+            variant: "error",
+            title: t("toast.progressTrackFailed.title"),
+            description: t("toast.progressTrackFailed.description"),
+          });
           return null;
         });
     },
-    [hasProgress],
+    [hasProgress, toast, t],
   );
 
   const getCount = useCallback(
