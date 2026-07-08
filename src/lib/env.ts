@@ -13,6 +13,7 @@ const EnvSchema = z.object({
     .optional(),
   VERCEL_TOKEN: z.string().optional(),
   RAILWAY_API_TOKEN: z.string().optional(),
+  NEXT_PUBLIC_SITE_URL: z.string().url().optional(),
 });
 
 type Env = z.infer<typeof EnvSchema>;
@@ -29,6 +30,7 @@ function loadEnv(): Env {
     SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     VERCEL_TOKEN: process.env.VERCEL_TOKEN,
     RAILWAY_API_TOKEN: process.env.RAILWAY_API_TOKEN,
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   });
 
   if (!parsed.success) {

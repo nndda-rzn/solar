@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { env } from "@/lib/env";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const SITE_URL = env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 const PUBLIC_ROUTES = [
   "/",

@@ -30,7 +30,10 @@ export default function GlobalError({
         }}
       >
         <main style={{ maxWidth: 480, margin: "0 auto", textAlign: "center" }}>
-          <h1 style={{ color: "#4a9eff", fontSize: 28, marginBottom: 12 }}>
+          <h1
+            style={{ color: "#4a9eff", fontSize: 28, marginBottom: 12 }}
+            role="alert"
+          >
             Something went wrong
           </h1>
           <p style={{ color: "#9aa4af", marginBottom: 24 }}>
