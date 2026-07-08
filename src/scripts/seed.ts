@@ -11,17 +11,17 @@
 import { createClient } from "@supabase/supabase-js";
 import * as dotenv from "dotenv";
 import path from "path";
+import { env } from "@/lib/env";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const SUPABASE_URL = env.NEXT_PUBLIC_SUPABASE_URL;
+const SERVICE_ROLE_KEY = env.SUPABASE_SERVICE_ROLE_KEY;
 
-if (!SUPABASE_URL || !SERVICE_ROLE_KEY) {
+if (!SERVICE_ROLE_KEY) {
   console.error(
-    "[seed] Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.local.\n" +
-      "        Get the service_role key from Supabase Dashboard → Settings → API.\n" +
-      "        Never commit this key or use it in client-side code.",
+    "[seed] SUPABASE_SERVICE_ROLE_KEY is required. " +
+      "Get the key from Supabase Dashboard → Settings → API.",
   );
   process.exit(1);
 }
