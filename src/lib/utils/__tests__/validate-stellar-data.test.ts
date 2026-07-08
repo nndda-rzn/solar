@@ -50,7 +50,7 @@ describe("validateStellarData", () => {
     const badConstellations: ConstellationCatalog = {
       constellations: [
         {
-          ...validConstellations.constellations[0],
+          ...validConstellations.constellations[0]!,
           lines: [{ from: "sirius", to: "nonexistent" }],
         },
       ],
@@ -62,7 +62,7 @@ describe("validateStellarData", () => {
 
   it("errors for RA out of range", () => {
     const badStars: StarCatalog = {
-      stars: [{ ...validStars.stars[0], ra: 400 }],
+      stars: [{ ...validStars.stars[0]!, ra: 400 }],
     };
     const result = validateStellarData(badStars, validConstellations);
     expect(result.valid).toBe(false);
@@ -71,7 +71,7 @@ describe("validateStellarData", () => {
 
   it("errors for Dec out of range", () => {
     const badStars: StarCatalog = {
-      stars: [{ ...validStars.stars[0], dec: -100 }],
+      stars: [{ ...validStars.stars[0]!, dec: -100 }],
     };
     const result = validateStellarData(badStars, validConstellations);
     expect(result.valid).toBe(false);
@@ -80,7 +80,7 @@ describe("validateStellarData", () => {
 
   it("errors for duplicate star IDs", () => {
     const dupStars: StarCatalog = {
-      stars: [validStars.stars[0], validStars.stars[0]],
+      stars: [validStars.stars[0]!, validStars.stars[0]!],
     };
     const result = validateStellarData(dupStars, validConstellations);
     expect(result.valid).toBe(false);

@@ -21,7 +21,7 @@ export function Planet({ planet }: PlanetProps) {
       id={planet.id}
       name={planet.name}
       radius={planet.radius}
-      color={planet.color}
+      color={planet.color ?? "#ffffff"}
       orbitConfig={{
         distance: planet.distanceScaled * 10,
         period: planet.orbitalPeriod,
@@ -35,7 +35,7 @@ export function Planet({ planet }: PlanetProps) {
           radius={planetRadius}
           rotationSpeed={planet.rotationSpeed}
           tilt={planet.tilt}
-          color={planet.color}
+          color={planet.color ?? "#ffffff"}
         />
       </Suspense>
 

@@ -29,7 +29,7 @@ export function KuiperBelt() {
       const angle = Math.random() * Math.PI * 2;
       const height = (Math.random() - 0.5) * thickness;
       const scale =
-        sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
+        sizeRange[0]! + Math.random() * (sizeRange[1]! - sizeRange[0]!);
 
       dummy.position.set(
         radius * Math.cos(angle),

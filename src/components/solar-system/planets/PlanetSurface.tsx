@@ -44,10 +44,10 @@ export function PlanetSurface({
     <mesh ref={meshRef} rotation={[THREE.MathUtils.degToRad(tilt), 0, 0]}>
       <sphereGeometry args={[radius, 64, 64]} />
       <meshStandardMaterial
-        map={loadedTextures.map as THREE.Texture | undefined}
-        normalMap={loadedTextures.normalMap as THREE.Texture | undefined}
-        roughnessMap={loadedTextures.roughnessMap as THREE.Texture | undefined}
-        emissiveMap={loadedTextures.emissiveMap as THREE.Texture | undefined}
+        map={loadedTextures.map ?? null}
+        normalMap={loadedTextures.normalMap ?? null}
+        roughnessMap={loadedTextures.roughnessMap ?? null}
+        emissiveMap={loadedTextures.emissiveMap ?? null}
         emissive={
           loadedTextures.emissiveMap
             ? new THREE.Color(color || "#ffffff")

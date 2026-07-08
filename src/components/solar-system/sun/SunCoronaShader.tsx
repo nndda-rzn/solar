@@ -36,7 +36,7 @@ export function SunCoronaShader() {
   ).current;
 
   useFrame((state) => {
-    material.uniforms.u_time.value = state.clock.getElapsedTime();
+    material.uniforms.u_time!.value = state.clock.getElapsedTime();
   });
 
   return (

@@ -65,7 +65,7 @@ describe("StarBackground", () => {
 
   it("opens the constellation info panel after a click resolves to a constellation", () => {
     const { container, getByRole } = render(<StarBackground />);
-    const constellationCanvas = container.querySelectorAll("canvas")[1];
+    const constellationCanvas = container.querySelectorAll("canvas")[1]!;
 
     // Force getBoundingClientRect so detectConstellationClick has stable
     // width/height math to work with, then click at the Orion constellation

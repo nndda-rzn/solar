@@ -26,7 +26,7 @@ export function Star({ star }: StarProps) {
       radius={starSize}
       color={star.color}
       selectionRing={true}
-      label={showLabel ? star.name : undefined}
+      label={showLabel ? star.name : ""}
       type="star"
     >
       <mesh>

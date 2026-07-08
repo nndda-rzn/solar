@@ -46,7 +46,6 @@ export function buildSearchIndex({
       name: "Sun",
       color: "#FBBF24",
       type: "star",
-      distanceScaled: undefined as number | undefined,
     },
     ...planets.map((p) => ({
       id: p.id,
@@ -70,7 +69,6 @@ export function buildSearchIndex({
       x: s.x,
       y: s.y,
       z: s.z,
-      distanceScaled: undefined as number | undefined,
     })),
     ...constellations.map((c) => ({
       id: c.id,
@@ -78,7 +76,6 @@ export function buildSearchIndex({
       color: "#4a9eff",
       type: "constellation" as const,
       stars: c.stars,
-      distanceScaled: undefined as number | undefined,
     })),
   ];
 }

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useAuth } from "@/hooks/useAuth";
 import { useAchievements } from "@/hooks/useAchievements";
 
-export function TopBar({ breadcrumb }: { breadcrumb?: string }) {
+export function TopBar({ breadcrumb }: { breadcrumb?: string | undefined }) {
   const t = useTranslations("common");
   const { user } = useAuth();
   const { totalXp } = useAchievements();

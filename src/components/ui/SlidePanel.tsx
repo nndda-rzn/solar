@@ -6,7 +6,7 @@ import { CloseButton } from "./CloseButton";
 interface SlidePanelProps {
   isOpen: boolean;
   onClose: () => void;
-  ariaLabel?: string;
+  ariaLabel?: string | undefined;
   closeAriaLabel: string;
   panelRef: RefObject<HTMLElement | null>;
   children: ReactNode;

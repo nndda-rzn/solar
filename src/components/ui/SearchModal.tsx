@@ -120,7 +120,7 @@ export function SearchModal() {
         e.preventDefault();
         setSelectedIndex((i) => Math.max(i - 1, 0));
       } else if (e.key === "Enter" && filtered[selectedIndex]) {
-        const obj = filtered[selectedIndex];
+        const obj = filtered[selectedIndex]!;
         handleSelect(obj);
       }
     },
@@ -159,7 +159,7 @@ export function SearchModal() {
             aria-controls="search-results-list"
             aria-activedescendant={
               filtered[selectedIndex]
-                ? `search-result-${filtered[selectedIndex].id}`
+                ? `search-result-${filtered[selectedIndex]!.id}`
                 : undefined
             }
             className="flex-1 bg-transparent text-sm text-white outline-none placeholder:text-white/30"

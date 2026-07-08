@@ -70,9 +70,7 @@ export function CelestialBase({
 
   const initialPosition = position
     ? new THREE.Vector3(...position)
-    : orbitConfig
-      ? undefined
-      : new THREE.Vector3(0, 0, 0);
+    : new THREE.Vector3(0, 0, 0);
 
   return (
     <group ref={groupRef} position={initialPosition}>

@@ -30,7 +30,7 @@ export function ProfileTabs() {
 
   function handleTabChange(index: number) {
     setActive(index);
-    const tabName = TABS[index];
+    const tabName = TABS[index]!;
     const params = new URLSearchParams(searchParams.toString());
     params.set("tab", tabName);
     router.replace(`${pathname}?${params.toString()}`);

@@ -53,7 +53,9 @@ export function generateStars(width: number, height: number): Star[] {
         twinkleSpeed: 0.5 + Math.random() * 2,
         twinkleOffset: Math.random() * Math.PI * 2,
         depth: layer.depth,
-        color: starColors[Math.floor(Math.random() * starColors.length)],
+        color:
+          starColors[Math.floor(Math.random() * starColors.length)] ??
+          "#ffffff",
       });
     }
   });

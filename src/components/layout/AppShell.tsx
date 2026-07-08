@@ -8,7 +8,7 @@ export function AppShell({
   breadcrumb,
 }: {
   children: React.ReactNode;
-  breadcrumb?: string;
+  breadcrumb?: string | undefined;
 }) {
   return (
     <div className="min-h-screen bg-cosmic-deep">

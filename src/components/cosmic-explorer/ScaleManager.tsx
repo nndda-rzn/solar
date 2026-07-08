@@ -14,11 +14,11 @@ export function ScaleManager() {
 
     let newScale: ScaleMode = "solar";
 
-    if (distance >= ZOOM_THRESHOLDS["galactic-cosmic"]) {
+    if (distance >= ZOOM_THRESHOLDS["galactic-cosmic"]!) {
       newScale = "cosmic";
-    } else if (distance >= ZOOM_THRESHOLDS["stellar-galactic"]) {
+    } else if (distance >= ZOOM_THRESHOLDS["stellar-galactic"]!) {
       newScale = "galactic";
-    } else if (distance >= ZOOM_THRESHOLDS["solar-stellar"]) {
+    } else if (distance >= ZOOM_THRESHOLDS["solar-stellar"]!) {
       newScale = "stellar";
     } else {
       newScale = "solar";
