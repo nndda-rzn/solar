@@ -15,6 +15,11 @@ export default function GlobalError({
 
   return (
     <html lang="en">
+      <head>
+        <title>Error — Cosmic Explorer</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         style={{
           background: "#0d1117",
@@ -39,6 +44,7 @@ export default function GlobalError({
           <button
             type="button"
             onClick={() => reset()}
+            autoFocus
             style={{
               border: "1px solid #4a9eff",
               background: "transparent",
