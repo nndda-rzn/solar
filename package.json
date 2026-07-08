@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check-env": "tsx -e \"import('./src/lib/env').then(() => console.log('✓ Environment OK')).catch((e) => { console.error(e.message); process.exit(1); })\"",
     "start": "next start",
     "lint": "eslint src --fix --ext .ts,.tsx",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,md}\"",
