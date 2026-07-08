@@ -13,9 +13,26 @@ module.exports = {
     ],
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(@react-three|three)/)',
+    "node_modules/(?!(@react-three|three)/)",
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 15,
+      functions: 15,
+      lines: 17,
+      statements: 16,
+    },
+  },
+  collectCoverageFrom: [
+    "src/**/*.{ts,tsx}",
+    "!src/**/*.d.ts",
+    "!src/messages/**",
+    "!src/**/*.test.{ts,tsx}",
+    "!src/types/**",
+    "!src/scripts/**",
+    "!src/i18n/**",
   ],
 };
