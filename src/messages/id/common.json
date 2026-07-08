@@ -1,4 +1,8 @@
 {
+  "app": {
+    "title": "Interactive Cosmic Explorer",
+    "description": "Jelajahi alam semesta dalam 3D interaktif — tata surya, lingkungan bintang, konstelasi, dan lainnya."
+  },
   "error": {
     "title": "Terjadi kesalahan",
     "description": "Terjadi kesalahan saat merender cosmic explorer. Progres Anda telah disimpan.",

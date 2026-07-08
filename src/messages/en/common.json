@@ -1,4 +1,8 @@
 {
+  "app": {
+    "title": "Interactive Cosmic Explorer",
+    "description": "Explore the universe in interactive 3D — solar system, stellar neighborhood, constellations, and beyond."
+  },
   "error": {
     "title": "Something went wrong",
     "description": "An error occurred while rendering the cosmic explorer. Your progress has been saved.",
