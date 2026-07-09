@@ -71,10 +71,29 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return createElement(ToastContext.Provider, { value }, children);
 }
 
+const noopPush = () => {
+  if (typeof window !== "undefined") {
+    console.warn(
+      "[useToast] ToastProvider not found in tree — toast is a no-op. " +
+        "Wrap your app with <ToastProvider> to enable toasts.",
+    );
+  }
+  return "";
+};
+
+const noopToast: ToastContextValue = {
+  toasts: [],
+  push: () => {
+    noopPush();
+    return "";
+  },
+  dismiss: () => {},
+};
+
 export function useToast(): ToastContextValue {
   const ctx = useContext(ToastContext);
   if (!ctx) {
-    throw new Error("useToast must be used within a ToastProvider");
+    return noopToast;
   }
   return ctx;
 }

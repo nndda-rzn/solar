@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ),
+  icons: {
+    icon: [
+      {
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080b14'/><circle cx='50' cy='50' r='20' fill='%234a9eff' opacity='0.8'/><circle cx='30' cy='35' r='4' fill='%237cb9ff'/><circle cx='70' cy='45' r='3' fill='%237cb9ff'/><circle cx='45' cy='70' r='2.5' fill='%237cb9ff'/></svg>",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   title: {
     default: "Interactive Cosmic Explorer",
     template: "%s | Cosmic Explorer",
