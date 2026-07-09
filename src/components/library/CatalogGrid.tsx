@@ -8,6 +8,7 @@ export interface CatalogItem {
   subtitle?: string;
   type: LibraryItemType;
   accentColor?: string;
+  textureUrl?: string;
   stats?: Array<{ label: string; value: string }>;
 }
 

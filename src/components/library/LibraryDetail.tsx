@@ -9,6 +9,7 @@ export interface LibraryDetailItem {
   title: string;
   type: LibraryItemType;
   accentColor?: string;
+  textureUrl?: string;
   description?: string;
   facts?: string[];
   mythology?: string;

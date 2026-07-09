@@ -23,6 +23,7 @@ interface PlanetJson {
   description: string;
   funFacts: string[];
   color: string;
+  textures?: { diffuse?: string };
 }
 
 interface StarJson {
@@ -81,6 +82,7 @@ function planetBrowseItem(p: PlanetJson): CatalogItem {
     title: p.name,
     type: "planet",
     accentColor: p.color,
+    ...(p.textures?.diffuse ? { textureUrl: p.textures.diffuse } : {}),
     stats: [
       stat("moons", `${p.moonCount} moon(s)`),
       stat("mass", p.mass),
@@ -95,6 +97,7 @@ function planetDetailItem(p: PlanetJson): LibraryDetailItemRaw {
     title: p.name,
     type: "planet",
     accentColor: p.color,
+    ...(p.textures?.diffuse ? { textureUrl: p.textures.diffuse } : {}),
     description: p.description,
     facts: p.funFacts,
     stats: buildPlanetStats(p),
