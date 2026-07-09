@@ -23,8 +23,6 @@ jest.mock("next-intl", () => {
   };
 });
 
-const messages = { common: enMessages };
-
 function renderWithIntl(ui: React.ReactNode) {
   return {
     user: userEvent.setup(),
@@ -56,22 +54,50 @@ describe("LibraryCard", () => {
     expect(screen.getByRole("button")).toBeDisabled();
   });
 
-  it("renders stats when provided", () => {
+  it("renders stats inline joined by separator", () => {
     renderWithIntl(
       <LibraryCard
         {...baseProps}
         stats={[
           { label: "Moons", value: "1" },
-          { label: "Temp", value: "288K" },
+          { label: "Temp", value: "288C" },
+          { label: "Distance", value: "1 AU" },
         ]}
       />,
     );
-    expect(screen.getByText("Moons")).toBeInTheDocument();
-    expect(screen.getByText("1")).toBeInTheDocument();
+    expect(screen.getByText("1 · 288C · 1 AU")).toBeInTheDocument();
+  });
+
+  it("hides stats line when stats array is empty", () => {
+    const { container } = renderWithIntl(<LibraryCard {...baseProps} />);
+    expect(container.querySelector(".text-cosmic-glow\\/80")).toBeNull();
   });
 
   it("renders subtitle when provided", () => {
     renderWithIntl(<LibraryCard {...baseProps} subtitle="The Blue Planet" />);
     expect(screen.getByText("The Blue Planet")).toBeInTheDocument();
+  });
+
+  it("renders accent color in inner anchor dot", () => {
+    const { container } = renderWithIntl(
+      <LibraryCard {...baseProps} accentColor="#ff0000" />,
+    );
+    const dot = container.querySelector(".h-12.w-12.rounded-full");
+    expect(dot).toBeInTheDocument();
+    expect((dot as HTMLElement).style.backgroundColor).toBe("rgb(255, 0, 0)");
+  });
+
+  it("renders accent color via custom property fallback", () => {
+    const { container } = renderWithIntl(<LibraryCard {...baseProps} />);
+    const dot = container.querySelector(".h-12.w-12.rounded-full");
+    expect((dot as HTMLElement).style.backgroundColor).toBe(
+      "rgb(74, 158, 255)",
+    );
+  });
+
+  it("renders orbital ring decoration", () => {
+    const { container } = renderWithIntl(<LibraryCard {...baseProps} />);
+    const ring = container.querySelector(".border-dashed");
+    expect(ring).toBeInTheDocument();
   });
 });

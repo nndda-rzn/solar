@@ -5,13 +5,18 @@ import { useTranslations } from "next-intl";
 export type LibraryItemType =
   "planet" | "dwarfPlanet" | "star" | "constellation";
 
+export interface LibraryCardStats {
+  label: string;
+  value: string;
+}
+
 export interface LibraryCardProps {
   id: string;
   title: string;
   subtitle?: string;
   type: LibraryItemType;
   accentColor?: string;
-  stats?: Array<{ label: string; value: string }>;
+  stats?: LibraryCardStats[];
   onSelect: (id: string, type: LibraryItemType) => void;
   disabled?: boolean;
 }
@@ -27,47 +32,60 @@ export function LibraryCard({
   disabled,
 }: LibraryCardProps) {
   const t = useTranslations("common.library");
+  const fallbackColor = "#4a9eff";
+  const color = accentColor ?? fallbackColor;
+
   return (
     <button
       type="button"
       onClick={() => !disabled && onSelect(id, type)}
       disabled={disabled}
       className={[
-        "group flex flex-col gap-3 rounded-xl border border-white/10 bg-cosmic-nebula/50 p-4 text-left transition-all",
+        "group relative flex aspect-[3/4] flex-col overflow-hidden rounded-2xl border border-white/5 bg-cosmic-black/40 text-left transition-all duration-300 ease-out",
         disabled
           ? "cursor-not-allowed opacity-40"
-          : "hover:border-cosmic-accent/40 hover:bg-cosmic-nebula/70 active:scale-[0.98]",
+          : "hover:-translate-y-1 hover:border-cosmic-accent/40 hover:shadow-2xl hover:shadow-cosmic-accent/20 active:scale-[0.98]",
       ].join(" ")}
-      style={accentColor ? { borderLeftColor: accentColor } : undefined}
       aria-label={`${t(`tabs.${type === "dwarfPlanet" ? "dwarfPlanets" : `${type}s`}`)}: ${title}`}
     >
-      <div className="flex h-8 items-center gap-2">
-        <span
-          className="h-3 w-3 rounded-full"
-          style={{ backgroundColor: accentColor ?? "#4a9eff" }}
+      <div className="relative flex flex-1 items-center justify-center overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-4 rounded-full border border-dashed border-white/10 transition-transform duration-700 ease-out group-hover:rotate-180"
         />
-        <span className="text-xs uppercase tracking-wider text-white/50">
+        <div
+          aria-hidden
+          className="absolute top-1/2 left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 blur-2xl transition-transform duration-500 ease-out group-hover:scale-110"
+          style={{ backgroundColor: color }}
+        />
+        <div
+          aria-hidden
+          className="relative h-12 w-12 rounded-full transition-transform duration-500 ease-out group-hover:scale-110"
+          style={{
+            backgroundColor: color,
+            boxShadow: `0 0 24px ${color}80, inset 0 0 12px ${color}cc`,
+          }}
+        />
+        <span className="absolute top-3 left-3 rounded-full border border-white/20 bg-cosmic-black/70 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-white/90 backdrop-blur">
           {t(`tabs.${type === "dwarfPlanet" ? "dwarfPlanets" : `${type}s`}`)}
         </span>
       </div>
-      <div>
-        <h3 className="line-clamp-1 text-lg font-semibold text-white">
+      <div className="flex flex-col gap-0.5 border-t border-white/5 p-4">
+        <p className="line-clamp-1 text-base font-semibold leading-tight text-white">
           {title}
-        </h3>
+        </p>
         {subtitle ? (
-          <p className="line-clamp-1 text-sm text-white/50">{subtitle}</p>
+          <p className="line-clamp-1 text-xs text-white/50">{subtitle}</p>
+        ) : null}
+        {stats.length > 0 ? (
+          <p className="mt-1 line-clamp-1 text-[11px] text-cosmic-glow/80">
+            {stats
+              .slice(0, 3)
+              .map((s) => s.value)
+              .join(" · ")}
+          </p>
         ) : null}
       </div>
-      {stats.length > 0 ? (
-        <dl className="grid grid-cols-3 gap-2 border-t border-white/5 pt-3 text-xs">
-          {stats.slice(0, 3).map((s) => (
-            <div key={s.label} className="flex flex-col">
-              <dt className="text-white/40">{s.label}</dt>
-              <dd className="truncate text-white/80">{s.value}</dd>
-            </div>
-          ))}
-        </dl>
-      ) : null}
     </button>
   );
 }
