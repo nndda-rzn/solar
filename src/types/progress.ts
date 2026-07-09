@@ -7,7 +7,8 @@ export type ProgressCategory =
   | "time_traveled"
   | "bookmark_created"
   | "panel_opened"
-  | "speed_reached";
+  | "speed_reached"
+  | "library_accessed";
 
 export interface Progress {
   id: string;

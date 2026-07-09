@@ -123,6 +123,9 @@ export function AchievementTracker() {
       cosmicEventBus.on("speed_reached", (e) =>
         handleTrack("speed_reached", String(e.payload.speed)),
       ),
+      cosmicEventBus.on("library_accessed", (e) =>
+        handleTrack("library_accessed", e.payload.itemId),
+      ),
     ];
 
     return () => unsubs.forEach((u) => u());

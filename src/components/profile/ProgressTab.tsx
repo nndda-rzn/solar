@@ -11,6 +11,7 @@ import {
   Clock,
   Gauge,
   Orbit,
+  Library,
   type LucideIcon,
 } from "lucide-react";
 import { useProgress } from "@/hooks/useProgress";
@@ -73,6 +74,7 @@ const RECENT_META: Record<
   bookmark_created: { icon: Bookmark, color: "text-pink-400" },
   panel_opened: { icon: BookOpen, color: "text-indigo-400" },
   speed_reached: { icon: Gauge, color: "text-red-400" },
+  library_accessed: { icon: Library, color: "text-teal-400" },
 };
 
 function relativeTime(iso: string): string {

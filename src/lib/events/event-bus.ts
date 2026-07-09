@@ -18,7 +18,8 @@ export type CosmicEvent =
       type: "achievement_unlocked";
       payload: { achievementType: string; title: string; xp: number };
     }
-  | { type: "level_up"; payload: { from: number; to: number } };
+  | { type: "level_up"; payload: { from: number; to: number } }
+  | { type: "library_accessed"; payload: { itemId: string } };
 
 type Listener<E extends CosmicEvent> = (event: E) => void;
 type AnyListener = (event: CosmicEvent) => void;
