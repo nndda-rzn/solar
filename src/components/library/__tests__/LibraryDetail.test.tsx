@@ -3,6 +3,17 @@ import userEvent from "@testing-library/user-event";
 import enMessages from "@/messages/en/common.json";
 import { LibraryDetail, type LibraryDetailItem } from "../LibraryDetail";
 
+jest.mock("../PlanetSphere", () => ({
+  PlanetSphere: ({ url }: { url: string }) => (
+    <button
+      type="button"
+      role="img"
+      aria-label="3D planet preview"
+      data-url={url}
+    />
+  ),
+}));
+
 const messages = { common: enMessages };
 
 jest.mock("next-intl", () => ({
@@ -116,5 +127,31 @@ describe("LibraryDetail", () => {
       <LibraryDetail item={item} onExplore={jest.fn()} onClose={jest.fn()} />,
     );
     expect(screen.getByText(/No description available/i)).toBeInTheDocument();
+  });
+
+  it("renders PlanetSphere preview when textureUrl provided", () => {
+    const item = {
+      ...baseItem,
+      textureUrl: "/textures/solar-system/earth/diffuse.webp",
+    };
+    renderWithIntl(
+      <LibraryDetail item={item} onExplore={jest.fn()} onClose={jest.fn()} />,
+    );
+    expect(
+      screen.getByRole("img", { name: /3D planet preview/i }),
+    ).toBeInTheDocument();
+  });
+
+  it("shows accentColor dot when no textureUrl", () => {
+    renderWithIntl(
+      <LibraryDetail
+        item={baseItem}
+        onExplore={jest.fn()}
+        onClose={jest.fn()}
+      />,
+    );
+    expect(
+      screen.queryByRole("img", { name: /3D planet preview/i }),
+    ).toBeNull();
   });
 });

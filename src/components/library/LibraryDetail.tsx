@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import type { LibraryItemType } from "./LibraryCard";
 import { Stat } from "@/components/ui/Stat";
+import { PlanetSphere } from "./PlanetSphere";
 
 export interface LibraryDetailItem {
   id: string;
@@ -31,11 +32,15 @@ export function LibraryDetail({
   return (
     <div className="flex flex-col gap-6 p-6">
       <header className="flex items-start gap-4">
-        <span
-          className="mt-1 h-4 w-4 rounded-full"
-          style={{ backgroundColor: item.accentColor ?? "#4a9eff" }}
-          aria-hidden
-        />
+        {item.textureUrl ? (
+          <PlanetSphere url={item.textureUrl} />
+        ) : (
+          <span
+            className="mt-1 h-4 w-4 rounded-full"
+            style={{ backgroundColor: item.accentColor ?? "#4a9eff" }}
+            aria-hidden
+          />
+        )}
         <div className="flex-1">
           <p className="text-xs uppercase tracking-wider text-cosmic-accent">
             {t(
