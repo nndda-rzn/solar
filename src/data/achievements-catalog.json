@@ -192,6 +192,22 @@
         "category": "panel_opened",
         "threshold": 20
       }
+    },
+    {
+      "id": "cosmic_reader",
+      "title": "Cosmic Reader",
+      "description": {
+        "en": "Visit 5 different celestial objects in the Library.",
+        "id": "Kunjungi 5 objek langit berbeda di Pustaka."
+      },
+      "icon": "book",
+      "category": "mastery",
+      "xp": 50,
+      "rule": {
+        "type": "count_unique",
+        "category": "library_accessed",
+        "threshold": 5
+      }
     }
   ]
 }
