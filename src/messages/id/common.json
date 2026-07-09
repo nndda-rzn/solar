@@ -3,6 +3,45 @@
     "title": "Interactive Cosmic Explorer",
     "description": "Jelajahi alam semesta dalam 3D interaktif — tata surya, lingkungan bintang, konstelasi, dan lainnya."
   },
+  "library": {
+    "title": "Pustaka",
+    "subtitle": "Jelajahi objek langit, fakta menarik, dan bookmark tersimpan Anda",
+    "tabs": {
+      "planets": "Planet",
+      "dwarfPlanets": "Planet Katai",
+      "stars": "Bintang",
+      "constellations": "Rasi Bintang",
+      "bookmarks": "Bookmark Saya"
+    },
+    "empty": {
+      "planets": "Tidak ada planet untuk ditampilkan.",
+      "dwarfPlanets": "Tidak ada planet katai untuk ditampilkan.",
+      "stars": "Tidak ada bintang untuk ditampilkan.",
+      "constellations": "Tidak ada rasi bintang untuk ditampilkan.",
+      "bookmarks": "Anda belum menyimpan bookmark. Simpan tampilan kamera dari Explorer untuk melihatnya di sini."
+    },
+    "explore3d": "Jelajahi dalam 3D",
+    "noContent": "Deskripsi tidak tersedia.",
+    "stats": {
+      "mass": "Massa",
+      "temperature": "Suhu",
+      "distance": "Jarak dari Matahari",
+      "radius": "Radius",
+      "orbitalPeriod": "Periode Orbit",
+      "moonCount": "Bulan",
+      "magnitude": "Magnitudo",
+      "spectralType": "Tipe Spektral",
+      "starCount": "Jumlah Bintang",
+      "abbreviation": "Singkatan",
+      "indonesianName": "Nama Indonesia"
+    },
+    "sections": {
+      "facts": "Fakta Menarik",
+      "mythology": "Mitologi",
+      "description": "Deskripsi",
+      "physicalData": "Data Fisik"
+    }
+  },
   "error": {
     "title": "Terjadi kesalahan",
     "description": "Terjadi kesalahan saat merender cosmic explorer. Progres Anda telah disimpan.",

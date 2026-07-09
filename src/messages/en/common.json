@@ -3,6 +3,45 @@
     "title": "Interactive Cosmic Explorer",
     "description": "Explore the universe in interactive 3D — solar system, stellar neighborhood, constellations, and beyond."
   },
+  "library": {
+    "title": "Library",
+    "subtitle": "Browse celestial objects, fun facts, and your saved bookmarks",
+    "tabs": {
+      "planets": "Planets",
+      "dwarfPlanets": "Dwarf Planets",
+      "stars": "Stars",
+      "constellations": "Constellations",
+      "bookmarks": "My Bookmarks"
+    },
+    "empty": {
+      "planets": "No planets to display.",
+      "dwarfPlanets": "No dwarf planets to display.",
+      "stars": "No stars to display.",
+      "constellations": "No constellations to display.",
+      "bookmarks": "You haven't saved any bookmarks yet. Save camera views from the Explorer to see them here."
+    },
+    "explore3d": "Explore in 3D",
+    "noContent": "No description available.",
+    "stats": {
+      "mass": "Mass",
+      "temperature": "Temperature",
+      "distance": "Distance from Sun",
+      "radius": "Radius",
+      "orbitalPeriod": "Orbital Period",
+      "moonCount": "Moons",
+      "magnitude": "Magnitude",
+      "spectralType": "Spectral Type",
+      "starCount": "Star Count",
+      "abbreviation": "Abbreviation",
+      "indonesianName": "Indonesian Name"
+    },
+    "sections": {
+      "facts": "Fun Facts",
+      "mythology": "Mythology",
+      "description": "Description",
+      "physicalData": "Physical Data"
+    }
+  },
   "error": {
     "title": "Something went wrong",
     "description": "An error occurred while rendering the cosmic explorer. Your progress has been saved.",
