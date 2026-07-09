@@ -16,6 +16,7 @@ export interface LibraryCardProps {
   subtitle?: string;
   type: LibraryItemType;
   accentColor?: string;
+  textureUrl?: string;
   stats?: LibraryCardStats[];
   onSelect: (id: string, type: LibraryItemType) => void;
   disabled?: boolean;
@@ -27,6 +28,7 @@ export function LibraryCard({
   subtitle,
   type,
   accentColor,
+  textureUrl,
   stats = [],
   onSelect,
   disabled,
@@ -48,24 +50,51 @@ export function LibraryCard({
       ].join(" ")}
       aria-label={`${t(`tabs.${type === "dwarfPlanet" ? "dwarfPlanets" : `${type}s`}`)}: ${title}`}
     >
-      <div className="relative flex flex-1 items-center justify-center overflow-hidden">
-        <div
-          aria-hidden
-          className="absolute inset-4 rounded-full border border-dashed border-white/10 transition-transform duration-700 ease-out group-hover:rotate-180"
-        />
-        <div
-          aria-hidden
-          className="absolute top-1/2 left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 blur-2xl transition-transform duration-500 ease-out group-hover:scale-110"
-          style={{ backgroundColor: color }}
-        />
-        <div
-          aria-hidden
-          className="relative h-12 w-12 rounded-full transition-transform duration-500 ease-out group-hover:scale-110"
-          style={{
-            backgroundColor: color,
-            boxShadow: `0 0 24px ${color}80, inset 0 0 12px ${color}cc`,
-          }}
-        />
+      <div
+        className={
+          textureUrl
+            ? "relative flex flex-1 items-center justify-center overflow-hidden bg-cosmic-black/80"
+            : "relative flex flex-1 items-center justify-center overflow-hidden"
+        }
+      >
+        {textureUrl ? (
+          <>
+            <img
+              src={textureUrl}
+              alt=""
+              aria-hidden
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-cosmic-black/80 to-transparent"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-cosmic-black/60 to-transparent"
+            />
+          </>
+        ) : (
+          <>
+            <div
+              aria-hidden
+              className="absolute inset-4 rounded-full border border-dashed border-white/10 transition-transform duration-700 ease-out group-hover:rotate-180"
+            />
+            <div
+              aria-hidden
+              className="absolute top-1/2 left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 blur-2xl transition-transform duration-500 ease-out group-hover:scale-110"
+              style={{ backgroundColor: color }}
+            />
+            <div
+              aria-hidden
+              className="relative h-12 w-12 rounded-full transition-transform duration-500 ease-out group-hover:scale-110"
+              style={{
+                backgroundColor: color,
+                boxShadow: `0 0 24px ${color}80, inset 0 0 12px ${color}cc`,
+              }}
+            />
+          </>
+        )}
         <span className="absolute top-3 left-3 rounded-full border border-white/20 bg-cosmic-black/70 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-white/90 backdrop-blur">
           {t(`tabs.${type === "dwarfPlanet" ? "dwarfPlanets" : `${type}s`}`)}
         </span>

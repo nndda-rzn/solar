@@ -78,7 +78,7 @@ describe("LibraryCard", () => {
     expect(screen.getByText("The Blue Planet")).toBeInTheDocument();
   });
 
-  it("renders accent color in inner anchor dot", () => {
+  it("renders accent color in inner anchor dot when no textureUrl", () => {
     const { container } = renderWithIntl(
       <LibraryCard {...baseProps} accentColor="#ff0000" />,
     );
@@ -87,7 +87,7 @@ describe("LibraryCard", () => {
     expect((dot as HTMLElement).style.backgroundColor).toBe("rgb(255, 0, 0)");
   });
 
-  it("renders accent color via custom property fallback", () => {
+  it("renders fallback accent color when no accentColor and no textureUrl", () => {
     const { container } = renderWithIntl(<LibraryCard {...baseProps} />);
     const dot = container.querySelector(".h-12.w-12.rounded-full");
     expect((dot as HTMLElement).style.backgroundColor).toBe(
@@ -95,9 +95,38 @@ describe("LibraryCard", () => {
     );
   });
 
-  it("renders orbital ring decoration", () => {
+  it("renders orbital ring decoration when no textureUrl", () => {
     const { container } = renderWithIntl(<LibraryCard {...baseProps} />);
-    const ring = container.querySelector(".border-dashed");
-    expect(ring).toBeInTheDocument();
+    expect(container.querySelector(".border-dashed")).toBeInTheDocument();
+  });
+
+  it("renders texture image when textureUrl provided, no anchor dot", () => {
+    const { container } = renderWithIntl(
+      <LibraryCard
+        {...baseProps}
+        textureUrl="/textures/solar-system/earth/diffuse.webp"
+        accentColor="#ff0000"
+      />,
+    );
+    const img = container.querySelector("img");
+    expect(img).toBeInTheDocument();
+    expect(img?.getAttribute("src")).toBe(
+      "/textures/solar-system/earth/diffuse.webp",
+    );
+    expect(container.querySelector(".h-12.w-12.rounded-full")).toBeNull();
+    expect(container.querySelector(".border-dashed")).toBeNull();
+  });
+
+  it("renders top gradient overlay for badge readability when textured", () => {
+    const { container } = renderWithIntl(
+      <LibraryCard
+        {...baseProps}
+        textureUrl="/textures/solar-system/earth/diffuse.webp"
+      />,
+    );
+    const topGrad = container.querySelector(
+      ".bg-gradient-to-b.from-cosmic-black\\/80",
+    );
+    expect(topGrad).toBeInTheDocument();
   });
 });
