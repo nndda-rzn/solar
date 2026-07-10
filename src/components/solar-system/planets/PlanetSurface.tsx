@@ -6,6 +6,7 @@ import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import { PlanetTextures } from "@/types/celestial/planet";
 import { useSimulationStore } from "@/lib/store/simulation-store";
+import { PLANET_ROTATION_UNIT } from "@/lib/config/simulation";
 
 interface PlanetSurfaceProps {
   textures: PlanetTextures;
@@ -36,7 +37,8 @@ export function PlanetSurface({
     if (meshRef.current) {
       const { dayOffset } = useSimulationStore.getState();
       // Rotation now tied to same dayOffset as orbit - synced time source
-      meshRef.current.rotation.y = dayOffset * rotationSpeed * 0.01;
+      meshRef.current.rotation.y =
+        dayOffset * rotationSpeed * PLANET_ROTATION_UNIT;
     }
   });
 

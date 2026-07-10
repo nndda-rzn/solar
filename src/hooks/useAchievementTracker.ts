@@ -6,8 +6,10 @@ import { useAchievements } from "@/hooks/useAchievements";
 import { useToast } from "@/hooks/useToast";
 import { cosmicEventBus } from "@/lib/events/event-bus";
 import { Progress, ProgressCategory } from "@/types/progress";
-
-const LEVEL_STEP = 100;
+import {
+  LEVEL_STEP_XP,
+  TIME_TRAVEL_THRESHOLD_DAYS,
+} from "@/lib/config/simulation";
 
 /**
  * Invisible component (returns null) that bridges the cosmic event bus to the
@@ -27,7 +29,7 @@ export function AchievementTracker() {
   const pushRef = useRef(push);
   const progressRef = useRef<Progress[]>(progress);
   const totalXpRef = useRef(totalXp);
-  const levelRef = useRef(Math.floor(totalXp / LEVEL_STEP));
+  const levelRef = useRef(Math.floor(totalXp / LEVEL_STEP_XP));
 
   useEffect(() => {
     trackRef.current = track;
@@ -35,7 +37,7 @@ export function AchievementTracker() {
     pushRef.current = push;
     progressRef.current = progress;
     totalXpRef.current = totalXp;
-    levelRef.current = Math.floor(totalXp / LEVEL_STEP);
+    levelRef.current = Math.floor(totalXp / LEVEL_STEP_XP);
   });
 
   useEffect(() => {
@@ -75,7 +77,7 @@ export function AchievementTracker() {
       const prevTotal = totalXpRef.current;
       const newTotal = prevTotal + addedXp;
       const prevLevel = levelRef.current;
-      const newLevel = Math.floor(newTotal / LEVEL_STEP);
+      const newLevel = Math.floor(newTotal / LEVEL_STEP_XP);
 
       totalXpRef.current = newTotal;
       levelRef.current = newLevel;
@@ -110,7 +112,7 @@ export function AchievementTracker() {
         handleTrack("scale_reached", e.payload.scale),
       ),
       cosmicEventBus.on("time_traveled", (e) => {
-        if (e.payload.dayOffset >= 365) {
+        if (e.payload.dayOffset >= TIME_TRAVEL_THRESHOLD_DAYS) {
           handleTrack("time_traveled", "day_365");
         }
       }),

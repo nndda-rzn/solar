@@ -5,8 +5,10 @@ import { useFrame } from "@react-three/fiber";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { cosmicEventBus } from "@/lib/events/event-bus";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-
-const TIME_TRAVEL_THRESHOLD = 365;
+import {
+  REDUCED_MOTION_TIME_FACTOR,
+  TIME_TRAVEL_THRESHOLD_DAYS,
+} from "@/lib/config/simulation";
 
 /**
  * SimulationClock - Central time accumulator for the entire simulation
@@ -29,10 +31,15 @@ export function SimulationClock() {
   useFrame((state, delta) => {
     // Advance simulation time by real elapsed time scaled by speed
     // advanceDayOffset handles isPlaying check internally
-    advanceDayOffset(reducedMotion ? delta * 0.3 : delta);
+    advanceDayOffset(
+      reducedMotion ? delta * REDUCED_MOTION_TIME_FACTOR : delta,
+    );
 
     const dayOffset = useSimulationStore.getState().dayOffset;
-    if (!hasEmittedThreshold.current && dayOffset >= TIME_TRAVEL_THRESHOLD) {
+    if (
+      !hasEmittedThreshold.current &&
+      dayOffset >= TIME_TRAVEL_THRESHOLD_DAYS
+    ) {
       hasEmittedThreshold.current = true;
       cosmicEventBus.emit({
         type: "time_traveled",

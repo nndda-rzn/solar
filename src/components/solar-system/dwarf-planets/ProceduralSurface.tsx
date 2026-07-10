@@ -6,6 +6,7 @@ import * as THREE from "three";
 import { useProceduralTexture } from "@/hooks/useProceduralTexture";
 import { ProceduralTextureConfig } from "@/types/celestial/dwarf-planet";
 import { useSimulationStore } from "@/lib/store/simulation-store";
+import { PLANET_ROTATION_UNIT } from "@/lib/config/simulation";
 
 interface ProceduralSurfaceProps {
   radius: number;
@@ -26,7 +27,8 @@ export function ProceduralSurface({
   useFrame(() => {
     if (meshRef.current) {
       const { dayOffset } = useSimulationStore.getState();
-      meshRef.current.rotation.y = dayOffset * rotationSpeed * 0.01;
+      meshRef.current.rotation.y =
+        dayOffset * rotationSpeed * PLANET_ROTATION_UNIT;
     }
   });
 

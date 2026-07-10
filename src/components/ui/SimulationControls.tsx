@@ -4,31 +4,17 @@ import { useSimulationStore } from "@/lib/store/simulation-store";
 import { cosmicEventBus } from "@/lib/events/event-bus";
 import { Play, Pause, RotateCcw } from "lucide-react";
 import { useTranslations } from "next-intl";
-
-const SPEED_ACHIEVEMENT_THRESHOLD = 86400;
-
-const SPEED_PRESETS = [
-  { key: "realtime", value: 1 },
-  { key: "minPerSec", value: 60 },
-  { key: "hourPerSec", value: 3600 },
-  { key: "dayPerSec", value: 86400 },
-  { key: "weekPerSec", value: 604800 },
-  { key: "monthPerSec", value: 2592000 },
-  { key: "yearPerSec", value: 31536000 },
-] as const;
-
-const JUMP_AMOUNTS = [
-  { key: "back1Year", delta: -365 },
-  { key: "back1Month", delta: -30 },
-  { key: "today", delta: 0 },
-  { key: "forward1Month", delta: 30 },
-  { key: "forward1Year", delta: 365 },
-] as const;
+import {
+  MS_PER_DAY,
+  SPEED_ACHIEVEMENT_THRESHOLD,
+  SPEED_PRESETS,
+  JUMP_AMOUNTS,
+} from "@/lib/config/simulation";
 
 function formatDateTimeInput(dayOffset: number): string {
   const base = new Date();
   base.setHours(0, 0, 0, 0);
-  const target = new Date(base.getTime() + dayOffset * 86400000);
+  const target = new Date(base.getTime() + dayOffset * MS_PER_DAY);
   const pad = (n: number) => n.toString().padStart(2, "0");
   return `${target.getFullYear()}-${pad(target.getMonth() + 1)}-${pad(
     target.getDate(),

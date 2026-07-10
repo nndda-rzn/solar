@@ -1,4 +1,10 @@
 import { create } from "zustand";
+import {
+  clampDayOffset,
+  MAX_DAY_OFFSET,
+  MS_PER_DAY,
+  SECONDS_PER_DAY,
+} from "@/lib/config/simulation";
 
 interface SimulationState {
   isPlaying: boolean;
@@ -17,7 +23,7 @@ interface SimulationState {
   reset: () => void;
 }
 
-export const useSimulationStore = create<SimulationState>((set) => ({
+export const useSimulationStore = create<SimulationState>((set, get) => ({
   isPlaying: true,
   togglePlay: () => set((state) => ({ isPlaying: !state.isPlaying })),
   setPlaying: (isPlaying) => set({ isPlaying }),
@@ -26,23 +32,19 @@ export const useSimulationStore = create<SimulationState>((set) => ({
   setSpeed: (speed) => set({ speed }),
 
   dayOffset: 0,
-  maxDayOffset: 36500,
-  setDayOffset: (dayOffset) =>
-    set({ dayOffset: Math.max(0, Math.min(36500, dayOffset)) }),
-  advanceDayOffset: (delta) =>
-    set((state) => ({
-      dayOffset: state.isPlaying
-        ? Math.max(
-            0,
-            Math.min(36500, state.dayOffset + (delta / 86400) * state.speed),
-          )
-        : state.dayOffset,
-    })),
+  maxDayOffset: MAX_DAY_OFFSET,
+  setDayOffset: (dayOffset) => set({ dayOffset: clampDayOffset(dayOffset) }),
+  advanceDayOffset: (delta) => {
+    const state = get();
+    if (!state.isPlaying) return;
+    const newOffset = state.dayOffset + (delta / SECONDS_PER_DAY) * state.speed;
+    set({ dayOffset: clampDayOffset(newOffset) });
+  },
   jumpToDate: (date) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const diff = Math.floor((date.getTime() - today.getTime()) / 86400000);
-    set({ dayOffset: Math.max(0, Math.min(36500, diff)) });
+    const diff = (date.getTime() - today.getTime()) / MS_PER_DAY;
+    set({ dayOffset: clampDayOffset(Math.floor(diff)) });
   },
 
   reset: () => set({ isPlaying: true, speed: 1 }),
