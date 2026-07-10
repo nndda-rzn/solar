@@ -5,6 +5,11 @@
       "name": "Orion",
       "indonesianName": "Belantik",
       "abbreviation": "Ori",
+      "bestViewing": "Desember - Maret",
+      "center": {
+        "x": 0.2,
+        "y": 0.28
+      },
       "stars": [
         "betelgeuse",
         "rigel",
@@ -13,13 +18,96 @@
         "alnilam",
         "mintaka"
       ],
+      "canvasStars": [
+        {
+          "id": "betelgeuse",
+          "name": "Betelgeuse",
+          "magnitude": 0.42,
+          "type": "supergiant",
+          "color": "#ffcc6f",
+          "x": 0.15,
+          "y": 0.2
+        },
+        {
+          "id": "rigel",
+          "name": "Rigel",
+          "magnitude": 0.13,
+          "type": "supergiant",
+          "color": "#aabfff",
+          "x": 0.25,
+          "y": 0.35
+        },
+        {
+          "id": "bellatrix",
+          "name": "Bellatrix",
+          "magnitude": 1.64,
+          "type": "giant",
+          "color": "#cad8ff",
+          "x": 0.22,
+          "y": 0.22
+        },
+        {
+          "id": "saiph",
+          "name": "Saiph",
+          "magnitude": 2.06,
+          "type": "supergiant",
+          "color": "#aabfff",
+          "x": 0.2,
+          "y": 0.38
+        },
+        {
+          "id": "alnitak",
+          "name": "Alnitak",
+          "magnitude": 1.77,
+          "type": "supergiant",
+          "color": "#aabfff",
+          "x": 0.17,
+          "y": 0.28
+        },
+        {
+          "id": "alnilam",
+          "name": "Alnilam",
+          "magnitude": 1.69,
+          "type": "supergiant",
+          "color": "#cad8ff",
+          "x": 0.195,
+          "y": 0.27
+        },
+        {
+          "id": "mintaka",
+          "name": "Mintaka",
+          "magnitude": 2.23,
+          "type": "giant",
+          "color": "#cad8ff",
+          "x": 0.22,
+          "y": 0.26
+        }
+      ],
       "lines": [
-        { "from": "betelgeuse", "to": "bellatrix" },
-        { "from": "bellatrix", "to": "mintaka" },
-        { "from": "mintaka", "to": "alnilam" },
-        { "from": "alnilam", "to": "alnitak" },
-        { "from": "betelgeuse", "to": "alnitak" },
-        { "from": "rigel", "to": "alnitak" }
+        {
+          "from": "betelgeuse",
+          "to": "bellatrix"
+        },
+        {
+          "from": "bellatrix",
+          "to": "mintaka"
+        },
+        {
+          "from": "mintaka",
+          "to": "alnilam"
+        },
+        {
+          "from": "alnilam",
+          "to": "alnitak"
+        },
+        {
+          "from": "betelgeuse",
+          "to": "alnitak"
+        },
+        {
+          "from": "rigel",
+          "to": "alnitak"
+        }
       ],
       "content": {
         "en": {
@@ -37,12 +125,76 @@
       "name": "Scorpius",
       "indonesianName": "Kalajengking",
       "abbreviation": "Sco",
+      "bestViewing": "Juni - Agustus",
+      "center": {
+        "x": 0.8,
+        "y": 0.62
+      },
       "stars": ["antares", "shaula", "sargas", "dschubba", "graffias"],
+      "canvasStars": [
+        {
+          "id": "antares",
+          "name": "Antares",
+          "magnitude": 1.09,
+          "type": "supergiant",
+          "color": "#ffcc6f",
+          "x": 0.8,
+          "y": 0.6
+        },
+        {
+          "id": "shaula",
+          "name": "Shaula",
+          "magnitude": 1.62,
+          "type": "supergiant",
+          "color": "#aabfff",
+          "x": 0.85,
+          "y": 0.75
+        },
+        {
+          "id": "sargas",
+          "name": "Sargas",
+          "magnitude": 1.87,
+          "type": "giant",
+          "color": "#fff4ea",
+          "x": 0.82,
+          "y": 0.7
+        },
+        {
+          "id": "dschubba",
+          "name": "Dschubba",
+          "magnitude": 2.32,
+          "type": "supergiant",
+          "color": "#aabfff",
+          "x": 0.78,
+          "y": 0.55
+        },
+        {
+          "id": "graffias",
+          "name": "Graffias",
+          "magnitude": 2.62,
+          "type": "giant",
+          "color": "#aabfff",
+          "x": 0.75,
+          "y": 0.52
+        }
+      ],
       "lines": [
-        { "from": "graffias", "to": "dschubba" },
-        { "from": "dschubba", "to": "antares" },
-        { "from": "antares", "to": "sargas" },
-        { "from": "sargas", "to": "shaula" }
+        {
+          "from": "graffias",
+          "to": "dschubba"
+        },
+        {
+          "from": "dschubba",
+          "to": "antares"
+        },
+        {
+          "from": "antares",
+          "to": "sargas"
+        },
+        {
+          "from": "sargas",
+          "to": "shaula"
+        }
       ],
       "content": {
         "en": {
@@ -60,12 +212,30 @@
       "name": "Lyra",
       "indonesianName": "Kecapi",
       "abbreviation": "Lyr",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["vega", "sheliak", "sulafat", "delta-lyrae"],
+      "canvasStars": [],
       "lines": [
-        { "from": "vega", "to": "sheliak" },
-        { "from": "sheliak", "to": "sulafat" },
-        { "from": "sulafat", "to": "delta-lyrae" },
-        { "from": "delta-lyrae", "to": "vega" }
+        {
+          "from": "vega",
+          "to": "sheliak"
+        },
+        {
+          "from": "sheliak",
+          "to": "sulafat"
+        },
+        {
+          "from": "sulafat",
+          "to": "delta-lyrae"
+        },
+        {
+          "from": "delta-lyrae",
+          "to": "vega"
+        }
       ],
       "content": {
         "en": {
@@ -83,12 +253,30 @@
       "name": "Canis Major",
       "indonesianName": "Anjing Besar",
       "abbreviation": "CMa",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["sirius", "mirzam", "wezen", "adhara", "furud"],
+      "canvasStars": [],
       "lines": [
-        { "from": "sirius", "to": "mirzam" },
-        { "from": "mirzam", "to": "wezen" },
-        { "from": "wezen", "to": "adhara" },
-        { "from": "adhara", "to": "furud" }
+        {
+          "from": "sirius",
+          "to": "mirzam"
+        },
+        {
+          "from": "mirzam",
+          "to": "wezen"
+        },
+        {
+          "from": "wezen",
+          "to": "adhara"
+        },
+        {
+          "from": "adhara",
+          "to": "furud"
+        }
       ],
       "content": {
         "en": {
@@ -106,8 +294,19 @@
       "name": "Canis Minor",
       "indonesianName": "Anjing Kecil",
       "abbreviation": "CMi",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["procyon", "gomeisa"],
-      "lines": [{ "from": "procyon", "to": "gomeisa" }],
+      "canvasStars": [],
+      "lines": [
+        {
+          "from": "procyon",
+          "to": "gomeisa"
+        }
+      ],
       "content": {
         "en": {
           "description": "Canis Minor is the Little Dog constellation, a small constellation containing the bright star Procyon.",
@@ -124,10 +323,22 @@
       "name": "Aquila",
       "indonesianName": "Elang",
       "abbreviation": "Aql",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["altair", "tarazed", "alshain"],
+      "canvasStars": [],
       "lines": [
-        { "from": "tarazed", "to": "altair" },
-        { "from": "altair", "to": "alshain" }
+        {
+          "from": "tarazed",
+          "to": "altair"
+        },
+        {
+          "from": "altair",
+          "to": "alshain"
+        }
       ],
       "content": {
         "en": {
@@ -145,11 +356,26 @@
       "name": "Boötes",
       "indonesianName": "Gembala",
       "abbreviation": "Boo",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["arcturus", "izar", "muphrid", "seginus"],
+      "canvasStars": [],
       "lines": [
-        { "from": "seginus", "to": "izar" },
-        { "from": "izar", "to": "arcturus" },
-        { "from": "arcturus", "to": "muphrid" }
+        {
+          "from": "seginus",
+          "to": "izar"
+        },
+        {
+          "from": "izar",
+          "to": "arcturus"
+        },
+        {
+          "from": "arcturus",
+          "to": "muphrid"
+        }
       ],
       "content": {
         "en": {
@@ -167,12 +393,30 @@
       "name": "Taurus",
       "indonesianName": "Banteng",
       "abbreviation": "Tau",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["aldebaran", "elnath", "ain", "hyadum"],
+      "canvasStars": [],
       "lines": [
-        { "from": "elnath", "to": "ain" },
-        { "from": "ain", "to": "hyadum" },
-        { "from": "hyadum", "to": "aldebaran" },
-        { "from": "aldebaran", "to": "elnath" }
+        {
+          "from": "elnath",
+          "to": "ain"
+        },
+        {
+          "from": "ain",
+          "to": "hyadum"
+        },
+        {
+          "from": "hyadum",
+          "to": "aldebaran"
+        },
+        {
+          "from": "aldebaran",
+          "to": "elnath"
+        }
       ],
       "content": {
         "en": {
@@ -190,10 +434,22 @@
       "name": "Carina",
       "indonesianName": "Lunas Kapal",
       "abbreviation": "Car",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["canopus", "avior", "miaplacidus"],
+      "canvasStars": [],
       "lines": [
-        { "from": "miaplacidus", "to": "canopus" },
-        { "from": "canopus", "to": "avior" }
+        {
+          "from": "miaplacidus",
+          "to": "canopus"
+        },
+        {
+          "from": "canopus",
+          "to": "avior"
+        }
       ],
       "content": {
         "en": {
@@ -211,10 +467,22 @@
       "name": "Aries",
       "indonesianName": "Domba",
       "abbreviation": "Ari",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["hamal", "sheratan", "mesarthim"],
+      "canvasStars": [],
       "lines": [
-        { "from": "hamal", "to": "sheratan" },
-        { "from": "sheratan", "to": "mesarthim" }
+        {
+          "from": "hamal",
+          "to": "sheratan"
+        },
+        {
+          "from": "sheratan",
+          "to": "mesarthim"
+        }
       ],
       "content": {
         "en": {
@@ -232,10 +500,22 @@
       "name": "Gemini",
       "indonesianName": "Kembar",
       "abbreviation": "Gem",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["pollux", "castor", "alhena"],
+      "canvasStars": [],
       "lines": [
-        { "from": "pollux", "to": "castor" },
-        { "from": "castor", "to": "alhena" }
+        {
+          "from": "pollux",
+          "to": "castor"
+        },
+        {
+          "from": "castor",
+          "to": "alhena"
+        }
       ],
       "content": {
         "en": {
@@ -253,8 +533,19 @@
       "name": "Cancer",
       "indonesianName": "Kepiting",
       "abbreviation": "Cnc",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["tarf", "asellus-australis"],
-      "lines": [{ "from": "tarf", "to": "asellus-australis" }],
+      "canvasStars": [],
+      "lines": [
+        {
+          "from": "tarf",
+          "to": "asellus-australis"
+        }
+      ],
       "content": {
         "en": {
           "description": "Cancer is a faint zodiac constellation representing the crab, home to the famous Beehive Cluster.",
@@ -271,11 +562,72 @@
       "name": "Leo",
       "indonesianName": "Singa",
       "abbreviation": "Leo",
+      "bestViewing": "Maret - Mei",
+      "center": {
+        "x": 0.4,
+        "y": 0.43
+      },
       "stars": ["regulus", "algieba", "zosma", "denebola"],
+      "canvasStars": [
+        {
+          "id": "regulus",
+          "name": "Regulus",
+          "magnitude": 1.35,
+          "type": "supergiant",
+          "color": "#aabfff",
+          "x": 0.35,
+          "y": 0.45
+        },
+        {
+          "id": "denebola",
+          "name": "Denebola",
+          "magnitude": 2.13,
+          "type": "main-sequence",
+          "color": "#cad8ff",
+          "x": 0.48,
+          "y": 0.42
+        },
+        {
+          "id": "algieba",
+          "name": "Algieba",
+          "magnitude": 2.28,
+          "type": "giant",
+          "color": "#ffd2a1",
+          "x": 0.32,
+          "y": 0.4
+        },
+        {
+          "id": "zosma",
+          "name": "Zosma",
+          "magnitude": 2.56,
+          "type": "main-sequence",
+          "color": "#cad8ff",
+          "x": 0.42,
+          "y": 0.42
+        },
+        {
+          "id": "chertan",
+          "name": "Chertan",
+          "magnitude": 3.33,
+          "type": "main-sequence",
+          "color": "#cad8ff",
+          "x": 0.4,
+          "y": 0.46
+        }
+      ],
       "lines": [
-        { "from": "regulus", "to": "algieba" },
-        { "from": "algieba", "to": "zosma" },
-        { "from": "zosma", "to": "denebola" }
+        {
+          "from": "regulus",
+          "to": "algieba"
+        },
+        {
+          "from": "algieba",
+          "to": "zosma"
+        },
+        {
+          "from": "zosma",
+          "to": "denebola"
+        }
       ],
       "content": {
         "en": {
@@ -293,8 +645,19 @@
       "name": "Virgo",
       "indonesianName": "Perawan",
       "abbreviation": "Vir",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["spica", "zavijava"],
-      "lines": [{ "from": "zavijava", "to": "spica" }],
+      "canvasStars": [],
+      "lines": [
+        {
+          "from": "zavijava",
+          "to": "spica"
+        }
+      ],
       "content": {
         "en": {
           "description": "Virgo is the second-largest constellation and a zodiac sign, dominated by the bright star Spica.",
@@ -311,8 +674,19 @@
       "name": "Libra",
       "indonesianName": "Timbangan",
       "abbreviation": "Lib",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["zubenelgenubi", "zubeneschamali"],
-      "lines": [{ "from": "zubenelgenubi", "to": "zubeneschamali" }],
+      "canvasStars": [],
+      "lines": [
+        {
+          "from": "zubenelgenubi",
+          "to": "zubeneschamali"
+        }
+      ],
       "content": {
         "en": {
           "description": "Libra is the zodiac constellation of the scales, the only zodiac sign represented by an object rather than an animal or person.",
@@ -329,10 +703,22 @@
       "name": "Sagittarius",
       "indonesianName": "Pemanah",
       "abbreviation": "Sgr",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["kaus-australis", "nunki", "ascella"],
+      "canvasStars": [],
       "lines": [
-        { "from": "kaus-australis", "to": "nunki" },
-        { "from": "nunki", "to": "ascella" }
+        {
+          "from": "kaus-australis",
+          "to": "nunki"
+        },
+        {
+          "from": "nunki",
+          "to": "ascella"
+        }
       ],
       "content": {
         "en": {
@@ -350,8 +736,19 @@
       "name": "Capricornus",
       "indonesianName": "Kambing Laut",
       "abbreviation": "Cap",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["dabih", "deneb-algedi"],
-      "lines": [{ "from": "dabih", "to": "deneb-algedi" }],
+      "canvasStars": [],
+      "lines": [
+        {
+          "from": "dabih",
+          "to": "deneb-algedi"
+        }
+      ],
       "content": {
         "en": {
           "description": "Capricornus is a faint zodiac constellation representing a sea-goat, one of the oldest recognized constellations.",
@@ -368,8 +765,19 @@
       "name": "Aquarius",
       "indonesianName": "Pembawa Air",
       "abbreviation": "Aqr",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["sadalsuud", "sadalmelik"],
-      "lines": [{ "from": "sadalsuud", "to": "sadalmelik" }],
+      "canvasStars": [],
+      "lines": [
+        {
+          "from": "sadalsuud",
+          "to": "sadalmelik"
+        }
+      ],
       "content": {
         "en": {
           "description": "Aquarius is a large zodiac constellation depicting a figure pouring water from a jar into the sky.",
@@ -386,8 +794,19 @@
       "name": "Pisces",
       "indonesianName": "Ikan",
       "abbreviation": "Psc",
+      "bestViewing": "",
+      "center": {
+        "x": 0.5,
+        "y": 0.5
+      },
       "stars": ["fumalsamakah", "alrescha"],
-      "lines": [{ "from": "fumalsamakah", "to": "alrescha" }],
+      "canvasStars": [],
+      "lines": [
+        {
+          "from": "fumalsamakah",
+          "to": "alrescha"
+        }
+      ],
       "content": {
         "en": {
           "description": "Pisces is the twelfth and final zodiac constellation, representing two fish tied together by their tails.",

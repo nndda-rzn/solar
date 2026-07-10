@@ -30,7 +30,10 @@ describe("validateStellarData", () => {
         name: "Canis Major",
         indonesianName: "Anjing Besar",
         abbreviation: "CMa",
+        bestViewing: "January",
+        center: { x: 0.5, y: 0.5 },
         stars: ["sirius"],
+        canvasStars: [],
         lines: [],
         content: {
           en: { description: "Dog", mythology: "Myth" },
