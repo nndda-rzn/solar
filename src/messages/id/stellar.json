@@ -8,8 +8,15 @@
   "starProperties": "Properti Bintang",
   "facts": "Fakta",
   "constellation": {
+    "label": "Rasi Bintang",
     "memberStars": "Bintang Anggota",
-    "mythology": "Mitologi"
+    "mainStars": "Bintang Utama",
+    "mythology": "Mitologi",
+    "magnitude": "Magnitudo",
+    "wholeIndonesia": "Seluruh Indonesia",
+    "bestViewingPlaceholder": "Sepanjang Tahun",
+    "observationTips": "Tips Pengamatan",
+    "observationTipText": "Rasi {name} terlihat jelas pada malam hari saat musim {season}. Cari posisi gelap jauh dari polusi cahaya untuk pengalaman terbaik."
   },
   "types": {
     "star": "bintang",

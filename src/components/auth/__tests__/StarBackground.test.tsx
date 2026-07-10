@@ -2,6 +2,11 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { StarBackground } from "../StarBackground";
 
+jest.mock("next-intl", () => ({
+  useTranslations: () => (key: string) => key,
+  useLocale: () => "en",
+}));
+
 // Mock the requestAnimationFrame loop so the effect doesn't run indefinitely
 // or throw due to missing timing APIs in jsdom.
 beforeEach(() => {

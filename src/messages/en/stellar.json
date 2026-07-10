@@ -8,8 +8,15 @@
   "starProperties": "Star Properties",
   "facts": "Facts",
   "constellation": {
+    "label": "Constellation",
     "memberStars": "Member Stars",
-    "mythology": "Mythology"
+    "mainStars": "Main Stars",
+    "mythology": "Mythology",
+    "magnitude": "Magnitude",
+    "wholeIndonesia": "Whole Indonesia",
+    "bestViewingPlaceholder": "All Year",
+    "observationTips": "Observation Tips",
+    "observationTipText": "Constellation {name} is clearly visible at night during the {season} season. Find a dark location away from light pollution for the best experience."
   },
   "types": {
     "star": "star",

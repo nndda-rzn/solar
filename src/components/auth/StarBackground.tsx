@@ -6,7 +6,7 @@ import { useMouseParallax } from "@/hooks/canvas/useMouseParallax";
 import { useWindowSize } from "@/hooks/canvas/useWindowSize";
 import { useShootingStars } from "@/hooks/canvas/useShootingStars";
 import { generateStars } from "@/lib/utils/stars";
-import { CONSTELLATIONS } from "./constellations/ConstellationData";
+import { useConstellationData } from "@/hooks/data/useConstellationData";
 import {
   renderConstellations,
   detectConstellationClick,
@@ -15,6 +15,10 @@ import { ConstellationInfo } from "./info-panel/ConstellationInfo";
 
 export function StarBackground() {
   const { width, height } = useWindowSize();
+  const { constellations } = useConstellationData();
+  const renderableConstellations = constellations.filter(
+    (c) => c.canvasStars.length > 0,
+  );
   const parallax = useMouseParallax(0.3);
   const starsCanvasRef = useRef<HTMLCanvasElement>(null);
   const constellationCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -137,7 +141,7 @@ export function StarBackground() {
         parallax.x,
         parallax.y,
         selectedConstellation,
-        CONSTELLATIONS,
+        renderableConstellations,
       );
       animationId = requestAnimationFrame(animate);
     };
@@ -174,7 +178,7 @@ export function StarBackground() {
         y,
         width,
         height,
-        CONSTELLATIONS,
+        renderableConstellations,
       );
       setSelectedConstellation(constellationId);
     },
@@ -182,7 +186,8 @@ export function StarBackground() {
   );
 
   const selectedConstellationData =
-    CONSTELLATIONS.find((c) => c.id === selectedConstellation) || null;
+    renderableConstellations.find((c) => c.id === selectedConstellation) ||
+    null;
 
   return (
     <div
