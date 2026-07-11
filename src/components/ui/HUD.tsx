@@ -17,6 +17,7 @@ import { SettingsModal } from "./SettingsModal";
 import { ToastProvider } from "@/hooks/useToast";
 import { AchievementTracker } from "@/hooks/useAchievementTracker";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
+import { useAudio } from "@/hooks/useAudio";
 
 function BackButton() {
   const t = useTranslations("common");
@@ -43,6 +44,7 @@ function BackButton() {
 
 export function HUD() {
   useKeyboardShortcuts();
+  useAudio();
 
   return (
     <ToastProvider>
