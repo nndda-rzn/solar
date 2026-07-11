@@ -10,15 +10,28 @@ const mockSetSearchOpen = jest.fn();
 
 let mockIsSearchOpen = true;
 
-jest.mock("@/lib/store/explorer-store", () => ({
-  useExplorerStore: () => ({
-    isSearchOpen: mockIsSearchOpen,
-    setSearchOpen: mockSetSearchOpen,
-    selectPlanet: mockSelectPlanet,
-    selectStar: mockSelectStar,
-    selectConstellation: mockSelectConstellation,
-    setCameraTarget: mockSetCameraTarget,
-  }),
+jest.mock("@/lib/store/ui-store", () => ({
+  useUIStore: (selector: (s: Record<string, unknown>) => unknown) =>
+    selector({
+      isSearchOpen: mockIsSearchOpen,
+      setSearchOpen: mockSetSearchOpen,
+    }),
+}));
+
+jest.mock("@/lib/store/selection-store", () => ({
+  useSelectionStore: (selector: (s: Record<string, unknown>) => unknown) =>
+    selector({
+      selectPlanet: mockSelectPlanet,
+      selectStar: mockSelectStar,
+      selectConstellation: mockSelectConstellation,
+    }),
+}));
+
+jest.mock("@/lib/store/camera-store", () => ({
+  useCameraStore: (selector: (s: Record<string, unknown>) => unknown) =>
+    selector({
+      setCameraTarget: mockSetCameraTarget,
+    }),
 }));
 
 jest.mock("@/lib/events/event-bus", () => ({

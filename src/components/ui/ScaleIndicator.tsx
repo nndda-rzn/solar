@@ -1,6 +1,6 @@
 "use client";
 
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useScaleStore } from "@/lib/store/scale-store";
 import { ScaleMode } from "@/config/scales";
 import { cosmicEventBus } from "@/lib/events/event-bus";
 import { useTranslations } from "next-intl";
@@ -9,7 +9,7 @@ const SCALE_ORDER: ScaleMode[] = ["solar", "stellar", "galactic", "cosmic"];
 
 export function ScaleIndicator() {
   const t = useTranslations("common");
-  const { scale, setScale } = useExplorerStore();
+  const { scale, setScale } = useScaleStore();
 
   return (
     <div className="pointer-events-auto absolute bottom-20 left-4 flex flex-col gap-1">

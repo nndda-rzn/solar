@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import * as THREE from "three";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useCameraStore } from "@/lib/store/camera-store";
 
 export function Camera() {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null);
@@ -15,12 +15,12 @@ export function Camera() {
 
     frameCount.current += 1;
     if (frameCount.current % 10 === 0) {
-      useExplorerStore
+      useCameraStore
         .getState()
         .setCameraPosition(cameraRef.current.position.clone());
     }
 
-    const { cameraTarget } = useExplorerStore.getState();
+    const { cameraTarget } = useCameraStore.getState();
     if (!cameraTarget) return;
 
     const cam = cameraRef.current;

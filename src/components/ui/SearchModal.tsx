@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useUIStore } from "@/lib/store/ui-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
+import { useCameraStore } from "@/lib/store/camera-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { useStarData } from "@/hooks/data/useStarData";
@@ -20,14 +22,12 @@ export function SearchModal() {
   const t = useTranslations("common");
   const tStellar = useTranslations("stellar");
   const locale = useLocale();
-  const {
-    isSearchOpen,
-    setSearchOpen,
-    selectPlanet,
-    selectStar,
-    selectConstellation,
-    setCameraTarget,
-  } = useExplorerStore();
+  const isSearchOpen = useUIStore((s) => s.isSearchOpen);
+  const setSearchOpen = useUIStore((s) => s.setSearchOpen);
+  const selectPlanet = useSelectionStore((s) => s.selectPlanet);
+  const selectStar = useSelectionStore((s) => s.selectStar);
+  const selectConstellation = useSelectionStore((s) => s.selectConstellation);
+  const setCameraTarget = useCameraStore((s) => s.setCameraTarget);
   const { planets } = usePlanetData();
   const { dwarfPlanets } = useDwarfPlanetData();
   const { stars } = useStarData();

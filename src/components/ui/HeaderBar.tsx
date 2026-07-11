@@ -12,7 +12,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { useSimulationStore } from "@/lib/store/simulation-store";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useUIStore } from "@/lib/store/ui-store";
 import { useAuth } from "@/hooks/useAuth";
 import { useAchievements } from "@/hooks/useAchievements";
 import { useClickOutside } from "@/hooks/useClickOutside";
@@ -98,9 +98,9 @@ function UserMenu() {
 export function HeaderBar() {
   const t = useTranslations("common");
   const dayOffset = useSimulationStore((s) => s.dayOffset);
-  const toggleSearch = useExplorerStore((s) => s.toggleSearch);
-  const toggleBookmarkModal = useExplorerStore((s) => s.toggleBookmarkModal);
-  const toggleSettings = useExplorerStore((s) => s.toggleSettings);
+  const toggleSearch = useUIStore((s) => s.toggleSearch);
+  const toggleBookmarkModal = useUIStore((s) => s.toggleBookmarkModal);
+  const toggleSettings = useUIStore((s) => s.toggleSettings);
   const { isAuthenticated } = useAuth();
   const { totalXp } = useAchievements();
   const level = Math.floor(totalXp / 100);

@@ -6,7 +6,7 @@ import { AppShell } from "@/components/layout/AppShell";
 import { SlidePanel } from "@/components/ui/SlidePanel";
 import { useTranslations, useLocale } from "next-intl";
 import { useBookmarks } from "@/hooks/useBookmarks";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
 import {
   catalog,
   detail as detailByTab,
@@ -33,9 +33,9 @@ export default function LibraryPage() {
   const [detailItem, setDetailItem] = useState<LibraryDetailItem | null>(null);
   const panelRef = useRef<HTMLElement | null>(null);
   const { bookmarks } = useBookmarks();
-  const selectPlanet = useExplorerStore((s) => s.selectPlanet);
-  const selectStar = useExplorerStore((s) => s.selectStar);
-  const selectConstellation = useExplorerStore((s) => s.selectConstellation);
+  const selectPlanet = useSelectionStore((s) => s.selectPlanet);
+  const selectStar = useSelectionStore((s) => s.selectStar);
+  const selectConstellation = useSelectionStore((s) => s.selectConstellation);
 
   const visible = useMemo(() => catalog[tab] ?? [], [tab]);
 

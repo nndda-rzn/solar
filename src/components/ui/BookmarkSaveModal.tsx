@@ -3,7 +3,10 @@
 import { useState } from "react";
 import { Bookmark, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useUIStore } from "@/lib/store/ui-store";
+import { useCameraStore } from "@/lib/store/camera-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
+import { useScaleStore } from "@/lib/store/scale-store";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { useToast } from "@/hooks/useToast";
@@ -15,16 +18,16 @@ import { formatSimDate } from "@/lib/utils/format";
 
 export function BookmarkSaveModal() {
   const t = useTranslations("common");
-  const {
-    isBookmarkModalOpen,
-    setBookmarkModalOpen,
-    cameraPosition,
-    cameraTarget,
-    selectedPlanet,
-    selectedStar,
-    selectedConstellation,
-    scale,
-  } = useExplorerStore();
+  const isBookmarkModalOpen = useUIStore((s) => s.isBookmarkModalOpen);
+  const setBookmarkModalOpen = useUIStore((s) => s.setBookmarkModalOpen);
+  const cameraPosition = useCameraStore((s) => s.cameraPosition);
+  const cameraTarget = useCameraStore((s) => s.cameraTarget);
+  const selectedPlanet = useSelectionStore((s) => s.selectedPlanet);
+  const selectedStar = useSelectionStore((s) => s.selectedStar);
+  const selectedConstellation = useSelectionStore(
+    (s) => s.selectedConstellation,
+  );
+  const scale = useScaleStore((s) => s.scale);
   const dayOffset = useSimulationStore((s) => s.dayOffset);
   const { create } = useBookmarks();
   const { push } = useToast();

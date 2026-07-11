@@ -2,14 +2,14 @@
 
 import { SlidersHorizontal } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useUIStore } from "@/lib/store/ui-store";
 import { useSettings } from "@/hooks/useSettings";
 import { ModalBase } from "./ModalBase";
 
 export function SettingsModal() {
   const t = useTranslations("common");
-  const isSettingsOpen = useExplorerStore((s) => s.isSettingsOpen);
-  const setSettingsOpen = useExplorerStore((s) => s.setSettingsOpen);
+  const isSettingsOpen = useUIStore((s) => s.isSettingsOpen);
+  const setSettingsOpen = useUIStore((s) => s.setSettingsOpen);
   const perfMode = useSettings((s) => s.perfMode);
   const setPerfMode = useSettings((s) => s.setPerfMode);
 

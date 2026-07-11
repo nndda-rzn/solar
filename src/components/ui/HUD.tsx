@@ -1,6 +1,7 @@
 "use client";
 
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
+import { useCameraStore } from "@/lib/store/camera-store";
 import { ArrowLeft } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SimulationControls } from "./SimulationControls";
@@ -19,9 +20,9 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 
 function BackButton() {
   const t = useTranslations("common");
-  const selectedPlanet = useExplorerStore((s) => s.selectedPlanet);
-  const selectPlanet = useExplorerStore((s) => s.selectPlanet);
-  const setCameraTarget = useExplorerStore((s) => s.setCameraTarget);
+  const selectedPlanet = useSelectionStore((s) => s.selectedPlanet);
+  const selectPlanet = useSelectionStore((s) => s.selectPlanet);
+  const setCameraTarget = useCameraStore((s) => s.setCameraTarget);
 
   if (!selectedPlanet) return null;
 

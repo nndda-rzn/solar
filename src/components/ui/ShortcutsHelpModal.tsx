@@ -2,7 +2,7 @@
 
 import { Keyboard } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useUIStore } from "@/lib/store/ui-store";
 import { ModalBase } from "./ModalBase";
 
 type ShortcutItem = {
@@ -21,8 +21,8 @@ const SHORTCUTS: ShortcutItem[] = [
 
 export function ShortcutsHelpModal() {
   const t = useTranslations("common");
-  const isShortcutsHelpOpen = useExplorerStore((s) => s.isShortcutsHelpOpen);
-  const setShortcutsHelpOpen = useExplorerStore((s) => s.setShortcutsHelpOpen);
+  const isShortcutsHelpOpen = useUIStore((s) => s.isShortcutsHelpOpen);
+  const setShortcutsHelpOpen = useUIStore((s) => s.setShortcutsHelpOpen);
 
   function close() {
     setShortcutsHelpOpen(false);

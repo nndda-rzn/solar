@@ -9,14 +9,21 @@ const mockSetCameraTarget = jest.fn();
 let mockSelectedStar: string | null = null;
 let mockSelectedConstellation: string | null = null;
 
-jest.mock("@/lib/store/explorer-store", () => ({
-  useExplorerStore: () => ({
-    selectedStar: mockSelectedStar,
-    selectStar: mockSelectStar,
-    selectedConstellation: mockSelectedConstellation,
-    selectConstellation: mockSelectConstellation,
-    setCameraTarget: mockSetCameraTarget,
-  }),
+jest.mock("@/lib/store/selection-store", () => ({
+  useSelectionStore: (selector: (s: Record<string, unknown>) => unknown) =>
+    selector({
+      selectedStar: mockSelectedStar,
+      selectStar: mockSelectStar,
+      selectedConstellation: mockSelectedConstellation,
+      selectConstellation: mockSelectConstellation,
+    }),
+}));
+
+jest.mock("@/lib/store/camera-store", () => ({
+  useCameraStore: (selector: (s: Record<string, unknown>) => unknown) =>
+    selector({
+      setCameraTarget: mockSetCameraTarget,
+    }),
 }));
 
 jest.mock("@/lib/events/event-bus", () => ({

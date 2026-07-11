@@ -5,7 +5,9 @@ import { useRouter } from "@/i18n/navigation";
 import { RotateCcw, Trash2, Bookmark } from "lucide-react";
 import * as THREE from "three";
 import { useBookmarks } from "@/hooks/useBookmarks";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useScaleStore } from "@/lib/store/scale-store";
+import { useCameraStore } from "@/lib/store/camera-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { SCALES, type ScaleMode } from "@/config/scales";
 import type { Bookmark as BookmarkType } from "@/types/bookmark";
@@ -23,13 +25,11 @@ export function BookmarksTab() {
   const t = useTranslations("common");
   const router = useRouter();
   const { bookmarks, isLoading, remove } = useBookmarks();
-  const {
-    setScale,
-    setCameraTarget,
-    selectPlanet,
-    selectStar,
-    selectConstellation,
-  } = useExplorerStore();
+  const setScale = useScaleStore((s) => s.setScale);
+  const setCameraTarget = useCameraStore((s) => s.setCameraTarget);
+  const selectPlanet = useSelectionStore((s) => s.selectPlanet);
+  const selectStar = useSelectionStore((s) => s.selectStar);
+  const selectConstellation = useSelectionStore((s) => s.selectConstellation);
   const setDayOffset = useSimulationStore((s) => s.setDayOffset);
 
   function handleRestore(b: BookmarkType) {

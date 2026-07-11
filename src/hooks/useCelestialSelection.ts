@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import * as THREE from "three";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
+import { useCameraStore } from "@/lib/store/camera-store";
 
 export type CelestialType = "planet" | "star" | "constellation";
 
@@ -14,8 +15,7 @@ export type CelestialType = "planet" | "star" | "constellation";
 export function useCelestialSelection(type: CelestialType, id: string) {
   const [hovered, setHovered] = useState(false);
 
-  // Map type to store selectors
-  const selectedId = useExplorerStore((s) => {
+  const selectedId = useSelectionStore((s) => {
     switch (type) {
       case "planet":
         return s.selectedPlanet;
@@ -28,13 +28,11 @@ export function useCelestialSelection(type: CelestialType, id: string) {
 
   const isSelected = selectedId === id;
 
-  const setCameraTarget = useExplorerStore((s) => s.setCameraTarget);
-  const setIsTransitioning = useExplorerStore((s) => s.setIsTransitioning);
+  const setCameraTarget = useCameraStore((s) => s.setCameraTarget);
 
-  // Get the appropriate select function based on type
   const selectFn = useCallback(
     (newId: string | null) => {
-      const state = useExplorerStore.getState();
+      const state = useSelectionStore.getState();
       switch (type) {
         case "planet":
           state.selectPlanet(newId);
@@ -50,29 +48,6 @@ export function useCelestialSelection(type: CelestialType, id: string) {
     [type],
   );
 
-  // Get the appropriate hover function based on type
-  const hoverFn = useCallback(
-    (newId: string | null) => {
-      const state = useExplorerStore.getState();
-      switch (type) {
-        case "planet":
-          state.hoverPlanet(newId);
-          break;
-        case "star":
-          state.hoverStar(newId);
-          break;
-        case "constellation":
-          state.hoverConstellation(newId);
-          break;
-      }
-    },
-    [type],
-  );
-
-  /**
-   * Handle click with a group ref (for planets and stars).
-   * Gets world position from the group ref.
-   */
   const handleClick = useCallback(
     (
       e: { stopPropagation: () => void },
@@ -88,16 +63,12 @@ export function useCelestialSelection(type: CelestialType, id: string) {
           const pos = new THREE.Vector3();
           groupRef.current.getWorldPosition(pos);
           setCameraTarget(pos);
-          setIsTransitioning(true);
         }
       }
     },
-    [id, isSelected, selectFn, setCameraTarget, setIsTransitioning],
+    [id, isSelected, selectFn, setCameraTarget],
   );
 
-  /**
-   * Handle click with a direct position (for constellations).
-   */
   const handleClickWithPosition = useCallback(
     (e: { stopPropagation: () => void }, targetPosition: THREE.Vector3) => {
       e.stopPropagation();
@@ -107,21 +78,18 @@ export function useCelestialSelection(type: CelestialType, id: string) {
       } else {
         selectFn(id);
         setCameraTarget(targetPosition);
-        setIsTransitioning(true);
       }
     },
-    [id, isSelected, selectFn, setCameraTarget, setIsTransitioning],
+    [id, isSelected, selectFn, setCameraTarget],
   );
 
   const handlePointerOver = useCallback(() => {
     setHovered(true);
-    hoverFn(id);
-  }, [id, hoverFn]);
+  }, []);
 
   const handlePointerOut = useCallback(() => {
     setHovered(false);
-    hoverFn(null);
-  }, [hoverFn]);
+  }, []);
 
   return {
     isSelected,

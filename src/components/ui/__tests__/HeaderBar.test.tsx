@@ -29,8 +29,8 @@ jest.mock("@/hooks/useAchievements", () => ({
   }),
 }));
 
-jest.mock("@/lib/store/explorer-store", () => ({
-  useExplorerStore: (selector: (s: Record<string, unknown>) => unknown) =>
+jest.mock("@/lib/store/ui-store", () => ({
+  useUIStore: (selector: (s: Record<string, unknown>) => unknown) =>
     selector({
       toggleSearch: mockToggleSearch,
       toggleBookmarkModal: mockToggleBookmarkModal,

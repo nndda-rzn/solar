@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
+import { useCameraStore } from "@/lib/store/camera-store";
 import { useStarData } from "@/hooks/data/useStarData";
 import { useConstellationData } from "@/hooks/data/useConstellationData";
 import { cosmicEventBus } from "@/lib/events/event-bus";
@@ -15,13 +16,13 @@ import { SlidePanel } from "./SlidePanel";
 export function StellarInfoPanel() {
   const t = useTranslations("stellar");
   const locale = useLocale();
-  const {
-    selectedStar,
-    selectStar,
-    selectedConstellation,
-    selectConstellation,
-    setCameraTarget,
-  } = useExplorerStore();
+  const selectedStar = useSelectionStore((s) => s.selectedStar);
+  const selectStar = useSelectionStore((s) => s.selectStar);
+  const selectedConstellation = useSelectionStore(
+    (s) => s.selectedConstellation,
+  );
+  const selectConstellation = useSelectionStore((s) => s.selectConstellation);
+  const setCameraTarget = useCameraStore((s) => s.setCameraTarget);
   const { getStarById } = useStarData();
   const { getConstellationById } = useConstellationData();
 

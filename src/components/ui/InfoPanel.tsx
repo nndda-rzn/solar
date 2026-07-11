@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useSelectionStore } from "@/lib/store/selection-store";
+import { useCameraStore } from "@/lib/store/camera-store";
 import { usePlanetData } from "@/hooks/data/usePlanetData";
 import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { cosmicEventBus } from "@/lib/events/event-bus";
@@ -13,7 +14,9 @@ export function InfoPanel() {
   const t = useTranslations("infoPanel");
   const tPlanets = useTranslations("planets");
   const tDwarfPlanets = useTranslations("dwarfPlanets");
-  const { selectedPlanet, selectPlanet, setCameraTarget } = useExplorerStore();
+  const selectedPlanet = useSelectionStore((s) => s.selectedPlanet);
+  const selectPlanet = useSelectionStore((s) => s.selectPlanet);
+  const setCameraTarget = useCameraStore((s) => s.setCameraTarget);
   const { getPlanetBySlug } = usePlanetData();
   const { getDwarfPlanetBySlug } = useDwarfPlanetData();
 
