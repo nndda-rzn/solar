@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Star } from "@/types/canvas/star";
+import { BackgroundStarParticle } from "@/types/canvas/star";
 import { useMouseParallax } from "@/hooks/canvas/useMouseParallax";
 import { useWindowSize } from "@/hooks/canvas/useWindowSize";
 import { useShootingStars } from "@/hooks/canvas/useShootingStars";
@@ -22,7 +22,7 @@ export function StarBackground() {
   const parallax = useMouseParallax(0.3);
   const starsCanvasRef = useRef<HTMLCanvasElement>(null);
   const constellationCanvasRef = useRef<HTMLCanvasElement>(null);
-  const starsRef = useRef<Star[]>([]);
+  const starsRef = useRef<BackgroundStarParticle[]>([]);
   const { drawShootingStars } = useShootingStars(width, height);
   const [selectedConstellation, setSelectedConstellation] = useState<
     string | null

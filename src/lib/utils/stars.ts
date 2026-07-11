@@ -1,4 +1,4 @@
-import { Star } from "@/types/canvas/star";
+import { BackgroundStarParticle } from "@/types/canvas/star";
 
 /**
  * Generates a randomized field of background stars across three depth
@@ -7,11 +7,14 @@ import { Star } from "@/types/canvas/star";
  *
  * @param width - Canvas width in pixels used to bound star x positions.
  * @param height - Canvas height in pixels used to bound star y positions.
- * @returns An array of `Star` objects with randomized position, size,
+ * @returns An array of `BackgroundStarParticle` objects with randomized position, size,
  * opacity, twinkle animation params, depth, and color.
  */
-export function generateStars(width: number, height: number): Star[] {
-  const stars: Star[] = [];
+export function generateStars(
+  width: number,
+  height: number,
+): BackgroundStarParticle[] {
+  const stars: BackgroundStarParticle[] = [];
   const layers = [
     {
       count: 40,
