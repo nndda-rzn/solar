@@ -23,7 +23,7 @@ export function TourCard() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 8 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="fixed bottom-8 left-1/2 z-50 w-full max-w-md -translate-x-1/2 px-4"
+        className="fixed bottom-8 left-1/2 z-50 w-full max-w-md -translate-x-1/2 px-4 pointer-events-auto"
       >
         <div className="relative rounded-2xl border border-white/10 bg-black/80 p-5 shadow-2xl backdrop-blur-md">
           {/* Step indicator */}
