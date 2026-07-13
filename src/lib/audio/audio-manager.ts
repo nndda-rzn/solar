@@ -40,6 +40,28 @@ class AudioManager {
     }
   }
 
+  fadeOutAndStop(key: string, duration: number = 1000) {
+    const track = this.tracks.get(key);
+    if (track && track.playing()) {
+      track.fade(track.volume(), 0, duration);
+      setTimeout(() => track.stop(), duration);
+    }
+  }
+
+  fadeIn(key: string, targetVolume: number, duration: number = 2000) {
+    const track = this.tracks.get(key);
+    if (track) {
+      track.volume(0);
+      if (!track.playing()) track.play();
+      track.fade(0, targetVolume, duration);
+    }
+  }
+
+  isPlaying(key: string): boolean {
+    const track = this.tracks.get(key);
+    return track ? track.playing() : false;
+  }
+
   setVolume(key: string, volume: number) {
     const track = this.tracks.get(key);
     if (track) {

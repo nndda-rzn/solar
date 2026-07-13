@@ -4,6 +4,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { AuthProvider } from "@/components/auth/AuthProvider";
+import { AudioController } from "@/components/ui/AudioController";
 
 export async function generateMetadata({
   params,
@@ -49,7 +50,10 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <AuthProvider>{children}</AuthProvider>
+      <AuthProvider>
+        <AudioController />
+        {children}
+      </AuthProvider>
     </NextIntlClientProvider>
   );
 }
