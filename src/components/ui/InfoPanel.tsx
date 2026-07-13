@@ -157,15 +157,39 @@ export function InfoPanel() {
 
             <hr className="border-white/10" />
 
-            {/* About */}
+            {/* Discovery */}
             <section>
               <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white/70">
                 <BookOpen className="h-4 w-4 text-cosmic-accent" />
-                {t("about")}
+                {t("discovery")}
               </div>
-              <p className="text-sm leading-relaxed text-white/50">
-                {getDescription()}
-              </p>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                <Stat
+                  label={t("stats.rotationSpeed")}
+                  value={`${planet.rotationSpeed}`}
+                />
+                <Stat label={t("stats.tilt")} value={`${planet.tilt}°`} />
+                <Stat
+                  label={t("stats.hasRing")}
+                  value={
+                    "hasRing" in planet
+                      ? planet.hasRing
+                        ? t("yes")
+                        : t("no")
+                      : "—"
+                  }
+                />
+                <Stat
+                  label={t("stats.hasAtmosphere")}
+                  value={
+                    "hasAtmosphere" in planet
+                      ? planet.hasAtmosphere
+                        ? t("yes")
+                        : t("no")
+                      : "—"
+                  }
+                />
+              </div>
             </section>
 
             <hr className="border-white/10" />

@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useProfile } from "@/hooks/useProfile";
+import { useAchievements } from "@/hooks/useAchievements";
 import { Loader2, Save, User as UserIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function ProfileForm() {
   const t = useTranslations("common");
   const { profile, isLoading, error, updateProfile } = useProfile();
+  const { totalXp } = useAchievements();
   const [displayName, setDisplayName] = useState("");
   const [bio, setBio] = useState("");
   const [avatarUrl, setAvatarUrl] = useState("");
@@ -87,7 +89,7 @@ export function ProfileForm() {
           </p>
           <p className="text-xs text-white/50">{profile.email}</p>
           <p className="mt-1 text-[10px] uppercase tracking-wider text-cosmic-accent">
-            {t("profile.level")} {profile.level} &middot; {profile.xp} XP
+            {t("profile.level")} {profile.level} &middot; {totalXp} XP
           </p>
         </div>
       </div>

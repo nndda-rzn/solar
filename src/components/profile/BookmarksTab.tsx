@@ -38,14 +38,8 @@ export function BookmarksTab() {
       setCameraTarget(
         new THREE.Vector3(b.cameraTarget.x, b.cameraTarget.y, b.cameraTarget.z),
       );
-    } else if (b.cameraPosition) {
-      setCameraTarget(
-        new THREE.Vector3(
-          b.cameraPosition.x,
-          b.cameraPosition.y,
-          b.cameraPosition.z,
-        ),
-      );
+    } else {
+      setCameraTarget(null);
     }
     if (b.selectedObject && b.selectedType === "planet") {
       selectPlanet(b.selectedObject);
