@@ -61,8 +61,8 @@ export function HUD() {
         <BookmarkSaveModal />
         <ShortcutsHelpModal />
         <SettingsModal />
-        <GuidedTour />
       </div>
+      <GuidedTour />
       <ToastContainer />
     </ToastProvider>
   );
