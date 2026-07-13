@@ -21,5 +21,28 @@
       "description": "Lihat progres, bookmark, dan pencapaian Anda",
       "cta": "Lihat Profil"
     }
+  },
+  "charts": {
+    "sectionTitle": "Progres Kamu",
+    "xp": {
+      "title": "Poin Pengalaman",
+      "level": "Level",
+      "toNextLevel": "XP ke level berikutnya"
+    },
+    "ring": {
+      "title": "Eksplorasi Alam Semesta",
+      "explored": "Dijelajahi",
+      "planets": "Planet",
+      "stars": "Bintang",
+      "constellations": "Rasi Bintang"
+    },
+    "heatmap": {
+      "title": "Aktivitas (30 Hari)",
+      "activeDays": "hari aktif",
+      "totalActions": "total aksi",
+      "last30Days": "dalam 30 hari terakhir",
+      "less": "Sedikit",
+      "more": "Banyak"
+    }
   }
 }

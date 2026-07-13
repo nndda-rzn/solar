@@ -21,5 +21,28 @@
       "description": "View your progress, bookmarks, and achievements",
       "cta": "View Profile"
     }
+  },
+  "charts": {
+    "sectionTitle": "Your Progress",
+    "xp": {
+      "title": "Experience Points",
+      "level": "Level",
+      "toNextLevel": "XP to next level"
+    },
+    "ring": {
+      "title": "Universe Exploration",
+      "explored": "Explored",
+      "planets": "Planets",
+      "stars": "Stars",
+      "constellations": "Constellations"
+    },
+    "heatmap": {
+      "title": "Activity (30 Days)",
+      "activeDays": "active days",
+      "totalActions": "total actions",
+      "last30Days": "in last 30 days",
+      "less": "Less",
+      "more": "More"
+    }
   }
 }

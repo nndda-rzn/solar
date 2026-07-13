@@ -16,6 +16,7 @@ import { useProgress } from "@/hooks/useProgress";
 import { useBookmarks } from "@/hooks/useBookmarks";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { DashboardCharts } from "@/components/dashboard/DashboardCharts";
 
 function StatCard({
   icon,
@@ -163,6 +164,7 @@ export default function DashboardPage() {
             </Link>
           </div>
         </section>
+        <DashboardCharts />
       </div>
     </AppShell>
   );
