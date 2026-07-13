@@ -286,5 +286,50 @@
       "errorExists": "Email already registered",
       "checkEmail": "Check your email to confirm your account"
     }
+  },
+  "tour": {
+    "step": "Step",
+    "next": "Next",
+    "skip": "Skip Tour",
+    "finish": "Start Exploring",
+    "replay": "Restart Tour",
+    "steps": {
+      "welcome": {
+        "title": "Welcome to Cosmic Explorer",
+        "description": "An interactive journey through our solar system and beyond. Let's explore the universe together."
+      },
+      "sun": {
+        "title": "The Sun",
+        "description": "Our star at the center of the solar system, containing 99.8% of all the mass in the solar system."
+      },
+      "earth": {
+        "title": "Earth",
+        "description": "Our home planet — the only known world harboring life, with liquid water oceans and a protective atmosphere."
+      },
+      "saturn": {
+        "title": "Saturn",
+        "description": "The jewel of the solar system, famous for its spectacular ring system made of ice and rock particles."
+      },
+      "neptune": {
+        "title": "Neptune",
+        "description": "The farthest planet from the Sun, 30 times Earth's distance away, with winds reaching 2,100 km/h."
+      },
+      "stellar": {
+        "title": "Stellar Neighborhood",
+        "description": "Zoom out beyond our solar system. Thousands of nearby stars become visible within 100 light-years."
+      },
+      "galactic": {
+        "title": "The Milky Way",
+        "description": "Our home galaxy — a spiral galaxy containing 200 to 400 billion stars, 100,000 light-years across."
+      },
+      "cosmic": {
+        "title": "The Observable Universe",
+        "description": "The largest scale — the entire observable universe, 93 billion light-years in diameter, containing trillions of galaxies."
+      },
+      "finish": {
+        "title": "You're Ready to Explore!",
+        "description": "You've seen the full scale of the cosmos. Now explore freely — click planets, zoom in and out, discover the universe."
+      }
+    }
   }
 }

@@ -10,6 +10,7 @@ import {
   Settings as SettingsIcon,
   LayoutDashboard,
   ChevronDown,
+  Map,
 } from "lucide-react";
 import { useSimulationStore } from "@/lib/store/simulation-store";
 import { useUIStore } from "@/lib/store/ui-store";
@@ -17,6 +18,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useAchievements } from "@/hooks/useAchievements";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { useSupabaseLogout } from "@/hooks/useSupabaseLogout";
+import { useTourStore } from "@/lib/store/tour-store";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { formatSimDate } from "@/lib/utils/format";
@@ -101,6 +103,7 @@ export function HeaderBar() {
   const toggleSearch = useUIStore((s) => s.toggleSearch);
   const toggleBookmarkModal = useUIStore((s) => s.toggleBookmarkModal);
   const toggleSettings = useUIStore((s) => s.toggleSettings);
+  const startTour = useTourStore((s) => s.startTour);
   const { isAuthenticated } = useAuth();
   const { totalXp } = useAchievements();
   const level = Math.floor(totalXp / 100);
@@ -155,6 +158,13 @@ export function HeaderBar() {
             className="flex items-center justify-center rounded-lg px-2.5 py-1.5 text-white/50 transition-colors hover:bg-white/5 hover:text-white/70"
           >
             <SettingsIcon className="h-3.5 w-3.5" />
+          </button>
+          <button
+            onClick={startTour}
+            aria-label={t("tour.replay")}
+            className="flex items-center justify-center rounded-lg px-2.5 py-1.5 text-white/50 transition-colors hover:bg-white/5 hover:text-white/70"
+          >
+            <Map className="h-3.5 w-3.5" />
           </button>
         </div>
 

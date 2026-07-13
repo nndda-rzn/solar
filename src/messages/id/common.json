@@ -286,5 +286,50 @@
       "errorExists": "Email sudah terdaftar",
       "checkEmail": "Periksa email Anda untuk konfirmasi akun"
     }
+  },
+  "tour": {
+    "step": "Langkah",
+    "next": "Lanjut",
+    "skip": "Lewati Tour",
+    "finish": "Mulai Eksplorasi",
+    "replay": "Ulangi Tour",
+    "steps": {
+      "welcome": {
+        "title": "Selamat Datang di Cosmic Explorer",
+        "description": "Perjalanan interaktif melalui tata surya dan alam semesta. Mari kita jelajahi bersama."
+      },
+      "sun": {
+        "title": "Matahari",
+        "description": "Bintang kita di pusat tata surya, mengandung 99,8% dari seluruh massa di tata surya."
+      },
+      "earth": {
+        "title": "Bumi",
+        "description": "Planet kita — satu-satunya dunia yang diketahui memiliki kehidupan, dengan lautan dan atmosfer pelindung."
+      },
+      "saturn": {
+        "title": "Saturnus",
+        "description": "Permata tata surya, terkenal dengan sistem cincinnya yang spektakuler dari es dan batuan."
+      },
+      "neptune": {
+        "title": "Neptunus",
+        "description": "Planet terjauh dari Matahari, 30 kali jarak Bumi, dengan angin mencapai 2.100 km/jam."
+      },
+      "stellar": {
+        "title": "Lingkungan Bintang",
+        "description": "Zoom keluar melampaui tata surya kita. Ribuan bintang terdekat terlihat dalam radius 100 tahun cahaya."
+      },
+      "galactic": {
+        "title": "Bima Sakti",
+        "description": "Galaksi kita — galaksi spiral dengan 200 hingga 400 miliar bintang, selebar 100.000 tahun cahaya."
+      },
+      "cosmic": {
+        "title": "Alam Semesta yang Dapat Diamati",
+        "description": "Skala terbesar — seluruh alam semesta yang dapat diamati, diameter 93 miliar tahun cahaya, berisi triliunan galaksi."
+      },
+      "finish": {
+        "title": "Siap Menjelajah!",
+        "description": "Kamu sudah melihat skala penuh kosmos. Sekarang jelajahi secara bebas — klik planet, zoom in dan out, temukan alam semesta."
+      }
+    }
   }
 }

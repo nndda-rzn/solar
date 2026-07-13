@@ -14,6 +14,7 @@ import { ToastContainer } from "./Toast";
 import { BookmarkSaveModal } from "./BookmarkSaveModal";
 import { ShortcutsHelpModal } from "./ShortcutsHelpModal";
 import { SettingsModal } from "./SettingsModal";
+import { GuidedTour } from "./GuidedTour";
 import { ToastProvider } from "@/hooks/useToast";
 import { AchievementTracker } from "@/hooks/useAchievementTracker";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
@@ -60,6 +61,7 @@ export function HUD() {
         <BookmarkSaveModal />
         <ShortcutsHelpModal />
         <SettingsModal />
+        <GuidedTour />
       </div>
       <ToastContainer />
     </ToastProvider>
