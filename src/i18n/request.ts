@@ -15,9 +15,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
       simulation: (await import(`@/messages/${locale}/simulation.json`))
         .default,
       infoPanel: (await import(`@/messages/${locale}/infoPanel.json`)).default,
-      planets: (await import(`@/messages/${locale}/planets.json`)).default,
-      dwarfPlanets: (await import(`@/messages/${locale}/dwarfPlanets.json`))
-        .default,
       stellar: (await import(`@/messages/${locale}/stellar.json`)).default,
       dashboard: (await import(`@/messages/${locale}/dashboard.json`)).default,
       landing:
