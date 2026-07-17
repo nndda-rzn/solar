@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useRef, useMemo } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import { PlanetTextures } from "@/types/celestial/planet";
@@ -24,6 +24,8 @@ export function PlanetSurface({
   color,
 }: PlanetSurfaceProps) {
   const meshRef = useRef<THREE.Mesh>(null);
+  const { camera } = useThree();
+  const dayOffset = useSimulationStore((state) => state.dayOffset);
 
   const textureMap: Record<string, string> = {};
   if (textures.diffuse) textureMap.map = textures.diffuse;
@@ -33,18 +35,35 @@ export function PlanetSurface({
 
   const loadedTextures = useTexture(textureMap);
 
+  // LOD geometries: 64 segments (close), 32 (medium), 16 (far)
+  const geometries = useMemo(
+    () => ({
+      high: new THREE.SphereGeometry(radius, 64, 64),
+      medium: new THREE.SphereGeometry(radius, 32, 32),
+      low: new THREE.SphereGeometry(radius, 16, 16),
+    }),
+    [radius],
+  );
+
   useFrame(() => {
     if (meshRef.current) {
-      const { dayOffset } = useSimulationStore.getState();
-      // Rotation now tied to same dayOffset as orbit - synced time source
       meshRef.current.rotation.y =
         dayOffset * rotationSpeed * PLANET_ROTATION_UNIT;
+
+      const distance = camera.position.distanceTo(meshRef.current.position);
+      if (distance < 50) {
+        meshRef.current.geometry = geometries.high;
+      } else if (distance < 150) {
+        meshRef.current.geometry = geometries.medium;
+      } else {
+        meshRef.current.geometry = geometries.low;
+      }
     }
   });
 
   return (
     <mesh ref={meshRef} rotation={[THREE.MathUtils.degToRad(tilt), 0, 0]}>
-      <sphereGeometry args={[radius, 64, 64]} />
+      <primitive object={geometries.high} />
       <meshStandardMaterial
         map={loadedTextures.map ?? null}
         normalMap={loadedTextures.normalMap ?? null}
