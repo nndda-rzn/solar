@@ -32,6 +32,14 @@ export default function LoginPage() {
       );
     }
 
+    // If user did not check "remember me", flag the session as temporary.
+    // AuthProvider will sign out when the browser tab/window is closed.
+    if (!values.rememberMe) {
+      sessionStorage.setItem("rememberMe", "false");
+    } else {
+      sessionStorage.removeItem("rememberMe");
+    }
+
     router.push("/dashboard");
     router.refresh();
   };

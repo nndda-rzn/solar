@@ -21,6 +21,7 @@
       "bookmarks": "Anda belum menyimpan bookmark. Simpan tampilan kamera dari Explorer untuk melihatnya di sini."
     },
     "explore3d": "Jelajahi dalam 3D",
+    "close": "Tutup",
     "noContent": "Deskripsi tidak tersedia.",
     "stats": {
       "mass": "Massa",
@@ -179,7 +180,13 @@
     "highQuality": "Kualitas Tinggi",
     "lowQuality": "Kualitas Rendah (Performa)",
     "highQualityDesc": "Jumlah partikel penuh, resolusi tinggi. Terbaik untuk perangkat bertenaga.",
-    "lowQualityDesc": "Jumlah partikel dikurangi, resolusi dibatasi. Terbaik untuk perangkat low-end."
+    "lowQualityDesc": "Jumlah partikel dikurangi, resolusi dibatasi. Terbaik untuk perangkat low-end.",
+    "audio": "Audio",
+    "mute": "Bisukan",
+    "volume": "Volume",
+    "ambient": "Suara Ambient",
+    "on": "Aktif",
+    "off": "Nonaktif"
   },
   "loader": {
     "loading": "Memuat..."
@@ -230,12 +237,32 @@
     },
     "help": {
       "title": "Bantuan",
-      "faq1": "Bagaimana cara menavigasi scene 3D?",
-      "faq1Answer": "Gunakan drag mouse untuk rotasi, scroll untuk zoom. Tekan ? untuk pintasan keyboard.",
-      "faq2": "Bagaimana cara menyimpan tampilan saat ini?",
-      "faq2Answer": "Tekan Ctrl+B (atau Cmd+B di Mac) untuk membuka modal bookmark.",
-      "faq3": "Bagaimana cara mendapatkan pencapaian?",
-      "faq3Answer": "Jelajahi planet, bintang, dan konstelasi. Setiap interaksi berkontribusi pada progres Anda."
+      "faqs": [
+        {
+          "q": "Bagaimana cara navigasi explorer 3D?",
+          "a": "Gunakan mouse untuk orbit (drag klik kiri), zoom (scroll), dan pan (drag klik kanan). Di perangkat sentuh, gunakan dua jari untuk zoom dan satu jari untuk rotasi."
+        },
+        {
+          "q": "Bagaimana cara mengganti tampilan skala?",
+          "a": "Gunakan pemilih skala di top bar untuk beralih antara Tata Surya, Stellar, Galaktik, dan Kosmik. Anda juga bisa zoom keluar secara alami untuk memicu transisi skala."
+        },
+        {
+          "q": "Bagaimana cara menyimpan bookmark?",
+          "a": "Tekan Ctrl+B (atau Cmd+B di Mac) saat menjelajah, atau klik ikon bookmark di top bar. Beri nama tampilan Anda dan simpan. Bookmark akan memulihkan posisi kamera dan skala yang tepat."
+        },
+        {
+          "q": "Bagaimana cara melihat pencapaian saya?",
+          "a": "Buka Profil dari sidebar dan pilih tab Pencapaian. Anda juga bisa melihat pencapaian yang baru terbuka sebagai notifikasi toast saat menjelajah."
+        },
+        {
+          "q": "Bagaimana cara mengubah kecepatan simulasi?",
+          "a": "Gunakan kontrol kecepatan di toolbar explorer. Anda bisa mempercepat, memperlambat, menjeda, atau mereset simulasi. Perjalanan waktu jauh ke masa depan atau masa lalu juga menghasilkan XP."
+        },
+        {
+          "q": "Apa perbedaan mode Kualitas Tinggi dan Kualitas Rendah?",
+          "a": "Kualitas Tinggi merender jumlah partikel penuh dan resolusi tinggi — terbaik untuk perangkat bertenaga. Kualitas Rendah mengurangi jumlah partikel dan membatasi resolusi untuk performa lebih halus di perangkat low-end. Ubah ini di Pengaturan."
+        }
+      ]
     }
   },
   "auth": {

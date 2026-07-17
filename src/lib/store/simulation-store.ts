@@ -47,5 +47,5 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
     set({ dayOffset: clampDayOffset(Math.floor(diff)) });
   },
 
-  reset: () => set({ isPlaying: true, speed: 1 }),
+  reset: () => set({ isPlaying: true, speed: 1, dayOffset: 0 }),
 }));

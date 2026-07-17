@@ -99,7 +99,7 @@ export function LibraryDetail({
           onClick={onClose}
           className="rounded border border-white/20 px-4 py-2 text-sm text-white/70 transition hover:bg-white/5"
         >
-          Close
+          {t("close")}
         </button>
         <button
           type="button"

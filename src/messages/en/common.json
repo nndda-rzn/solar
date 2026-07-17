@@ -21,6 +21,7 @@
       "bookmarks": "You haven't saved any bookmarks yet. Save camera views from the Explorer to see them here."
     },
     "explore3d": "Explore in 3D",
+    "close": "Close",
     "noContent": "No description available.",
     "stats": {
       "mass": "Mass",
@@ -179,7 +180,13 @@
     "highQuality": "High Quality",
     "lowQuality": "Low Quality (Performance)",
     "highQualityDesc": "Full particle count, high resolution. Best for powerful devices.",
-    "lowQualityDesc": "Reduced particle count, capped resolution. Best for low-end devices."
+    "lowQualityDesc": "Reduced particle count, capped resolution. Best for low-end devices.",
+    "audio": "Audio",
+    "mute": "Mute",
+    "volume": "Volume",
+    "ambient": "Ambient Sound",
+    "on": "On",
+    "off": "Off"
   },
   "loader": {
     "loading": "Loading..."
@@ -230,12 +237,32 @@
     },
     "help": {
       "title": "Help",
-      "faq1": "How do I navigate the 3D scene?",
-      "faq1Answer": "Use mouse drag to rotate, scroll to zoom. Press ? for keyboard shortcuts.",
-      "faq2": "How do I save my current view?",
-      "faq2Answer": "Press Ctrl+B (or Cmd+B on Mac) to open the bookmark modal.",
-      "faq3": "How do I earn achievements?",
-      "faq3Answer": "Explore planets, stars, and constellations. Each interaction contributes to your progress."
+      "faqs": [
+        {
+          "q": "How do I navigate the 3D explorer?",
+          "a": "Use your mouse to orbit (left-click drag), zoom (scroll wheel), and pan (right-click drag). On touch devices, use two fingers to zoom and one finger to rotate."
+        },
+        {
+          "q": "How do I change the scale view?",
+          "a": "Use the scale selector in the top bar to switch between Solar System, Stellar, Galactic, and Cosmic scales. You can also zoom out naturally to trigger scale transitions."
+        },
+        {
+          "q": "How do I save a bookmark?",
+          "a": "Press Ctrl+B (or Cmd+B on Mac) at any time while exploring, or click the bookmark icon in the top bar. Give your view a name and save it. Bookmarks restore your exact camera position and scale."
+        },
+        {
+          "q": "How do I view my achievements?",
+          "a": "Go to Profile from the sidebar and select the Achievements tab. You can also see newly unlocked achievements as toast notifications while exploring."
+        },
+        {
+          "q": "How do I change simulation speed?",
+          "a": "Use the speed control in the explorer toolbar. You can speed up, slow down, pause, or reset the simulation. Time-traveling far into the future or past also earns XP."
+        },
+        {
+          "q": "What is the difference between High Quality and Low Quality mode?",
+          "a": "High Quality renders full particle counts and high resolution — best for powerful devices. Low Quality reduces particle counts and caps resolution for smoother performance on low-end hardware. Change this in Settings."
+        }
+      ]
     }
   },
   "auth": {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { useProgress } from "@/hooks/useProgress";
 import { useAchievements } from "@/hooks/useAchievements";
 import { useToast } from "@/hooks/useToast";
@@ -20,6 +21,7 @@ import {
  * Mount inside a tree wrapped by <ToastProvider> and authenticated.
  */
 export function AchievementTracker() {
+  const t = useTranslations("common");
   const { progress, track } = useProgress();
   const { checkAndAward, totalXp } = useAchievements();
   const { push } = useToast();
@@ -67,7 +69,7 @@ export function AchievementTracker() {
           },
         });
         pushRef.current({
-          title: "Achievement Unlocked!",
+          title: t("toast.achievementUnlocked"),
           description: a.title,
           icon: a.icon,
           variant: "achievement",
@@ -88,7 +90,7 @@ export function AchievementTracker() {
           payload: { from: prevLevel, to: newLevel },
         });
         pushRef.current({
-          title: "Level Up!",
+          title: t("toast.levelUp"),
           description: `Level ${newLevel}`,
           variant: "info",
         });

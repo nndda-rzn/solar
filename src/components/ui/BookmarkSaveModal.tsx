@@ -175,7 +175,7 @@ export function BookmarkSaveModal() {
             disabled={isSaving}
             className="rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white/60 transition-colors hover:text-white disabled:opacity-50"
           >
-            Cancel
+            {t("bookmarks.cancel")}
           </button>
         </div>
       </div>

@@ -8,12 +8,14 @@ import { useAuthStore } from "@/lib/store/auth-store";
  * AuthProvider - subscribes to Supabase auth state changes and keeps the
  * Zustand auth store in sync across the client-side app.
  *
+ * Also handles "remember me = false": if the user logged in without
+ * checking remember me, signs them out when the tab/window is closed.
+ *
  * Mount once near the root of the locale layout. Renders nothing itself;
  * it's a side-effect-only provider.
  */
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const setUser = useAuthStore((s) => s.setUser);
-  const setLoading = useAuthStore((s) => s.setLoading);
 
   useEffect(() => {
     const supabase = createClient();
@@ -30,10 +32,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       },
     );
 
+    // If user logged in without "remember me", sign out on tab/window close
+    const handleBeforeUnload = () => {
+      if (sessionStorage.getItem("rememberMe") === "false") {
+        // Use sendBeacon-compatible approach: fire and forget
+        supabase.auth.signOut();
+        sessionStorage.removeItem("rememberMe");
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
     return () => {
       subscription.subscription.unsubscribe();
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
-  }, [setUser, setLoading]);
+  }, [setUser]);
 
   return <>{children}</>;
 }
