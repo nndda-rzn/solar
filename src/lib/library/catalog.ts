@@ -84,6 +84,50 @@ function stat(label: string, value: string) {
   return { label, value };
 }
 
+type LocaleFields = {
+  description?: string;
+  facts?: string[];
+  mythology?: string;
+};
+
+function extractLocaleContent<T extends LocaleFields>(
+  content: LocaleContent<T> | undefined,
+  fallbackDesc: string,
+  fallbackFacts: string[],
+): {
+  description: string;
+  facts: string[];
+  rawDescriptionEn?: string | undefined;
+  rawDescriptionId?: string | undefined;
+  rawFactsEn?: string[] | undefined;
+  rawFactsId?: string[] | undefined;
+  rawMythologyEn?: string | undefined;
+  rawMythologyId?: string | undefined;
+} {
+  const en = content?.en;
+  const id = content?.id;
+
+  const result: ReturnType<typeof extractLocaleContent> = {
+    description: en?.description ?? fallbackDesc,
+    facts: en?.facts ?? fallbackFacts,
+  };
+
+  if (en?.description) result.rawDescriptionEn = en.description;
+  if (id?.description) {
+    result.rawDescriptionId = id.description;
+    if (!en?.description) result.description = id.description;
+  }
+  if (en?.facts) result.rawFactsEn = en.facts;
+  if (id?.facts) {
+    result.rawFactsId = id.facts;
+    if (!en?.facts) result.facts = id.facts;
+  }
+  if (en?.mythology) result.rawMythologyEn = en.mythology;
+  if (id?.mythology) result.rawMythologyId = id.mythology;
+
+  return result;
+}
+
 function buildPlanetStats(p: PlanetJson) {
   return [
     stat("Mass", p.mass),
@@ -111,31 +155,40 @@ function planetBrowseItem(p: PlanetJson): CatalogItem {
 }
 
 function planetDetailItem(p: PlanetJson): LibraryDetailItemRaw {
-  const en = p.content?.en;
-  const id = p.content?.id;
-  const item: LibraryDetailItemRaw = {
+  const localeContent = extractLocaleContent(
+    p.content,
+    p.description,
+    p.funFacts,
+  );
+
+  return {
     id: p.id,
     title: p.name,
     type: "planet",
     accentColor: p.color,
     ...(p.textures?.diffuse ? { textureUrl: p.textures.diffuse } : {}),
-    description: en?.description ?? p.description,
-    facts: en?.facts ?? p.funFacts,
+    description: localeContent.description,
+    facts: localeContent.facts,
     stats: buildPlanetStats(p),
+    ...(localeContent.rawDescriptionEn
+      ? { rawDescriptionEn: localeContent.rawDescriptionEn }
+      : {}),
+    ...(localeContent.rawDescriptionId
+      ? { rawDescriptionId: localeContent.rawDescriptionId }
+      : {}),
+    ...(localeContent.rawFactsEn
+      ? { rawFactsEn: localeContent.rawFactsEn }
+      : {}),
+    ...(localeContent.rawFactsId
+      ? { rawFactsId: localeContent.rawFactsId }
+      : {}),
+    ...(localeContent.rawMythologyEn
+      ? { rawMythologyEn: localeContent.rawMythologyEn }
+      : {}),
+    ...(localeContent.rawMythologyId
+      ? { rawMythologyId: localeContent.rawMythologyId }
+      : {}),
   };
-  if (en?.description) item.rawDescriptionEn = en.description;
-  if (id?.description) {
-    item.rawDescriptionId = id.description;
-    if (!en?.description) item.description = id.description;
-  }
-  if (en?.facts) item.rawFactsEn = en.facts;
-  if (id?.facts) {
-    item.rawFactsId = id.facts;
-    if (!en?.facts) item.facts = id.facts;
-  }
-  if (en?.mythology) item.rawMythologyEn = en.mythology;
-  if (id?.mythology) item.rawMythologyId = id.mythology;
-  return item;
 }
 
 function dwarfPlanetBrowseItem(p: PlanetJson): CatalogItem {
@@ -153,30 +206,39 @@ function dwarfPlanetBrowseItem(p: PlanetJson): CatalogItem {
 }
 
 function dwarfPlanetDetailItem(p: PlanetJson): LibraryDetailItemRaw {
-  const en = p.content?.en;
-  const id = p.content?.id;
-  const item: LibraryDetailItemRaw = {
+  const localeContent = extractLocaleContent(
+    p.content,
+    p.description,
+    p.funFacts,
+  );
+
+  return {
     id: p.id,
     title: p.name,
     type: "dwarfPlanet",
     accentColor: p.color,
-    description: en?.description ?? p.description,
-    facts: en?.facts ?? p.funFacts,
+    description: localeContent.description,
+    facts: localeContent.facts,
     stats: buildPlanetStats(p),
+    ...(localeContent.rawDescriptionEn
+      ? { rawDescriptionEn: localeContent.rawDescriptionEn }
+      : {}),
+    ...(localeContent.rawDescriptionId
+      ? { rawDescriptionId: localeContent.rawDescriptionId }
+      : {}),
+    ...(localeContent.rawFactsEn
+      ? { rawFactsEn: localeContent.rawFactsEn }
+      : {}),
+    ...(localeContent.rawFactsId
+      ? { rawFactsId: localeContent.rawFactsId }
+      : {}),
+    ...(localeContent.rawMythologyEn
+      ? { rawMythologyEn: localeContent.rawMythologyEn }
+      : {}),
+    ...(localeContent.rawMythologyId
+      ? { rawMythologyId: localeContent.rawMythologyId }
+      : {}),
   };
-  if (en?.description) item.rawDescriptionEn = en.description;
-  if (id?.description) {
-    item.rawDescriptionId = id.description;
-    if (!en?.description) item.description = id.description;
-  }
-  if (en?.facts) item.rawFactsEn = en.facts;
-  if (id?.facts) {
-    item.rawFactsId = id.facts;
-    if (!en?.facts) item.facts = id.facts;
-  }
-  if (en?.mythology) item.rawMythologyEn = en.mythology;
-  if (id?.mythology) item.rawMythologyId = id.mythology;
-  return item;
 }
 
 function buildStarStats(s: StarJson) {
@@ -202,9 +264,9 @@ function starBrowseItem(s: StarJson): CatalogItem {
 }
 
 function starDetailItem(s: StarJson): LibraryDetailItemRaw {
-  const en = s.content?.en;
-  const id = s.content?.id;
-  const item: LibraryDetailItemRaw = {
+  const localeContent = extractLocaleContent(s.content, "", []);
+
+  return {
     id: s.id,
     title: s.name,
     type: "star",
@@ -212,18 +274,29 @@ function starDetailItem(s: StarJson): LibraryDetailItemRaw {
     magnitude: s.magnitude,
     spectralType: s.spectralType,
     stats: buildStarStats(s),
+    ...(localeContent.description
+      ? { description: localeContent.description }
+      : {}),
+    ...(localeContent.facts.length > 0 ? { facts: localeContent.facts } : {}),
+    ...(localeContent.rawDescriptionEn
+      ? { rawDescriptionEn: localeContent.rawDescriptionEn }
+      : {}),
+    ...(localeContent.rawDescriptionId
+      ? { rawDescriptionId: localeContent.rawDescriptionId }
+      : {}),
+    ...(localeContent.rawFactsEn
+      ? { rawFactsEn: localeContent.rawFactsEn }
+      : {}),
+    ...(localeContent.rawFactsId
+      ? { rawFactsId: localeContent.rawFactsId }
+      : {}),
+    ...(localeContent.rawMythologyEn
+      ? { rawMythologyEn: localeContent.rawMythologyEn }
+      : {}),
+    ...(localeContent.rawMythologyId
+      ? { rawMythologyId: localeContent.rawMythologyId }
+      : {}),
   };
-  if (en?.description) {
-    item.description = en.description;
-    item.rawDescriptionEn = en.description;
-  }
-  if (id?.description) item.rawDescriptionId = id.description;
-  if (en?.facts) {
-    item.facts = en.facts;
-    item.rawFactsEn = en.facts;
-  }
-  if (id?.facts) item.rawFactsId = id.facts;
-  return item;
 }
 
 function constellationBrowseItem(c: ConstellationJson): CatalogItem {
@@ -241,7 +314,8 @@ function constellationBrowseItem(c: ConstellationJson): CatalogItem {
 function constellationDetailItem(c: ConstellationJson): LibraryDetailItemRaw {
   const en = c.content?.en;
   const id = c.content?.id;
-  const item: LibraryDetailItemRaw = {
+
+  return {
     id: c.id,
     title: c.name,
     type: "constellation",
@@ -249,20 +323,17 @@ function constellationDetailItem(c: ConstellationJson): LibraryDetailItemRaw {
       stat("Abbreviation", c.abbreviation),
       stat("Star Count", String(c.stars.length)),
     ],
+    ...(c.canvasStars ? { canvasStars: c.canvasStars } : {}),
+    ...(c.lines ? { lines: c.lines } : {}),
+    ...(en?.description
+      ? { description: en.description, rawDescriptionEn: en.description }
+      : {}),
+    ...(id?.description ? { rawDescriptionId: id.description } : {}),
+    ...(en?.mythology
+      ? { mythology: en.mythology, rawMythologyEn: en.mythology }
+      : {}),
+    ...(id?.mythology ? { rawMythologyId: id.mythology } : {}),
   };
-  if (c.canvasStars) item.canvasStars = c.canvasStars;
-  if (c.lines) item.lines = c.lines;
-  if (en?.description) {
-    item.description = en.description;
-    item.rawDescriptionEn = en.description;
-  }
-  if (id?.description) item.rawDescriptionId = id.description;
-  if (en?.mythology) {
-    item.mythology = en.mythology;
-    item.rawMythologyEn = en.mythology;
-  }
-  if (id?.mythology) item.rawMythologyId = id.mythology;
-  return item;
 }
 
 const indexById = <T extends { id: string }>(arr: T[]): Record<string, T> => {
