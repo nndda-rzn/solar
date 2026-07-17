@@ -8,12 +8,11 @@ import { useDwarfPlanetData } from "@/hooks/data/useDwarfPlanetData";
 import { cosmicEventBus } from "@/lib/events/event-bus";
 import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { X, Settings, Globe, BookOpen, Lightbulb } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export function InfoPanel() {
   const t = useTranslations("infoPanel");
-  const tPlanets = useTranslations("planets");
-  const tDwarfPlanets = useTranslations("dwarfPlanets");
+  const locale = useLocale() as "en" | "id";
   const selectedPlanet = useSelectionStore((s) => s.selectedPlanet);
   const selectPlanet = useSelectionStore((s) => s.selectPlanet);
   const setCameraTarget = useCameraStore((s) => s.setCameraTarget);
@@ -45,16 +44,15 @@ export function InfoPanel() {
   }, [selectedPlanet, isDwarfPlanet]);
 
   const getDescription = () => {
-    if (!selectedPlanet) return "";
-    if (isDwarfPlanet) return tDwarfPlanets(`${selectedPlanet}.description`);
-    return tPlanets(`${selectedPlanet}.description`);
+    if (!planet) return "";
+    const localeContent = planet.content?.[locale];
+    return localeContent?.description ?? planet.description;
   };
 
   const getFunFacts = (): string[] => {
-    if (!selectedPlanet) return [];
-    if (isDwarfPlanet)
-      return tDwarfPlanets.raw(`${selectedPlanet}.funFacts`) as string[];
-    return tPlanets.raw(`${selectedPlanet}.funFacts`) as string[];
+    if (!planet) return [];
+    const localeContent = planet.content?.[locale];
+    return localeContent?.facts ?? planet.funFacts;
   };
 
   function handleClose() {

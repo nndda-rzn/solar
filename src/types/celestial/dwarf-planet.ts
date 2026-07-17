@@ -20,6 +20,24 @@ export interface DwarfPlanetData {
   moonCount: number;
   description: string;
   funFacts: string[];
+  content?:
+    | {
+        en?:
+          | {
+              description: string;
+              facts: string[];
+              mythology: string;
+            }
+          | undefined;
+        id?:
+          | {
+              description: string;
+              facts: string[];
+              mythology: string;
+            }
+          | undefined;
+      }
+    | undefined;
   proceduralTexture: ProceduralTextureConfig;
   color: string;
 }

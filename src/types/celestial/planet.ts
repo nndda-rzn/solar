@@ -24,6 +24,24 @@ export interface PlanetData {
   moons: MoonData[];
   description: string;
   funFacts: string[];
+  content?:
+    | {
+        en?:
+          | {
+              description: string;
+              facts: string[];
+              mythology: string;
+            }
+          | undefined;
+        id?:
+          | {
+              description: string;
+              facts: string[];
+              mythology: string;
+            }
+          | undefined;
+      }
+    | undefined;
   textures: PlanetTextures;
   hasRing?: boolean;
   hasAtmosphere?: boolean;
