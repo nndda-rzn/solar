@@ -2,6 +2,7 @@
 
 import { useEffect, type ReactNode, type RefObject } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useFocusTrap } from "@/hooks/useFocusTrap";
 import { CloseButton } from "./CloseButton";
 
@@ -12,20 +13,11 @@ interface ModalBaseProps {
   icon?: ReactNode;
   title?: string;
   children: ReactNode;
-  /** Tailwind max-width class, defaults to "max-w-md". */
   maxWidthClassName?: string;
-  /** Tailwind rounded class, defaults to "rounded-2xl". */
   roundedClassName?: string;
-  /** Tailwind background class, defaults to "bg-cosmic-deep/95". */
   backgroundClassName?: string;
 }
 
-/**
- * Shared centered-dialog modal shell: backdrop + focus trap + Escape-to-close
- * + close button + optional icon/title header. Used by SettingsModal,
- * ShortcutsHelpModal, and BookmarkSaveModal to avoid duplicating the
- * AnimatePresence/motion/backdrop/dialog boilerplate.
- */
 export function ModalBase({
   isOpen,
   onClose,
@@ -34,9 +26,10 @@ export function ModalBase({
   title,
   children,
   maxWidthClassName = "max-w-md",
-  roundedClassName = "rounded-2xl",
+  roundedClassName = "rounded-xl",
   backgroundClassName = "bg-cosmic-deep/95",
 }: ModalBaseProps) {
+  const t = useTranslations("common");
   const modalRef = useFocusTrap(isOpen);
 
   useEffect(() => {
@@ -59,7 +52,7 @@ export function ModalBase({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-md"
         >
           <motion.div
             ref={modalRef as RefObject<HTMLDivElement>}
@@ -70,9 +63,9 @@ export function ModalBase({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             onClick={(e: React.MouseEvent) => e.stopPropagation()}
-            className={`relative w-full ${maxWidthClassName} ${roundedClassName} border border-white/10 ${backgroundClassName} p-6 backdrop-blur-md`}
+            className={`relative w-full ${maxWidthClassName} ${roundedClassName} border border-white/10 ${backgroundClassName} p-6 shadow-xl`}
           >
-            <CloseButton onClick={onClose} ariaLabel="Close" />
+            <CloseButton onClick={onClose} ariaLabel={t("close")} />
 
             {(icon || title) && (
               <div className="mb-4 flex items-center gap-2">

@@ -23,9 +23,9 @@ export function LandingNav({ locale }: LandingNavProps) {
   return (
     <header
       className={[
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
         scrolled
-          ? "bg-[#080b14]/90 backdrop-blur-md border-b border-white/5 shadow-lg"
+          ? "bg-[#090d14]/90 backdrop-blur-md border-b border-white/[0.06]"
           : "bg-transparent",
       ].join(" ")}
     >
@@ -36,10 +36,13 @@ export function LandingNav({ locale }: LandingNavProps) {
         {/* Logo */}
         <Link
           href={`/${locale}/welcome`}
-          className="flex items-center gap-2 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] rounded-sm"
+          className="flex items-center gap-2 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
         >
-          <Telescope className="h-5 w-5 text-[#4a9eff]" aria-hidden="true" />
-          <span className="font-playfair text-lg font-semibold tracking-wide">
+          <Telescope
+            className="h-5 w-5 text-cosmic-accent"
+            aria-hidden="true"
+          />
+          <span className="font-sans text-base font-semibold tracking-wide">
             Cosmic Explorer
           </span>
         </Link>
@@ -50,7 +53,7 @@ export function LandingNav({ locale }: LandingNavProps) {
             <li key={key}>
               <a
                 href={`#${key}`}
-                className="text-sm text-white/70 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] rounded-sm"
+                className="text-sm text-white/70 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
               >
                 {t(key)}
               </a>
@@ -62,13 +65,13 @@ export function LandingNav({ locale }: LandingNavProps) {
         <div className="hidden md:flex items-center gap-3">
           <Link
             href={`/${locale}/login`}
-            className="text-sm text-white/70 hover:text-white transition-colors duration-200 px-3 py-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff]"
+            className="text-sm text-white/70 hover:text-white transition-colors duration-200 px-3 py-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
           >
             Log in
           </Link>
           <Link
             href={`/${locale}/signup`}
-            className="inline-flex items-center gap-2 rounded-full bg-[#4a9eff] px-5 py-2 text-sm font-medium text-white transition-all duration-200 hover:bg-[#7cb9ff] hover:shadow-[0_0_20px_rgba(74,158,255,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080b14] cursor-pointer"
+            className="inline-flex items-center gap-2 rounded-lg bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#090d14] cursor-pointer"
           >
             {t("launch")}
           </Link>
@@ -76,7 +79,7 @@ export function LandingNav({ locale }: LandingNavProps) {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 text-white/70 hover:text-white transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] rounded-sm"
+          className="md:hidden p-2 text-white/70 hover:text-white transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
@@ -89,7 +92,7 @@ export function LandingNav({ locale }: LandingNavProps) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#080b14]/95 backdrop-blur-md border-t border-white/5 px-6 pb-6 pt-4">
+        <div className="md:hidden bg-[#090d14]/95 backdrop-blur-md border-t border-white/[0.06] px-6 pb-6 pt-4">
           <ul className="flex flex-col gap-4" role="list">
             {(["features", "howItWorks"] as const).map((key) => (
               <li key={key}>
@@ -102,7 +105,7 @@ export function LandingNav({ locale }: LandingNavProps) {
                 </a>
               </li>
             ))}
-            <li className="pt-2 border-t border-white/10 flex flex-col gap-3">
+            <li className="pt-2 border-t border-white/[0.06] flex flex-col gap-3">
               <Link
                 href={`/${locale}/login`}
                 className="text-sm text-white/70 hover:text-white transition-colors duration-200"
@@ -111,7 +114,7 @@ export function LandingNav({ locale }: LandingNavProps) {
               </Link>
               <Link
                 href={`/${locale}/signup`}
-                className="inline-flex items-center justify-center rounded-full bg-[#4a9eff] px-5 py-2 text-sm font-medium text-white hover:bg-[#7cb9ff] transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center justify-center rounded-lg bg-white/[0.06] px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/[0.1] transition-colors duration-200 cursor-pointer"
               >
                 {t("launch")}
               </Link>

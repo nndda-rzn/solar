@@ -265,6 +265,8 @@
       ]
     }
   },
+  "close": "Close",
+  "cancel": "Cancel",
   "auth": {
     "layout": {
       "titleLine1": "Explore the Solar System",

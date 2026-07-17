@@ -13,16 +13,19 @@ export function LandingFooter({ locale }: LandingFooterProps) {
   const t = useTranslations("landing.footer");
 
   return (
-    <footer className="relative bg-[#080b14] border-t border-white/5 px-6 py-12">
+    <footer className="relative border-t border-white/[0.06] bg-[#090d14] px-6 py-10">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
           {/* Brand */}
           <Link
             href={`/${locale}/welcome`}
-            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] rounded-sm"
+            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
           >
-            <Telescope className="h-4 w-4 text-[#4a9eff]" aria-hidden="true" />
-            <span className="font-playfair text-sm font-semibold tracking-wide">
+            <Telescope
+              className="h-4 w-4 text-cosmic-accent"
+              aria-hidden="true"
+            />
+            <span className="font-sans text-sm font-semibold tracking-wide">
               {t("brand")}
             </span>
           </Link>
@@ -36,7 +39,7 @@ export function LandingFooter({ locale }: LandingFooterProps) {
               <li>
                 <Link
                   href={`/${locale}/help`}
-                  className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] rounded-sm"
+                  className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
                 >
                   {t("links.help")}
                 </Link>
@@ -44,7 +47,7 @@ export function LandingFooter({ locale }: LandingFooterProps) {
               <li>
                 <Link
                   href={`/${locale}`}
-                  className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] rounded-sm"
+                  className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
                 >
                   {t("links.explorer")}
                 </Link>
@@ -52,7 +55,7 @@ export function LandingFooter({ locale }: LandingFooterProps) {
               <li>
                 <Link
                   href={`/${locale}/dashboard`}
-                  className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a9eff] rounded-sm"
+                  className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
                 >
                   {t("links.dashboard")}
                 </Link>
@@ -65,7 +68,7 @@ export function LandingFooter({ locale }: LandingFooterProps) {
         </div>
 
         {/* Copyright */}
-        <p className="mt-8 text-center text-xs text-white/20">
+        <p className="mt-6 text-center text-xs text-white/30">
           {t("copyright")}
         </p>
       </div>

@@ -2,11 +2,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cosmic-black: #080b14;
-  --color-cosmic-deep: #0d1117;
+  --color-cosmic-black: #090d14;
+  --color-cosmic-deep: #0f1419;
   --color-cosmic-nebula: #161b22;
   --color-cosmic-accent: #4a9eff;
   --color-cosmic-glow: #7cb9ff;
+  --color-cosmic-muted: #94a3b8;
+  --color-cosmic-warm: #f59e0b;
   --font-family-sans: 'Inter', system-ui, sans-serif;
   --font-family-mono: 'JetBrains Mono', monospace;
   --font-family-playfair: 'Playfair Display', Georgia, serif;
