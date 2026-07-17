@@ -1,5 +1,6 @@
 "use client";
 
+import { lazy, Suspense } from "react";
 import { Stars, OrbitControls } from "@react-three/drei";
 import {
   EffectComposer,
@@ -11,14 +12,29 @@ import { Camera } from "./Camera";
 import { Lighting } from "./Lighting";
 import { ScaleManager } from "./ScaleManager";
 import { SimulationClock } from "./SimulationClock";
-import { SolarSystemScene } from "@/components/solar-system/SolarSystemScene";
-import { StellarScene } from "@/components/stellar";
-import { GalacticScene } from "@/components/galactic/GalacticScene";
-import { CosmicScene } from "@/components/cosmic/CosmicScene";
 import { useSelectionStore } from "@/lib/store/selection-store";
 import { useScaleStore } from "@/lib/store/scale-store";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useSettings } from "@/hooks/useSettings";
+
+const SolarSystemScene = lazy(() =>
+  import("@/components/solar-system/SolarSystemScene").then((m) => ({
+    default: m.SolarSystemScene,
+  })),
+);
+const StellarScene = lazy(() =>
+  import("@/components/stellar").then((m) => ({ default: m.StellarScene })),
+);
+const GalacticScene = lazy(() =>
+  import("@/components/galactic/GalacticScene").then((m) => ({
+    default: m.GalacticScene,
+  })),
+);
+const CosmicScene = lazy(() =>
+  import("@/components/cosmic/CosmicScene").then((m) => ({
+    default: m.CosmicScene,
+  })),
+);
 
 export function Scene() {
   const selectedPlanet = useSelectionStore((s) => s.selectedPlanet);
@@ -43,10 +59,12 @@ export function Scene() {
         fade
         speed={reducedMotion ? 0 : 0.5}
       />
-      {scale === "solar" && <SolarSystemScene />}
-      {scale === "stellar" && <StellarScene />}
-      {scale === "galactic" && <GalacticScene />}
-      {scale === "cosmic" && <CosmicScene />}
+      <Suspense fallback={null}>
+        {scale === "solar" && <SolarSystemScene />}
+        {scale === "stellar" && <StellarScene />}
+        {scale === "galactic" && <GalacticScene />}
+        {scale === "cosmic" && <CosmicScene />}
+      </Suspense>
       <OrbitControls
         enabled={!isFlying}
         enablePan={true}
