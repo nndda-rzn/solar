@@ -41,6 +41,16 @@ interface ConstellationJson {
   name: string;
   abbreviation: string;
   stars: string[];
+  canvasStars?: Array<{
+    id: string;
+    name: string;
+    magnitude: number;
+    type: string;
+    color: string;
+    x: number;
+    y: number;
+  }>;
+  lines?: Array<{ from: string; to: string }>;
   content?: LocaleContent<{ description: string; mythology: string }>;
 }
 
@@ -160,6 +170,8 @@ function starDetailItem(s: StarJson): LibraryDetailItemRaw {
     title: s.name,
     type: "star",
     accentColor: s.color,
+    magnitude: s.magnitude,
+    spectralType: s.spectralType,
     stats: buildStarStats(s),
   };
   if (en?.description) {
@@ -199,6 +211,8 @@ function constellationDetailItem(c: ConstellationJson): LibraryDetailItemRaw {
       stat("Star Count", String(c.stars.length)),
     ],
   };
+  if (c.canvasStars) item.canvasStars = c.canvasStars;
+  if (c.lines) item.lines = c.lines;
   if (en?.description) {
     item.description = en.description;
     item.rawDescriptionEn = en.description;
