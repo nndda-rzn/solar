@@ -7,7 +7,7 @@ const intlMiddleware = createMiddleware(routing);
 
 // Routes that do not require an authenticated session.
 // Matched against the path with the locale prefix stripped.
-const PUBLIC_PATHS = ["/login", "/signup"];
+const PUBLIC_PATHS = ["/login", "/signup", "/welcome"];
 
 function isPublicPath(pathWithoutLocale: string) {
   return PUBLIC_PATHS.some(
