@@ -24,6 +24,11 @@ interface PlanetJson {
   funFacts: string[];
   color: string;
   textures?: { diffuse?: string };
+  content?: LocaleContent<{
+    description: string;
+    facts: string[];
+    mythology: string;
+  }>;
 }
 
 interface StarJson {
@@ -33,7 +38,11 @@ interface StarJson {
   spectralType: string;
   color: string;
   distance: number;
-  content?: LocaleContent<{ description: string; facts: string[] }>;
+  content?: LocaleContent<{
+    description: string;
+    facts: string[];
+    mythology?: string;
+  }>;
 }
 
 interface ConstellationJson {
@@ -102,16 +111,31 @@ function planetBrowseItem(p: PlanetJson): CatalogItem {
 }
 
 function planetDetailItem(p: PlanetJson): LibraryDetailItemRaw {
-  return {
+  const en = p.content?.en;
+  const id = p.content?.id;
+  const item: LibraryDetailItemRaw = {
     id: p.id,
     title: p.name,
     type: "planet",
     accentColor: p.color,
     ...(p.textures?.diffuse ? { textureUrl: p.textures.diffuse } : {}),
-    description: p.description,
-    facts: p.funFacts,
+    description: en?.description ?? p.description,
+    facts: en?.facts ?? p.funFacts,
     stats: buildPlanetStats(p),
   };
+  if (en?.description) item.rawDescriptionEn = en.description;
+  if (id?.description) {
+    item.rawDescriptionId = id.description;
+    if (!en?.description) item.description = id.description;
+  }
+  if (en?.facts) item.rawFactsEn = en.facts;
+  if (id?.facts) {
+    item.rawFactsId = id.facts;
+    if (!en?.facts) item.facts = id.facts;
+  }
+  if (en?.mythology) item.rawMythologyEn = en.mythology;
+  if (id?.mythology) item.rawMythologyId = id.mythology;
+  return item;
 }
 
 function dwarfPlanetBrowseItem(p: PlanetJson): CatalogItem {
@@ -129,15 +153,30 @@ function dwarfPlanetBrowseItem(p: PlanetJson): CatalogItem {
 }
 
 function dwarfPlanetDetailItem(p: PlanetJson): LibraryDetailItemRaw {
-  return {
+  const en = p.content?.en;
+  const id = p.content?.id;
+  const item: LibraryDetailItemRaw = {
     id: p.id,
     title: p.name,
     type: "dwarfPlanet",
     accentColor: p.color,
-    description: p.description,
-    facts: p.funFacts,
+    description: en?.description ?? p.description,
+    facts: en?.facts ?? p.funFacts,
     stats: buildPlanetStats(p),
   };
+  if (en?.description) item.rawDescriptionEn = en.description;
+  if (id?.description) {
+    item.rawDescriptionId = id.description;
+    if (!en?.description) item.description = id.description;
+  }
+  if (en?.facts) item.rawFactsEn = en.facts;
+  if (id?.facts) {
+    item.rawFactsId = id.facts;
+    if (!en?.facts) item.facts = id.facts;
+  }
+  if (en?.mythology) item.rawMythologyEn = en.mythology;
+  if (id?.mythology) item.rawMythologyId = id.mythology;
+  return item;
 }
 
 function buildStarStats(s: StarJson) {

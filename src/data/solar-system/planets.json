@@ -19,6 +19,36 @@
         "Satu hari di Merkurius berlangsung 59 hari Bumi",
         "Merkurius memiliki orbit paling eksentrik"
       ],
+      "content": {
+        "en": {
+          "description": "Mercury is the smallest planet in our solar system and the closest to the Sun, orbiting at just 0.39 AU. Despite its proximity to the Sun, Mercury is not the hottest planet — that title belongs to Venus. Without a substantial atmosphere to retain heat, Mercury experiences extreme temperature swings, from 430°C during the day to -180°C at night. Its surface is heavily cratered, resembling Earth's Moon, scarred by billions of years of meteorite impacts. Mercury's core is disproportionately large, comprising about 85% of its radius, likely the result of a massive ancient collision that stripped away its outer layers.",
+          "facts": [
+            "Mercury completes one orbit around the Sun in just 87.97 Earth days",
+            "A single Mercurian day (one rotation) lasts 59 Earth days",
+            "Surface temperatures swing from 430°C (day) to -180°C (night)",
+            "Mercury has the most eccentric orbit of all planets",
+            "Its iron core makes up ~85% of the planet's radius",
+            "Mercury has almost no atmosphere — only a thin exosphere of oxygen, sodium, and hydrogen",
+            "The Caloris Basin, one of the largest impact craters in the solar system, spans 1,550 km across",
+            "Mercury has no moons and no ring system"
+          ],
+          "mythology": "Named after the Roman messenger god Mercurius, the swift deity of commerce, communication, and travel. The name reflects Mercury's rapid movement across the sky — it completes a full orbit faster than any other planet, appearing to race across the heavens. Ancient Greeks called it Hermes, the messenger of the Olympian gods, who wore winged sandals and a winged helmet to travel at unmatched speed between the mortal world and Olympus."
+        },
+        "id": {
+          "description": "Merkurius adalah planet terkecil di tata surya kita dan yang terdekat dari Matahari, mengorbit pada jarak hanya 0,39 AU. Meski dekat dengan Matahari, Merkurius bukanlah planet terpanas — gelar itu milik Venus. Tanpa atmosfer yang cukup untuk menahan panas, Merkurius mengalami fluktuasi suhu ekstrem, dari 430°C di siang hari hingga -180°C di malam hari. Permukaannya dipenuhi kawah, menyerupai Bulan Bumi, bekas miliaran tahun hantaman meteorit. Inti Merkurius sangat besar secara tidak proporsional, mencakup sekitar 85% radiusnya, kemungkinan akibat tabrakan besar di masa lampau yang melepaskan lapisan luarnya.",
+          "facts": [
+            "Merkurius menyelesaikan satu orbit mengelilingi Matahari hanya dalam 87,97 hari Bumi",
+            "Satu hari di Merkurius (satu rotasi) berlangsung 59 hari Bumi",
+            "Suhu permukaan berkisar dari 430°C (siang) hingga -180°C (malam)",
+            "Merkurius memiliki orbit paling eksentrik dari semua planet",
+            "Inti besinya mencakup ~85% radius planet",
+            "Merkurius hampir tidak memiliki atmosfer — hanya eksosfer tipis dari oksigen, natrium, dan hidrogen",
+            "Cekungan Caloris, salah satu kawah tumbukan terbesar di tata surya, membentang 1.550 km",
+            "Merkurius tidak memiliki bulan dan tidak memiliki sistem cincin"
+          ],
+          "mythology": "Dinamai dari dewa utusan Romawi, Mercurius, dewa perdagangan, komunikasi, dan perjalanan yang gesit. Nama ini mencerminkan pergerakan Merkurius yang cepat melintasi langit — ia menyelesaikan orbit penuh lebih cepat dari planet lain mana pun. Orang Yunani kuno menyebutnya Hermes, utusan para dewa Olimpus, yang mengenakan sandal bersayap dan helm bersayap untuk bepergian dengan kecepatan tak tertandingi antara dunia fana dan Olimpus."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/mercury/diffuse.webp"
       },
@@ -45,6 +75,36 @@
         "Venus berotasi mundur dibanding planet lain",
         "Satu hari di Venus lebih lama dari setahun"
       ],
+      "content": {
+        "en": {
+          "description": "Venus is the second planet from the Sun and the hottest planet in our solar system, with surface temperatures reaching 464°C — hot enough to melt lead. Its thick atmosphere of carbon dioxide creates an extreme greenhouse effect that traps heat with terrifying efficiency. Venus rotates in the opposite direction to most planets, meaning the Sun rises in the west and sets in the east. A Venusian day (243 Earth days) is actually longer than a Venusian year (225 Earth days). Its surface is dominated by vast volcanic plains, highland regions, and more than 1,600 volcanoes, some of which may still be active.",
+          "facts": [
+            "Venus is the hottest planet despite not being closest to the Sun",
+            "Surface temperature reaches 464°C, hot enough to melt lead",
+            "Venus rotates backwards (retrograde) compared to most planets",
+            "A day on Venus (243 Earth days) is longer than its year (225 Earth days)",
+            "Atmospheric pressure on the surface is 92 times that of Earth",
+            "Venus has over 1,600 volcanoes — more than any other planet",
+            "Its thick CO₂ atmosphere creates the most extreme greenhouse effect in the solar system",
+            "Venus has no moons and no magnetic field"
+          ],
+          "mythology": "Venus was named after the Roman goddess of love and beauty, the most radiant deity in the Roman pantheon. The name was fitting — Venus is often the brightest object in the night sky after the Moon, shining brilliantly as either the 'Morning Star' or 'Evening Star'. The ancient Greeks called it Aphrodite, goddess of love, desire, and fertility. Many ancient cultures worshipped the planet, with the Babylonians tracking its movements as early as 1600 BCE, calling it Ishtar, their goddess of love and war."
+        },
+        "id": {
+          "description": "Venus adalah planet kedua dari Matahari dan planet terpanas di tata surya kita, dengan suhu permukaan mencapai 464°C — cukup panas untuk melelehkan timbal. Atmosfernya yang tebal dari karbon dioksida menciptakan efek rumah kaca ekstrem yang menjebak panas dengan sangat efisien. Venus berotasi berlawanan arah dengan sebagian besar planet, artinya Matahari terbit di barat dan terbenam di timur. Satu hari Venus (243 hari Bumi) bahkan lebih panjang dari satu tahun Venus (225 hari Bumi). Permukaannya didominasi dataran vulkanik yang luas, wilayah dataran tinggi, dan lebih dari 1.600 gunung berapi, beberapa di antaranya mungkin masih aktif.",
+          "facts": [
+            "Venus adalah planet terpanas meski bukan yang terdekat dari Matahari",
+            "Suhu permukaan mencapai 464°C, cukup panas untuk melelehkan timbal",
+            "Venus berotasi mundur (retrograde) dibanding kebanyakan planet",
+            "Satu hari di Venus (243 hari Bumi) lebih panjang dari setahunnya (225 hari Bumi)",
+            "Tekanan atmosfer di permukaan Venus 92 kali tekanan atmosfer Bumi",
+            "Venus memiliki lebih dari 1.600 gunung berapi — lebih banyak dari planet manapun",
+            "Atmosfer CO₂ tebalnya menciptakan efek rumah kaca paling ekstrem di tata surya",
+            "Venus tidak memiliki bulan dan tidak memiliki medan magnet"
+          ],
+          "mythology": "Venus dinamai dari dewi cinta dan kecantikan Romawi, dewa paling bercahaya dalam panteon Romawi. Nama ini sangat tepat — Venus sering menjadi objek paling terang di langit malam setelah Bulan, bersinar cemerlang sebagai 'Bintang Pagi' atau 'Bintang Sore'. Orang Yunani kuno menyebutnya Aphrodite, dewi cinta, hasrat, dan kesuburan. Banyak peradaban kuno menyembah planet ini, dengan orang Babilonia melacak pergerakannya sejak 1600 SM dan menyebutnya Ishtar, dewi cinta dan perang mereka."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/venus/diffuse.webp",
         "atmosphere": "/textures/solar-system/venus/atmosphere.webp"
@@ -81,8 +141,38 @@
       "description": "Planet kita. 71% permukaan ditutup air dan satu-satunya planet yang diketahui mendukung kehidupan.",
       "funFacts": [
         "Inti bumi sepanas permukaan matahari",
-        "Bumi berotasi pada kecepatan 1.670 km/jam di khatulistiwa"
+        "Bumi adalah satu-satunya planet yang diketahui mendukung kehidupan"
       ],
+      "content": {
+        "en": {
+          "description": "Earth is the third planet from the Sun and the only known world to harbor life. About 71% of its surface is covered by liquid water oceans, which play a crucial role in regulating climate and supporting the biosphere. Earth's atmosphere is a carefully balanced mixture of nitrogen (78%) and oxygen (21%), with a protective ozone layer shielding the surface from harmful ultraviolet radiation. A large iron-nickel core generates a powerful magnetic field that deflects harmful solar wind particles. Earth's single large moon stabilizes its axial tilt, maintaining the climate conditions that have allowed life to flourish for over 3.5 billion years.",
+          "facts": [
+            "Earth is the densest planet in the solar system at 5.51 g/cm³",
+            "71% of Earth's surface is covered by liquid water",
+            "Earth's iron core generates a powerful magnetosphere that protects life",
+            "The Moon stabilizes Earth's axial tilt, keeping climate stable over millions of years",
+            "Earth's atmosphere is 78% nitrogen and 21% oxygen",
+            "Earth is the only known planet with active plate tectonics",
+            "Earth's inner core temperature reaches ~5,400°C, as hot as the Sun's surface",
+            "Life on Earth began approximately 3.5–4 billion years ago"
+          ],
+          "mythology": "Earth's name comes from Old English 'eorþe' and Germanic 'erde', meaning ground or soil. Unlike the other planets, Earth was not named after a Roman or Greek deity — it was simply the ground beneath people's feet. However, Earth has been personified as a deity across countless cultures: the Greeks called her Gaia, the primordial goddess of Earth and mother of all life. Romans worshipped her as Terra Mater (Mother Earth). Many indigenous traditions around the world also revere Earth as a sacred mother figure, a giver of life and sustainer of all living things."
+        },
+        "id": {
+          "description": "Bumi adalah planet ketiga dari Matahari dan satu-satunya dunia yang diketahui menjadi rumah bagi kehidupan. Sekitar 71% permukaannya ditutupi lautan air cair yang berperan penting dalam mengatur iklim dan mendukung biosfer. Atmosfer Bumi adalah campuran nitrogen (78%) dan oksigen (21%) yang seimbang, dengan lapisan ozon pelindung yang melindungi permukaan dari radiasi ultraviolet berbahaya. Inti besi-nikel yang besar menghasilkan medan magnet kuat yang membelokkan partikel angin matahari yang berbahaya. Satu bulan besar Bumi menstabilkan kemiringan sumbunya, menjaga kondisi iklim yang memungkinkan kehidupan berkembang selama lebih dari 3,5 miliar tahun.",
+          "facts": [
+            "Bumi adalah planet paling padat di tata surya dengan kepadatan 5,51 g/cm³",
+            "71% permukaan Bumi ditutupi air cair",
+            "Inti besi Bumi menghasilkan magnetosfer kuat yang melindungi kehidupan",
+            "Bulan menstabilkan kemiringan sumbu Bumi, menjaga iklim tetap stabil selama jutaan tahun",
+            "Atmosfer Bumi terdiri dari 78% nitrogen dan 21% oksigen",
+            "Bumi adalah satu-satunya planet yang diketahui memiliki lempeng tektonik aktif",
+            "Suhu inti dalam Bumi mencapai ~5.400°C, sepanas permukaan Matahari",
+            "Kehidupan di Bumi dimulai sekitar 3,5–4 miliar tahun yang lalu"
+          ],
+          "mythology": "Nama Bumi berasal dari bahasa Inggris Kuno 'eorþe' dan Jerman 'erde', yang berarti tanah. Tidak seperti planet lain, Bumi tidak dinamai dari dewa Romawi atau Yunani — nama itu hanyalah tanah di bawah kaki manusia. Namun, Bumi telah dipersonifikasikan sebagai dewa di berbagai budaya: orang Yunani menyebutnya Gaia, dewi primordial Bumi dan ibu dari semua kehidupan. Orang Romawi memujanya sebagai Terra Mater (Ibu Bumi). Banyak tradisi adat di seluruh dunia juga menghormati Bumi sebagai sosok ibu yang sakral, pemberi kehidupan dan penopang semua makhluk hidup."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/earth/diffuse.webp",
         "normal": "/textures/solar-system/earth/normal.webp",
@@ -114,6 +204,36 @@
         "Mars memiliki musim seperti Bumi",
         "Olympus Mons 3x lebih tinggi dari Everest"
       ],
+      "content": {
+        "en": {
+          "description": "Mars is the fourth planet from the Sun and the most thoroughly explored planet after Earth. Known as the Red Planet due to iron oxide (rust) covering its surface, Mars has a thin atmosphere of mostly carbon dioxide that provides little protection from solar radiation or temperature extremes. It is home to Olympus Mons, the tallest volcano in the solar system at 21.9 km high — nearly three times the height of Mount Everest. The Valles Marineris canyon system stretches 4,000 km across the Martian surface, dwarfing the Grand Canyon. Mars has two small, irregularly shaped moons — Phobos and Deimos — thought to be captured asteroids.",
+          "facts": [
+            "Olympus Mons is the tallest volcano in the solar system at 21.9 km high",
+            "Valles Marineris stretches 4,000 km — about the width of the United States",
+            "Mars has two small moons: Phobos and Deimos, likely captured asteroids",
+            "A Martian day (sol) is 24 hours and 37 minutes — close to Earth's",
+            "Mars has the largest dust storms in the solar system, sometimes covering the entire planet",
+            "Mars has seasons similar to Earth due to its 25.2° axial tilt",
+            "Surface temperatures range from -125°C at the poles to 20°C near the equator in summer",
+            "Mars has evidence of ancient river valleys, lakes, and possibly a northern ocean"
+          ],
+          "mythology": "Mars was named after the Roman god of war, the second most important deity in the Roman pantheon after Jupiter. The planet's blood-red color made it a natural symbol for war and conflict. The ancient Greeks called it Ares, god of war and violence. Babylonians associated the red planet with Nergal, their god of plague and war. Even the names of its moons reflect this martial heritage — Phobos means 'fear' and Deimos means 'dread' in Greek, the twin sons of Ares who accompanied their father into battle."
+        },
+        "id": {
+          "description": "Mars adalah planet keempat dari Matahari dan planet yang paling banyak dieksplorasi setelah Bumi. Dikenal sebagai Planet Merah karena besi oksida (karat) yang menutupi permukaannya, Mars memiliki atmosfer tipis yang sebagian besar terdiri dari karbon dioksida yang memberikan sedikit perlindungan dari radiasi matahari atau suhu ekstrem. Mars adalah rumah bagi Olympus Mons, gunung berapi tertinggi di tata surya dengan ketinggian 21,9 km — hampir tiga kali tinggi Gunung Everest. Sistem ngarai Valles Marineris membentang 4.000 km di permukaan Mars. Mars memiliki dua bulan kecil berbentuk tidak beraturan — Phobos dan Deimos — yang diduga merupakan asteroid yang tertangkap gravitasi.",
+          "facts": [
+            "Olympus Mons adalah gunung berapi tertinggi di tata surya dengan ketinggian 21,9 km",
+            "Valles Marineris membentang 4.000 km — selebar Amerika Serikat",
+            "Mars memiliki dua bulan kecil: Phobos dan Deimos, kemungkinan asteroid yang tertangkap",
+            "Satu hari Mars (sol) adalah 24 jam 37 menit — hampir sama dengan Bumi",
+            "Mars memiliki badai debu terbesar di tata surya, kadang menutupi seluruh planet",
+            "Mars memiliki musim mirip Bumi karena kemiringan sumbu 25,2°",
+            "Suhu permukaan berkisar dari -125°C di kutub hingga 20°C di ekuator saat musim panas",
+            "Mars memiliki bukti lembah sungai kuno, danau, dan kemungkinan lautan di bagian utara"
+          ],
+          "mythology": "Mars dinamai dari dewa perang Romawi, dewa terpenting kedua dalam panteon Romawi setelah Jupiter. Warna merah darah planet ini menjadikannya simbol alami untuk perang dan konflik. Orang Yunani kuno menyebutnya Ares, dewa perang dan kekerasan. Orang Babilonia mengasosiasikannya dengan Nergal, dewa wabah dan perang mereka. Bahkan nama-nama bulannya mencerminkan warisan perang ini — Phobos berarti 'ketakutan' dan Deimos berarti 'kengerian' dalam bahasa Yunani, putra kembar Ares yang menemani ayah mereka ke medan perang."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/mars/diffuse.webp"
       },
@@ -141,6 +261,36 @@
         "Great Red Spot adalah badai yang sudah berlangsung 350+ tahun",
         "Jupiter memiliki medan magnet 20.000x lebih kuat dari Bumi"
       ],
+      "content": {
+        "en": {
+          "description": "Jupiter is the largest planet in our solar system, with a mass more than twice that of all other planets combined. It is a gas giant composed mostly of hydrogen and helium, with no solid surface — the atmosphere gradually transitions into a denser liquid interior. Jupiter's most iconic feature is the Great Red Spot, a storm larger than Earth that has been raging for at least 350 years. The planet has a faint ring system and at least 95 known moons, including the four large Galilean moons discovered by Galileo in 1610: Io, Europa, Ganymede, and Callisto. Europa is considered one of the most promising places to search for extraterrestrial life due to its subsurface ocean of liquid water.",
+          "facts": [
+            "Jupiter is more massive than all other planets combined — 318 times Earth's mass",
+            "The Great Red Spot is a storm larger than Earth, ongoing for at least 350 years",
+            "Jupiter has at least 95 known moons — more than any other planet",
+            "Europa has a subsurface liquid water ocean and is a prime candidate for extraterrestrial life",
+            "Jupiter's magnetic field is 20,000 times stronger than Earth's",
+            "A day on Jupiter lasts only 9 hours 56 minutes — the shortest in the solar system",
+            "Jupiter acts as a gravitational shield, deflecting comets and asteroids away from inner planets",
+            "Ganymede is the largest moon in the solar system, bigger than the planet Mercury"
+          ],
+          "mythology": "Jupiter was named after the king of the Roman gods, ruler of Mount Olympus and master of thunder and lightning. As the most massive planet in the solar system, it was fitting to name it after the supreme deity. The ancient Greeks called this god Zeus, father of gods and humans. Jupiter's Galilean moons — Io, Europa, Ganymede, and Callisto — are all named after Zeus's lovers or companions in Greek mythology, a tradition started by Galileo Galilei when he discovered them in 1610."
+        },
+        "id": {
+          "description": "Jupiter adalah planet terbesar di tata surya kita, dengan massa lebih dari dua kali lipat gabungan semua planet lainnya. Jupiter adalah planet gas yang sebagian besar terdiri dari hidrogen dan helium, tanpa permukaan padat. Fitur paling ikonik Jupiter adalah Bintik Merah Besar, badai yang lebih besar dari Bumi dan telah berlangsung setidaknya 350 tahun. Planet ini memiliki setidaknya 95 bulan yang diketahui, termasuk empat bulan besar Galilean yang ditemukan Galileo pada 1610: Io, Europa, Ganymede, dan Callisto. Europa dianggap sebagai salah satu tempat paling menjanjikan untuk mencari kehidupan ekstraterestrial karena lautan air cairnya di bawah permukaan.",
+          "facts": [
+            "Jupiter lebih masif dari semua planet lain digabungkan — 318 kali massa Bumi",
+            "Bintik Merah Besar adalah badai lebih besar dari Bumi, berlangsung setidaknya 350 tahun",
+            "Jupiter memiliki setidaknya 95 bulan yang diketahui — lebih banyak dari planet manapun",
+            "Europa memiliki lautan air cair di bawah permukaan, kandidat utama kehidupan ekstraterestrial",
+            "Medan magnet Jupiter 20.000 kali lebih kuat dari Bumi",
+            "Satu hari di Jupiter hanya 9 jam 56 menit — terpendek di tata surya",
+            "Jupiter bertindak sebagai perisai gravitasi, membelokkan komet dan asteroid dari planet-planet dalam",
+            "Ganymede adalah bulan terbesar di tata surya, lebih besar dari planet Merkurius"
+          ],
+          "mythology": "Jupiter dinamai dari raja para dewa Romawi, penguasa Gunung Olimpus dan penguasa petir. Sebagai planet paling masif di tata surya, penamaan dengan dewa tertinggi sangatlah tepat. Orang Yunani kuno menyebut dewa ini Zeus, ayah para dewa dan manusia. Bulan-bulan Galilean Jupiter — Io, Europa, Ganymede, dan Callisto — semuanya dinamai dari kekasih atau pendamping Zeus dalam mitologi Yunani, tradisi yang dimulai oleh Galileo Galilei saat ia menemukannya pada 1610."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/jupiter/diffuse.webp"
       },
@@ -168,6 +318,36 @@
         "Cincin Saturnus terbuat dari es dan batu",
         "Saturn bisa mengambang di bak mandi yang cukup besar"
       ],
+      "content": {
+        "en": {
+          "description": "Saturn is the sixth planet from the Sun and the second-largest in the solar system. It is most famous for its stunning ring system, made up of billions of ice and rock particles ranging from tiny grains to chunks several meters across. Saturn is a gas giant so low in density that it would float in water — it is the only planet in the solar system less dense than water. It has 146 known moons, including Titan, the second-largest moon in the solar system and the only moon with a thick atmosphere and liquid lakes on its surface. Enceladus, another moon, shoots geysers of water vapor from its south pole, indicating a subsurface ocean.",
+          "facts": [
+            "Saturn's rings span up to 282,000 km but are only about 10-100 meters thick",
+            "Saturn is the least dense planet — it would float in water",
+            "Saturn has 146 known moons — second most in the solar system",
+            "Titan is the only moon in the solar system with a dense atmosphere and surface liquids",
+            "Enceladus has active geysers and a subsurface liquid water ocean",
+            "Saturn's day is only 10 hours 42 minutes long",
+            "Saturn's rings are relatively young — estimated to be 100 to 400 million years old",
+            "Wind speeds on Saturn can reach 1,800 km/h near the equator"
+          ],
+          "mythology": "Saturn was named after the Roman god of agriculture, wealth, and time — the father of Jupiter in Roman mythology. The Greeks called him Cronus, the Titan who ruled during the Golden Age before being overthrown by his son Zeus. In Roman tradition, Saturn was celebrated during Saturnalia, one of the most popular festivals of the Roman calendar, a period of feasting and role reversals. Saturn's slow movement across the sky — taking 29.5 years to orbit the Sun — led ancient astronomers to associate it with the slow passage of time."
+        },
+        "id": {
+          "description": "Saturnus adalah planet keenam dari Matahari dan terbesar kedua di tata surya. Planet ini paling terkenal dengan sistem cincinnya yang menakjubkan, terdiri dari miliaran partikel es dan batu. Saturnus adalah gas raksasa dengan kepadatan begitu rendah sehingga akan mengapung di air — satu-satunya planet di tata surya yang kurang padat dari air. Saturnus memiliki 146 bulan yang diketahui, termasuk Titan, bulan terbesar kedua di tata surya dan satu-satunya bulan dengan atmosfer tebal dan danau cair di permukaannya. Enceladus, bulan lain, menyemprotkan geyser uap air dari kutub selatannya, menunjukkan adanya lautan di bawah permukaan.",
+          "facts": [
+            "Cincin Saturnus membentang hingga 282.000 km tetapi hanya setebal 10-100 meter",
+            "Saturnus adalah planet dengan kepadatan paling rendah — bisa mengapung di air",
+            "Saturnus memiliki 146 bulan yang diketahui — terbanyak kedua di tata surya",
+            "Titan adalah satu-satunya bulan di tata surya dengan atmosfer tebal dan cairan di permukaan",
+            "Enceladus memiliki geyser aktif dan lautan air cair di bawah permukaan",
+            "Satu hari di Saturnus hanya 10 jam 42 menit",
+            "Cincin Saturnus relatif muda — diperkirakan berusia 100 hingga 400 juta tahun",
+            "Kecepatan angin di Saturnus bisa mencapai 1.800 km/jam di ekuator"
+          ],
+          "mythology": "Saturnus dinamai dari dewa pertanian, kekayaan, dan waktu Romawi — ayah Jupiter dalam mitologi Romawi. Orang Yunani menyebutnya Cronus, Titan yang berkuasa selama Zaman Keemasan sebelum digulingkan oleh putranya Zeus. Dalam tradisi Romawi, Saturnus dirayakan dalam Saturnalia, salah satu festival paling populer dalam kalender Romawi. Pergerakan Saturnus yang lambat melintasi langit — membutuhkan 29,5 tahun untuk mengorbit Matahari — membuat astronom kuno mengasosiasikannya dengan berlalunya waktu."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/saturn/diffuse.webp",
         "ring": "/textures/solar-system/saturn/rings.webp"
@@ -196,6 +376,36 @@
         "Uranus berotasi miring pada sisi 98 derajat",
         "Uranus adalah planet pertama yang ditemukan dengan teleskop"
       ],
+      "content": {
+        "en": {
+          "description": "Uranus is the seventh planet from the Sun and the first to be discovered with a telescope, found by William Herschel in 1781. It is an ice giant composed mainly of water, methane, and ammonia ices beneath a hydrogen-helium atmosphere. Uranus is unique in that it rotates on its side — its axial tilt of 97.77° means it essentially rolls around the Sun like a ball, with each pole experiencing 42 years of continuous sunlight followed by 42 years of darkness. Its blue-green color comes from methane in the atmosphere absorbing red light. Uranus has 13 known rings and 27 known moons, all named after characters from Shakespeare and Alexander Pope.",
+          "facts": [
+            "Uranus rotates on its side with an axial tilt of 97.77° — essentially rolling around the Sun",
+            "Each pole of Uranus experiences 42 years of daylight followed by 42 years of darkness",
+            "Uranus was the first planet discovered with a telescope, by William Herschel in 1781",
+            "Its blue-green color comes from methane absorbing red wavelengths of light",
+            "Uranus has 13 known rings and 27 known moons",
+            "All of Uranus's moons are named after Shakespeare or Alexander Pope characters",
+            "Despite being an ice giant, Uranus radiates very little internal heat — the coldest planetary atmosphere at -224°C",
+            "Uranus has the third largest diameter but fourth largest mass in the solar system"
+          ],
+          "mythology": "Uranus was named after the ancient Greek god of the sky, Ouranos, one of the earliest supreme deities in Greek mythology. In Greek cosmology, Ouranos was the personification of the heavens and the father of the Titans, including Cronus (Saturn). The name was proposed by Johann Bode in 1782, following the tradition of naming planets after classical deities. The choice of a Greek — rather than Roman — name was somewhat unusual, as most planets carry Roman names, reflecting the fact that Uranus was a modern discovery without an ancient mythological tradition attached to it."
+        },
+        "id": {
+          "description": "Uranus adalah planet ketujuh dari Matahari dan yang pertama ditemukan dengan teleskop, ditemukan oleh William Herschel pada 1781. Uranus adalah es raksasa yang sebagian besar terdiri dari es air, metana, dan amonia di bawah atmosfer hidrogen-helium. Uranus unik karena berotasi miring — kemiringan sumbu 97,77° berarti planet ini pada dasarnya berguling mengelilingi Matahari seperti bola, dengan setiap kutub mengalami 42 tahun sinar matahari terus-menerus diikuti 42 tahun kegelapan. Warna biru-hijaunya berasal dari metana di atmosfer yang menyerap cahaya merah. Uranus memiliki 13 cincin yang diketahui dan 27 bulan yang diketahui.",
+          "facts": [
+            "Uranus berotasi miring dengan kemiringan sumbu 97,77° — pada dasarnya berguling mengelilingi Matahari",
+            "Setiap kutub Uranus mengalami 42 tahun siang diikuti 42 tahun malam",
+            "Uranus adalah planet pertama yang ditemukan dengan teleskop, oleh William Herschel pada 1781",
+            "Warna biru-hijaunya berasal dari metana yang menyerap panjang gelombang merah cahaya",
+            "Uranus memiliki 13 cincin dan 27 bulan yang diketahui",
+            "Semua bulan Uranus dinamai dari karakter Shakespeare atau Alexander Pope",
+            "Meski es raksasa, Uranus memancarkan sangat sedikit panas internal — atmosfer planet paling dingin pada -224°C",
+            "Uranus memiliki diameter terbesar ketiga tetapi massa terbesar keempat di tata surya"
+          ],
+          "mythology": "Uranus dinamai dari dewa langit Yunani kuno, Ouranos, salah satu dewa tertinggi paling awal dalam mitologi Yunani. Dalam kosmologi Yunani, Ouranos adalah personifikasi langit dan ayah para Titan, termasuk Cronus (Saturnus). Nama ini diusulkan oleh Johann Bode pada 1782, mengikuti tradisi penamaan planet dari dewa klasik. Pilihan nama Yunani — bukan Romawi — agak tidak biasa, mencerminkan fakta bahwa Uranus adalah penemuan modern tanpa tradisi mitologi kuno yang melekat padanya."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/uranus/diffuse.webp"
       },
@@ -223,6 +433,36 @@
         "Neptune memiliki angin tercepat di tata surya",
         "Neptune butuh 165 tahun untuk mengorbit Matahari"
       ],
+      "content": {
+        "en": {
+          "description": "Neptune is the eighth and farthest known planet from the Sun, orbiting at an average distance of 30 AU. It is an ice giant, similar in composition to Uranus, with a thick atmosphere of hydrogen, helium, and methane. Neptune has the strongest winds in the solar system, reaching speeds of up to 2,100 km/h — faster than the speed of sound on Earth. Its most famous feature is the Great Dark Spot, a storm system the size of Earth, though unlike Jupiter's Great Red Spot, it has appeared and disappeared multiple times. Neptune has 16 known moons, the largest being Triton, which orbits in the opposite direction of the planet's rotation — suggesting it was captured from the Kuiper Belt.",
+          "facts": [
+            "Neptune has the fastest winds in the solar system — up to 2,100 km/h",
+            "A year on Neptune lasts 165 Earth years — it completed its first orbit since discovery in 2011",
+            "Neptune has 16 known moons; Triton orbits backwards and is likely a captured Kuiper Belt object",
+            "Triton is geologically active, with nitrogen geysers shooting 8 km into space",
+            "Neptune was the first planet found through mathematical prediction rather than direct observation",
+            "Neptune's Great Dark Spot, a storm the size of Earth, appears and disappears over time",
+            "Neptune radiates 2.6 times more heat than it receives from the Sun",
+            "Neptune has a faint ring system made of 5 rings composed of dust and ice"
+          ],
+          "mythology": "Neptune was named after the Roman god of the sea, the brother of Jupiter and Pluto. This was fitting — Neptune's deep blue color, caused by methane in its atmosphere, evokes the color of the ocean. The ancient Greeks called this god Poseidon, who ruled over seas, storms, and earthquakes from his underwater palace. Neptune was the last planet discovered in our solar system through mathematical prediction — Urbain Le Verrier and John Couch Adams independently calculated its position in 1846 based on gravitational perturbations of Uranus's orbit."
+        },
+        "id": {
+          "description": "Neptunus adalah planet kedelapan dan terjauh yang diketahui dari Matahari, mengorbit pada jarak rata-rata 30 AU. Neptunus adalah es raksasa, mirip komposisinya dengan Uranus, dengan atmosfer tebal dari hidrogen, helium, dan metana. Neptunus memiliki angin terkencang di tata surya, mencapai kecepatan hingga 2.100 km/jam — lebih cepat dari kecepatan suara di Bumi. Neptunus memiliki 16 bulan yang diketahui, yang terbesar adalah Triton, yang mengorbit berlawanan arah rotasi planet — menunjukkan bahwa ia ditangkap dari Sabuk Kuiper.",
+          "facts": [
+            "Neptunus memiliki angin tercepat di tata surya — hingga 2.100 km/jam",
+            "Satu tahun di Neptunus berlangsung 165 tahun Bumi — menyelesaikan orbit pertamanya sejak ditemukan pada 2011",
+            "Neptunus memiliki 16 bulan; Triton mengorbit mundur dan kemungkinan objek Sabuk Kuiper yang tertangkap",
+            "Triton aktif secara geologis, dengan geyser nitrogen menyembur 8 km ke luar angkasa",
+            "Neptunus adalah planet pertama yang ditemukan melalui prediksi matematis, bukan pengamatan langsung",
+            "Bintik Gelap Besar Neptunus, badai seukuran Bumi, muncul dan menghilang dari waktu ke waktu",
+            "Neptunus memancarkan 2,6 kali lebih banyak panas daripada yang diterimanya dari Matahari",
+            "Neptunus memiliki sistem cincin tipis yang terdiri dari 5 cincin dari debu dan es"
+          ],
+          "mythology": "Neptunus dinamai dari dewa laut Romawi, saudara Jupiter dan Pluto. Ini sangat tepat — warna biru tua Neptunus, yang disebabkan oleh metana di atmosfernya, mengingatkan pada warna lautan. Orang Yunani kuno menyebut dewa ini Poseidon, yang menguasai lautan, badai, dan gempa bumi dari istana bawah lautnya. Neptunus adalah planet terakhir yang ditemukan di tata surya kita melalui prediksi matematis — Urbain Le Verrier dan John Couch Adams secara independen menghitung posisinya pada 1846 berdasarkan gangguan gravitasi pada orbit Uranus."
+        }
+      },
       "textures": {
         "diffuse": "/textures/solar-system/neptune/diffuse.webp"
       },

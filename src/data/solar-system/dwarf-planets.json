@@ -19,6 +19,36 @@
         "Satu tahun di Pluto sama dengan 248 tahun Bumi",
         "Pluto memiliki jantung es yang terlihat dari foto New Horizons"
       ],
+      "content": {
+        "en": {
+          "description": "Pluto is the most famous dwarf planet, located in the Kuiper Belt beyond Neptune. Discovered in 1930 by Clyde Tombaugh, it was considered the ninth planet for 76 years before being reclassified as a dwarf planet by the International Astronomical Union in 2006. Pluto has a remarkably complex surface with mountains of water ice, nitrogen glaciers, and a large heart-shaped region called Tombaugh Regio. It has five known moons, the largest being Charon — so massive relative to Pluto that the two form a binary system, orbiting their common center of gravity. NASA's New Horizons spacecraft flew past Pluto in July 2015, revealing a geologically active and surprisingly diverse world.",
+          "facts": [
+            "Pluto was reclassified from planet to dwarf planet in 2006 by the IAU",
+            "Pluto is smaller than Earth's Moon — just 2,377 km in diameter",
+            "A year on Pluto lasts 248 Earth years",
+            "Pluto's heart-shaped Tombaugh Regio is a vast plain of nitrogen ice",
+            "Pluto and Charon form a binary system — they orbit their common center of mass",
+            "Pluto has mountains of water ice rising up to 3,500 meters",
+            "New Horizons revealed active geological processes despite Pluto's extreme cold",
+            "Pluto's atmosphere temporarily expands as it approaches the Sun and collapses as it moves away"
+          ],
+          "mythology": "Pluto was named after the Roman god of the underworld, ruler of the dead and keeper of hidden wealth beneath the earth. The name was suggested by 11-year-old Venetia Burney from Oxford, England, who felt the dark, distant, and cold world suited the god of the underworld perfectly. The Greek equivalent was Hades, who presided over the realm of the dead. Fittingly, Pluto's largest moon Charon is named after the ferryman who transported souls across the River Styx to the underworld, and its smaller moons Nix, Hydra, Kerberos, and Styx are all named after underworld figures."
+        },
+        "id": {
+          "description": "Pluto adalah planet katai paling terkenal, terletak di Sabuk Kuiper di luar Neptunus. Ditemukan pada 1930 oleh Clyde Tombaugh, planet ini dianggap sebagai planet kesembilan selama 76 tahun sebelum diklasifikasikan ulang sebagai planet katai oleh International Astronomical Union pada 2006. Pluto memiliki permukaan yang sangat kompleks dengan pegunungan es air, gletser nitrogen, dan wilayah berbentuk hati besar yang disebut Tombaugh Regio. Pluto memiliki lima bulan yang diketahui, yang terbesar adalah Charon — begitu besar relatif terhadap Pluto sehingga keduanya membentuk sistem biner. Wahana New Horizons milik NASA terbang melewati Pluto pada Juli 2015, mengungkap dunia yang aktif secara geologis.",
+          "facts": [
+            "Pluto diklasifikasikan ulang dari planet menjadi planet katai pada 2006 oleh IAU",
+            "Pluto lebih kecil dari Bulan Bumi — hanya 2.377 km diameternya",
+            "Satu tahun di Pluto berlangsung 248 tahun Bumi",
+            "Tombaugh Regio berbentuk hati di Pluto adalah dataran luas dari es nitrogen",
+            "Pluto dan Charon membentuk sistem biner — mereka mengorbit pusat massa bersama",
+            "Pluto memiliki pegunungan dari es air yang menjulang hingga 3.500 meter",
+            "New Horizons mengungkap proses geologis aktif meski suhu Pluto sangat ekstrem",
+            "Atmosfer Pluto mengembang saat mendekati Matahari dan menyusut saat menjauh"
+          ],
+          "mythology": "Pluto dinamai dari dewa dunia bawah Romawi, penguasa orang mati dan penjaga kekayaan tersembunyi di bawah bumi. Nama ini disarankan oleh Venetia Burney, seorang anak berusia 11 tahun dari Oxford, Inggris, yang merasa dunia yang gelap, jauh, dan dingin itu cocok dengan dewa dunia bawah. Padanan Yunaninya adalah Hades, yang memimpin alam orang mati. Secara tepat, bulan terbesar Pluto, Charon, dinamai dari penyeberang yang membawa jiwa melewati Sungai Styx ke dunia bawah, dan bulan-bulan kecilnya Nix, Hydra, Kerberos, dan Styx semuanya dinamai dari tokoh dunia bawah."
+        }
+      },
       "proceduralTexture": {
         "baseColor": "#C4A882",
         "noiseScale": 0.6,
@@ -46,6 +76,36 @@
         "Mungkin memiliki samudra air di bawah permukaan",
         "Ditemukan tahun 1801, dulunya dikategorikan planet"
       ],
+      "content": {
+        "en": {
+          "description": "Ceres is the largest object in the asteroid belt between Mars and Jupiter, and the only dwarf planet located in the inner solar system. Discovered in 1801 by Giuseppe Piazzi, it was initially classified as a planet before being demoted to asteroid status, and then reclassified as a dwarf planet in 2006. Ceres is roughly spherical with a diameter of about 940 km, making up about 25% of the total mass of the asteroid belt. NASA's Dawn spacecraft orbited Ceres from 2015 to 2018, revealing a world with bright spots in Occator Crater — likely salt deposits from ancient brine water. Ceres may harbor a subsurface reservoir of liquid water or brine.",
+          "facts": [
+            "Ceres is the only dwarf planet located in the inner solar system, in the asteroid belt",
+            "It contains about 25-33% of the total mass of the entire asteroid belt",
+            "Discovered in 1801 by Giuseppe Piazzi — the first asteroid ever found",
+            "NASA's Dawn spacecraft orbited Ceres from 2015 to 2018",
+            "Bright spots in Occator Crater are salt deposits from ancient brine eruptions",
+            "Ceres may have a subsurface ocean of liquid water or brine",
+            "Its surface has large amounts of water ice mixed into the crust",
+            "Ceres has no moons and no ring system"
+          ],
+          "mythology": "Ceres was named after the Roman goddess of agriculture, grain crops, fertility, and motherly relationships — the Roman equivalent of the Greek goddess Demeter. The name was fitting for an object found in the productive zone of the solar system. The word 'cereal' comes directly from Ceres, the goddess who was said to have invented farming and taught humans how to cultivate grain. In Roman mythology, Ceres wandered the Earth in grief when her daughter Proserpina was taken to the underworld, causing winter — a myth that explained the seasons."
+        },
+        "id": {
+          "description": "Ceres adalah objek terbesar di sabuk asteroid antara Mars dan Jupiter, dan satu-satunya planet katai yang terletak di tata surya dalam. Ditemukan pada 1801 oleh Giuseppe Piazzi, awalnya diklasifikasikan sebagai planet sebelum diturunkan menjadi asteroid, lalu diklasifikasikan ulang sebagai planet katai pada 2006. Ceres berbentuk hampir bulat dengan diameter sekitar 940 km, mencakup sekitar 25% dari total massa sabuk asteroid. Wahana Dawn milik NASA mengorbit Ceres dari 2015 hingga 2018, mengungkap dunia dengan bintik-bintik cerah di Kawah Occator — kemungkinan endapan garam dari air garam purba. Ceres mungkin memiliki reservoir air cair di bawah permukaan.",
+          "facts": [
+            "Ceres adalah satu-satunya planet katai di tata surya dalam, di sabuk asteroid",
+            "Mengandung sekitar 25-33% dari total massa seluruh sabuk asteroid",
+            "Ditemukan pada 1801 oleh Giuseppe Piazzi — asteroid pertama yang pernah ditemukan",
+            "Wahana Dawn milik NASA mengorbit Ceres dari 2015 hingga 2018",
+            "Bintik cerah di Kawah Occator adalah endapan garam dari letusan air garam purba",
+            "Ceres mungkin memiliki lautan bawah permukaan dari air cair atau air garam",
+            "Permukaannya mengandung banyak es air yang tercampur dalam kerak",
+            "Ceres tidak memiliki bulan dan tidak memiliki sistem cincin"
+          ],
+          "mythology": "Ceres dinamai dari dewi pertanian, tanaman gandum, kesuburan, dan hubungan keibuan Romawi — padanan Romawi dari dewi Yunani Demeter. Kata 'sereal' berasal langsung dari Ceres, dewi yang konon menemukan pertanian dan mengajarkan manusia cara menanam gandum. Dalam mitologi Romawi, Ceres mengembara di Bumi dalam kesedihan ketika putrinya Proserpina dibawa ke dunia bawah, menyebabkan musim dingin — mitos yang menjelaskan pergantian musim."
+        }
+      },
       "proceduralTexture": {
         "baseColor": "#7A7A6D",
         "noiseScale": 0.8,
@@ -73,6 +133,36 @@
         "Penemuan Eris yang mendorong reklassifikasi Pluto",
         "Satu orbit Eris memakan waktu 559 tahun"
       ],
+      "content": {
+        "en": {
+          "description": "Eris is the most massive dwarf planet in the solar system and the discovery that directly triggered the reclassification of Pluto in 2006. Found in 2005 by astronomer Mike Brown, Eris orbits in the scattered disc region far beyond the Kuiper Belt, at an average distance of 67.8 AU from the Sun. Eris is slightly smaller than Pluto in volume but about 27% more massive. Its surface is covered in methane frost, giving it an extremely high reflectivity (albedo). Eris has one known moon, Dysnomia. Because Eris is more massive than Pluto, its discovery forced astronomers to decide: either accept Eris as the tenth planet, or reclassify both Pluto and Eris as dwarf planets.",
+          "facts": [
+            "Eris triggered the 2006 redefinition of 'planet' and reclassification of Pluto",
+            "Eris is about 27% more massive than Pluto despite being slightly smaller",
+            "Eris orbits in the scattered disc, far beyond the Kuiper Belt at ~67.8 AU",
+            "One orbit of Eris takes about 559 Earth years",
+            "Eris's surface is covered in methane frost, making it one of the most reflective objects in the solar system",
+            "Eris has one known moon, Dysnomia, named after the goddess of lawlessness",
+            "Eris was nicknamed 'Xena' by its discoverers before receiving its official name",
+            "Surface temperature on Eris is around -243°C, one of the coldest in the solar system"
+          ],
+          "mythology": "Eris is named after the Greek goddess of discord and strife, the daughter of Zeus and Hera. This name was chosen with dark humor — Eris the planet caused enormous discord in the astronomical community, forcing a controversial redefinition of what constitutes a planet. In mythology, Eris threw a golden apple inscribed 'for the fairest' among the gods at the wedding of Peleus and Thetis, triggering a dispute between Hera, Athena, and Aphrodite that ultimately led to the Trojan War. Eris's moon Dysnomia is named after Eris's daughter, the goddess of lawlessness."
+        },
+        "id": {
+          "description": "Eris adalah planet katai paling masif di tata surya dan penemuannya yang langsung memicu reklasifikasi Pluto pada 2006. Ditemukan pada 2005 oleh astronom Mike Brown, Eris mengorbit di wilayah cakram tersebar jauh melampaui Sabuk Kuiper, pada jarak rata-rata 67,8 AU dari Matahari. Eris sedikit lebih kecil dari Pluto secara volume tetapi sekitar 27% lebih masif. Permukaannya dilapisi embun beku metana, membuatnya memiliki reflektivitas sangat tinggi. Eris memiliki satu bulan yang diketahui, Dysnomia. Karena Eris lebih masif dari Pluto, penemuannya memaksa para astronom untuk memutuskan: terima Eris sebagai planet kesepuluh, atau reklasifikasikan keduanya sebagai planet katai.",
+          "facts": [
+            "Eris memicu pendefinisian ulang 'planet' pada 2006 dan reklasifikasi Pluto",
+            "Eris sekitar 27% lebih masif dari Pluto meski sedikit lebih kecil",
+            "Eris mengorbit di cakram tersebar, jauh melampaui Sabuk Kuiper pada ~67,8 AU",
+            "Satu orbit Eris membutuhkan sekitar 559 tahun Bumi",
+            "Permukaan Eris dilapisi embun beku metana, menjadikannya salah satu objek paling reflektif di tata surya",
+            "Eris memiliki satu bulan yang diketahui, Dysnomia, dinamai dari dewi ketidaktertiban",
+            "Eris dijuluki 'Xena' oleh para penemunya sebelum mendapat nama resmi",
+            "Suhu permukaan Eris sekitar -243°C, salah satu yang paling dingin di tata surya"
+          ],
+          "mythology": "Eris dinamai dari dewi perselisihan dan percekcokan Yunani, putri Zeus dan Hera. Nama ini dipilih dengan humor gelap — Eris sang planet menyebabkan perselisihan besar di komunitas astronomi, memaksa pendefinisian ulang planet yang kontroversial. Dalam mitologi, Eris melempar apel emas bertuliskan 'untuk yang tercantik' di antara para dewa pada pernikahan Peleus dan Thetis, memicu perselisihan antara Hera, Athena, dan Aphrodite yang pada akhirnya menyebabkan Perang Troya. Bulan Eris, Dysnomia, dinamai dari putri Eris, dewi ketidaktertiban."
+        }
+      },
       "proceduralTexture": {
         "baseColor": "#E0DDD5",
         "noiseScale": 0.5,
@@ -100,6 +190,36 @@
         "Bentuknya seperti rugby ball karena rotasi cepat",
         "Memiliki 2 bulan kecil: Hi'iaka dan Namaka"
       ],
+      "content": {
+        "en": {
+          "description": "Haumea is a dwarf planet in the Kuiper Belt with one of the most unusual shapes in the solar system — it resembles a squashed football or rugby ball due to its extremely rapid rotation. Haumea completes one rotation every 3.9 hours, making it the fastest-spinning large body in the solar system, which has stretched it into an elongated ellipsoid. Despite its odd shape, Haumea qualifies as a dwarf planet because gravity has pulled it into hydrostatic equilibrium. It has two moons — Hi'iaka and Namaka — and in 2017 became the first Kuiper Belt object discovered to have a ring system. Its surface is covered in crystalline water ice, giving it a bright white reflectivity.",
+          "facts": [
+            "Haumea rotates once every 3.9 hours — fastest spin of any large body in the solar system",
+            "Its rapid rotation stretches it into a football/rugby ball ellipsoid shape",
+            "Haumea has two moons: Hi'iaka and Namaka, named after Hawaiian goddesses",
+            "In 2017 a thin ring was discovered around Haumea — first ring on a Kuiper Belt object",
+            "Surface is covered in crystalline water ice, giving it a bright white appearance",
+            "Haumea is roughly the same size as Pluto but significantly less massive",
+            "The Haumea family of objects — its moons and orbital fragments — all originated from a giant collision",
+            "A year on Haumea lasts about 285 Earth years"
+          ],
+          "mythology": "Haumea is named after the Hawaiian goddess of childbirth and fertility, associated with the element of stone. In Hawaiian mythology, Haumea was a progenitor deity who gave birth to many children, sometimes through unusual means — from parts of her body or from the land itself. The name was chosen partly because Haumea's moons and the orbital fragment family are thought to have originated from Haumea itself in a giant ancient collision, making the planet a literal mother of its companions. Its moons Hi'iaka and Namaka are named after two of Haumea's daughters in Hawaiian legend."
+        },
+        "id": {
+          "description": "Haumea adalah planet katai di Sabuk Kuiper dengan salah satu bentuk paling tidak biasa di tata surya — menyerupai bola sepak atau bola rugby yang gepeng karena rotasinya yang sangat cepat. Haumea menyelesaikan satu rotasi setiap 3,9 jam, menjadikannya benda besar dengan putaran tercepat di tata surya, yang meregangkannya menjadi elipsoid memanjang. Haumea memiliki dua bulan — Hi'iaka dan Namaka — dan pada 2017 menjadi objek Sabuk Kuiper pertama yang ditemukan memiliki sistem cincin. Permukaannya dilapisi es air kristal yang memberikan reflektivitas cerah.",
+          "facts": [
+            "Haumea berotasi sekali setiap 3,9 jam — putaran tercepat benda besar di tata surya",
+            "Rotasi cepatnya meregangkannya menjadi bentuk elipsoid seperti bola rugby",
+            "Haumea memiliki dua bulan: Hi'iaka dan Namaka, dinamai dari dewi-dewi Hawaii",
+            "Pada 2017, cincin tipis ditemukan mengelilingi Haumea — cincin pertama pada objek Sabuk Kuiper",
+            "Permukaannya dilapisi es air kristal, memberikan tampilan putih cerah",
+            "Haumea kira-kira seukuran Pluto tetapi jauh lebih tidak masif",
+            "Keluarga objek Haumea — bulan dan fragmen orbitalnya — semuanya berasal dari satu tabrakan besar",
+            "Satu tahun di Haumea berlangsung sekitar 285 tahun Bumi"
+          ],
+          "mythology": "Haumea dinamai dari dewi kelahiran dan kesuburan Hawaii, yang dikaitkan dengan unsur batu. Dalam mitologi Hawaii, Haumea adalah dewa leluhur yang melahirkan banyak anak, kadang dengan cara tidak biasa — dari bagian tubuhnya atau dari tanah itu sendiri. Nama ini dipilih karena bulan-bulan Haumea dan fragmen orbital diperkirakan berasal dari Haumea sendiri dalam tabrakan besar, menjadikan planet ini secara harfiah ibu dari para pendampingnya. Bulan-bulannya Hi'iaka dan Namaka dinamai dari dua putri Haumea dalam legenda Hawaii."
+        }
+      },
       "proceduralTexture": {
         "baseColor": "#B8B0A0",
         "noiseScale": 0.7,
@@ -127,6 +247,36 @@
         "Warna permukaannya merah-coklat",
         "Ditemukan tahun 2005, saat Easter Week"
       ],
+      "content": {
+        "en": {
+          "description": "Makemake is a dwarf planet in the Kuiper Belt, the third-largest known trans-Neptunian object after Pluto and Eris. It was discovered in March 2005 by Mike Brown and his team at Palomar Observatory, just a few days after Easter, which influenced its name. Makemake has a reddish-brown surface covered in methane, ethane, and nitrogen ices, similar to Pluto. It is one of the brightest objects in the Kuiper Belt, with a high reflectivity due to its frozen surface. In 2016, the Hubble Space Telescope discovered a small, dark moon orbiting Makemake, temporarily nicknamed MK2 and later named S/2015 (136472) 1.",
+          "facts": [
+            "Makemake is the third-largest known dwarf planet after Pluto and Eris",
+            "Discovered in March 2005, just days after Easter — influencing its mythological name choice",
+            "Surface is covered in methane, ethane, and nitrogen ices giving it a reddish-brown color",
+            "Makemake is one of the brightest trans-Neptunian objects due to its reflective icy surface",
+            "A small dark moon was discovered around Makemake by Hubble in 2016",
+            "Makemake has no detectable atmosphere — it collapses onto the surface in the cold",
+            "One orbit around the Sun takes about 306 Earth years",
+            "Surface temperature is approximately -239°C"
+          ],
+          "mythology": "Makemake is named after the creator deity of the Rapa Nui people, the indigenous inhabitants of Easter Island. In Rapa Nui mythology, Makemake was the chief god and creator of humanity, the god of fertility, and the chief god of the Tangata manu (birdman) cult. The name was chosen partly as a tribute to the island's culture — the dwarf planet was discovered just after Easter, and Easter Island (Rapa Nui) seemed the natural cultural reference. The Birdman cult of Rapa Nui held an annual competition where a chosen warrior would swim to a nearby island to retrieve the first egg of the sooty tern, a rite connected to Makemake's worship."
+        },
+        "id": {
+          "description": "Makemake adalah planet katai di Sabuk Kuiper, objek trans-Neptunus terbesar ketiga yang diketahui setelah Pluto dan Eris. Ditemukan pada Maret 2005 oleh Mike Brown dan timnya di Palomar Observatory, beberapa hari setelah Paskah, yang memengaruhi namanya. Makemake memiliki permukaan kemerahan-coklat yang dilapisi es metana, etana, dan nitrogen, mirip dengan Pluto. Makemake adalah salah satu objek paling terang di Sabuk Kuiper. Pada 2016, Teleskop Luar Angkasa Hubble menemukan sebuah bulan kecil dan gelap yang mengorbit Makemake.",
+          "facts": [
+            "Makemake adalah planet katai terbesar ketiga yang diketahui setelah Pluto dan Eris",
+            "Ditemukan Maret 2005, beberapa hari setelah Paskah — memengaruhi pilihan nama mitologisnya",
+            "Permukaannya dilapisi es metana, etana, dan nitrogen yang memberikan warna kemerahan-coklat",
+            "Makemake adalah salah satu objek trans-Neptunus paling terang karena permukaan esnya yang reflektif",
+            "Sebuah bulan kecil dan gelap ditemukan mengorbit Makemake oleh Hubble pada 2016",
+            "Makemake tidak memiliki atmosfer yang dapat dideteksi — mengembun ke permukaan saat sangat dingin",
+            "Satu orbit mengelilingi Matahari membutuhkan sekitar 306 tahun Bumi",
+            "Suhu permukaan sekitar -239°C"
+          ],
+          "mythology": "Makemake dinamai dari dewa pencipta suku Rapa Nui, penduduk asli Pulau Paskah. Dalam mitologi Rapa Nui, Makemake adalah dewa utama dan pencipta umat manusia, dewa kesuburan, dan dewa utama kultus Tangata manu (manusia burung). Nama ini dipilih sebagian sebagai penghormatan terhadap budaya pulau tersebut — planet katai ini ditemukan tepat setelah Paskah, dan Pulau Paskah (Rapa Nui) tampak menjadi referensi budaya yang alami. Kultus Birdman Rapa Nui mengadakan kompetisi tahunan di mana seorang pejuang terpilih akan berenang ke pulau terdekat untuk mengambil telur pertama burung mayang — ritual yang terhubung dengan pemujaan Makemake."
+        }
+      },
       "proceduralTexture": {
         "baseColor": "#A0522D",
         "noiseScale": 0.6,
