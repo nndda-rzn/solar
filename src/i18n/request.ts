@@ -20,6 +20,10 @@ export default getRequestConfig(async ({ requestLocale }) => {
         .default,
       stellar: (await import(`@/messages/${locale}/stellar.json`)).default,
       dashboard: (await import(`@/messages/${locale}/dashboard.json`)).default,
+      landing:
+        locale === "en"
+          ? (await import(`@/messages/en/landing.json`)).default
+          : (await import(`@/messages/en/landing.json`)).default,
     },
   };
 });
