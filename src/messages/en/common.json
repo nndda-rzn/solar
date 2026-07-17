@@ -1,0 +1,365 @@
+{
+  "app": {
+    "title": "Interactive Cosmic Explorer",
+    "description": "Explore the universe in interactive 3D — solar system, stellar neighborhood, constellations, and beyond."
+  },
+  "library": {
+    "title": "Library",
+    "subtitle": "Browse celestial objects, fun facts, and your saved bookmarks",
+    "tabs": {
+      "planets": "Planets",
+      "dwarfPlanets": "Dwarf Planets",
+      "stars": "Stars",
+      "constellations": "Constellations",
+      "bookmarks": "My Bookmarks"
+    },
+    "empty": {
+      "planets": "No planets to display.",
+      "dwarfPlanets": "No dwarf planets to display.",
+      "stars": "No stars to display.",
+      "constellations": "No constellations to display.",
+      "bookmarks": "You haven't saved any bookmarks yet. Save camera views from the Explorer to see them here."
+    },
+    "explore3d": "Explore in 3D",
+    "searchPlaceholder": "Search planets, stars, constellations...",
+    "close": "Close",
+    "noContent": "No description available.",
+    "stats": {
+      "mass": "Mass",
+      "temperature": "Temperature",
+      "distance": "Distance from Sun",
+      "radius": "Radius",
+      "orbitalPeriod": "Orbital Period",
+      "moonCount": "Moons",
+      "magnitude": "Magnitude",
+      "spectralType": "Spectral Type",
+      "starCount": "Star Count",
+      "abbreviation": "Abbreviation",
+      "indonesianName": "Indonesian Name"
+    },
+    "sections": {
+      "facts": "Fun Facts",
+      "mythology": "Mythology",
+      "description": "Description",
+      "physicalData": "Physical Data"
+    }
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An error occurred while rendering the cosmic explorer. Your progress has been saved.",
+    "retry": "Try again"
+  },
+  "notFound": {
+    "title": "Lost in space",
+    "description": "The cosmic coordinate you followed does not lead anywhere in our universe.",
+    "action": "Return to dashboard"
+  },
+  "header": {
+    "title": "Cosmic Explorer",
+    "subtitle": "Explore planetary orbits in real time",
+    "search": "Search",
+    "searchPlaceholder": "Search planets, dwarf planets, stars...",
+    "noResults": "No results found",
+    "date": "Date",
+    "speed": "Speed",
+    "close": "ESC",
+    "bookmark": "Bookmark",
+    "level": "Level",
+    "xp": "XP"
+  },
+  "hud": {
+    "backToOverview": "Back to Overview"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "explorer": "Explorer",
+    "library": "Library",
+    "achievements": "Achievements",
+    "settings": "Settings",
+    "profile": "Profile",
+    "help": "Help",
+    "logout": "Logout",
+    "exit": "Exit to Dashboard"
+  },
+  "sidebar": {
+    "tagline": "Elite Astronomer",
+    "brand": "Cosmic Explorer"
+  },
+  "topbar": {
+    "level": "LVL",
+    "points": "PTS",
+    "notifications": "Notifications",
+    "account": "Account"
+  },
+  "scale": {
+    "solar": "Solar System",
+    "stellar": "Stars",
+    "galactic": "Galaxy",
+    "cosmic": "Universe"
+  },
+  "search": {
+    "placeholder": "Search planets, dwarf planets, stars...",
+    "noResults": "No results found"
+  },
+  "types": {
+    "star": "star",
+    "planet": "planet",
+    "dwarfPlanet": "dwarf planet"
+  },
+  "language": {
+    "en": "EN",
+    "id": "ID"
+  },
+  "profile": {
+    "title": "My Profile",
+    "tabs": {
+      "profile": "Profile",
+      "progress": "Progress",
+      "achievements": "Achievements",
+      "bookmarks": "Bookmarks"
+    },
+    "loading": "Loading profile...",
+    "loadError": "Failed to load profile: ",
+    "notFound": "No profile found.",
+    "saved": "Profile saved.",
+    "level": "Level",
+    "displayName": "Display Name",
+    "displayNamePlaceholder": "Display name",
+    "bio": "Bio",
+    "bioPlaceholder": "Tell us about yourself",
+    "avatarUrl": "Avatar URL",
+    "save": "Save Profile"
+  },
+  "progress": {
+    "stats": {
+      "planetsVisited": "Planets Visited",
+      "starsVisited": "Stars Visited",
+      "constellationsVisited": "Constellations Visited",
+      "searchesUsed": "Searches Used",
+      "bookmarksSaved": "Bookmarks Saved",
+      "panelsOpened": "Panels Opened"
+    },
+    "recentActivity": "Recent Activity",
+    "empty": "No activity yet. Start exploring!"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "level": "Level",
+    "totalXp": "Total XP",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "hidden": "Hidden Achievement",
+    "xp": "XP"
+  },
+  "bookmarks": {
+    "title": "Bookmarks",
+    "save": "Save Bookmark",
+    "namePlaceholder": "Bookmark name",
+    "saveSuccess": "Bookmark saved",
+    "restore": "Restore",
+    "delete": "Delete",
+    "confirmDelete": "Delete this bookmark?",
+    "empty": "No bookmarks yet. Press Ctrl+B to save your current view.",
+    "scale": "Scale",
+    "saveError": "Failed to save bookmark",
+    "nameError": "Name must be 1-50 characters",
+    "cameraError": "Camera position unavailable",
+    "cancel": "Cancel"
+  },
+  "shortcuts": {
+    "title": "Keyboard Shortcuts",
+    "search": "Open search",
+    "bookmark": "Save bookmark",
+    "help": "Show this help",
+    "close": "Close dialog",
+    "playPause": "Play / pause simulation",
+    "reset": "Reset simulation"
+  },
+  "settings": {
+    "title": "Settings",
+    "perfMode": "Performance Mode",
+    "highQuality": "High Quality",
+    "lowQuality": "Low Quality (Performance)",
+    "highQualityDesc": "Full particle count, high resolution. Best for powerful devices.",
+    "lowQualityDesc": "Reduced particle count, capped resolution. Best for low-end devices.",
+    "audio": "Audio",
+    "mute": "Mute",
+    "volume": "Volume",
+    "ambient": "Ambient Sound",
+    "on": "On",
+    "off": "Off"
+  },
+  "loader": {
+    "loading": "Loading..."
+  },
+  "toast": {
+    "achievementUnlocked": "Achievement Unlocked!",
+    "levelUp": "Level Up!",
+    "bookmarkSaved": "Bookmark Saved",
+    "reachedLevel": "Reached Level {level}",
+    "bookmarksLoadFailed": {
+      "title": "Couldn't load bookmarks",
+      "description": "Your saved views will appear once the connection is restored."
+    },
+    "bookmarkCreateFailed": {
+      "title": "Couldn't save bookmark",
+      "description": "Try again in a moment."
+    },
+    "bookmarkRenameFailed": {
+      "title": "Couldn't rename bookmark",
+      "description": "Try again in a moment."
+    },
+    "bookmarkRemoveFailed": {
+      "title": "Couldn't delete bookmark",
+      "description": "Try again in a moment."
+    },
+    "progressLoadFailed": {
+      "title": "Couldn't load progress",
+      "description": "Your exploration stats will resume once we reconnect."
+    },
+    "progressTrackFailed": {
+      "title": "Couldn't save progress",
+      "description": "Your latest action may not be saved."
+    },
+    "achievementsLoadFailed": {
+      "title": "Couldn't load achievements",
+      "description": "Your badges will appear once the connection is restored."
+    },
+    "achievementAwardFailed": {
+      "title": "Couldn't award achievement",
+      "description": "Try again in a moment."
+    }
+  },
+  "pages": {
+    "library": {
+      "title": "Library",
+      "comingSoon": "Coming Soon",
+      "description": "An encyclopedia of planets, stars, and constellations is on its way."
+    },
+    "help": {
+      "title": "Help",
+      "faqs": [
+        {
+          "q": "How do I navigate the 3D explorer?",
+          "a": "Use your mouse to orbit (left-click drag), zoom (scroll wheel), and pan (right-click drag). On touch devices, use two fingers to zoom and one finger to rotate."
+        },
+        {
+          "q": "How do I change the scale view?",
+          "a": "Use the scale selector in the top bar to switch between Solar System, Stellar, Galactic, and Cosmic scales. You can also zoom out naturally to trigger scale transitions."
+        },
+        {
+          "q": "How do I save a bookmark?",
+          "a": "Press Ctrl+B (or Cmd+B on Mac) at any time while exploring, or click the bookmark icon in the top bar. Give your view a name and save it. Bookmarks restore your exact camera position and scale."
+        },
+        {
+          "q": "How do I view my achievements?",
+          "a": "Go to Profile from the sidebar and select the Achievements tab. You can also see newly unlocked achievements as toast notifications while exploring."
+        },
+        {
+          "q": "How do I change simulation speed?",
+          "a": "Use the speed control in the explorer toolbar. You can speed up, slow down, pause, or reset the simulation. Time-traveling far into the future or past also earns XP."
+        },
+        {
+          "q": "What is the difference between High Quality and Low Quality mode?",
+          "a": "High Quality renders full particle counts and high resolution — best for powerful devices. Low Quality reduces particle counts and caps resolution for smoother performance on low-end hardware. Change this in Settings."
+        }
+      ]
+    }
+  },
+  "close": "Close",
+  "cancel": "Cancel",
+  "auth": {
+    "layout": {
+      "titleLine1": "Explore the Solar System",
+      "titleLine2": "Interactively",
+      "subtitle": "Sign in to continue exploring planets, orbits, space missions, and cosmic quizzes.",
+      "feature1": "Interactive Planets",
+      "feature2": "Educational Quizzes",
+      "feature3": "Exploration Timeline",
+      "footer": "© 2024 Cosmic Explorer. Explore the Universe.",
+      "aboutUs": "About Us",
+      "help": "Help"
+    },
+    "login": {
+      "badge": "Explorer Access",
+      "title": "Login to Cosmic Explorer",
+      "subtitle": "Continue your journey through the solar system",
+      "email": "Email",
+      "emailPlaceholder": "Enter email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Login Now",
+      "processing": "Processing...",
+      "noAccount": "Don't have an account?",
+      "signupHere": "Sign up here",
+      "errorInvalid": "Invalid email or password",
+      "signupSuccess": "Account created successfully! Please log in."
+    },
+    "signup": {
+      "badge": "Explorer Access",
+      "title": "Sign up to Cosmic Explorer",
+      "subtitle": "Start your journey exploring the solar system",
+      "username": "Username",
+      "usernamePlaceholder": "Enter username",
+      "email": "Email",
+      "emailPlaceholder": "Enter email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "confirmPassword": "Confirm Password",
+      "confirmPlaceholder": "Repeat password",
+      "submit": "Sign Up Now",
+      "processing": "Processing...",
+      "hasAccount": "Already have an account?",
+      "loginHere": "Login here",
+      "errorExists": "Email already registered",
+      "checkEmail": "Check your email to confirm your account"
+    }
+  },
+  "tour": {
+    "step": "Step",
+    "next": "Next",
+    "skip": "Skip Tour",
+    "finish": "Start Exploring",
+    "replay": "Restart Tour",
+    "steps": {
+      "welcome": {
+        "title": "Welcome to Cosmic Explorer",
+        "description": "An interactive journey through our solar system and beyond. Let's explore the universe together."
+      },
+      "sun": {
+        "title": "The Sun",
+        "description": "Our star at the center of the solar system, containing 99.8% of all the mass in the solar system."
+      },
+      "earth": {
+        "title": "Earth",
+        "description": "Our home planet — the only known world harboring life, with liquid water oceans and a protective atmosphere."
+      },
+      "saturn": {
+        "title": "Saturn",
+        "description": "The jewel of the solar system, famous for its spectacular ring system made of ice and rock particles."
+      },
+      "neptune": {
+        "title": "Neptune",
+        "description": "The farthest planet from the Sun, 30 times Earth's distance away, with winds reaching 2,100 km/h."
+      },
+      "stellar": {
+        "title": "Stellar Neighborhood",
+        "description": "Zoom out beyond our solar system. Thousands of nearby stars become visible within 100 light-years."
+      },
+      "galactic": {
+        "title": "The Milky Way",
+        "description": "Our home galaxy — a spiral galaxy containing 200 to 400 billion stars, 100,000 light-years across."
+      },
+      "cosmic": {
+        "title": "The Observable Universe",
+        "description": "The largest scale — the entire observable universe, 93 billion light-years in diameter, containing trillions of galaxies."
+      },
+      "finish": {
+        "title": "You're Ready to Explore!",
+        "description": "You've seen the full scale of the cosmos. Now explore freely — click planets, zoom in and out, discover the universe."
+      }
+    }
+  }
+}

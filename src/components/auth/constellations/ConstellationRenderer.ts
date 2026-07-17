@@ -1,6 +1,6 @@
 "use client";
 
-import { Constellation } from "@/types/canvas/constellation";
+import { ConstellationData } from "@/types/celestial/constellation";
 
 export function renderConstellations(
   ctx: CanvasRenderingContext2D,
@@ -9,7 +9,7 @@ export function renderConstellations(
   parallaxX: number,
   parallaxY: number,
   hoveredConstellation: string | null,
-  constellations: Constellation[],
+  constellations: ConstellationData[],
 ) {
   ctx.clearRect(0, 0, width, height);
 
@@ -26,8 +26,10 @@ export function renderConstellations(
     ctx.globalAlpha = baseOpacity;
 
     constellation.lines.forEach((line) => {
-      const fromStar = constellation.stars.find((s) => s.id === line.from);
-      const toStar = constellation.stars.find((s) => s.id === line.to);
+      const fromStar = constellation.canvasStars.find(
+        (s) => s.id === line.from,
+      );
+      const toStar = constellation.canvasStars.find((s) => s.id === line.to);
 
       if (fromStar && toStar) {
         const fromX =
@@ -44,7 +46,7 @@ export function renderConstellations(
       }
     });
 
-    constellation.stars.forEach((star) => {
+    constellation.canvasStars.forEach((star) => {
       const x = centerX + (star.x * width - centerX) + parallaxX * 0.15;
       const y = centerY + (star.y * height - centerY) + parallaxY * 0.15;
 
@@ -93,7 +95,7 @@ export function detectConstellationClick(
   y: number,
   width: number,
   height: number,
-  constellations: Constellation[],
+  constellations: ConstellationData[],
 ): string | null {
   const centerX = width / 2;
   const centerY = height / 2;

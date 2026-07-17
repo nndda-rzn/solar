@@ -1,0 +1,22 @@
+{
+  "physicalProperties": "Properti Fisik",
+  "orbitalProperties": "Properti Orbit",
+  "discovery": "Data Tambahan",
+  "about": "Tentang",
+  "funFacts": "Fakta Menarik",
+  "yes": "Ya",
+  "no": "Tidak",
+  "stats": {
+    "radius": "Radius",
+    "mass": "Massa",
+    "temperature": "Suhu",
+    "moonCount": "Bulan",
+    "distance": "Jarak",
+    "period": "Periode Orbit",
+    "tilt": "Kemiringan Sumbu",
+    "rotationSpeed": "Kecepatan Rotasi",
+    "hasRing": "Memiliki Cincin",
+    "hasAtmosphere": "Memiliki Atmosfer"
+  },
+  "close": "Tutup panel"
+}

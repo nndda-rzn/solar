@@ -1,10 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
-import { useExplorerStore } from "@/lib/store/explorer-store";
+import { useUIStore } from "@/lib/store/ui-store";
+import { useSimulationStore } from "@/lib/store/simulation-store";
+
+function isTypingTarget(e: KeyboardEvent): boolean {
+  const target = e.target as HTMLElement;
+  return target.tagName === "INPUT" || target.tagName === "TEXTAREA";
+}
 
 export function useKeyboardShortcuts() {
-  const toggleSearch = useExplorerStore((s) => s.toggleSearch);
+  const toggleSearch = useUIStore((s) => s.toggleSearch);
 
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
@@ -12,11 +18,27 @@ export function useKeyboardShortcuts() {
         e.preventDefault();
         toggleSearch();
       }
+      if ((e.metaKey || e.ctrlKey) && e.key === "b") {
+        e.preventDefault();
+        useUIStore.getState().toggleBookmarkModal();
+      }
       if (e.key === "Escape") {
-        const { isSearchOpen, setSearchOpen } = useExplorerStore.getState();
+        const { isSearchOpen, setSearchOpen } = useUIStore.getState();
         if (isSearchOpen) {
           setSearchOpen(false);
         }
+      }
+      if (e.key === " " && !isTypingTarget(e)) {
+        e.preventDefault();
+        useSimulationStore.getState().togglePlay();
+      }
+      if ((e.key === "r" || e.key === "R") && !isTypingTarget(e)) {
+        e.preventDefault();
+        useSimulationStore.getState().reset();
+      }
+      if (e.key === "?" && !isTypingTarget(e)) {
+        e.preventDefault();
+        useUIStore.getState().toggleShortcutsHelp();
       }
     }
     window.addEventListener("keydown", handleKeyDown);

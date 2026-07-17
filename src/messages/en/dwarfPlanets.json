@@ -1,0 +1,42 @@
+{
+  "pluto": {
+    "description": "The most famous dwarf planet in the Kuiper Belt. Formerly the ninth planet, now classified as a dwarf planet.",
+    "funFacts": [
+      "Pluto is smaller than Earth's Moon",
+      "One year on Pluto equals 248 Earth years",
+      "Pluto has an ice heart visible from New Horizons photos"
+    ]
+  },
+  "ceres": {
+    "description": "The largest object in the asteroid belt. The only dwarf planet in the inner Solar System.",
+    "funFacts": [
+      "Ceres holds 25% of the asteroid belt's mass",
+      "It may have an ocean of water beneath its surface",
+      "Discovered in 1801, originally classified as a planet"
+    ]
+  },
+  "eris": {
+    "description": "The most massive dwarf planet in the Solar System. Named after the Greek goddess of discord.",
+    "funFacts": [
+      "Eris is more massive than Pluto",
+      "Eris's discovery prompted Pluto's reclassification",
+      "One orbit of Eris takes 559 years"
+    ]
+  },
+  "haumea": {
+    "description": "An ellipsoidal dwarf planet due to its super-fast rotation. Named after the Hawaiian goddess of fertility.",
+    "funFacts": [
+      "Haumea rotates every 4 hours — the fastest in the Solar System",
+      "Its shape is like a rugby ball due to rapid rotation",
+      "It has 2 small moons: Hi'iaka and Namaka"
+    ]
+  },
+  "makemake": {
+    "description": "A dwarf planet in the Kuiper Belt. Named after the Rapa Nui creator god.",
+    "funFacts": [
+      "Makemake is one of 3 dwarf planets in the Kuiper Belt",
+      "Its surface color is reddish-brown",
+      "Discovered in 2005 during Easter Week"
+    ]
+  }
+}

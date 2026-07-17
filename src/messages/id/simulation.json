@@ -1,0 +1,24 @@
+{
+  "speed": "Kecepatan",
+  "pause": "Jeda simulasi",
+  "play": "Putar simulasi",
+  "reset": "Reset simulasi",
+  "timeline": "Lini Masa",
+  "dateJump": "Lompat ke tanggal",
+  "presets": {
+    "realtime": "Waktu Nyata",
+    "minPerSec": "1 mnt/dtk",
+    "hourPerSec": "1 jam/dtk",
+    "dayPerSec": "1 hari/dtk",
+    "weekPerSec": "1 minggu/dtk",
+    "monthPerSec": "1 bulan/dtk",
+    "yearPerSec": "1 tahun/dtk"
+  },
+  "jump": {
+    "back1Year": "-1 thn",
+    "back1Month": "-1 bln",
+    "today": "Hari Ini",
+    "forward1Month": "+1 bln",
+    "forward1Year": "+1 thn"
+  }
+}

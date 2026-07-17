@@ -1,0 +1,48 @@
+{
+  "welcome": "Welcome back",
+  "subtitle": "Continue your journey through the cosmos",
+  "badge": "Elite Astronomer",
+  "breadcrumb": "Dashboard",
+  "breadcrumbSummary": "Overview",
+  "stats": {
+    "level": "Explorer Level",
+    "planetsVisited": "Planets Visited",
+    "achievements": "Mysteries Unlocked",
+    "bookmarks": "Bookmarks Saved"
+  },
+  "cards": {
+    "explore": {
+      "title": "Cosmic Exploration",
+      "description": "Explore the solar system, stars, and galaxies in 3D",
+      "cta": "Start Exploring"
+    },
+    "profile": {
+      "title": "Profile & Progress",
+      "description": "View your progress, bookmarks, and achievements",
+      "cta": "View Profile"
+    }
+  },
+  "charts": {
+    "sectionTitle": "Your Progress",
+    "xp": {
+      "title": "Experience Points",
+      "level": "Level",
+      "toNextLevel": "XP to next level"
+    },
+    "ring": {
+      "title": "Universe Exploration",
+      "explored": "Explored",
+      "planets": "Planets",
+      "stars": "Stars",
+      "constellations": "Constellations"
+    },
+    "heatmap": {
+      "title": "Activity (30 Days)",
+      "activeDays": "active days",
+      "totalActions": "total actions",
+      "last30Days": "in last 30 days",
+      "less": "Less",
+      "more": "More"
+    }
+  }
+}

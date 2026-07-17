@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "launch": "Launch Explorer"
+  },
+  "hero": {
+    "headline": "Explore the Universe,\nOne Scale at a Time",
+    "subheadline": "An interactive 3D journey through the solar system, stellar neighborhood, and the observable universe.",
+    "ctaPrimary": "Start Exploring",
+    "ctaSecondary": "Learn More",
+    "scrollHint": "Scroll to discover"
+  },
+  "features": {
+    "title": "Everything in One Place",
+    "subtitle": "Four scales of cosmic exploration, rendered in real-time 3D.",
+    "items": [
+      {
+        "title": "Solar System",
+        "desc": "Navigate all 8 planets, dwarf planets, and their moons in a real-time orbital simulation."
+      },
+      {
+        "title": "Stellar Neighborhood",
+        "desc": "Zoom out to 100 light-years and discover thousands of nearby stars with detailed spectral data."
+      },
+      {
+        "title": "The Milky Way",
+        "desc": "Pull back further to see our galaxy — 200 billion stars spanning 100,000 light-years."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three steps from signup to the edge of the observable universe.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Create an Account",
+        "desc": "Sign up for free and save your exploration progress, bookmarks, and achievements across sessions."
+      },
+      {
+        "num": "02",
+        "title": "Launch the Explorer",
+        "desc": "Enter the interactive 3D scene. Click any planet, star, or constellation to reveal detailed scientific data."
+      },
+      {
+        "num": "03",
+        "title": "Discover & Learn",
+        "desc": "Scale from the solar system to the observable universe. Earn XP and unlock achievements as you explore."
+      }
+    ]
+  },
+  "stats": {
+    "label1": "Planets",
+    "value1": "8",
+    "label2": "Constellations",
+    "value2": "88",
+    "label3": "Scale Levels",
+    "value3": "4",
+    "label4": "Light-Years Modeled",
+    "value4": "93B"
+  },
+  "quote": {
+    "text": "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.",
+    "author": "Carl Sagan"
+  },
+  "cta": {
+    "headline": "Begin Your Journey Through the Cosmos",
+    "subheadline": "Free to explore. No telescope required.",
+    "button": "Create Free Account",
+    "loginPrompt": "Already have an account?",
+    "loginLink": "Log in"
+  },
+  "footer": {
+    "brand": "Cosmic Explorer",
+    "copyright": "© 2025 Cosmic Explorer. All rights reserved.",
+    "links": {
+      "help": "Help",
+      "explorer": "Explorer",
+      "dashboard": "Dashboard"
+    }
+  }
+}

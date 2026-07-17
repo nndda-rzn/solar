@@ -1,4 +1,4 @@
-export interface Star {
+export interface BackgroundStarParticle {
   x: number;
   y: number;
   size: number;

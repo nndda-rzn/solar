@@ -1,0 +1,72 @@
+{
+  "mercury": {
+    "description": "The smallest planet and closest to the Sun. It has no atmosphere.",
+    "funFacts": [
+      "One day on Mercury lasts 59 Earth days",
+      "Mercury has the most eccentric orbit in the Solar System"
+    ]
+  },
+  "venus": {
+    "description": "The hottest planet in the Solar System with a thick CO₂ atmosphere.",
+    "funFacts": [
+      "Venus rotates backwards compared to most planets",
+      "A day on Venus is longer than its year"
+    ]
+  },
+  "earth": {
+    "description": "Our planet. 71% of the surface is covered by water and it's the only known planet that supports life.",
+    "funFacts": [
+      "Earth's core is as hot as the surface of the Sun",
+      "Earth rotates at 1,670 km/h at the equator"
+    ]
+  },
+  "mars": {
+    "description": "The Red Planet. It has the tallest mountain and deepest valley in the Solar System.",
+    "funFacts": [
+      "Mars has seasons like Earth",
+      "Olympus Mons is 3x taller than Mount Everest"
+    ]
+  },
+  "jupiter": {
+    "description": "The largest planet in the Solar System. A gas giant with mass 2x the total of all other planets.",
+    "funFacts": [
+      "The Great Red Spot is a storm lasting over 350 years",
+      "Jupiter's magnetic field is 20,000x stronger than Earth's"
+    ]
+  },
+  "saturn": {
+    "description": "The planet with beautiful rings. A gas giant less dense than water.",
+    "funFacts": [
+      "Saturn's rings are made of ice and rock",
+      "Saturn could float in a large enough bathtub"
+    ]
+  },
+  "uranus": {
+    "description": "An ice giant that rotates on its side (98 degrees tilt).",
+    "funFacts": [
+      "Uranus rotates tilted at 98 degrees on its side",
+      "Uranus was the first planet discovered with a telescope"
+    ]
+  },
+  "neptune": {
+    "description": "The windiest planet in the Solar System. Supersonic winds reach 2,100 km/h.",
+    "funFacts": [
+      "Neptune has the fastest winds in the Solar System",
+      "Neptune takes 165 years to orbit the Sun"
+    ]
+  },
+  "sun": {
+    "description": "The star at the center of our Solar System. It contains 99.86% of the total mass.",
+    "funFacts": [
+      "The Sun is 4.6 billion years old",
+      "Light from the Sun takes 8 minutes to reach Earth"
+    ]
+  },
+  "moon": {
+    "description": "Earth's only natural satellite. It influences tides and stabilizes Earth's axial tilt.",
+    "funFacts": [
+      "The Moon is slowly drifting away from Earth at 3.8 cm per year",
+      "The same side of the Moon always faces Earth"
+    ]
+  }
+}

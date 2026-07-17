@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-cosmic-black: #080b14;
-  --color-cosmic-deep: #0d1117;
+  --color-cosmic-black: #090d14;
+  --color-cosmic-deep: #0f1419;
   --color-cosmic-nebula: #161b22;
   --color-cosmic-accent: #4a9eff;
   --color-cosmic-glow: #7cb9ff;
+  --color-cosmic-muted: #94a3b8;
+  --color-cosmic-warm: #f59e0b;
   --font-family-sans: 'Inter', system-ui, sans-serif;
   --font-family-mono: 'JetBrains Mono', monospace;
+  --font-family-playfair: 'Playfair Display', Georgia, serif;
 }
 
 :root {
@@ -18,7 +22,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 ::-webkit-scrollbar {

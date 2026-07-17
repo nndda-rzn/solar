@@ -1,10 +1,11 @@
 "use client";
 
 import { X, Star, Clock, Globe } from "lucide-react";
-import { Constellation } from "@/types/canvas/constellation";
+import { ConstellationData } from "@/types/celestial/constellation";
+import { useTranslations, useLocale } from "next-intl";
 
 interface ConstellationInfoProps {
-  constellation: Constellation | null;
+  constellation: ConstellationData | null;
   onClose: () => void;
 }
 
@@ -12,7 +13,12 @@ export function ConstellationInfo({
   constellation,
   onClose,
 }: ConstellationInfoProps) {
+  const t = useTranslations("stellar");
+  const locale = useLocale() as "en" | "id";
+
   if (!constellation) return null;
+
+  const content = constellation.content[locale];
 
   return (
     <div className="fixed inset-y-0 right-0 w-full max-w-md z-50 pointer-events-auto">
@@ -35,7 +41,7 @@ export function ConstellationInfo({
           <div className="flex items-center gap-2 mb-1">
             <Star size={16} className="text-cyan-400" />
             <span className="text-cyan-400 text-xs font-medium tracking-wider uppercase">
-              Constellation
+              {t("constellation.label")}
             </span>
           </div>
 
@@ -47,24 +53,29 @@ export function ConstellationInfo({
           </p>
 
           <p className="text-gray-300 text-sm leading-relaxed mb-6">
-            {constellation.description}
+            {content.description}
           </p>
 
           <div className="flex items-center gap-4 mb-6">
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Clock size={14} className="text-cyan-400" />
-              <span>{constellation.bestViewing}</span>
+              <span>
+                {constellation.bestViewing ||
+                  t("constellation.bestViewingPlaceholder")}
+              </span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Globe size={14} className="text-cyan-400" />
-              <span>Seluruh Indonesia</span>
+              <span>{t("constellation.wholeIndonesia")}</span>
             </div>
           </div>
 
           <div className="mb-6">
-            <h3 className="text-white font-semibold mb-3">Bintang Utama</h3>
+            <h3 className="text-white font-semibold mb-3">
+              {t("constellation.mainStars")}
+            </h3>
             <div className="space-y-2">
-              {constellation.stars.map((star) => (
+              {constellation.canvasStars.map((star) => (
                 <div
                   key={star.id}
                   className="flex items-center gap-3 p-3 rounded-lg"
@@ -85,7 +96,8 @@ export function ConstellationInfo({
                       {star.name}
                     </p>
                     <p className="text-gray-400 text-xs">
-                      Magnitude {star.magnitude} - {star.type.replace("-", " ")}
+                      {t("constellation.magnitude")} {star.magnitude} -{" "}
+                      {star.type.replace("-", " ")}
                     </p>
                   </div>
                 </div>
@@ -94,9 +106,11 @@ export function ConstellationInfo({
           </div>
 
           <div className="mb-6">
-            <h3 className="text-white font-semibold mb-2">Mitologi</h3>
+            <h3 className="text-white font-semibold mb-2">
+              {t("constellation.mythology")}
+            </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              {constellation.mythology}
+              {content.mythology}
             </p>
           </div>
 
@@ -108,12 +122,13 @@ export function ConstellationInfo({
             }}
           >
             <h4 className="text-cyan-400 text-sm font-semibold mb-1">
-              Tips Pengamatan
+              {t("constellation.observationTips")}
             </h4>
             <p className="text-gray-400 text-xs">
-              Rasi {constellation.name} terlihat jelas pada malam hari saat
-              musim {constellation.bestViewing}. Cari posisi gelap jauh dari
-              polusi cahaya untuk pengalaman terbaik.
+              {t("constellation.observationTipText", {
+                name: constellation.name,
+                season: constellation.bestViewing,
+              })}
             </p>
           </div>
         </div>

@@ -2,16 +2,19 @@
 
 import { useLoginForm } from "@/hooks/useLoginForm";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 interface LoginFormProps {
   onSubmit: (values: {
-    username: string;
+    email: string;
     password: string;
     rememberMe: boolean;
   }) => Promise<void>;
 }
 
 export function LoginForm({ onSubmit }: LoginFormProps) {
+  const t = useTranslations("common");
   const {
     values,
     errors,
@@ -39,16 +42,14 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
           style={{ boxShadow: "0 0 8px rgba(0, 255, 255, 0.6)" }}
         />
         <span className="text-cyan-400 text-xs font-medium tracking-wider uppercase">
-          Explorer Access
+          {t("auth.login.badge")}
         </span>
       </div>
 
       <h2 className="text-2xl font-bold text-white mb-1">
-        Masuk ke Cosmic Explorer
+        {t("auth.login.title")}
       </h2>
-      <p className="text-gray-400 text-sm mb-6">
-        Lanjutkan petualanganmu di tata surya.
-      </p>
+      <p className="text-gray-400 text-sm mb-6">{t("auth.login.subtitle")}</p>
 
       <form
         onSubmit={(e) => {
@@ -57,33 +58,38 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
         }}
         className="space-y-4"
       >
+        {errors.form && (
+          <p className="rounded-lg border border-red-400/30 bg-red-400/10 px-3 py-2 text-xs text-red-400">
+            {errors.form}
+          </p>
+        )}
         <div>
           <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
-            Username
+            {t("auth.login.email")}
           </label>
           <input
-            type="text"
-            name="username"
-            value={values.username}
+            type="email"
+            name="email"
+            value={values.email}
             onChange={handleChange}
-            placeholder="Masukkan username"
+            placeholder={t("auth.login.emailPlaceholder")}
             disabled={isLoading}
             className="w-full px-4 py-3 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
             style={{
               background: "rgba(30, 41, 59, 0.5)",
-              border: errors.username
+              border: errors.email
                 ? "1px solid #f87171"
                 : "1px solid rgba(255, 255, 255, 0.1)",
             }}
           />
-          {errors.username && (
-            <p className="text-red-400 text-xs mt-1">{errors.username}</p>
+          {errors.email && (
+            <p className="text-red-400 text-xs mt-1">{errors.email}</p>
           )}
         </div>
 
         <div>
           <label className="block text-gray-400 text-xs font-medium mb-2 tracking-wider uppercase">
-            Password
+            {t("auth.login.password")}
           </label>
           <div className="relative">
             <input
@@ -91,7 +97,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
               name="password"
               value={values.password}
               onChange={handleChange}
-              placeholder="Masukkan password"
+              placeholder={t("auth.login.passwordPlaceholder")}
               disabled={isLoading}
               className="w-full px-4 py-3 pr-12 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
               style={{
@@ -123,14 +129,16 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
               onChange={handleChange}
               className="w-4 h-4 rounded border-gray-600 text-cyan-400 focus:ring-cyan-400"
             />
-            <span className="text-gray-400 text-sm">Ingat saya</span>
+            <span className="text-gray-400 text-sm">
+              {t("auth.login.rememberMe")}
+            </span>
           </label>
-          <a
-            href="#"
-            className="text-cyan-400 text-sm hover:text-cyan-300 transition-colors"
+          <span
+            className="text-gray-500 text-sm cursor-not-allowed"
+            title="Coming soon"
           >
-            Lupa password?
-          </a>
+            {t("auth.login.forgotPassword")}
+          </span>
         </div>
 
         <button
@@ -144,22 +152,22 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
           {isLoading ? (
             <>
               <Loader2 size={18} className="animate-spin" />
-              <span>Memproses...</span>
+              <span>{t("auth.login.processing")}</span>
             </>
           ) : (
-            <span>Masuk Sekarang</span>
+            <span>{t("auth.login.submit")}</span>
           )}
         </button>
       </form>
 
       <p className="text-center text-gray-400 text-sm mt-6">
-        Belum punya akun?{" "}
-        <a
-          href="#"
+        {t("auth.login.noAccount")}{" "}
+        <Link
+          href="/signup"
           className="text-white font-medium hover:text-cyan-400 transition-colors underline"
         >
-          Daftar di sini
-        </a>
+          {t("auth.login.signupHere")}
+        </Link>
       </p>
     </div>
   );
