@@ -61,10 +61,10 @@ function StatBar({
     <div className="space-y-1">
       <div className="flex items-center justify-between">
         <span className="text-xs text-white/40">{label}</span>
-        <span className="text-xs font-medium text-white/80">{value}</span>
+        <span className="text-xs font-medium text-white/90">{value}</span>
       </div>
       {percent !== undefined && (
-        <div className="h-1 w-full overflow-hidden rounded-full bg-white/[0.06]">
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/[0.06]">
           <div
             className={`h-full rounded-full ${color} transition-all duration-700`}
             style={{ width: `${Math.max(2, Math.min(100, percent))}%` }}
@@ -170,10 +170,10 @@ export function LibraryDetail({
       >
         {/* Background tint */}
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0"
           style={{
             background: item.accentColor
-              ? `radial-gradient(ellipse at center, ${item.accentColor}40 0%, transparent 70%)`
+              ? `radial-gradient(ellipse 80% 70% at 50% 80%, ${item.accentColor}0a 0%, transparent 70%)`
               : undefined,
           }}
         />

@@ -88,21 +88,19 @@ export function LibraryTree({
         const isOpen = openSections.has(section.key);
         const isActive = isSectionActive(section.key);
 
-        // Filter items by query
         const filteredItems = query
           ? section.items.filter((item) =>
               item.label.toLowerCase().includes(query.toLowerCase()),
             )
           : section.items;
 
-        // Hide section if query active and no matching items
         if (query && filteredItems.length === 0) return null;
 
         return (
           <div key={section.key}>
             {/* Section header */}
             <div
-              className={`group flex items-center gap-1 px-2 py-0.5 ${
+              className={`group flex items-center gap-1 px-2 py-1 ${
                 isActive ? "bg-cosmic-accent/10" : ""
               }`}
             >
@@ -110,7 +108,7 @@ export function LibraryTree({
               <button
                 type="button"
                 onClick={() => onSectionToggle(section.key)}
-                className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded text-white/30 transition-colors hover:text-white/60"
+                className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded text-white/25 transition-colors hover:text-white/50"
                 aria-label={isOpen ? "Collapse" : "Expand"}
               >
                 <ChevronRight
@@ -120,21 +118,21 @@ export function LibraryTree({
                 />
               </button>
 
-              {/* Section label — clickable for overview */}
+              {/* Section label */}
               <button
                 type="button"
                 onClick={() => onSectionSelect(section.key)}
                 className={`flex flex-1 items-center gap-2 rounded-md px-1.5 py-1 text-left transition-colors ${
                   isActive
                     ? "text-cosmic-accent"
-                    : "text-white/70 hover:bg-white/5 hover:text-white"
+                    : "text-white/60 hover:bg-white/[0.04] hover:text-white/90"
                 }`}
               >
                 <Icon className="h-3.5 w-3.5 flex-shrink-0" aria-hidden />
-                <span className="flex-1 truncate text-xs font-medium">
+                <span className="flex-1 truncate text-[11px] font-semibold tracking-wide">
                   {t(SECTION_LABELS[section.key])}
                 </span>
-                <span className="rounded px-1.5 py-0.5 text-[10px] text-white/30">
+                <span className="rounded px-1.5 py-0.5 text-[10px] tabular-nums text-white/40">
                   {section.items.length}
                 </span>
               </button>
@@ -155,16 +153,20 @@ export function LibraryTree({
                       }
                       className={`group flex w-full items-center gap-2.5 py-1.5 pl-9 pr-3 text-left transition-colors ${
                         active
-                          ? "border-l-2 border-cosmic-accent bg-cosmic-accent/10 text-cosmic-accent"
-                          : "border-l-2 border-transparent text-white/50 hover:bg-white/5 hover:text-white/80"
+                          ? "border-l-2 border-cosmic-accent bg-cosmic-accent/10 text-white"
+                          : "border-l-2 border-transparent text-white/45 hover:bg-white/[0.04] hover:text-white/80"
                       }`}
                     >
-                      {/* Color dot */}
+                      {/* Color dot with subtle glow for active */}
                       <span
-                        className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
+                        className="h-2 w-2 flex-shrink-0 rounded-full transition-shadow"
                         style={{
                           backgroundColor:
-                            item.accentColor ?? "rgba(255,255,255,0.3)",
+                            item.accentColor ?? "rgba(255,255,255,0.25)",
+                          boxShadow:
+                            active && item.accentColor
+                              ? `0 0 5px ${item.accentColor}80`
+                              : undefined,
                         }}
                         aria-hidden
                       />

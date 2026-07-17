@@ -291,7 +291,7 @@ export default function LibraryPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={`${t("searchPlaceholder") ?? "Search celestial objects..."}  /`}
-              className="w-full rounded-lg border border-white/[0.06] bg-white/[0.03] py-2 pl-9 pr-8 text-sm text-white/80 placeholder-white/25 outline-none transition-colors focus:border-white/[0.12] focus:bg-white/[0.05]"
+              className="w-full rounded-lg border border-white/[0.06] bg-[#080c12] py-2 pl-9 pr-8 text-sm text-white/80 placeholder-white/25 outline-none transition-colors focus:border-cosmic-accent/30 focus:bg-[#0a0f16]"
             />
             {query && (
               <button
@@ -308,7 +308,7 @@ export default function LibraryPage() {
         {/* Tree + Detail split */}
         <div className="flex flex-1 overflow-hidden">
           {/* Tree sidebar */}
-          <div className="w-64 flex-shrink-0 overflow-y-auto border-r border-white/[0.06]">
+          <div className="w-64 flex-shrink-0 overflow-y-auto border-r border-white/[0.08] bg-[#080c12]">
             <LibraryTree
               sections={sections}
               selection={selection}

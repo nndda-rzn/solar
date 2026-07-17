@@ -4,8 +4,7 @@ import { Globe, Star, Telescope, Orbit, Bookmark } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { LibraryTab } from "./LibraryTabs";
 import type { LibraryItemType } from "./LibraryCard";
-import type { TreeItem } from "./LibraryTree";
-import type { TreeSelection } from "./LibraryTree";
+import type { TreeItem, TreeSelection } from "./LibraryTree";
 import { LibraryDetail, type LibraryDetailItem } from "./LibraryDetail";
 
 interface SectionMeta {
@@ -65,8 +64,8 @@ export function LibraryDetailPanel({
   if (selection.kind === "none") {
     return (
       <div className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.03]">
-          <Telescope className="h-7 w-7 text-white/20" aria-hidden />
+        <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.04]">
+          <Telescope className="h-6 w-6 text-white/30" aria-hidden />
         </div>
         <div>
           <p className="text-sm font-medium text-white/50">
@@ -101,7 +100,7 @@ export function LibraryDetailPanel({
               </p>
             </div>
           </div>
-          <p className="text-sm text-white/50 leading-relaxed">
+          <p className="text-sm leading-relaxed text-white/50">
             {meta.description}
           </p>
         </div>
@@ -113,19 +112,27 @@ export function LibraryDetailPanel({
               key={item.id}
               type="button"
               onClick={() => onItemSelect(item.id, item.type)}
-              className="flex flex-col items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.02] p-3 text-center transition-colors hover:border-white/[0.12] hover:bg-white/[0.05]"
+              className="flex flex-col items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.02] p-3 text-center transition-all duration-150 hover:-translate-y-0.5 hover:border-white/[0.14] hover:bg-white/[0.05]"
+              style={
+                item.accentColor
+                  ? {
+                      borderTopColor: `${item.accentColor}60`,
+                      borderTopWidth: 2,
+                    }
+                  : undefined
+              }
             >
               <span
                 className="h-6 w-6 rounded-full"
                 style={{
                   backgroundColor: item.accentColor ?? "rgba(255,255,255,0.2)",
                   boxShadow: item.accentColor
-                    ? `0 0 10px ${item.accentColor}40`
+                    ? `0 0 8px ${item.accentColor}50`
                     : undefined,
                 }}
                 aria-hidden
               />
-              <span className="line-clamp-2 text-[11px] text-white/60 leading-tight">
+              <span className="line-clamp-2 text-[11px] leading-tight text-white/60">
                 {item.label}
               </span>
             </button>
