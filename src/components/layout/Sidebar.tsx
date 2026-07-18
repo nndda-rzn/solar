@@ -2,6 +2,7 @@
 
 import {
   BookOpen,
+  Brain,
   Globe,
   HelpCircle,
   LayoutDashboard,
@@ -40,6 +41,7 @@ export function Sidebar({ isMobileOpen, onMobileClose }: SidebarProps) {
       label: t("nav.achievements"),
       icon: Trophy,
     },
+    { href: "/quiz" as const, label: t("nav.quiz"), icon: Brain },
     { href: "/settings" as const, label: t("nav.settings"), icon: Settings },
   ];
 

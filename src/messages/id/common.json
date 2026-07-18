@@ -71,15 +71,16 @@
     "backToOverview": "Kembali ke Overview"
   },
   "nav": {
-    "dashboard": "Dashboard",
-    "explorer": "Eksplorasi",
+    "dashboard": "Dasbor",
+    "explorer": "Penjelajah",
     "library": "Pustaka",
     "achievements": "Pencapaian",
+    "quiz": "Kuis",
     "settings": "Pengaturan",
     "profile": "Profil",
     "help": "Bantuan",
     "logout": "Keluar",
-    "exit": "Kembali ke Dashboard"
+    "exit": "Keluar ke Dasbor"
   },
   "sidebar": {
     "tagline": "Elite Astronomer",
