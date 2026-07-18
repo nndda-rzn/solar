@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { StarBackground } from "./StarBackground";
 
 interface AuthLayoutProps {
@@ -7,6 +9,7 @@ interface AuthLayoutProps {
 }
 
 export function AuthLayout({ children }: AuthLayoutProps) {
+  const t = useTranslations("common");
   return (
     <div
       style={{
@@ -70,7 +73,9 @@ export function AuthLayout({ children }: AuthLayoutProps) {
                 lineHeight: 1.2,
               }}
             >
-              <span style={{ color: "#ffffff" }}>Jelajahi Tata Surya</span>
+              <span style={{ color: "#ffffff" }}>
+                {t("auth.layout.titleLine1")}
+              </span>
               <br />
               <span
                 style={{
@@ -81,7 +86,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
                   backgroundClip: "text",
                 }}
               >
-                Secara Interaktif
+                {t("auth.layout.titleLine2")}
               </span>
             </h1>
 
@@ -92,8 +97,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
                 marginBottom: "32px",
               }}
             >
-              Masuk untuk melanjutkan eksplorasi planet, orbit, misi luar
-              angkasa, dan kuis kosmik.
+              {t("auth.layout.subtitle")}
             </p>
 
             <div
@@ -111,7 +115,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
                   }}
                 />
                 <span style={{ color: "#d1d5db", fontSize: "14px" }}>
-                  Planet Interaktif
+                  {t("auth.layout.feature1")}
                 </span>
               </div>
               <div
@@ -126,7 +130,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
                   }}
                 />
                 <span style={{ color: "#d1d5db", fontSize: "14px" }}>
-                  Kuis Edukatif
+                  {t("auth.layout.feature2")}
                 </span>
               </div>
               <div
@@ -141,7 +145,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
                   }}
                 />
                 <span style={{ color: "#d1d5db", fontSize: "14px" }}>
-                  Timeline Eksplorasi
+                  {t("auth.layout.feature3")}
                 </span>
               </div>
             </div>
@@ -179,33 +183,33 @@ export function AuthLayout({ children }: AuthLayoutProps) {
         }}
       >
         <p style={{ color: "#6b7280", fontSize: "12px" }}>
-          &copy; 2024 Cosmic Explorer. Jelajahi Alam Semesta.
+          {t("auth.layout.footer")}
         </p>
         <div style={{ display: "flex", gap: "24px" }}>
-          <a
-            href="#"
+          <span
             style={{
               color: "#6b7280",
               fontSize: "12px",
               textDecoration: "none",
+              cursor: "not-allowed",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#22d3ee")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#6b7280")}
           >
-            Tentang Kami
-          </a>
-          <a
-            href="#"
+            {t("auth.layout.aboutUs")}
+          </span>
+          <span
             style={{
               color: "#6b7280",
               fontSize: "12px",
               textDecoration: "none",
+              cursor: "not-allowed",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#22d3ee")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#6b7280")}
           >
-            Bantuan
-          </a>
+            {t("auth.layout.help")}
+          </span>
         </div>
       </footer>
     </div>

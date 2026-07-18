@@ -59,8 +59,8 @@ desktop.ini
 .agents/
 skills-lock.json
 
-# ===== DOCUMENTATION (lokal) =====
-docs/
+# ===== DOCUMENTATION =====
+# Track design specs in docs/superpowers/specs/
 
 # ===== LARGE ASSETS =====
 public/textures/

@@ -1,0 +1,22 @@
+{
+  "physicalProperties": "Physical Properties",
+  "orbitalProperties": "Orbital Properties",
+  "discovery": "Additional Data",
+  "about": "About",
+  "funFacts": "Fun Facts",
+  "yes": "Yes",
+  "no": "No",
+  "stats": {
+    "radius": "Radius",
+    "mass": "Mass",
+    "temperature": "Temperature",
+    "moonCount": "Moons",
+    "distance": "Distance",
+    "period": "Period",
+    "tilt": "Axial Tilt",
+    "rotationSpeed": "Rotation Speed",
+    "hasRing": "Has Ring",
+    "hasAtmosphere": "Has Atmosphere"
+  },
+  "close": "Close panel"
+}

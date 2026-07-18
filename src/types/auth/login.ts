@@ -1,12 +1,13 @@
 export interface LoginFormValues {
-  username: string;
+  email: string;
   password: string;
   rememberMe: boolean;
 }
 
 export interface LoginFormErrors {
-  username?: string;
+  email?: string;
   password?: string;
+  form?: string;
 }
 
 export interface LoginState {

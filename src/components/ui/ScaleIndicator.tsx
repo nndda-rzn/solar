@@ -1,23 +1,33 @@
 "use client";
 
-import { useExplorerStore } from "@/lib/store/explorer-store";
-import { SCALES, ScaleMode } from "@/config/scales";
+import { useScaleStore } from "@/lib/store/scale-store";
+import { ScaleMode } from "@/config/scales";
+import { cosmicEventBus } from "@/lib/events/event-bus";
+import { useTranslations } from "next-intl";
 
 const SCALE_ORDER: ScaleMode[] = ["solar", "stellar", "galactic", "cosmic"];
 
 export function ScaleIndicator() {
-  const { scale, setScale } = useExplorerStore();
+  const t = useTranslations("common");
+  const { scale, setScale } = useScaleStore();
 
   return (
     <div className="pointer-events-auto absolute bottom-20 left-4 flex flex-col gap-1">
       {SCALE_ORDER.map((key) => {
-        const config = SCALES[key];
         const isActive = scale === key;
 
         return (
           <button
             key={key}
-            onClick={() => setScale(key)}
+            onClick={() => {
+              setScale(key);
+              cosmicEventBus.emit({
+                type: "scale_reached",
+                payload: { scale: key },
+              });
+            }}
+            aria-label={t(`scale.${key}`)}
+            aria-pressed={isActive}
             className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-left text-xs transition-all duration-200 ${
               isActive
                 ? "border border-cosmic-accent/40 bg-cosmic-accent/20 text-cosmic-accent"
@@ -29,7 +39,7 @@ export function ScaleIndicator() {
                 isActive ? "bg-cosmic-accent" : "bg-white/20"
               }`}
             />
-            <span>{config.label}</span>
+            <span>{t(`scale.${key}`)}</span>
           </button>
         );
       })}

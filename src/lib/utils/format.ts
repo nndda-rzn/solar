@@ -25,3 +25,12 @@ export function formatTemperature(celsius: number): string {
   const fahrenheit = (celsius * 9) / 5 + 32;
   return `${celsius.toFixed(0)}°C / ${fahrenheit.toFixed(0)}°F`;
 }
+
+export function formatSimDate(dayOffset: number): string {
+  const base = new Date();
+  const simTime = new Date(base.getTime() + dayOffset * 86400000);
+  const day = simTime.getDate().toString().padStart(2, "0");
+  const month = simTime.toLocaleString("en-US", { month: "short" });
+  const year = simTime.getFullYear();
+  return `${day} ${month} ${year}`;
+}

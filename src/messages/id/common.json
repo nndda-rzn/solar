@@ -1,0 +1,366 @@
+{
+  "app": {
+    "title": "Interactive Cosmic Explorer",
+    "description": "Jelajahi alam semesta dalam 3D interaktif — tata surya, lingkungan bintang, konstelasi, dan lainnya."
+  },
+  "library": {
+    "title": "Pustaka",
+    "subtitle": "Jelajahi objek langit, fakta menarik, dan bookmark tersimpan Anda",
+    "tabs": {
+      "planets": "Planet",
+      "dwarfPlanets": "Planet Katai",
+      "stars": "Bintang",
+      "constellations": "Rasi Bintang",
+      "bookmarks": "Bookmark Saya"
+    },
+    "empty": {
+      "planets": "Tidak ada planet untuk ditampilkan.",
+      "dwarfPlanets": "Tidak ada planet katai untuk ditampilkan.",
+      "stars": "Tidak ada bintang untuk ditampilkan.",
+      "constellations": "Tidak ada rasi bintang untuk ditampilkan.",
+      "bookmarks": "Anda belum menyimpan bookmark. Simpan tampilan kamera dari Explorer untuk melihatnya di sini."
+    },
+    "explore3d": "Jelajahi dalam 3D",
+    "searchPlaceholder": "Cari planet, bintang, rasi bintang...",
+    "close": "Tutup",
+    "noContent": "Deskripsi tidak tersedia.",
+    "stats": {
+      "mass": "Massa",
+      "temperature": "Suhu",
+      "distance": "Jarak dari Matahari",
+      "radius": "Radius",
+      "orbitalPeriod": "Periode Orbit",
+      "moonCount": "Bulan",
+      "magnitude": "Magnitudo",
+      "spectralType": "Tipe Spektral",
+      "starCount": "Jumlah Bintang",
+      "abbreviation": "Singkatan",
+      "indonesianName": "Nama Indonesia"
+    },
+    "sections": {
+      "facts": "Fakta Menarik",
+      "mythology": "Mitologi",
+      "description": "Deskripsi",
+      "physicalData": "Data Fisik"
+    }
+  },
+  "error": {
+    "title": "Terjadi kesalahan",
+    "description": "Terjadi kesalahan saat merender cosmic explorer. Progres Anda telah disimpan.",
+    "retry": "Coba lagi"
+  },
+  "notFound": {
+    "title": "Tersesat di luar angkasa",
+    "description": "Koordinat kosmis yang Anda tuju tidak menunjuk ke mana pun di alam semesta kami.",
+    "action": "Kembali ke dashboard"
+  },
+  "header": {
+    "title": "Penjelajah Kosmik",
+    "subtitle": "Jelajahi orbit planet secara real time",
+    "search": "Cari",
+    "searchPlaceholder": "Cari planet, planet katai, bintang...",
+    "noResults": "Tidak ada hasil ditemukan",
+    "date": "Tanggal",
+    "speed": "Kecepatan",
+    "close": "ESC",
+    "bookmark": "Bookmark",
+    "level": "Level",
+    "xp": "XP"
+  },
+  "hud": {
+    "backToOverview": "Kembali ke Overview"
+  },
+  "nav": {
+    "dashboard": "Dasbor",
+    "explorer": "Penjelajah",
+    "library": "Pustaka",
+    "achievements": "Pencapaian",
+    "quiz": "Kuis",
+    "settings": "Pengaturan",
+    "profile": "Profil",
+    "help": "Bantuan",
+    "logout": "Keluar",
+    "exit": "Keluar ke Dasbor"
+  },
+  "sidebar": {
+    "tagline": "Elite Astronomer",
+    "brand": "Cosmic Explorer"
+  },
+  "topbar": {
+    "level": "LVL",
+    "points": "PTS",
+    "notifications": "Notifikasi",
+    "account": "Akun"
+  },
+  "scale": {
+    "solar": "Tata Surya",
+    "stellar": "Bintang",
+    "galactic": "Galaksi",
+    "cosmic": "Alam Semesta"
+  },
+  "search": {
+    "placeholder": "Cari planet, planet katai, bintang...",
+    "noResults": "Tidak ada hasil ditemukan"
+  },
+  "types": {
+    "star": "bintang",
+    "planet": "planet",
+    "dwarfPlanet": "planet katai"
+  },
+  "language": {
+    "en": "EN",
+    "id": "ID"
+  },
+  "profile": {
+    "title": "Profil Saya",
+    "tabs": {
+      "profile": "Profil",
+      "progress": "Progress",
+      "achievements": "Pencapaian",
+      "bookmarks": "Bookmark"
+    },
+    "loading": "Memuat profil...",
+    "loadError": "Gagal memuat profil: ",
+    "notFound": "Tidak ada profil ditemukan.",
+    "saved": "Profil tersimpan.",
+    "level": "Level",
+    "displayName": "Nama Tampilan",
+    "displayNamePlaceholder": "Nama tampilan",
+    "bio": "Bio",
+    "bioPlaceholder": "Ceritakan tentang dirimu",
+    "avatarUrl": "URL Avatar",
+    "save": "Simpan Profil"
+  },
+  "progress": {
+    "stats": {
+      "planetsVisited": "Planet Dikunjungi",
+      "starsVisited": "Bintang Dikunjungi",
+      "constellationsVisited": "Konstelasi Dikunjungi",
+      "searchesUsed": "Pencarian Digunakan",
+      "bookmarksSaved": "Bookmark Disimpan",
+      "panelsOpened": "Panel Dibuka"
+    },
+    "recentActivity": "Aktivitas Terbaru",
+    "empty": "Belum ada aktivitas. Mulai jelajah!"
+  },
+  "achievements": {
+    "title": "Pencapaian",
+    "level": "Level",
+    "totalXp": "Total XP",
+    "unlocked": "Terbuka",
+    "locked": "Terkunci",
+    "hidden": "Pencapaian Tersembunyi",
+    "xp": "XP"
+  },
+  "bookmarks": {
+    "title": "Bookmark",
+    "save": "Simpan Bookmark",
+    "namePlaceholder": "Nama bookmark",
+    "saveSuccess": "Bookmark disimpan",
+    "restore": "Pulihkan",
+    "delete": "Hapus",
+    "confirmDelete": "Hapus bookmark ini?",
+    "empty": "Belum ada bookmark. Tekan Ctrl+B untuk menyimpan tampilan saat ini.",
+    "scale": "Skala",
+    "saveError": "Gagal menyimpan bookmark",
+    "nameError": "Nama harus 1-50 karakter",
+    "cameraError": "Posisi kamera tidak tersedia",
+    "cancel": "Batal"
+  },
+  "shortcuts": {
+    "title": "Pintasan Keyboard",
+    "search": "Buka pencarian",
+    "bookmark": "Simpan bookmark",
+    "help": "Tampilkan bantuan ini",
+    "close": "Tutup dialog",
+    "playPause": "Putar / jeda simulasi",
+    "reset": "Reset simulasi"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "perfMode": "Mode Performa",
+    "highQuality": "Kualitas Tinggi",
+    "lowQuality": "Kualitas Rendah (Performa)",
+    "highQualityDesc": "Jumlah partikel penuh, resolusi tinggi. Terbaik untuk perangkat bertenaga.",
+    "lowQualityDesc": "Jumlah partikel dikurangi, resolusi dibatasi. Terbaik untuk perangkat low-end.",
+    "audio": "Audio",
+    "mute": "Bisukan",
+    "volume": "Volume",
+    "ambient": "Suara Ambient",
+    "on": "Aktif",
+    "off": "Nonaktif"
+  },
+  "loader": {
+    "loading": "Memuat..."
+  },
+  "toast": {
+    "achievementUnlocked": "Pencapaian Terbuka!",
+    "levelUp": "Level Naik!",
+    "bookmarkSaved": "Bookmark Disimpan",
+    "reachedLevel": "Mencapai Level {level}",
+    "bookmarksLoadFailed": {
+      "title": "Tidak dapat memuat bookmark",
+      "description": "Tampilan tersimpan Anda akan muncul setelah koneksi pulih."
+    },
+    "bookmarkCreateFailed": {
+      "title": "Tidak dapat menyimpan bookmark",
+      "description": "Coba lagi sebentar."
+    },
+    "bookmarkRenameFailed": {
+      "title": "Tidak dapat mengubah nama bookmark",
+      "description": "Coba lagi sebentar."
+    },
+    "bookmarkRemoveFailed": {
+      "title": "Tidak dapat menghapus bookmark",
+      "description": "Coba lagi sebentar."
+    },
+    "progressLoadFailed": {
+      "title": "Tidak dapat memuat progres",
+      "description": "Stat eksplorasi Anda akan dilanjutkan saat koneksi pulih."
+    },
+    "progressTrackFailed": {
+      "title": "Tidak dapat menyimpan progres",
+      "description": "Tindakan terakhir Anda mungkin tidak tersimpan."
+    },
+    "achievementsLoadFailed": {
+      "title": "Tidak dapat memuat pencapaian",
+      "description": "Lencana Anda akan muncul setelah koneksi pulih."
+    },
+    "achievementAwardFailed": {
+      "title": "Tidak dapat memberikan pencapaian",
+      "description": "Coba lagi sebentar."
+    }
+  },
+  "pages": {
+    "library": {
+      "title": "Pustaka",
+      "comingSoon": "Segera Hadir",
+      "description": "Ensiklopedia planet, bintang, dan konstelasi sedang dalam pengembangan."
+    },
+    "help": {
+      "title": "Bantuan",
+      "faqs": [
+        {
+          "q": "Bagaimana cara navigasi explorer 3D?",
+          "a": "Gunakan mouse untuk orbit (drag klik kiri), zoom (scroll), dan pan (drag klik kanan). Di perangkat sentuh, gunakan dua jari untuk zoom dan satu jari untuk rotasi."
+        },
+        {
+          "q": "Bagaimana cara mengganti tampilan skala?",
+          "a": "Gunakan pemilih skala di top bar untuk beralih antara Tata Surya, Stellar, Galaktik, dan Kosmik. Anda juga bisa zoom keluar secara alami untuk memicu transisi skala."
+        },
+        {
+          "q": "Bagaimana cara menyimpan bookmark?",
+          "a": "Tekan Ctrl+B (atau Cmd+B di Mac) saat menjelajah, atau klik ikon bookmark di top bar. Beri nama tampilan Anda dan simpan. Bookmark akan memulihkan posisi kamera dan skala yang tepat."
+        },
+        {
+          "q": "Bagaimana cara melihat pencapaian saya?",
+          "a": "Buka Profil dari sidebar dan pilih tab Pencapaian. Anda juga bisa melihat pencapaian yang baru terbuka sebagai notifikasi toast saat menjelajah."
+        },
+        {
+          "q": "Bagaimana cara mengubah kecepatan simulasi?",
+          "a": "Gunakan kontrol kecepatan di toolbar explorer. Anda bisa mempercepat, memperlambat, menjeda, atau mereset simulasi. Perjalanan waktu jauh ke masa depan atau masa lalu juga menghasilkan XP."
+        },
+        {
+          "q": "Apa perbedaan mode Kualitas Tinggi dan Kualitas Rendah?",
+          "a": "Kualitas Tinggi merender jumlah partikel penuh dan resolusi tinggi — terbaik untuk perangkat bertenaga. Kualitas Rendah mengurangi jumlah partikel dan membatasi resolusi untuk performa lebih halus di perangkat low-end. Ubah ini di Pengaturan."
+        }
+      ]
+    }
+  },
+  "close": "Tutup",
+  "cancel": "Batal",
+  "auth": {
+    "layout": {
+      "titleLine1": "Jelajahi Tata Surya",
+      "titleLine2": "Secara Interaktif",
+      "subtitle": "Masuk untuk melanjutkan eksplorasi planet, orbit, misi luar angkasa, dan kuis kosmik.",
+      "feature1": "Planet Interaktif",
+      "feature2": "Kuis Edukatif",
+      "feature3": "Timeline Eksplorasi",
+      "footer": "© 2024 Cosmic Explorer. Jelajahi Alam Semesta.",
+      "aboutUs": "Tentang Kami",
+      "help": "Bantuan"
+    },
+    "login": {
+      "badge": "Akses Explorer",
+      "title": "Masuk ke Cosmic Explorer",
+      "subtitle": "Lanjutkan petualanganmu di tata surya",
+      "email": "Email",
+      "emailPlaceholder": "Masukkan email",
+      "password": "Password",
+      "passwordPlaceholder": "Masukkan password",
+      "rememberMe": "Ingat saya",
+      "forgotPassword": "Lupa password?",
+      "submit": "Masuk Sekarang",
+      "processing": "Memproses...",
+      "noAccount": "Belum punya akun?",
+      "signupHere": "Daftar di sini",
+      "errorInvalid": "Email atau password salah",
+      "signupSuccess": "Akun berhasil dibuat! Silakan masuk."
+    },
+    "signup": {
+      "badge": "Akses Explorer",
+      "title": "Daftar ke Cosmic Explorer",
+      "subtitle": "Mulai petualanganmu menjelajahi tata surya",
+      "username": "Username",
+      "usernamePlaceholder": "Masukkan username",
+      "email": "Email",
+      "emailPlaceholder": "Masukkan email",
+      "password": "Password",
+      "passwordPlaceholder": "Masukkan password",
+      "confirmPassword": "Konfirmasi Password",
+      "confirmPlaceholder": "Ulangi password",
+      "submit": "Daftar Sekarang",
+      "processing": "Memproses...",
+      "hasAccount": "Sudah punya akun?",
+      "loginHere": "Masuk di sini",
+      "errorExists": "Email sudah terdaftar",
+      "checkEmail": "Periksa email Anda untuk konfirmasi akun"
+    }
+  },
+  "tour": {
+    "step": "Langkah",
+    "next": "Lanjut",
+    "skip": "Lewati Tour",
+    "finish": "Mulai Eksplorasi",
+    "replay": "Ulangi Tour",
+    "steps": {
+      "welcome": {
+        "title": "Selamat Datang di Cosmic Explorer",
+        "description": "Perjalanan interaktif melalui tata surya dan alam semesta. Mari kita jelajahi bersama."
+      },
+      "sun": {
+        "title": "Matahari",
+        "description": "Bintang kita di pusat tata surya, mengandung 99,8% dari seluruh massa di tata surya."
+      },
+      "earth": {
+        "title": "Bumi",
+        "description": "Planet kita — satu-satunya dunia yang diketahui memiliki kehidupan, dengan lautan dan atmosfer pelindung."
+      },
+      "saturn": {
+        "title": "Saturnus",
+        "description": "Permata tata surya, terkenal dengan sistem cincinnya yang spektakuler dari es dan batuan."
+      },
+      "neptune": {
+        "title": "Neptunus",
+        "description": "Planet terjauh dari Matahari, 30 kali jarak Bumi, dengan angin mencapai 2.100 km/jam."
+      },
+      "stellar": {
+        "title": "Lingkungan Bintang",
+        "description": "Zoom keluar melampaui tata surya kita. Ribuan bintang terdekat terlihat dalam radius 100 tahun cahaya."
+      },
+      "galactic": {
+        "title": "Bima Sakti",
+        "description": "Galaksi kita — galaksi spiral dengan 200 hingga 400 miliar bintang, selebar 100.000 tahun cahaya."
+      },
+      "cosmic": {
+        "title": "Alam Semesta yang Dapat Diamati",
+        "description": "Skala terbesar — seluruh alam semesta yang dapat diamati, diameter 93 miliar tahun cahaya, berisi triliunan galaksi."
+      },
+      "finish": {
+        "title": "Siap Menjelajah!",
+        "description": "Kamu sudah melihat skala penuh kosmos. Sekarang jelajahi secara bebas — klik planet, zoom in dan out, temukan alam semesta."
+      }
+    }
+  }
+}

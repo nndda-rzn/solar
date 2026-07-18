@@ -10,11 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         cosmic: {
-          black: "#080b14",
-          deep: "#0d1117",
+          black: "#090d14",
+          deep: "#0f1419",
           nebula: "#161b22",
           accent: "#4a9eff",
           glow: "#7cb9ff",
+          muted: "#94a3b8",
+          warm: "#f59e0b",
         },
       },
       fontFamily: {

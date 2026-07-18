@@ -20,9 +20,28 @@ export interface PlanetData {
   tilt: number;
   mass: string;
   temperature: string;
-  moons: number;
+  moonCount: number;
+  moons: MoonData[];
   description: string;
   funFacts: string[];
+  content?:
+    | {
+        en?:
+          | {
+              description: string;
+              facts: string[];
+              mythology: string;
+            }
+          | undefined;
+        id?:
+          | {
+              description: string;
+              facts: string[];
+              mythology: string;
+            }
+          | undefined;
+      }
+    | undefined;
   textures: PlanetTextures;
   hasRing?: boolean;
   hasAtmosphere?: boolean;
@@ -34,4 +53,14 @@ export interface PlanetPosition {
   x: number;
   y: number;
   z: number;
+}
+
+export interface MoonData {
+  id: string;
+  name: string;
+  radius: number;
+  orbitRadius: number;
+  orbitalPeriod: number;
+  texture?: string;
+  color: string;
 }

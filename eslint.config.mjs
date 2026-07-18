@@ -11,6 +11,15 @@ export default tseslint.config(
     },
   },
   {
+    files: ["jest.config.js", "jest.setup.js", "commitlint.config.js"],
+    languageOptions: {
+      globals: {
+        module: "writable",
+        require: "readonly",
+      },
+    },
+  },
+  {
     ignores: ["node_modules/", ".next/", "dist/"],
   },
 )

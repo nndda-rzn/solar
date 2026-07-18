@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "features": "Fitur",
+    "howItWorks": "Cara Kerja",
+    "launch": "Buka Explorer"
+  },
+  "hero": {
+    "headline": "Jelajahi Alam Semesta,\nSatu Skala dalam Satu Waktu",
+    "subheadline": "Perjalanan 3D interaktif melalui tata surya, lingkungan bintang, dan alam semesta yang dapat diamati.",
+    "ctaPrimary": "Mulai Menjelajah",
+    "ctaSecondary": "Pelajari Lebih Lanjut",
+    "scrollHint": "Gulir untuk menemukan"
+  },
+  "features": {
+    "title": "Semua dalam Satu Tempat",
+    "subtitle": "Empat skala eksplorasi kosmik, dirender dalam 3D real-time.",
+    "items": [
+      {
+        "title": "Tata Surya",
+        "desc": "Navigasikan 8 planet, planet katai, dan bulan-bulannya dalam simulasi orbit real-time."
+      },
+      {
+        "title": "Lingkungan Bintang",
+        "desc": "Zoom keluar hingga 100 tahun cahaya dan temukan ribuan bintang terdekat dengan data spektral lengkap."
+      },
+      {
+        "title": "Bima Sakti",
+        "desc": "Tarik lebih jauh untuk melihat galaksi kita — 200 miliar bintang yang membentang 100.000 tahun cahaya."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Cara Kerja",
+    "subtitle": "Tiga langkah dari pendaftaran hingga tepi alam semesta yang dapat diamati.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Buat Akun",
+        "desc": "Daftar gratis dan simpan progres eksplorasi, bookmark, serta pencapaian Anda lintas sesi."
+      },
+      {
+        "num": "02",
+        "title": "Buka Explorer",
+        "desc": "Masuki scene 3D interaktif. Klik planet, bintang, atau rasi bintang untuk menampilkan data sains yang detail."
+      },
+      {
+        "num": "03",
+        "title": "Temukan & Pelajari",
+        "desc": "Skalakan dari tata surya hingga alam semesta yang dapat diamati. Dapatkan XP dan buka pencapaian saat Anda menjelajah."
+      }
+    ]
+  },
+  "stats": {
+    "label1": "Planet",
+    "value1": "8",
+    "label2": "Rasi Bintang",
+    "value2": "88",
+    "label3": "Level Skala",
+    "value3": "4",
+    "label4": "Tahun Cahaya Dimodelkan",
+    "value4": "93M"
+  },
+  "quote": {
+    "text": "Kosmos ada di dalam diri kita. Kita terbuat dari materi bintang. Kita adalah cara alam semesta mengenal dirinya sendiri.",
+    "author": "Carl Sagan"
+  },
+  "cta": {
+    "headline": "Mulai Perjalanan Anda Melintasi Kosmos",
+    "subheadline": "Gratis untuk dijelajahi. Tidak perlu teleskop.",
+    "button": "Buat Akun Gratis",
+    "loginPrompt": "Sudah punya akun?",
+    "loginLink": "Masuk"
+  },
+  "footer": {
+    "brand": "Cosmic Explorer",
+    "copyright": "© 2025 Cosmic Explorer. Semua hak dilindungi.",
+    "links": {
+      "help": "Bantuan",
+      "explorer": "Explorer",
+      "dashboard": "Dashboard"
+    }
+  }
+}

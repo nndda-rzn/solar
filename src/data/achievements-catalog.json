@@ -1,0 +1,213 @@
+{
+  "version": "1.0",
+  "definitions": [
+    {
+      "id": "first_planet",
+      "title": "First Contact",
+      "description": {
+        "en": "Visit your first planet",
+        "id": "Kunjungi planet pertamamu"
+      },
+      "icon": "Rocket",
+      "category": "explorer",
+      "xp": 25,
+      "rule": {
+        "type": "count_unique",
+        "category": "visited_planet",
+        "threshold": 1
+      }
+    },
+    {
+      "id": "first_star",
+      "title": "Star Gazer",
+      "description": {
+        "en": "Visit your first star",
+        "id": "Kunjungi bintang pertamamu"
+      },
+      "icon": "Sparkles",
+      "category": "explorer",
+      "xp": 25,
+      "rule": {
+        "type": "count_unique",
+        "category": "visited_star",
+        "threshold": 1
+      }
+    },
+    {
+      "id": "first_constellation",
+      "title": "Constellation Hunter",
+      "description": {
+        "en": "Visit your first constellation",
+        "id": "Temukan konstelasi pertamamu"
+      },
+      "icon": "Compass",
+      "category": "explorer",
+      "xp": 25,
+      "rule": {
+        "type": "count_unique",
+        "category": "visited_constellation",
+        "threshold": 1
+      }
+    },
+    {
+      "id": "first_bookmark",
+      "title": "Memory Maker",
+      "description": {
+        "en": "Save your first bookmark",
+        "id": "Simpan bookmark pertamamu"
+      },
+      "icon": "Bookmark",
+      "category": "explorer",
+      "xp": 25,
+      "rule": {
+        "type": "count_unique",
+        "category": "bookmark_created",
+        "threshold": 1
+      }
+    },
+    {
+      "id": "first_search",
+      "title": "Seeker",
+      "description": {
+        "en": "Use search for the first time",
+        "id": "Gunakan pencarian pertama kali"
+      },
+      "icon": "Search",
+      "category": "explorer",
+      "xp": 10,
+      "rule": {
+        "type": "count_unique",
+        "category": "search_used",
+        "threshold": 1
+      }
+    },
+    {
+      "id": "first_scale_change",
+      "title": "Scale Pioneer",
+      "description": {
+        "en": "Navigate to a different scale",
+        "id": "Menjelajahi skala baru"
+      },
+      "icon": "Globe",
+      "category": "explorer",
+      "xp": 15,
+      "rule": {
+        "type": "count_unique",
+        "category": "scale_reached",
+        "threshold": 2
+      }
+    },
+    {
+      "id": "planet_explorer",
+      "title": "Solar System Explorer",
+      "description": {
+        "en": "Visit 4 different planets",
+        "id": "Kunjungi 4 planet berbeda"
+      },
+      "icon": "Orbit",
+      "category": "mastery",
+      "xp": 100,
+      "rule": {
+        "type": "count_unique",
+        "category": "visited_planet",
+        "threshold": 4
+      }
+    },
+    {
+      "id": "solar_master",
+      "title": "Solar System Master",
+      "description": {
+        "en": "Visit all 8 planets",
+        "id": "Kunjungi semua 8 planet"
+      },
+      "icon": "Sun",
+      "category": "mastery",
+      "xp": 500,
+      "rule": {
+        "type": "count_unique",
+        "category": "visited_planet",
+        "threshold": 8
+      }
+    },
+    {
+      "id": "star_collector",
+      "title": "Star Collector",
+      "description": {
+        "en": "Visit 10 different stars",
+        "id": "Kunjungi 10 bintang berbeda"
+      },
+      "icon": "Star",
+      "category": "mastery",
+      "xp": 200,
+      "rule": {
+        "type": "count_unique",
+        "category": "visited_star",
+        "threshold": 10
+      }
+    },
+    {
+      "id": "constellation_scholar",
+      "title": "Constellation Scholar",
+      "description": {
+        "en": "Visit 6 different constellations",
+        "id": "Kunjungi 6 konstelasi berbeda"
+      },
+      "icon": "Map",
+      "category": "mastery",
+      "xp": 200,
+      "rule": {
+        "type": "count_unique",
+        "category": "visited_constellation",
+        "threshold": 6
+      }
+    },
+    {
+      "id": "time_traveler",
+      "title": "Time Traveler",
+      "description": {
+        "en": "Simulate 365+ days into the future",
+        "id": "Simulasikan lebih dari 365 hari"
+      },
+      "icon": "Clock",
+      "category": "mastery",
+      "xp": 150,
+      "rule": {
+        "type": "has_target",
+        "category": "time_traveled",
+        "targetId": "day_365"
+      }
+    },
+    {
+      "id": "bookworm",
+      "title": "Cosmic Librarian",
+      "description": {
+        "en": "Open info panels 20 times",
+        "id": "Buka panel info 20 kali"
+      },
+      "icon": "BookOpen",
+      "category": "mastery",
+      "xp": 100,
+      "rule": {
+        "type": "count_total",
+        "category": "panel_opened",
+        "threshold": 20
+      }
+    },
+    {
+      "id": "cosmic_reader",
+      "title": "Cosmic Reader",
+      "description": {
+        "en": "Visit 5 different celestial objects in the Library.",
+        "id": "Kunjungi 5 objek langit berbeda di Pustaka."
+      },
+      "icon": "book",
+      "category": "mastery",
+      "xp": 50,
+      "rule": {
+        "type": "count_unique",
+        "category": "library_accessed",
+        "threshold": 5
+      }
+    }
+  ]
+}
